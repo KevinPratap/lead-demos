@@ -3,4 +3,5 @@ __pycache__/
 *.pyc
 data/leads.db
 data/leads.db-journal
+data/exports/
 .DS_Store
