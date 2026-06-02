@@ -13,6 +13,11 @@ import time
 from pathlib import Path
 import yaml
 
+# Allow running from any working directory
+_SCRIPTS_DIR = Path(__file__).resolve().parent
+if str(_SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS_DIR))
+
 import apify_client as ac
 import lead_cache as lc
 import export_local
