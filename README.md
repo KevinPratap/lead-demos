@@ -1,35 +1,26 @@
-# Hermes Lead-Pipeline
+demandimport
 
-Automated local lead generation + demo website builder.
-Stack: Apify (Maps scrape) → SQLite (dedup/cache) → Google Sheets (pitch sheet) → Antigravity + GitHub Pages (demo sites).
+# Lead Pipeline — local lead-gen engine
 
-## Setup
-1. `source .venv/bin/activate`
-2. Make sure `~/.config/hermes/leads/.env` has your `APIFY_TOKEN` (already done).
-3. First run: `python scripts/daily_run.py` — this will:
-   - Hit Apify Google Maps Scraper (~$0.10 of free credit)
-   - Filter to businesses with no website
-   - Dedup against `data/leads.db`
-   - Push the 5 newest to a Google Sheet
-4. (One-time) Authenticate Google: `python scripts/sheets_auth.py`
+- Apify Maps scrape → SQLite dedup/cache → CSV+MD export
+- See `prompts/antigravity_prompt.md` for the demo-site build workflow
+- See `config.yaml` for niche / city / cadence
 
-## Files
-- `config.yaml` — niche, city, lead count, scrape cadence
-- `scripts/apify_client.py` — wrapper around Apify REST API
-- `scripts/filter_dedup.py` — SQLite-backed no-website filter + dedup
-- `scripts/sheets_sync.py` — pushes leads to Google Sheet
-- `scripts/sheets_auth.py` — one-time OAuth setup
-- `scripts/daily_run.py` — orchestrator (this is what the cron job calls)
-- `prompts/antigravity_prompt.md` — copy-paste prompt for Antigravity
-- `data/leads.db` — local cache (gitignored)
+## Daily run
+```
+source .venv/bin/activate
+python scripts/daily_run.py
+```
 
 ## Cost model
-- Apify free tier = $5 credit
-- One scrape of 100 results ≈ $0.10
-- Weekly cadence ≈ $0.40/month → $5 lasts ~12 months
-- If we go daily: $0.70/week → $5 lasts ~7 weeks
-- We default to weekly. Change `rescrape_cadence` in config.yaml.
+Apify free tier = $5 monthly credit. One scrape of 100 results ≈ $0.10.
+Default cadence is weekly. We default to 100 results / scrape.
 
-## Demo sites
-Built freestyle with Google Antigravity, hosted on GitHub Pages (one repo, subfolders per lead).
-See `prompts/antigravity_prompt.md` for the exact prompt to use.
+## Adding a new niche
+Edit `config.yaml` `niche`, `city`, and `queries`. Done.
+
+## Demo site workflow
+1. Read `data/exports/pitch_sheet.md` — pick a lead
+2. Use `prompts/antigravity_prompt.md` in Google Antigravity to build
+3. Push to your `lead-demos` GitHub Pages repo
+4. Pitch via the included phone script
