@@ -1,0 +1,23 @@
+version: 1
+niche: dental clinics
+city: Mumbai
+queries:
+  - "dental clinic in Mumbai"
+  - "dentist in Mumbai"
+  - "dental care Mumbai"
+
+# How many NEW leads to push to the sheet per day.
+# Apify will scrape more; we filter + dedupe + slice.
+leads_per_day: 5
+
+# Max results to request from Apify per run. ~50 = ~$0.05 of credit. 200 = ~$0.20.
+# We default low to stretch the free $5 credit as far as possible.
+apify_max_results: 100
+
+# Rescrape cadence. With free tier we want to scrape occasionally and serve from a local cache.
+# Set to 'daily' to burn credit every day, 'weekly' to scrape Mon only, or a cron-style interval.
+rescrape_cadence: weekly
+
+github:
+  repo: KevinPratap/lead-demos
+  branch: main
