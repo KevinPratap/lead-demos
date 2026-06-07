@@ -80,6 +80,23 @@
     letter-spacing: 0.5px;
   }
 
+  /* ── Hero Banner ── */
+  .hero-banner {
+    width: 100%;
+    height: 220px;
+    border-radius: var(--radius);
+    background: linear-gradient(135deg, #fce4d8 0%, #f8d0c0 25%, #e8c4b4 50%, #f5dcd3 75%, #fdf2ed 100%);
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 40%, transparent 30%, rgba(0,0,0,0.15) 100%);
+  }
+
   /* ── Hero ── */
   .hero {
     background: var(--surface);
@@ -111,6 +128,39 @@
     line-height: 1.7;
     max-width: 540px;
   }
+
+  /* ── Gallery Strip ── */
+  .gallery-heading {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .gallery-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 48px;
+  }
+  .gallery-img {
+    aspect-ratio: 4/5;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .gallery-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.25) 100%);
+  }
+  .gallery-img:nth-child(1) { background: linear-gradient(135deg, #f8d0c0, #e8c4b4); }
+  .gallery-img:nth-child(2) { background: linear-gradient(135deg, #fce4d8, #f0d0c0); }
+  .gallery-img:nth-child(3) { background: linear-gradient(135deg, #f5dcd3, #e8c4b4); }
 
   /* ── Services Grid ── */
   .services-heading {
@@ -246,17 +296,78 @@
   }
   .footer a:hover { text-decoration: underline; }
 
-  /* ── Mobile ── */
-  @media (max-width: 480px) {
-    .container { padding: 36px 16px 48px; }
-    .stats { gap: 14px; padding: 16px 12px; }
-    .stat-value { font-size: 24px; }
-    .hero { padding: 32px 22px; }
-    .hero h1 { font-size: 22px; }
-    .services-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-    .service-card { padding: 20px 16px; }
-    .featured-strip { padding: 32px 20px; }
-    .featured-strip h2 { font-size: 19px; }
+  /* ── Mobile: 428px and below (iPhone 14 Pro Max / Pixel) ── */
+  @media (max-width: 428px) {
+    .container { padding: 32px 16px 48px; }
+
+    /* Header */
+    .header { margin-bottom: 32px; }
+    .logo { font-size: 22px; }
+    .tagline { font-size: 13px; word-break: break-word; overflow-wrap: break-word; }
+
+    /* Hero Banner */
+    .hero-banner { height: 180px; margin-bottom: 20px; }
+
+    /* Stats — horizontal row, tight */
+    .stats { gap: 8px; padding: 16px 10px; margin-bottom: 28px; }
+    .stat-value { font-size: 22px; }
+    .stat-label { font-size: 10px; letter-spacing: 0.3px; }
+
+    /* Hero */
+    .hero { padding: 28px 18px; margin-bottom: 36px; }
+    .hero-label { font-size: 10px; letter-spacing: 1px; margin-bottom: 12px; }
+    .hero h1 { font-size: 20px; }
+    .hero p { font-size: 14px; line-height: 1.6; }
+
+    /* Services — 2 columns, tight */
+    .services-heading { font-size: 11px; margin-bottom: 14px; }
+    .services-grid { grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 36px; }
+    .service-card { padding: 18px 14px; }
+    .service-icon { width: 32px; height: 32px; border-radius: 8px; margin-bottom: 10px; font-size: 14px; }
+    .service-card h3 { font-size: 14px; }
+    .service-card p { font-size: 12px; }
+
+    /* Gallery */
+    .gallery-heading { font-size: 11px; margin-bottom: 12px; }
+    .gallery-strip { gap: 6px; margin-bottom: 36px; }
+
+    /* Featured strip */
+    .featured-strip { padding: 28px 18px; margin-bottom: 28px; }
+    .featured-strip h2 { font-size: 18px; }
+    .featured-strip p { font-size: 13px; margin-bottom: 18px; }
+
+    /* Buttons — full width, 48px tall minimum tap target */
+    .btn-light,
+    .btn-primary {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 15px;
+      border-radius: 10px;
+    }
+
+    /* CTA section */
+    .cta-section { margin-bottom: 32px; }
+    .cta-section h2 { font-size: 18px; }
+    .cta-section p { font-size: 13px; margin-bottom: 16px; }
+
+    /* Footer */
+    .footer { padding: 24px 0 0; font-size: 11px; }
+  }
+
+  /* ── Tiny phones: 374px and below (iPhone SE, older Androids) ── */
+  @media (max-width: 374px) {
+    .container { padding: 24px 12px 40px; }
+    .stats { gap: 4px; padding: 12px 6px; }
+    .stat-value { font-size: 20px; }
+    .hero h1 { font-size: 18px; }
+    .hero p { font-size: 13px; }
+    .services-grid { gap: 6px; }
+    .service-card { padding: 14px 10px; }
+    .service-card h3 { font-size: 13px; }
+    .featured-strip h2 { font-size: 16px; }
+    .featured-strip p { font-size: 12px; }
   }
 </style>
 </head>
@@ -268,6 +379,9 @@
     <div class="logo">New Light Beauty</div>
     <div class="tagline">KP MARKET, 219/23, Shop 6, Belasis Road, Near tahoora sweets, Nagpada Nagpada, junction, Mumbai Central, Mumbai, Maharashtra 400008, India</div>
   </div>
+
+  <!-- Hero Banner -->
+  <div class="hero-banner"></div>
 
   <!-- Stats -->
   <div class="stats">
@@ -299,6 +413,14 @@
     <div class="service-card"><div class="service-icon">🧖</div><h3>Skin Care</h3><p>Facials, cleanups & advanced skin treatments</p></div>
     <div class="service-card"><div class="service-icon">💄</div><h3>Makeup Artistry</h3><p>Bridal, party & professional makeup</p></div>
     <div class="service-card"><div class="service-icon">💆</div><h3>Spa & Wellness</h3><p>Relaxing massages, body treatments & more</p></div>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery-heading">Our Work</div>
+  <div class="gallery-strip">
+    <div class="gallery-img"></div>
+    <div class="gallery-img"></div>
+    <div class="gallery-img"></div>
   </div>
 
   <!-- Dark Featured Strip (from B1) -->
