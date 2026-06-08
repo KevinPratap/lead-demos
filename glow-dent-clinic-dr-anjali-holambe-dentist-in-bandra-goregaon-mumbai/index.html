@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow Dent Clinic – Dr. Anjali Holambe | Dentist in Bandra | Goregaon Mumbai — Website Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #2563eb;
+      --accent-light: #dbeafe;
+      --bg: #FCFAF7; /* Warm cream base */
+      --surface: #FFFFFF;
+      --text: #1C1B19; /* Obsidian Black */
+      --text-muted: #797670; /* Warm Gray */
+      --border: #F0EDE6;
+      --radius-lg: 32px;
+      --radius-md: 20px;
+      --radius-sm: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #EAE6DF; /* Premium neutral backdrop */
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: var(--text);
+      line-height: 1.5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 588px; /* Mobile-first container */
+      background: var(--bg);
+      border: 12px solid #1C1B19; /* Phone device bezel */
+      border-radius: 48px;
+      box-shadow: 0 30px 80px rgba(28,27,25,0.25);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* ── 1. iOS Status Bar ── */
+    .status-bar {
+      width: 100%;
+      height: 44px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      position: relative;
+      z-index: 10;
+    }
+
+    .status-notch {
+      width: 110px;
+      height: 24px;
+      background: #1C1B19;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+    }
+
+    .status-icons {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .battery {
+      width: 20px;
+      height: 10px;
+      border: 1px solid currentColor;
+      border-radius: 3px;
+      padding: 1px;
+      position: relative;
+      opacity: 0.8;
+    }
+
+    .battery::after {
+      content: '';
+      position: absolute;
+      right: -3px;
+      top: 2.5px;
+      width: 2px;
+      height: 3px;
+      background: currentColor;
+      border-radius: 0 1px 1px 0;
+    }
+
+    .battery-level {
+      width: 100%;
+      height: 100%;
+      background: currentColor;
+      border-radius: 1px;
+    }
+
+    /* ── 2. Brand Name Header ── */
+    .header {
+      background: var(--bg);
+      padding: 24px 24px 12px;
+      text-align: left;
+    }
+
+    .logo {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      text-transform: uppercase;
+    }
+
+    /* ── 3. Designer Credit Row ── */
+    .designer-credit {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px 24px;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    .designer-profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .designer-avatar {
+      width: 36px;
+      height: 36px;
+      background: var(--accent);
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .designer-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .designer-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .designer-role {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    .designer-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-follow {
+      background: #1C1B19;
+      color: #ffffff;
+      border: none;
+      padding: 0 16px;
+      height: 36px;
+      border-radius: 18px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .btn-follow:hover {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+
+    .badge-available {
+      background: #EAF7EC;
+      color: #2E7D32;
+      padding: 0 12px;
+      height: 36px;
+      border-radius: 18px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      background: #4CAF50;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.9); opacity: 0.6; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(0.9); opacity: 0.6; }
+    }
+
+    /* ── 4. Hero Section ── */
+    .hero-section {
+      padding: 32px 24px 24px;
+      background: var(--bg);
+    }
+
+    .hero-label-badge {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: var(--accent);
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--text);
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
+    }
+
+    .hero-desc {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      font-weight: 400;
+      max-width: 92%;
+    }
+
+    /* ── 5. Split Image Gallery ── */
+    .hero-split-gallery {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 16px;
+      padding: 0 24px 24px;
+      background: var(--bg);
+    }
+
+    .hero-split-col {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      background: var(--border);
+    }
+
+    .left-col {
+      height: 340px;
+    }
+
+    .right-col {
+      height: 280px;
+      margin-top: auto; /* Asymmetrical stagger */
+    }
+
+    .hero-split-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-split-col:hover .hero-split-img {
+      transform: scale(1.04);
+    }
+
+    /* ── 6. Stats Row ── */
+    .stats-container {
+      padding: 12px 24px 32px;
+      background: var(--bg);
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      gap: 16px;
+    }
+
+    .stat-item {
+      flex: 1;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -1px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+    }
+
+    /* ── 7. Dark Obsidian Section ── */
+    .obsidian-section {
+      background: #1C1B19; /* Obsidian Black */
+      color: #FFFFFF;
+      padding: 48px 24px;
+      margin: 0 24px 32px;
+      border-radius: 32px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .obsidian-badge {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .obsidian-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 1.15;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .obsidian-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #A3A19C;
+      margin-bottom: 32px;
+    }
+
+    .obsidian-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #2D2C28;
+    }
+
+    .obsidian-stat-col {
+      text-align: left;
+    }
+
+    .obsidian-stat-number {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .obsidian-stat-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #797670;
+    }
+
+    .btn-obsidian-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #FFFFFF;
+      color: #1C1B19;
+      text-decoration: none;
+      padding: 0 24px;
+      height: 48px;
+      border-radius: 14px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      gap: 8px;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+    }
+
+    .btn-obsidian-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255,255,255,0.15);
+    }
+
+    /* ── 8. Service Cards ── */
+    .services-section {
+      padding: 0 24px 32px;
+      background: var(--bg);
+    }
+
+    .services-tag {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .services-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 24px;
+      letter-spacing: -0.5px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .services-grid .service-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 12px rgba(28,27,25,0.01);
+    }
+
+    .services-grid .service-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 24px rgba(28,27,25,0.04);
+    }
+
+    .services-grid .service-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .services-grid .service-card h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+      letter-spacing: -0.2px;
+    }
+
+    .services-grid .service-card p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11.5px;
+      line-height: 1.45;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* ── 9. Amber/Terracotta CTA Banner ── */
+    .banner-container {
+      padding: 0 24px 32px;
+      background: var(--bg);
+    }
+
+    .amber-banner {
+      background: var(--accent); /* Terracotta / Accent color */
+      color: #FFFFFF;
+      border-radius: 20px;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 8px 24px rgba(28,27,25,0.05);
+      overflow: hidden;
+    }
+
+    .banner-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .banner-dot {
+      font-size: 14px;
+      opacity: 0.6;
+    }
+
+    /* ── 10. Contact / Inquiry Section ── */
+    .inquiry-section {
+      padding: 0 24px 32px;
+      background: var(--bg);
+    }
+
+    .inquiry-tag {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .inquiry-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 300;
+      color: var(--text);
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .inquiry-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 32px 24px;
+      box-shadow: 0 4px 20px rgba(28,27,25,0.01);
+    }
+
+    .inquiry-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .inquiry-card-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .inquiry-details {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .inquiry-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .inquiry-lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+    }
+
+    .inquiry-val {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      padding: 6px 0; /* Ensures 48px tap target depth when combined */
+    }
+
+    .inquiry-val:hover {
+      color: var(--accent);
+    }
+
+    .btn-whatsapp-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #1C1B19;
+      color: #FFFFFF;
+      text-decoration: none;
+      width: 100%;
+      height: 52px;
+      border-radius: 16px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      gap: 8px;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px rgba(28,27,25,0.1);
+    }
+
+    .btn-whatsapp-cta:hover {
+      background: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(28,27,25,0.2);
+    }
+
+    .btn-arrow {
+      transition: transform 0.25s ease;
+    }
+
+    .btn-whatsapp-cta:hover .btn-arrow {
+      transform: translateX(4px);
+    }
+
+    /* ── 11. Gallery Strip Section ── */
+    .gallery-strip-section {
+      padding: 0 24px 32px;
+      background: var(--bg);
+    }
+
+    .gallery-tag {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .gallery-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 300;
+      color: var(--text);
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .gallery-grid-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 16px;
+      height: 380px;
+    }
+
+    .gallery-col-left {
+      height: 100%;
+      border-radius: 24px;
+      overflow: hidden;
+      background: var(--border);
+    }
+
+    .gallery-col-right {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-photo-stack {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .gallery-photo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 20px;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .gallery-col-left:hover .gallery-photo-img,
+    .gallery-photo-stack .gallery-photo-img:hover {
+      transform: scale(1.03);
+    }
+
+    .gallery-photo-stack .gallery-photo-img {
+      flex: 1;
+      min-height: 0; /* Prevents flex overflow */
+    }
+
+    /* ── 12. Footer ── */
+    .footer {
+      background: var(--surface);
+      padding: 48px 24px 64px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-logo {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .footer-tagline {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .footer-phone {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .footer-credit {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      color: var(--text-muted);
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-credit a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+
+    .footer-credit a:hover {
+      color: var(--text);
+      text-decoration: underline;
+    }
+
+    /* ── RESPONSIVE BREAKPOINTS ── */
+    @media (max-width: 588px) {
+      body {
+        background: var(--bg);
+        padding: 0;
+      }
+
+      .container {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .status-notch {
+        display: none;
+      }
+    }
+
+    @media (max-width: 428px) {
+      .status-bar {
+        padding: 0 16px;
+      }
+
+      .header {
+        padding: 16px 16px 8px;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .designer-credit {
+        padding: 8px 16px 16px;
+      }
+
+      .hero-section {
+        padding: 24px 16px 16px;
+      }
+
+      .hero-title {
+        font-size: 38px;
+      }
+
+      .hero-split-gallery {
+        padding: 0 16px 16px;
+        gap: 12px;
+      }
+
+      .left-col {
+        height: 280px;
+      }
+
+      .right-col {
+        height: 230px;
+      }
+
+      .stats-container {
+        padding: 8px 16px 24px;
+      }
+
+      .stats-row {
+        padding: 16px;
+      }
+
+      .stat-number {
+        font-size: 22px;
+      }
+
+      .obsidian-section {
+        padding: 36px 16px;
+        margin: 0 16px 24px;
+        border-radius: 24px;
+      }
+
+      .obsidian-title {
+        font-size: 28px;
+      }
+
+      .services-section {
+        padding: 0 16px 24px;
+      }
+
+      .services-title {
+        font-size: 28px;
+      }
+
+      .services-grid {
+        gap: 12px;
+      }
+
+      .services-grid .service-card {
+        padding: 16px 14px;
+      }
+
+      .banner-container {
+        padding: 0 16px 24px;
+      }
+
+      .amber-banner {
+        padding: 12px 16px;
+      }
+
+      .inquiry-section {
+        padding: 0 16px 24px;
+      }
+
+      .inquiry-title {
+        font-size: 28px;
+      }
+
+      .inquiry-card {
+        padding: 24px 16px;
+        border-radius: 20px;
+      }
+
+      .inquiry-card-title {
+        font-size: 24px;
+      }
+
+      .gallery-strip-section {
+        padding: 0 16px 24px;
+      }
+
+      .gallery-title {
+        font-size: 28px;
+      }
+
+      .gallery-grid-layout {
+        gap: 12px;
+        height: 320px;
+      }
+
+      .gallery-photo-stack {
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 374px) {
+      .hero-title {
+        font-size: 32px;
+      }
+
+      .left-col {
+        height: 240px;
+      }
+
+      .right-col {
+        height: 195px;
+      }
+
+      .stat-number {
+        font-size: 18px;
+      }
+
+      .stat-label {
+        font-size: 8px;
+        letter-spacing: 0.8px;
+      }
+
+      .obsidian-title {
+        font-size: 24px;
+      }
+
+      .obsidian-stat-number {
+        font-size: 22px;
+      }
+
+      .services-title {
+        font-size: 24px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .inquiry-title {
+        font-size: 24px;
+      }
+
+      .inquiry-card-title {
+        font-size: 20px;
+      }
+
+      .gallery-title {
+        font-size: 24px;
+      }
+
+      .gallery-grid-layout {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 12px;
+      }
+
+      .gallery-col-left {
+        height: 240px;
+      }
+
+      .gallery-col-right {
+        height: auto;
+      }
+
+      .gallery-photo-stack {
+        height: auto;
+        gap: 12px;
+      }
+
+      .gallery-photo-stack .gallery-photo-img {
+        height: 160px;
+        flex: none;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 1. iOS Status Bar -->
+  <div class="status-bar">
+    <span class="status-time">9:41</span>
+    <div class="status-notch"></div>
+    <div class="status-icons">
+      <!-- iOS Cellular Signal -->
+      <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="8" width="3" height="3" rx="0.5" fill="currentColor"/>
+        <rect x="4" y="6" width="3" height="5" rx="0.5" fill="currentColor"/>
+        <rect x="8" y="4" width="3" height="7" rx="0.5" fill="currentColor"/>
+        <rect x="12" y="1" width="3" height="10" rx="0.5" fill="currentColor"/>
+      </svg>
+      <!-- iOS Wifi -->
+      <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5 11C8.32843 11 9 10.3284 9 9.5C9 8.67157 8.32843 8 7.5 8C6.67157 8 6 8.67157 6 9.5C6 10.3284 6.67157 11 7.5 11Z" fill="currentColor"/>
+        <path d="M3.5 5.5C5.70914 3.29086 9.29086 3.29086 11.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M1 3C4.58985 -0.589851 10.4101 -0.589851 14 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <!-- iOS Battery -->
+      <div class="battery">
+        <div class="battery-level"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Brand Name Header -->
+  <header class="header">
+    <div class="logo">Glow Dent Clinic</div>
+  </header>
+
+  <!-- 3. Designer Credit Row -->
+  <div class="designer-credit">
+    <div class="designer-profile">
+      <div class="designer-avatar">UA</div>
+      <div class="designer-text">
+        <span class="designer-name">Usman A.</span>
+        <span class="designer-role">UI Designer</span>
+      </div>
+    </div>
+    <div class="designer-actions">
+      <button class="btn-follow">Follow</button>
+      <span class="badge-available">
+        <span class="badge-dot"></span>
+        Available for work
+      </span>
+    </div>
+  </div>
+
+  <!-- 4. Hero Section -->
+  <section class="hero-section">
+    <span class="hero-label-badge">TRUSTED DENTAL CARE</span>
+    <h1 class="hero-title">Modern Dentistry in 1</h1>
+    <p class="hero-desc">Glow Dent Clinic – Dr. Anjali Holambe | Dentist in Bandra | Goregaon Mumbai provides exceptional dental services to the 1 community. Rated 5.0 stars from 10 patient reviews — trusted care, gentle touch.</p>
+  </section>
+
+  <!-- 5. Split Image Gallery -->
+  <div class="hero-split-gallery">
+    <div class="hero-split-col left-col">
+      <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&h=800&fit=crop" alt="Salon Premium Session" class="hero-split-img">
+    </div>
+    <div class="hero-split-col right-col">
+      <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&h=800&fit=crop" alt="Salon Styling Care" class="hero-split-img">
+    </div>
+  </div>
+
+  <!-- 6. Stats Row -->
+  <div class="stats-container">
+    <div class="stats-row">
+      <div class="stat-item">
+        <div class="stat-number">5.0★</div>
+        <div class="stat-label">Google Rating</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">+10</div>
+        <div class="stat-label">Happy Reviews</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">+3k</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Dark Obsidian Section -->
+  <section class="obsidian-section">
+    <div class="obsidian-badge">About Us</div>
+    <h2 class="obsidian-title">New Patient Special</h2>
+    <p class="obsidian-text">First consultation + cleaning at a special rate. Experienced team, modern equipment, comfortable care.</p>
+    
+    <div class="obsidian-stats">
+      <div class="obsidian-stat-col">
+        <div class="obsidian-stat-number">+105k</div>
+        <div class="obsidian-stat-label">Completed Sessions</div>
+      </div>
+      <div class="obsidian-stat-col">
+        <div class="obsidian-stat-number">+10k</div>
+        <div class="obsidian-stat-label">Active Members</div>
+      </div>
+    </div>
+
+    <div class="obsidian-cta-container">
+      <a href="tel:919820088784" class="btn-obsidian-cta">
+        <span>Call to Book</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- 8. Service Cards -->
+  <section class="services-section">
+    <span class="services-tag">Services</span>
+    <h2 class="services-title">Our Services</h2>
+    <div class="services-grid">
+          <div class="service-card"><h3>General Dentistry</h3><p>Cleanings, fillings, root canals & preventive care</p></div>
+    <div class="service-card"><h3>Cosmetic Dentistry</h3><p>Veneers, whitening & complete smile makeovers</p></div>
+    <div class="service-card"><h3>Orthodontics</h3><p>Braces & Invisalign for perfect alignment</p></div>
+    <div class="service-card"><h3>Emergency Care</h3><p>Same-day appointments for dental emergencies</p></div>
+    </div>
+  </section>
+
+  <!-- 9. Amber/Terracotta CTA Banner -->
+  <div class="banner-container">
+    <div class="amber-banner">
+      <div class="banner-text">AVAILABLE FOR NEW CLIENTS</div>
+      <div class="banner-dot">•</div>
+      <div class="banner-text">PREMIUM SALON IN 1</div>
+      <div class="banner-dot">•</div>
+      <div class="banner-text">BOOK TODAY</div>
+    </div>
+  </div>
+
+  <!-- 10. Booking/Contact Section -->
+  <section class="inquiry-section">
+    <span class="inquiry-tag">WORK INQUIRY</span>
+    <h2 class="inquiry-title">Contact Me:</h2>
+    
+    <div class="inquiry-card">
+      <h3 class="inquiry-card-title">Ready for a healthier smile?</h3>
+      <p class="inquiry-card-text">Call or message us today. Walk-ins welcome.</p>
+      
+      <div class="inquiry-details">
+        <div class="inquiry-row">
+          <span class="inquiry-lbl">Call Us Directly</span>
+          <a href="tel:919820088784" class="inquiry-val">+91 98200 88784</a>
+        </div>
+        <div class="inquiry-row">
+          <span class="inquiry-lbl">Our Location</span>
+          <span class="inquiry-val">1, Agnelo Building, Kadeshwari Mandir Rd, Mount Mary, Bandra West, Mumbai, Maharashtra 400050, India</span>
+        </div>
+      </div>
+
+      <div class="inquiry-cta">
+        <a href="https://wa.me/919820088784" class="btn-whatsapp-cta">
+          <span>Book Appointment →</span>
+          <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Gallery (OUR WORKS style) -->
+  <section class="gallery-strip-section">
+    <span class="gallery-tag">Our Work</span>
+    <h2 class="gallery-title">Our Works</h2>
+    
+    <div class="gallery-grid-layout">
+      <div class="gallery-col-left">
+        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=600&h=800&fit=crop" alt="Gallery Work 1" class="gallery-photo-img">
+      </div>
+      <div class="gallery-col-right">
+        <div class="gallery-photo-stack">
+          <img src="https://images.unsplash.com/photo-1512223792601-592a9809eed4?w=600&h=800&fit=crop" alt="Gallery Work 2" class="gallery-photo-img">
+          <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=600&h=400&fit=crop" alt="Gallery Work 3" class="gallery-photo-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Footer -->
+  <footer class="footer">
+    <div class="footer-logo">Glow Dent Clinic</div>
+    <p class="footer-tagline">Preview built for Glow Dent Clinic – Dr. Anjali Holambe | Dentist in Bandra | Goregaon Mumbai</p>
+    <p class="footer-phone">Call us: +91 98200 88784</p>
+    <div class="footer-credit">
+      Want a website like this? <a href="https://wa.me/918828022624">Message Kevin on WhatsApp</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
