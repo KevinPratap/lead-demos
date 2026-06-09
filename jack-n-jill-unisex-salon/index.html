@@ -3,22 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JACK N JILL UNISEX SALON — Website Preview</title>
+  <title>JACK N JILL UNISEX SALON</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --accent: #b76e5a;
-      --accent-light: #fdf2ed;
-      --bg: #FCFAF7; /* Warm cream base */
-      --surface: #FFFFFF;
-      --text: #1C1B19; /* Obsidian Black */
-      --text-muted: #797670; /* Warm Gray */
-      --border: #F0EDE6;
-      --radius-lg: 32px;
-      --radius-md: 20px;
-      --radius-sm: 12px;
+      --accent-light: #f7f0ee;
+      --accent-dark: #804d3e;
+      --bg: #fafafa;
+      --text: #111111;
+      --text-light: #666666;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     * {
@@ -27,914 +25,848 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background: var(--bg);
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      color: var(--text);
-      line-height: 1.5;
-      display: flex;
-      justify-content: center;
-      min-height: 100vh;
     }
 
     .container {
-      width: 100%;
-      max-width: 588px; /* Mobile-first container */
-      background: var(--bg);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
     }
 
-    /* ── 2. Brand Name Header ── */
-    .header {
-      background: var(--bg);
-      padding: 24px 24px 12px;
-      text-align: left;
-    }
-
-    .logo {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 24px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      color: var(--text);
-      text-transform: uppercase;
-    }
-
-    /* ── 4. Hero Section ── */
-    .hero-section {
-      padding: 32px 24px 24px;
-      background: var(--bg);
-    }
-
-    .hero-label-badge {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 11px;
+    /* Typography & Badges */
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 2.5px;
+      letter-spacing: 0.12em;
       color: var(--accent);
-      display: inline-block;
-      margin-bottom: 12px;
+      margin-bottom: 1.25rem;
     }
 
-    .hero-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 50px;
-      font-weight: 300;
-      line-height: 1.05;
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 2.25rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #ffffff;
+      border: 1px solid transparent;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
       color: var(--text);
-      letter-spacing: -1.5px;
-      margin-bottom: 18px;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+      border-color: rgba(0, 0, 0, 0.2);
+    }
+
+    /* Header & Navigation */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .nav-logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-light);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .btn-nav {
+      padding: 0.55rem 1.35rem;
+      background-color: var(--accent);
+      color: #ffffff !important;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .btn-nav:hover {
+      background-color: var(--accent-dark);
+    }
+
+    /* Hero Section (50/50 Split) */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: calc(100vh - 80px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .hero-image-side {
+      position: relative;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+
+    .hero-image-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .hero-content-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6rem 10% 6rem 8%;
+      background-color: var(--bg);
+    }
+
+    .hero-content-side h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 1.5rem;
     }
 
     .hero-desc {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 14px;
-      line-height: 1.6;
-      color: var(--text-muted);
-      font-weight: 400;
-      max-width: 92%;
+      font-size: 1.15rem;
+      color: var(--text-light);
+      line-height: 1.65;
+      margin-bottom: 3.5rem;
     }
 
-    /* ── 5. Split Image Gallery ── */
-    .hero-split-gallery {
+    .hero-stats {
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 16px;
-      padding: 0 24px 24px;
-      background: var(--bg);
-    }
-
-    .hero-split-col {
-      position: relative;
-      overflow: hidden;
-      border-radius: 24px;
-      background: var(--border);
-    }
-
-    .left-col {
-      height: 340px;
-    }
-
-    .right-col {
-      height: 280px;
-      margin-top: auto; /* Asymmetrical stagger */
-    }
-
-    .hero-split-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .hero-split-col:hover .hero-split-img {
-      transform: scale(1.04);
-    }
-
-    /* ── 6. Stats Row ── */
-    .stats-container {
-      padding: 12px 24px 32px;
-      background: var(--bg);
-    }
-
-    .stats-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 24px;
-      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      padding-top: 3.5rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
     }
 
     .stat-item {
-      flex: 1;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
     }
 
     .stat-number {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 26px;
+      font-size: 2.75rem;
       font-weight: 800;
-      color: var(--text);
-      letter-spacing: -1px;
+      letter-spacing: -0.04em;
+      color: var(--accent-dark);
       line-height: 1;
-      margin-bottom: 6px;
     }
 
     .stat-label {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--text-muted);
-    }
-
-    /* ── 7. Dark Obsidian Section ── */
-    .obsidian-section {
-      background: #1C1B19; /* Obsidian Black */
-      color: #FFFFFF;
-      padding: 48px 24px;
-      margin: 0 24px 32px;
-      border-radius: 32px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    }
-
-    .obsidian-badge {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-
-    .obsidian-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 36px;
-      font-weight: 300;
-      line-height: 1.15;
-      color: #FFFFFF;
-      margin-bottom: 16px;
-      letter-spacing: -0.5px;
-    }
-
-    .obsidian-text {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13.5px;
-      line-height: 1.6;
-      color: #A3A19C;
-      margin-bottom: 32px;
-    }
-
-    .obsidian-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-bottom: 32px;
-      padding-top: 24px;
-      border-top: 1px solid #2D2C28;
-    }
-
-    .obsidian-stat-col {
-      text-align: left;
-    }
-
-    .obsidian-stat-number {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 28px;
-      font-weight: 800;
-      color: #FFFFFF;
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-
-    .obsidian-stat-label {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 9px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #797670;
-    }
-
-    .btn-obsidian-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: #FFFFFF;
-      color: #1C1B19;
-      text-decoration: none;
-      padding: 0 24px;
-      height: 48px;
-      border-radius: 14px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      gap: 8px;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 12px rgba(255,255,255,0.05);
-    }
-
-    .btn-obsidian-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(255,255,255,0.15);
-    }
-
-    /* ── 8. Service Cards ── */
-    .services-section {
-      padding: 0 24px 32px;
-      background: var(--bg);
-    }
-
-    .services-tag {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      color: var(--accent);
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    .services-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
-      font-weight: 300;
-      line-height: 1.2;
-      color: var(--text);
-      margin-bottom: 24px;
-      letter-spacing: -0.5px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    .services-grid .service-card {
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 24px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 4px 12px rgba(28,27,25,0.01);
-    }
-
-    .services-grid .service-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent);
-      box-shadow: 0 12px 24px rgba(28,27,25,0.04);
-    }
-
-    .services-grid .service-icon {
-      width: 42px;
-      height: 42px;
-      background: var(--accent-light);
-      color: var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      margin-bottom: 16px;
-    }
-
-    .services-grid .service-card h3 {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 8px;
-      letter-spacing: -0.2px;
-    }
-
-    .services-grid .service-card p {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 11.5px;
-      line-height: 1.45;
-      color: var(--text-muted);
-      margin: 0;
-    }
-
-    /* ── 9. Amber/Terracotta CTA Banner ── */
-    .banner-container {
-      padding: 0 24px 32px;
-      background: var(--bg);
-    }
-
-    .amber-banner {
-      background: var(--accent); /* Terracotta / Accent color */
-      color: #FFFFFF;
-      border-radius: 20px;
-      padding: 16px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 8px 24px rgba(28,27,25,0.05);
-      overflow: hidden;
-    }
-
-    .banner-text {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .banner-dot {
-      font-size: 14px;
-      opacity: 0.6;
-    }
-
-    /* ── 10. Contact / Inquiry Section ── */
-    .inquiry-section {
-      padding: 0 24px 32px;
-      background: var(--bg);
-    }
-
-    .inquiry-tag {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-      display: block;
-    }
-
-    .inquiry-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
-      font-weight: 300;
-      color: var(--text);
-      margin-bottom: 20px;
-      letter-spacing: -0.5px;
-    }
-
-    .inquiry-card {
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 32px 24px;
-      box-shadow: 0 4px 20px rgba(28,27,25,0.01);
-    }
-
-    .inquiry-card-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 28px;
-      font-weight: 400;
-      line-height: 1.2;
-      color: var(--text);
-      margin-bottom: 12px;
-    }
-
-    .inquiry-card-text {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13.5px;
-      line-height: 1.6;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-    }
-
-    .inquiry-details {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 16px 0;
-      margin-bottom: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .inquiry-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .inquiry-lbl {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--text-muted);
-    }
-
-    .inquiry-val {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13px;
+      font-size: 0.8rem;
       font-weight: 600;
-      color: var(--text);
-      text-decoration: none;
-      padding: 6px 0; /* Ensures 48px tap target depth when combined */
-    }
-
-    .inquiry-val:hover {
-      color: var(--accent);
-    }
-
-    .btn-whatsapp-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: #1C1B19;
-      color: #FFFFFF;
-      text-decoration: none;
-      width: 100%;
-      height: 52px;
-      border-radius: 16px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      gap: 8px;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 4px 14px rgba(28,27,25,0.1);
-    }
-
-    .btn-whatsapp-cta:hover {
-      background: var(--accent);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(28,27,25,0.2);
-    }
-
-    .btn-arrow {
-      transition: transform 0.25s ease;
-    }
-
-    .btn-whatsapp-cta:hover .btn-arrow {
-      transform: translateX(4px);
-    }
-
-    /* ── 11. Gallery Strip Section ── */
-    .gallery-strip-section {
-      padding: 0 24px 32px;
-      background: var(--bg);
-    }
-
-    .gallery-tag {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
+      color: var(--text-light);
       text-transform: uppercase;
-      letter-spacing: 3px;
-      color: var(--text-muted);
-      display: block;
-      margin-bottom: 4px;
+      letter-spacing: 0.08em;
     }
 
-    .gallery-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
-      font-weight: 300;
+    /* Services Section */
+    .services-section {
+      padding: 10rem 0;
+      background-color: var(--bg);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .section-header {
+      margin-bottom: 6rem;
+      text-align: center;
+    }
+
+    .section-header h2 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
       color: var(--text);
-      margin-bottom: 20px;
-      letter-spacing: -0.5px;
     }
 
-    .gallery-grid-layout {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 16px;
-      height: 380px;
+    .services-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
     }
 
-    .gallery-col-left {
-      height: 100%;
-      border-radius: 24px;
+    /* Alternating Services Layout */
+    .service-card, .service-item, .service-row {
+      display: flex;
+      align-items: center;
+      gap: 6rem;
+    }
+
+    .service-card:nth-child(even), .service-item:nth-child(even), .service-row:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .service-image-wrapper, .service-card-image, .service-img {
+      flex: 1;
+      aspect-ratio: 16/11;
+      border-radius: 12px;
       overflow: hidden;
-      background: var(--border);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.03);
     }
 
-    .gallery-col-right {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .gallery-photo-stack {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .gallery-photo-img {
+    .service-image-wrapper img, .service-card-image img, .service-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
-      border-radius: 20px;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: var(--transition);
     }
 
-    .gallery-col-left:hover .gallery-photo-img,
-    .gallery-photo-stack .gallery-photo-img:hover {
-      transform: scale(1.03);
+    .service-image-wrapper img:hover, .service-card-image img:hover, .service-img img:hover {
+      transform: scale(1.02);
     }
 
-    .gallery-photo-stack .gallery-photo-img {
+    .service-content, .service-card-info, .service-info {
       flex: 1;
-      min-height: 0; /* Prevents flex overflow */
     }
 
-    /* ── 12. Footer ── */
-    .footer {
-      background: var(--surface);
-      padding: 48px 24px 64px;
+    .service-content h3, .service-card-info h3, .service-info h3 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .service-content p, .service-card-info p, .service-info p {
+      color: var(--text-light);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* Featured Banner Section */
+    .featured-section {
+      padding: 10rem 0;
+      background-color: var(--bg);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .featured-banner {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      background-color: var(--accent-light);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.04);
+    }
+
+    .featured-content {
+      padding: 6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .featured-content h2 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .featured-content p {
+      font-size: 1.15rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    .featured-image {
+      position: relative;
+      min-height: 400px;
+    }
+
+    .featured-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Dark Testimonial Section */
+    .testimonial-section {
+      background-color: var(--accent-dark);
+      color: #ffffff;
+      padding: 12rem 0;
       text-align: center;
-      border-top: 1px solid var(--border);
+      position: relative;
+    }
+
+    .testimonial-container {
+      max-width: 850px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .quote-icon {
+      font-family: 'Inter', Georgia, serif;
+      font-size: 9rem;
+      line-height: 1;
+      color: rgba(255, 255, 255, 0.08);
+      margin-bottom: -2.5rem;
+    }
+
+    .testimonial-quote {
+      font-size: 2.5rem;
+      font-weight: 500;
+      line-height: 1.45;
+      letter-spacing: -0.02em;
+      margin-bottom: 3.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .author-name {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .author-title {
+      display: block;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 0.3rem;
+    }
+
+    .testimonial-meta {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .rating-stars {
+      color: #ffb800;
+      font-size: 1.35rem;
+      letter-spacing: 0.12em;
+    }
+
+    .rating-text {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+      letter-spacing: 0.02em;
+    }
+
+    /* Masonry Gallery Section */
+    .gallery-section {
+      padding: 10rem 0;
+      background-color: var(--bg);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .gallery-grid {
+      column-count: 3;
+      column-gap: 2.25rem;
+    }
+
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 2.25rem;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: var(--bg);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.015);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: var(--transition);
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Centered CTA Section */
+    .cta-section {
+      padding: 12rem 0;
+      text-align: center;
+      background-color: var(--bg);
+    }
+
+    .cta-container {
+      max-width: 750px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cta-container h2 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+      line-height: 1.15;
+    }
+
+    .cta-container p {
+      font-size: 1.25rem;
+      color: var(--text-light);
+      line-height: 1.65;
+      margin-bottom: 3.5rem;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .phone-label {
+      font-size: 1rem;
+      color: var(--text-light);
+    }
+
+    .phone-label strong {
+      color: var(--text);
+    }
+
+    /* Minimal Footer */
+    .footer {
+      background-color: var(--bg);
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 7rem 0 4rem 0;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 4rem;
+      margin-bottom: 5rem;
+    }
+
+    .footer-left {
+      max-width: 320px;
     }
 
     .footer-logo {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 18px;
+      font-size: 1.5rem;
       font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: -0.03em;
       color: var(--text);
-      margin-bottom: 12px;
+      display: block;
+      margin-bottom: 1.25rem;
     }
 
     .footer-tagline {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-bottom: 4px;
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
     }
 
-    .footer-phone {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-bottom: 24px;
+    .footer-right {
+      display: flex;
+      gap: 5rem;
     }
 
-    /* ── RESPONSIVE BREAKPOINTS ── */
-
-    @media (max-width: 428px) {
-      .header {
-        padding: 16px 16px 8px;
-      }
-
-      .logo {
-        font-size: 20px;
-      }
-
-      .hero-section {
-        padding: 24px 16px 16px;
-      }
-
-      .hero-title {
-        font-size: 38px;
-      }
-
-      .hero-split-gallery {
-        padding: 0 16px 16px;
-        gap: 12px;
-      }
-
-      .left-col {
-        height: 280px;
-      }
-
-      .right-col {
-        height: 230px;
-      }
-
-      .stats-container {
-        padding: 8px 16px 24px;
-      }
-
-      .stats-row {
-        padding: 16px;
-      }
-
-      .stat-number {
-        font-size: 22px;
-      }
-
-      .obsidian-section {
-        padding: 36px 16px;
-        margin: 0 16px 24px;
-        border-radius: 24px;
-      }
-
-      .obsidian-title {
-        font-size: 28px;
-      }
-
-      .services-section {
-        padding: 0 16px 24px;
-      }
-
-      .services-title {
-        font-size: 28px;
-      }
-
-      .services-grid {
-        gap: 12px;
-      }
-
-      .services-grid .service-card {
-        padding: 16px 14px;
-      }
-
-      .banner-container {
-        padding: 0 16px 24px;
-      }
-
-      .amber-banner {
-        padding: 12px 16px;
-      }
-
-      .inquiry-section {
-        padding: 0 16px 24px;
-      }
-
-      .inquiry-title {
-        font-size: 28px;
-      }
-
-      .inquiry-card {
-        padding: 24px 16px;
-        border-radius: 20px;
-      }
-
-      .inquiry-card-title {
-        font-size: 24px;
-      }
-
-      .gallery-strip-section {
-        padding: 0 16px 24px;
-      }
-
-      .gallery-title {
-        font-size: 28px;
-      }
-
-      .gallery-grid-layout {
-        gap: 12px;
-        height: 320px;
-      }
-
-      .gallery-photo-stack {
-        gap: 12px;
-      }
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
     }
 
-    @media (max-width: 374px) {
-      .hero-title {
-        font-size: 32px;
-      }
+    .footer-info-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+    }
 
-      .left-col {
-        height: 240px;
-      }
+    .footer-info a, .footer-info span {
+      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
+      transition: var(--transition);
+    }
 
-      .right-col {
-        height: 195px;
-      }
+    .footer-info a:hover {
+      color: var(--accent);
+    }
 
-      .stat-number {
-        font-size: 18px;
-      }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
 
-      .stat-label {
-        font-size: 8px;
-        letter-spacing: 0.8px;
-      }
+    .footer-bottom p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
 
-      .obsidian-title {
-        font-size: 24px;
-      }
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+    }
 
-      .obsidian-stat-number {
-        font-size: 22px;
-      }
+    .footer-links a {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      text-decoration: none;
+      transition: var(--transition);
+    }
 
-      .services-title {
-        font-size: 24px;
-      }
+    .footer-links a:hover {
+      color: var(--text);
+    }
 
-      .services-grid {
+    /* Responsive Breakpoints */
+    @media (max-width: 991px) {
+      .hero {
         grid-template-columns: 1fr;
-        gap: 12px;
       }
-
-      .inquiry-title {
-        font-size: 24px;
+      .hero-image-side {
+        height: 450px;
       }
-
-      .inquiry-card-title {
-        font-size: 20px;
+      .hero-image-side img {
+        position: relative;
       }
-
-      .gallery-title {
-        font-size: 24px;
+      .hero-content-side {
+        padding: 5rem 2rem;
       }
-
-      .gallery-grid-layout {
+      .hero-content-side h1 {
+        font-size: 3rem;
+      }
+      .featured-banner {
         grid-template-columns: 1fr;
-        height: auto;
-        gap: 12px;
       }
-
-      .gallery-col-left {
-        height: 240px;
+      .featured-image {
+        height: 350px;
+        min-height: auto;
       }
-
-      .gallery-col-right {
-        height: auto;
+      .featured-content {
+        padding: 4rem 2.5rem;
       }
-
-      .gallery-photo-stack {
-        height: auto;
-        gap: 12px;
+      .featured-content h2 {
+        font-size: 2.25rem;
       }
+      .services-section, .featured-section, .gallery-section, .cta-section {
+        padding: 7rem 0;
+      }
+      .gallery-grid {
+        column-count: 2;
+        column-gap: 1.5rem;
+      }
+      .gallery-item {
+        margin-bottom: 1.5rem;
+      }
+    }
 
-      .gallery-photo-stack .gallery-photo-img {
-        height: 160px;
-        flex: none;
+    @media (max-width: 768px) {
+      .navbar-container {
+        height: 70px;
+      }
+      .nav-links {
+        gap: 1.5rem;
+      }
+      .nav-links a:not(.btn-nav) {
+        display: none;
+      }
+      .service-card, .service-item, .service-row {
+        flex-direction: column !important;
+        gap: 3rem;
+      }
+      .service-image-wrapper, .service-card-image, .service-img {
+        width: 100%;
+      }
+      .service-content h3, .service-card-info h3, .service-info h3 {
+        font-size: 1.75rem;
+      }
+      .testimonial-quote {
+        font-size: 1.85rem;
+      }
+      .testimonial-section {
+        padding: 8rem 0;
+      }
+      .cta-container h2 {
+        font-size: 2.75rem;
+      }
+      .footer-container {
+        flex-direction: column;
+        gap: 3rem;
+      }
+      .footer-right {
+        flex-direction: column;
+        gap: 2.5rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1.25rem;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        column-count: 1;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .hero-content-side h1 {
+        font-size: 2.5rem;
       }
     }
   </style>
 </head>
 <body>
-<div class="container">
 
-  <!-- 2. Brand Name Header -->
-  <header class="header">
-    <div class="logo">JACK N JILL</div>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <a href="#" class="nav-logo">JACK N JILL</a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#featured">Featured</a>
+        <a href="#gallery">Gallery</a>
+        <a href="tel:919076054777" class="btn btn-nav">Call Now</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- 4. Hero Section -->
-  <section class="hero-section">
-    <span class="hero-label-badge">PREMIUM SALON</span>
-    <h1 class="hero-title">Look & Feel Your Best in Ground Floor</h1>
-    <p class="hero-desc">JACK N JILL UNISEX SALON is Ground Floor's go-to destination for beauty and wellness. 4.9 stars from 98 happy clients — because you deserve the best.</p>
-  </section>
-
-  <!-- 5. Split Image Gallery -->
-  <div class="hero-split-gallery">
-    <div class="hero-split-col left-col">
-      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=800&fit=crop" alt="Salon Premium Session" class="hero-split-img">
+  <!-- Split Hero Section -->
+  <section class="hero">
+    <div class="hero-image-side">
+      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80" alt="JACK N JILL UNISEX SALON Hero Image">
     </div>
-    <div class="hero-split-col right-col">
-      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=800&fit=crop" alt="Salon Styling Care" class="hero-split-img">
-    </div>
-  </div>
-
-  <!-- 6. Stats Row -->
-  <div class="stats-container">
-    <div class="stats-row">
-      <div class="stat-item">
-        <div class="stat-number">4.9★</div>
-        <div class="stat-label">Google Rating</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">+98</div>
-        <div class="stat-label">Happy Reviews</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">+3k</div>
-        <div class="stat-label">Happy Clients</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 7. Dark Obsidian Section -->
-  <section class="obsidian-section">
-    <div class="obsidian-badge">About Us</div>
-    <h2 class="obsidian-title">First-Time Client Offer</h2>
-    <p class="obsidian-text">Enjoy 20% off your first visit. Experience premium care from Ground Floor's top-rated beauty professionals.</p>
-    
-    <div class="obsidian-stats">
-      <div class="obsidian-stat-col">
-        <div class="obsidian-stat-number">+105k</div>
-        <div class="obsidian-stat-label">Completed Sessions</div>
-      </div>
-      <div class="obsidian-stat-col">
-        <div class="obsidian-stat-number">+10k</div>
-        <div class="obsidian-stat-label">Active Members</div>
-      </div>
-    </div>
-
-    <div class="obsidian-cta-container">
-      <a href="tel:919076054777" class="btn-obsidian-cta">
-        <span>Call to Reserve</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- 8. Service Cards -->
-  <section class="services-section">
-    <span class="services-tag">Services</span>
-    <h2 class="services-title">What We Offer</h2>
-    <div class="services-grid">
-          <div class="service-card"><h3>Hair Styling</h3><p>Cuts, color, treatments & styling for all hair types</p></div>
-    <div class="service-card"><h3>Skin Care</h3><p>Facials, cleanups & advanced skin treatments</p></div>
-    <div class="service-card"><h3>Makeup Artistry</h3><p>Bridal, party & professional makeup</p></div>
-    <div class="service-card"><h3>Spa & Wellness</h3><p>Relaxing massages, body treatments & more</p></div>
-    </div>
-  </section>
-
-  <!-- 9. Amber/Terracotta CTA Banner -->
-  <div class="banner-container">
-    <div class="amber-banner">
-      <div class="banner-text">AVAILABLE FOR NEW CLIENTS</div>
-      <div class="banner-dot">•</div>
-      <div class="banner-text">PREMIUM SALON IN Ground Floor</div>
-      <div class="banner-dot">•</div>
-      <div class="banner-text">BOOK TODAY</div>
-    </div>
-  </div>
-
-  <!-- 10. Contact Section -->
-  <section class="inquiry-section">
-    <h2 class="inquiry-title">Book your glow-up</h2>
-    <p class="inquiry-card-text">Slots fill fast — message us to secure your appointment.</p>
-    
-    <div class="inquiry-cta">
-      <a href="tel:919076054777" class="btn-obsidian-cta">Call +91 90760 54777</a>
-    </div>
-    <div class="inquiry-cta" style="margin-top:12px;">
-      <a href="https://wa.me/919076054777" class="btn-whatsapp-cta">
-          <span>Message on WhatsApp →</span>
-          <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-  </section>
-
-  <!-- 11. Gallery -->
-  <section class="gallery-strip-section">
-    <span class="gallery-tag">Our Work</span>
-    
-    <div class="gallery-grid-layout">
-      <div class="gallery-col-left">
-        <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&h=800&fit=crop" alt="Gallery Work 1" class="gallery-photo-img">
-      </div>
-      <div class="gallery-col-right">
-        <div class="gallery-photo-stack">
-          <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=600&h=800&fit=crop" alt="Gallery Work 2" class="gallery-photo-img">
-          <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&h=400&fit=crop" alt="Gallery Work 3" class="gallery-photo-img">
+    <div class="hero-content-side">
+      <span class="badge">PREMIUM SALON</span>
+      <h1>Look & Feel Your Best in Ground Floor</h1>
+      <p class="hero-desc">JACK N JILL UNISEX SALON is Ground Floor's go-to destination for beauty and wellness. 4.9 stars from 98 happy clients — because you deserve the best.</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Years of Care</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">4.9</span>
+          <span class="stat-label">Average Rating</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">98</span>
+          <span class="stat-label">Verified Reviews</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 12. Footer -->
+  <!-- Alternating Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Expert Care</span>
+        <h2>What We Offer</h2>
+      </div>
+      <div class="services-container">
+            <div class="service-card"><h3>Hair Styling</h3><p>Cuts, color, treatments & styling for all hair types</p></div>
+    <div class="service-card"><h3>Skin Care</h3><p>Facials, cleanups & advanced skin treatments</p></div>
+    <div class="service-card"><h3>Makeup Artistry</h3><p>Bridal, party & professional makeup</p></div>
+    <div class="service-card"><h3>Spa & Wellness</h3><p>Relaxing massages, body treatments & more</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Banner Section -->
+  <section id="featured" class="featured-section">
+    <div class="container">
+      <div class="featured-banner">
+        <div class="featured-content">
+          <span class="badge">Featured Service</span>
+          <h2>First-Time Client Offer</h2>
+          <p>Enjoy 20% off your first visit. Experience premium care from Ground Floor's top-rated beauty professionals.</p>
+          <a href="tel:919076054777" class="btn btn-secondary">Call to Reserve</a>
+        </div>
+        <div class="featured-image">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1000&q=80" alt="First-Time Client Offer">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Quote Section (Full Width Dark) -->
+  <section class="testimonial-section">
+    <div class="container testimonial-container">
+      <div class="quote-icon">“</div>
+      <blockquote class="testimonial-quote">
+        "The level of care and professional expertise at JACK N JILL UNISEX SALON is truly unmatched. They made me feel completely at ease throughout my entire treatment journey, and the results speak for themselves."
+      </blockquote>
+      <div class="testimonial-author">
+        <span class="author-name">Sarah Jenkins</span>
+        <span class="author-title">Verified Patient</span>
+        <div class="testimonial-meta">
+          <div class="rating-stars">★★★★★</div>
+          <span class="rating-text">4.9 / 5.0 Rating based on 98 Reviews</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Masonry Gallery Section -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Our Space</span>
+        <h2>Our Work</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="Clinic Interior Detail">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=800&h=1000&q=80" alt="Modern Consultation Room">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="Our Medical Specialists">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&h=1100&q=80" alt="Advanced Medical Diagnostics">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" alt="Clinical Laboratory Equipment">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Patient Care Excellence">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Centered CTA Section -->
+  <section class="cta-section">
+    <div class="container cta-container">
+      <span class="badge">Book Now</span>
+      <h2>Book your glow-up</h2>
+      <p>Slots fill fast — message us to secure your appointment.</p>
+      <div class="cta-actions">
+        <a href="tel:919076054777" class="btn btn-primary">Message on WhatsApp →</a>
+        <span class="phone-label">Or call us directly at <strong>919076054777</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
   <footer class="footer">
-    <div class="footer-logo">JACK N JILL</div>
-    <p class="footer-tagline">Preview built for JACK N JILL UNISEX SALON</p>
-    <p class="footer-phone">Call us: +91 90760 54777</p>
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-logo">JACK N JILL</span>
+        <p class="footer-tagline">Providing exceptional healthcare services with advanced technology and professional experts.</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-info">
+          <span class="footer-info-title">Contact</span>
+          <a href="tel:919076054777">919076054777</a>
+        </div>
+        <div class="footer-info">
+          <span class="footer-info-title">Location</span>
+          <span>Ground Floor, Shop No. 4, Bapurao Jagtap Marg, Saat Rasta, Jacob Circle, Mumbai, Maharashtra 400011, India</span>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 JACK N JILL UNISEX SALON. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
   </footer>
 
-</div>
 </body>
 </html>
