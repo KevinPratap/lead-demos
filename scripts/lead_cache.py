@@ -49,14 +49,35 @@ def connect() -> sqlite3.Connection:
 
 
 def ingest(items: list[dict]) -> tuple[int, int]:
-    """Upsert a batch. Returns (inserted_or_updated, skipped)."""
+    """Upsert a batch. Returns (inserted_or_updated, skipped).
+
+    Handles both Apify (placeId/title/totalScore/...) and Google Maps
+    (place_id/name/rating/...) field naming conventions.
+    """
     now = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     n = 0
     with closing(connect()) as c:
         for it in items:
-            pid = it.get("placeId")
+            # Handle both Apify and Google Maps field names
+            pid = it.get("place_id") or it.get("placeId")
             if not pid:
                 continue
+
+            name = it.get("name") or it.get("title", "")
+            phone = it.get("phone") or it.get("phoneUnformatted", "")
+            address = it.get("address", "")
+            website = it.get("website") or None
+            if website == "":  # normalize empty string to NULL
+                website = None
+            google_url = it.get("google_url") or it.get("url", "")
+            rating = it.get("rating") or it.get("totalScore")
+            reviews = it.get("reviews") or it.get("reviewsCount", 0)
+            category = it.get("category") or it.get("categoryName", "")
+            image_url = it.get("image_url") or it.get("imageUrl")
+            image_urls_raw = it.get("image_urls") or it.get("imageUrls") or []
+            image_urls = ",".join(image_urls_raw) if isinstance(image_urls_raw, list) else str(image_urls_raw)
+            scraped_at = it.get("scraped_at") or it.get("scrapedAt", now)
+
             c.execute(
                 """
                 INSERT INTO leads
@@ -78,19 +99,9 @@ def ingest(items: list[dict]) -> tuple[int, int]:
                     scraped_at=excluded.scraped_at
                 """,
                 (
-                    pid,
-                    it.get("title"),
-                    it.get("phone") or it.get("phoneUnformatted"),
-                    it.get("address"),
-                    (it.get("website") or None) or None,  # normalize '' to NULL
-                    it.get("url"),
-                    it.get("totalScore"),
-                    it.get("reviewsCount"),
-                    it.get("categoryName"),
-                    it.get("imageUrl"),
-                    ",".join(it.get("imageUrls") or []),
-                    it.get("scrapedAt"),
-                    now,
+                    pid, name, phone, address, website, google_url,
+                    rating, reviews, category, image_url, image_urls,
+                    scraped_at, now,
                 ),
             )
             n += 1
