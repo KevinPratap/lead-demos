@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo Sites Index — Private</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,sans-serif;background:#0a0a0a;color:#e5e5e5;min-height:100vh;-webkit-font-smoothing:antialiased}
+.header{padding:3rem 2rem 2rem;border-bottom:1px solid #1a1a1a;background:#0a0a0a;position:sticky;top:0;z-index:10}
+.header h1{font-size:1.4rem;font-weight:300;letter-spacing:-.02em;color:#fff}
+.header p{font-size:.8rem;color:#555;margin-top:.3rem;font-weight:300}
+.filters{padding:1.5rem 2rem;display:flex;gap:.5rem;flex-wrap:wrap;border-bottom:1px solid #1a1a1a}
+.filter-btn{padding:.4rem 1rem;font-size:.75rem;font-weight:400;border:1px solid #222;border-radius:100px;background:transparent;color:#666;cursor:pointer;transition:all .2s ease;font-family:'Inter',sans-serif;letter-spacing:.02em}
+.filter-btn:hover{border-color:#444;color:#999}
+.filter-btn.active{background:#fff;color:#000;border-color:#fff}
+.stats{padding:1.5rem 2rem;font-size:.75rem;color:#444;font-weight:300;letter-spacing:.03em}
+.stats span{color:#666}
+.grid{padding:0 2rem 3rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1px;background:#111}
+.card{background:#0a0a0a;padding:1.5rem;transition:background .2s ease}
+.card:hover{background:#111}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.8rem}
+.card-niche{font-size:.65rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .6rem;border-radius:100px;border:1px solid #222;color:#555}
+.niche-dental{border-color:#1e3a5f;color:#5b8eb8}
+.niche-salon{border-color:#5c2d1e;color:#c4846a}
+.nique-spa{border-color:#4a3628;color:#c49a6c}
+.niche-yoga{border-color:#1a3d2e;color:#5dab8a}
+.niche-gym{border-color:#3d3d1a;color:#a0a050}
+.niche-physio{border-color:#1e3a5f;color:#5b8eb8}
+.niche-cafe{border-color:#3d2e1a;color:#b89a5b}
+.niche-skin{border-color:#4a2840;color:#b86a9e}
+.niche-bakery{border-color:#3d2e1a;color:#b89a5b}
+.niche-other{border-color:#333;color:#666}
+.card-name{font-size:.95rem;font-weight:400;color:#ddd;letter-spacing:-.01em;margin-bottom:.3rem}
+.card-phone{font-size:.8rem;color:#555;font-weight:300;margin-bottom:1rem;font-variant-numeric:tabular-nums}
+.card-links{display:flex;gap:.5rem}
+.card-links a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .9rem;font-size:.72rem;font-weight:400;border-radius:100px;text-decoration:none;letter-spacing:.02em;transition:all .2s ease}
+.link-site{background:#fff;color:#000}
+.link-site:hover{background:#e5e5e5}
+.link-wa{background:#1a1a1a;color:#555;border:1px solid #222}
+.link-wa:hover{border-color:#333;color:#777}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Demo Sites Index</h1>
+  <p>Private index — 98 sites — not publicly linked</p>
+</div>
+<div class="filters">
+<button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="dental">Dental</button>
+  <button class="filter-btn" data-filter="gym">Gym</button>
+  <button class="filter-btn" data-filter="other">Other</button>
+  <button class="filter-btn" data-filter="physio">Physio</button>
+  <button class="filter-btn" data-filter="salon">Salon</button>
+  <button class="filter-btn" data-filter="spa">Spa</button>
+  <button class="filter-btn" data-filter="yoga">Yoga</button>
+</div>
+<div class="stats">Showing <span id="count">98</span> sites</div>
+<div class="grid" id="grid">
+  <div class="card" data-niche="other">
+    <div class="card-header">
+      <span class="card-niche niche-other">other</span>
+    </div>
+    <div class="card-name">32 Smile Stones</div>
+    <div class="card-phone">918097911154"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/32-smile-stones/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/918097911154" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="gym">
+    <div class="card-header">
+      <span class="card-niche niche-gym">gym</span>
+    </div>
+    <div class="card-name">Advance Fitness</div>
+    <div class="card-phone">919769828930"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/advance-fitness/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919769828930" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="spa">
+    <div class="card-header">
+      <span class="card-niche niche-spa">spa</span>
+    </div>
+    <div class="card-name">Allure Thai Spa &amp; Wellness</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/allure-thai-spa-wellness---spa-in-marol-andheri-east/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="other">
+    <div class="card-header">
+      <span class="card-niche niche-other">other</span>
+    </div>
+    <div class="card-name">Aroma beauty parlour ( only ladies) — Website Preview</div>
+    <div class="card-phone">919769459321"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/aroma-beauty-parlour-only-ladies/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919769459321" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Aum Dental Clinic</div>
+    <div class="card-phone">09769606450"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/aum-dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/09769606450" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Awesome Unisex Salon</div>
+    <div class="card-phone">919820329444"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/awesome-unisex-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919820329444" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Believe unisex salon</div>
+    <div class="card-phone">919869648186"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/believe-unisex-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919869648186" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="spa">
+    <div class="card-header">
+      <span class="card-niche niche-spa">spa</span>
+    </div>
+    <div class="card-name">Angel Body Spa Andheri</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/best-body-spa-in-andheri-mumbai/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Best Salon</div>
+    <div class="card-phone">919819292015"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/best-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919819292015" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Blonde Me Salon - Shaggy Ansari — Website Preview</div>
+    <div class="card-phone">917039694479"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/blonde-me-salon---shaggy-ansari/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/917039694479" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="other">
+    <div class="card-header">
+      <span class="card-niche niche-other">other</span>
+    </div>
+    <div class="card-name">Braces and Smiles — Website Preview</div>
+    <div class="card-phone">09320272237"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/braces-and-smiles/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/09320272237" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">CARE DENTAL CLINIC — Website Preview</div>
+    <div class="card-phone">919167666796"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/care-dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919167666796" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Dental Care Clinic</div>
+    <div class="card-phone">09152272063"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dental-care-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/09152272063" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Dental Clinic</div>
+    <div class="card-phone">07208084400"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/07208084400" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Dental Excellence dental clinic</div>
+    <div class="card-phone">09820568583"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dental-excellence-dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/09820568583" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Dental house — Website Preview</div>
+    <div class="card-phone">09152806198"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dental-house/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/09152806198" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Dentium dental clinic</div>
+    <div class="card-phone">08080809482"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dentium-dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/08080809482" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Divine Unisex Salon — Website Preview</div>
+    <div class="card-phone">919619612461"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/divine-unisex-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919619612461" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Divyam unisex salon and spa academy</div>
+    <div class="card-phone">918828959773"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/divyam-unisex-salon-and-spa-academy/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/918828959773" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="other">
+    <div class="card-header">
+      <span class="card-niche niche-other">other</span>
+    </div>
+    <div class="card-name">Dr Abbas Unwala's Saifee Smiles Multispeciality — Website Preview</div>
+    <div class="card-phone">919820854665">Call</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dr-abbas-unwala-s-saifee-smiles-multispeciality/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919820854665" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="other">
+    <div class="card-header">
+      <span class="card-niche niche-other">other</span>
+    </div>
+    <div class="card-name">Dr Abbas Unwala's Saifee Smiles Multispeciality</div>
+    <div class="card-phone">919820854665"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dr-abbas-unwalas-saifee-smiles-multispeciality/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919820854665" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Dr.Bera's dental clinic Mumbai Dentist — Website Preview</div>
+    <div class="card-phone">919702582286">Call</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dr-bera-s-dental-clinic-mumbai-dentist/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919702582286" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="physio">
+    <div class="card-header">
+      <span class="card-niche niche-physio">physio</span>
+    </div>
+    <div class="card-name">Dr. Karishma's Core Physio</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dr-karishmas-core-physio/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Dr Merchant's Dental Clinic — Website Preview</div>
+    <div class="card-phone">919081232785">Call</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dr-merchant-s-dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919081232785" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Dr Merchant's Dental Clinic</div>
+    <div class="card-phone">919081232785"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dr-merchants-dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919081232785" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Dr. Namrata Patil Shiwalkar | Dent-O-Fit ~ Total Dental Fitness Centre</div>
+    <div class="card-phone">07045888007"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dr-namrata-patil-shiwalkar-dent-o-fit-total-dental-fitness-centre/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/07045888007" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Dr Ramona's Dental Clinic — Website Preview</div>
+    <div class="card-phone">919820460169">Call</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dr-ramona-s-dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919820460169" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Dr Ramona's Dental Clinic</div>
+    <div class="card-phone">09820460169"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dr-ramonas-dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/09820460169" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Dr. Vina Shah - 1 Stop Dental Clinic — Website Preview</div>
+    <div class="card-phone">08080010095"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dr-vina-shah---1-stop-dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/08080010095" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Dr. Vina Shah - 1 Stop Dental Clinic — Website Preview</div>
+    <div class="card-phone">918080010095">Call</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dr-vina-shah-1-stop-dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/918080010095" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Dr.Bera's dental clinic Mumbai Dentist — Website Preview</div>
+    <div class="card-phone">919702582286"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/drberas-dental-clinic-mumbai-dentist/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919702582286" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Dyson Hair Studio - Unisex Salon</div>
+    <div class="card-phone">918356814366"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/dyson-hair-studio---unisex-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/918356814366" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Fair Salon</div>
+    <div class="card-phone">918779917465"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/fair-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/918779917465" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">FINE BARBER SHOP</div>
+    <div class="card-phone">5164129210"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/fine-barber-shop/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/5164129210" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="gym">
+    <div class="card-header">
+      <span class="card-niche niche-gym">gym</span>
+    </div>
+    <div class="card-name">Fitness &amp; Conditioning Club (FC² Gym)</div>
+    <div class="card-phone">919930556987"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/fitness-conditioning-club-fc-gym/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919930556987" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="physio">
+    <div class="card-header">
+      <span class="card-niche niche-physio">physio</span>
+    </div>
+    <div class="card-name">Flex and Flow Physiotherapy Clinic</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/flex-and-flow-physiotherapy-clinic-expert-physiotherapist-in-vile-parle-east/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Fresh Look Beauty Salon</div>
+    <div class="card-phone">919892161746"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/fresh-look-beauty-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919892161746" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">FS UNISEX SALON</div>
+    <div class="card-phone">918108778492"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/fs-unisex-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/918108778492" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Ganatras Dental Care</div>
+    <div class="card-phone">09867440803"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/ganatras-dental-care/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/09867440803" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Glow Dent Clinic – Dr. Anjali Holambe | Dentist in Bandra | Goregaon Mumbai — Website Preview</div>
+    <div class="card-phone">919820088784"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/glow-dent-clinic-dr-anjali-holambe-dentist-in-bandra-goregaon-mumbai/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919820088784" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Hair and Care by Beauty Palace</div>
+    <div class="card-phone">492084515764"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/hair-and-care-by-beauty-palace/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/492084515764" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Hair Castle Salon — Website Preview</div>
+    <div class="card-phone">919022288846"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/hair-castle-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919022288846" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">HAIR KEY UNISEX SALON</div>
+    <div class="card-phone">919560294335"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/hair-key-unisex-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919560294335" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">HAIR PRAY LOVE</div>
+    <div class="card-phone">918850159641"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/hair-pray-love/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/918850159641" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Happy Tooth Dental Clinic</div>
+    <div class="card-phone">09324341063"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/happy-tooth-dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/09324341063" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">HEENA BEAUTY SALON &amp; ACADEMY (Ladies only) — Website Preview</div>
+    <div class="card-phone">919594023061"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/heena-beauty-salon-academy-ladies-only/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919594023061" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">JACK N JILL UNISEX SALON</div>
+    <div class="card-phone">919076054777"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/jack-n-jill-unisex-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919076054777" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="gym">
+    <div class="card-header">
+      <span class="card-niche niche-gym">gym</span>
+    </div>
+    <div class="card-name">JGS Fitness Centre</div>
+    <div class="card-phone">919324246680"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/jgs-fitness-centre/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919324246680" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Krishna Dental Clinic</div>
+    <div class="card-phone">09769176005"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/krishna-dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/09769176005" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Kuts and Kolor Unisex Salon</div>
+    <div class="card-phone">919702060528"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/kuts-and-kolor-unisex-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919702060528" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">KUTS &amp; KOLOR Luxury Unisex Salon</div>
+    <div class="card-phone">919167860528"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/kuts-kolor-luxury-unisex-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919167860528" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Lookout Salon — Website Preview</div>
+    <div class="card-phone">919819402381"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/lookout-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919819402381" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Looks hair studio unisex salon — Website Preview</div>
+    <div class="card-phone">919718760279"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/looks-hair-studio-unisex-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919718760279" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">love.hair studio</div>
+    <div class="card-phone">919967901223"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/lovehair-studio/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919967901223" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="spa">
+    <div class="card-header">
+      <span class="card-niche niche-spa">spa</span>
+    </div>
+    <div class="card-name">Lubss Spa Luxuries Juhu</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/lubss-spa-luxuries-juhu/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="spa">
+    <div class="card-header">
+      <span class="card-niche niche-spa">spa</span>
+    </div>
+    <div class="card-name">Bamboo Luxury Spa</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/luxury-spa-in-juhu-mumbai/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Myrah Spa &amp; Salon</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/luxury-spa-premium-unisex-salon-in-mumbai/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">LYS Salon &amp; Spa (Love your soul) : Best unisex Salon Near palladium Lower Parel</div>
+    <div class="card-phone">919833535960"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/lys-salon-spa-love-your-soul-best-unisex-salon-near-palladium-lower-parel/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919833535960" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="spa">
+    <div class="card-header">
+      <span class="card-niche niche-spa">spa</span>
+    </div>
+    <div class="card-name">Aquaa Spa &amp; Massage Centre</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/massage-centre-in-andheri-west-mumbai-massage-in-mumbai/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="gym">
+    <div class="card-header">
+      <span class="card-niche niche-gym">gym</span>
+    </div>
+    <div class="card-name">MIDTOWN FITNESS</div>
+    <div class="card-phone">919819999103"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/midtown-fitness/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919819999103" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="other">
+    <div class="card-header">
+      <span class="card-niche niche-other">other</span>
+    </div>
+    <div class="card-name">Diva Yoga Andheri</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/mumbai/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="gym">
+    <div class="card-header">
+      <span class="card-niche niche-gym">gym</span>
+    </div>
+    <div class="card-name">Mumbai Fitness Club — Website Preview</div>
+    <div class="card-phone">919769000705"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/mumbai-fitness-club/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919769000705" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="gym">
+    <div class="card-header">
+      <span class="card-niche niche-gym">gym</span>
+    </div>
+    <div class="card-name">MY FITNESS CLUB DHARAVI</div>
+    <div class="card-phone">919930722213"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/my-fitness-club-dharavi/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919930722213" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="other">
+    <div class="card-header">
+      <span class="card-niche niche-other">other</span>
+    </div>
+    <div class="card-name">Myrah Spa Juhu</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/myrah---juhu/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="other">
+    <div class="card-header">
+      <span class="card-niche niche-other">other</span>
+    </div>
+    <div class="card-name">New Light Beauty saloon — Website Preview</div>
+    <div class="card-phone">919967007734"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/new-light-beauty-saloon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919967007734" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Oscar's Unisex Salon in Worli - Best Unisex Salon in Worli - Best Beauty Salon in Worli</div>
+    <div class="card-phone">918655100811"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/oscars-unisex-salon-in-worli---best-unisex-salon-in-worli---best-beauty-salon-in-worli/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/918655100811" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">PERFECT SMILE DENTAL CARE CENTRE</div>
+    <div class="card-phone">912226201077"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/perfect-smile-dental-care-centre/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/912226201077" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">PERIO DENT</div>
+    <div class="card-phone">07021306774"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/perio-dent/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/07021306774" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="gym">
+    <div class="card-header">
+      <span class="card-niche niche-gym">gym</span>
+    </div>
+    <div class="card-name">Physio Active Pro Fitness Gym</div>
+    <div class="card-phone">919143438383"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/physio-active-pro-fitness-gym/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919143438383" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="physio">
+    <div class="card-header">
+      <span class="card-niche niche-physio">physio</span>
+    </div>
+    <div class="card-name">Physio-Fit by Dr. Tanvi Y. Shah</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/physio-fit-by-drtanvi-y-shah/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Powai Medical and Dental Centre</div>
+    <div class="card-phone">09833368548"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/powai-medical-and-dental-centre/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/09833368548" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Professionnel unisex salon &amp; Accdmy classes l Hair stylist salon l Hair patch &amp; more — Website Preview</div>
+    <div class="card-phone">919322964354"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/professionnel-unisex-salon-accdmy-classes-l-hair-stylist-salon-l-hair-patch-more/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919322964354" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="spa">
+    <div class="card-header">
+      <span class="card-niche niche-spa">spa</span>
+    </div>
+    <div class="card-name">Sea Princess Spa Hotel</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/relax-at-a-spa-hotel-in-mumbai/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Richie Rich Clinical Salon &amp; Spa 8 years experience</div>
+    <div class="card-phone">918779398011"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/richie-rich-clinical-salon-spa-8-years-experience/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/918779398011" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="spa">
+    <div class="card-header">
+      <span class="card-niche niche-spa">spa</span>
+    </div>
+    <div class="card-name">Royal Spa Andheri</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/royal-spa-andheri/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="spa">
+    <div class="card-header">
+      <span class="card-niche niche-spa">spa</span>
+    </div>
+    <div class="card-name">Royal Thai Spa</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/royal-thai-spa/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Saifee Dental Clinic</div>
+    <div class="card-phone">919870132176"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/saifee-dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919870132176" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="gym">
+    <div class="card-header">
+      <span class="card-niche niche-gym">gym</span>
+    </div>
+    <div class="card-name">Sanguine Fitness Studio</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/sanguine-fitness-studio/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Saniya Beauty Salon - Nanoplastia Hair Treatment | Hydra Medi Facial | Olaplex Hair Treatment-Balayage Hair colour</div>
+    <div class="card-phone">918080556399"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/saniya-beauty-salon---nanoplastia-hair-treatment-hydra-medi-facial-olaplex-hair-treatment-balayage-hair-colour/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/918080556399" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">ShearInsight Unisex Salon</div>
+    <div class="card-phone">919833995345"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/shearinsight-unisex-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919833995345" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Shining Smiles Dental Clinic</div>
+    <div class="card-phone">09892666407"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/shining-smiles-dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/09892666407" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="other">
+    <div class="card-header">
+      <span class="card-niche niche-other">other</span>
+    </div>
+    <div class="card-name">SHRIJI BEAUTY TOUCH</div>
+    <div class="card-phone">447404995198"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/shriji-beauty-touch/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/447404995198" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Smile Plus Dental Clinic</div>
+    <div class="card-phone">09920548380"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/smile-plus-dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/09920548380" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Smilee Dental Care</div>
+    <div class="card-phone">02225775599"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/smilee-dental-care/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/02225775599" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Specialist Dental Centre (SINCE 1983) — Website Preview</div>
+    <div class="card-phone">919920407651"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/specialist-dental-centre-since-1983/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919920407651" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Style Lynn Ladies Salon &amp; Spa — Website Preview</div>
+    <div class="card-phone">918691933480"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/style-lynn-ladies-salon-spa/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/918691933480" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="yoga">
+    <div class="card-header">
+      <span class="card-niche niche-yoga">yoga</span>
+    </div>
+    <div class="card-name">Sudipa Yogalaya</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/sudipa-yogalaya---yoga-classes-near-me-best-yoga-classesyoga-trainercorporate-yoga-in-andheri/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Taj Beauty Salon</div>
+    <div class="card-phone">918291366412"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/taj-beauty-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/918291366412" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="gym">
+    <div class="card-header">
+      <span class="card-niche niche-gym">gym</span>
+    </div>
+    <div class="card-name">TFC - Tarun Fitness Club 24/7 — Website Preview</div>
+    <div class="card-phone">919324636386"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/tfc---tarun-fitness-club-247/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919324636386" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">The Glam Bar Salon</div>
+    <div class="card-phone">919819100099"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/the-glam-bar-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919819100099" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">The Lash House</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/the-lash-house/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="other">
+    <div class="card-header">
+      <span class="card-niche niche-other">other</span>
+    </div>
+    <div class="card-name">The Tooth Junction</div>
+    <div class="card-phone">918692896336"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/the-tooth-junction/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/918692896336" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Tip and Toe Luxe Bandra</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/tip-and-toe-luxe-the-nail-lashes-brows-microblading---bandra/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="dental">
+    <div class="card-header">
+      <span class="card-niche niche-dental">dental</span>
+    </div>
+    <div class="card-name">Tooth Smith Dental Clinic</div>
+    <div class="card-phone">919004345554"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/tooth-smith-dental-clinic/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/919004345554" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="salon">
+    <div class="card-header">
+      <span class="card-niche niche-salon">salon</span>
+    </div>
+    <div class="card-name">Unique unisex salon — Website Preview</div>
+    <div class="card-phone">917498312269"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/unique-unisex-salon/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/917498312269" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="spa">
+    <div class="card-header">
+      <span class="card-niche niche-spa">spa</span>
+    </div>
+    <div class="card-name">Urban Luxury Spa Juhu</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/urban-luxury-spa-in-juhu/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="gym">
+    <div class="card-header">
+      <span class="card-niche niche-gym">gym</span>
+    </div>
+    <div class="card-name">WAY TO FITNESS - Gyms in Colaba, Mumbai. — Website Preview</div>
+    <div class="card-phone">917506340313"</div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/way-to-fitness---gyms-in-colaba-mumbai/" target="_blank" class="link-site">View Site</a>
+      <a href="https://wa.me/917506340313" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="card" data-niche="yoga">
+    <div class="card-header">
+      <span class="card-niche niche-yoga">yoga</span>
+    </div>
+    <div class="card-name">Yogasadhana</div>
+    <div class="card-phone"></div>
+    <div class="card-links">
+      <a href="https://kevinpratap.github.io/lead-demos/demos/yogasadhana/" target="_blank" class="link-site">View Site</a>
+      <a href="#" target="_blank" class="link-wa">WhatsApp</a>
+    </div>
+  </div>
+</div>
+<script>
+const demosData = [
+  {folder:'32-smile-stones',name:'32 Smile Stones',phone:'918097911154"',niche:'other',url:'https://kevinpratap.github.io/lead-demos/demos/32-smile-stones/'}
+  {folder:'advance-fitness',name:'Advance Fitness',phone:'919769828930"',niche:'gym',url:'https://kevinpratap.github.io/lead-demos/demos/advance-fitness/'}
+  {folder:'allure-thai-spa-wellness---spa-in-marol-andheri-east',name:'Allure Thai Spa &amp; Wellness',phone:'',niche:'spa',url:'https://kevinpratap.github.io/lead-demos/demos/allure-thai-spa-wellness---spa-in-marol-andheri-east/'}
+  {folder:'aroma-beauty-parlour-only-ladies',name:'Aroma beauty parlour ( only ladies) — Website Preview',phone:'919769459321"',niche:'other',url:'https://kevinpratap.github.io/lead-demos/demos/aroma-beauty-parlour-only-ladies/'}
+  {folder:'aum-dental-clinic',name:'Aum Dental Clinic',phone:'09769606450"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/aum-dental-clinic/'}
+  {folder:'awesome-unisex-salon',name:'Awesome Unisex Salon',phone:'919820329444"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/awesome-unisex-salon/'}
+  {folder:'believe-unisex-salon',name:'Believe unisex salon',phone:'919869648186"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/believe-unisex-salon/'}
+  {folder:'best-body-spa-in-andheri-mumbai',name:'Angel Body Spa Andheri',phone:'',niche:'spa',url:'https://kevinpratap.github.io/lead-demos/demos/best-body-spa-in-andheri-mumbai/'}
+  {folder:'best-salon',name:'Best Salon',phone:'919819292015"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/best-salon/'}
+  {folder:'blonde-me-salon---shaggy-ansari',name:'Blonde Me Salon - Shaggy Ansari — Website Preview',phone:'917039694479"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/blonde-me-salon---shaggy-ansari/'}
+  {folder:'braces-and-smiles',name:'Braces and Smiles — Website Preview',phone:'09320272237"',niche:'other',url:'https://kevinpratap.github.io/lead-demos/demos/braces-and-smiles/'}
+  {folder:'care-dental-clinic',name:'CARE DENTAL CLINIC — Website Preview',phone:'919167666796"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/care-dental-clinic/'}
+  {folder:'dental-care-clinic',name:'Dental Care Clinic',phone:'09152272063"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/dental-care-clinic/'}
+  {folder:'dental-clinic',name:'Dental Clinic',phone:'07208084400"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/dental-clinic/'}
+  {folder:'dental-excellence-dental-clinic',name:'Dental Excellence dental clinic',phone:'09820568583"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/dental-excellence-dental-clinic/'}
+  {folder:'dental-house',name:'Dental house — Website Preview',phone:'09152806198"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/dental-house/'}
+  {folder:'dentium-dental-clinic',name:'Dentium dental clinic',phone:'08080809482"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/dentium-dental-clinic/'}
+  {folder:'divine-unisex-salon',name:'Divine Unisex Salon — Website Preview',phone:'919619612461"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/divine-unisex-salon/'}
+  {folder:'divyam-unisex-salon-and-spa-academy',name:'Divyam unisex salon and spa academy',phone:'918828959773"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/divyam-unisex-salon-and-spa-academy/'}
+  {folder:'dr-abbas-unwala-s-saifee-smiles-multispeciality',name:'Dr Abbas Unwala's Saifee Smiles Multispeciality — Website Preview',phone:'919820854665">Call',niche:'other',url:'https://kevinpratap.github.io/lead-demos/demos/dr-abbas-unwala-s-saifee-smiles-multispeciality/'}
+  {folder:'dr-abbas-unwalas-saifee-smiles-multispeciality',name:'Dr Abbas Unwala's Saifee Smiles Multispeciality',phone:'919820854665"',niche:'other',url:'https://kevinpratap.github.io/lead-demos/demos/dr-abbas-unwalas-saifee-smiles-multispeciality/'}
+  {folder:'dr-bera-s-dental-clinic-mumbai-dentist',name:'Dr.Bera's dental clinic Mumbai Dentist — Website Preview',phone:'919702582286">Call',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/dr-bera-s-dental-clinic-mumbai-dentist/'}
+  {folder:'dr-karishmas-core-physio',name:'Dr. Karishma's Core Physio',phone:'',niche:'physio',url:'https://kevinpratap.github.io/lead-demos/demos/dr-karishmas-core-physio/'}
+  {folder:'dr-merchant-s-dental-clinic',name:'Dr Merchant's Dental Clinic — Website Preview',phone:'919081232785">Call',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/dr-merchant-s-dental-clinic/'}
+  {folder:'dr-merchants-dental-clinic',name:'Dr Merchant's Dental Clinic',phone:'919081232785"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/dr-merchants-dental-clinic/'}
+  {folder:'dr-namrata-patil-shiwalkar-dent-o-fit-total-dental-fitness-centre',name:'Dr. Namrata Patil Shiwalkar | Dent-O-Fit ~ Total Dental Fitness Centre',phone:'07045888007"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/dr-namrata-patil-shiwalkar-dent-o-fit-total-dental-fitness-centre/'}
+  {folder:'dr-ramona-s-dental-clinic',name:'Dr Ramona's Dental Clinic — Website Preview',phone:'919820460169">Call',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/dr-ramona-s-dental-clinic/'}
+  {folder:'dr-ramonas-dental-clinic',name:'Dr Ramona's Dental Clinic',phone:'09820460169"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/dr-ramonas-dental-clinic/'}
+  {folder:'dr-vina-shah---1-stop-dental-clinic',name:'Dr. Vina Shah - 1 Stop Dental Clinic — Website Preview',phone:'08080010095"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/dr-vina-shah---1-stop-dental-clinic/'}
+  {folder:'dr-vina-shah-1-stop-dental-clinic',name:'Dr. Vina Shah - 1 Stop Dental Clinic — Website Preview',phone:'918080010095">Call',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/dr-vina-shah-1-stop-dental-clinic/'}
+  {folder:'drberas-dental-clinic-mumbai-dentist',name:'Dr.Bera's dental clinic Mumbai Dentist — Website Preview',phone:'919702582286"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/drberas-dental-clinic-mumbai-dentist/'}
+  {folder:'dyson-hair-studio---unisex-salon',name:'Dyson Hair Studio - Unisex Salon',phone:'918356814366"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/dyson-hair-studio---unisex-salon/'}
+  {folder:'fair-salon',name:'Fair Salon',phone:'918779917465"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/fair-salon/'}
+  {folder:'fine-barber-shop',name:'FINE BARBER SHOP',phone:'5164129210"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/fine-barber-shop/'}
+  {folder:'fitness-conditioning-club-fc-gym',name:'Fitness &amp; Conditioning Club (FC² Gym)',phone:'919930556987"',niche:'gym',url:'https://kevinpratap.github.io/lead-demos/demos/fitness-conditioning-club-fc-gym/'}
+  {folder:'flex-and-flow-physiotherapy-clinic-expert-physiotherapist-in-vile-parle-east',name:'Flex and Flow Physiotherapy Clinic',phone:'',niche:'physio',url:'https://kevinpratap.github.io/lead-demos/demos/flex-and-flow-physiotherapy-clinic-expert-physiotherapist-in-vile-parle-east/'}
+  {folder:'fresh-look-beauty-salon',name:'Fresh Look Beauty Salon',phone:'919892161746"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/fresh-look-beauty-salon/'}
+  {folder:'fs-unisex-salon',name:'FS UNISEX SALON',phone:'918108778492"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/fs-unisex-salon/'}
+  {folder:'ganatras-dental-care',name:'Ganatras Dental Care',phone:'09867440803"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/ganatras-dental-care/'}
+  {folder:'glow-dent-clinic-dr-anjali-holambe-dentist-in-bandra-goregaon-mumbai',name:'Glow Dent Clinic – Dr. Anjali Holambe | Dentist in Bandra | Goregaon Mumbai — Website Preview',phone:'919820088784"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/glow-dent-clinic-dr-anjali-holambe-dentist-in-bandra-goregaon-mumbai/'}
+  {folder:'hair-and-care-by-beauty-palace',name:'Hair and Care by Beauty Palace',phone:'492084515764"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/hair-and-care-by-beauty-palace/'}
+  {folder:'hair-castle-salon',name:'Hair Castle Salon — Website Preview',phone:'919022288846"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/hair-castle-salon/'}
+  {folder:'hair-key-unisex-salon',name:'HAIR KEY UNISEX SALON',phone:'919560294335"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/hair-key-unisex-salon/'}
+  {folder:'hair-pray-love',name:'HAIR PRAY LOVE',phone:'918850159641"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/hair-pray-love/'}
+  {folder:'happy-tooth-dental-clinic',name:'Happy Tooth Dental Clinic',phone:'09324341063"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/happy-tooth-dental-clinic/'}
+  {folder:'heena-beauty-salon-academy-ladies-only',name:'HEENA BEAUTY SALON &amp; ACADEMY (Ladies only) — Website Preview',phone:'919594023061"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/heena-beauty-salon-academy-ladies-only/'}
+  {folder:'jack-n-jill-unisex-salon',name:'JACK N JILL UNISEX SALON',phone:'919076054777"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/jack-n-jill-unisex-salon/'}
+  {folder:'jgs-fitness-centre',name:'JGS Fitness Centre',phone:'919324246680"',niche:'gym',url:'https://kevinpratap.github.io/lead-demos/demos/jgs-fitness-centre/'}
+  {folder:'krishna-dental-clinic',name:'Krishna Dental Clinic',phone:'09769176005"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/krishna-dental-clinic/'}
+  {folder:'kuts-and-kolor-unisex-salon',name:'Kuts and Kolor Unisex Salon',phone:'919702060528"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/kuts-and-kolor-unisex-salon/'}
+  {folder:'kuts-kolor-luxury-unisex-salon',name:'KUTS &amp; KOLOR Luxury Unisex Salon',phone:'919167860528"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/kuts-kolor-luxury-unisex-salon/'}
+  {folder:'lookout-salon',name:'Lookout Salon — Website Preview',phone:'919819402381"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/lookout-salon/'}
+  {folder:'looks-hair-studio-unisex-salon',name:'Looks hair studio unisex salon — Website Preview',phone:'919718760279"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/looks-hair-studio-unisex-salon/'}
+  {folder:'lovehair-studio',name:'love.hair studio',phone:'919967901223"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/lovehair-studio/'}
+  {folder:'lubss-spa-luxuries-juhu',name:'Lubss Spa Luxuries Juhu',phone:'',niche:'spa',url:'https://kevinpratap.github.io/lead-demos/demos/lubss-spa-luxuries-juhu/'}
+  {folder:'luxury-spa-in-juhu-mumbai',name:'Bamboo Luxury Spa',phone:'',niche:'spa',url:'https://kevinpratap.github.io/lead-demos/demos/luxury-spa-in-juhu-mumbai/'}
+  {folder:'luxury-spa-premium-unisex-salon-in-mumbai',name:'Myrah Spa &amp; Salon',phone:'',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/luxury-spa-premium-unisex-salon-in-mumbai/'}
+  {folder:'lys-salon-spa-love-your-soul-best-unisex-salon-near-palladium-lower-parel',name:'LYS Salon &amp; Spa (Love your soul) : Best unisex Salon Near palladium Lower Parel',phone:'919833535960"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/lys-salon-spa-love-your-soul-best-unisex-salon-near-palladium-lower-parel/'}
+  {folder:'massage-centre-in-andheri-west-mumbai-massage-in-mumbai',name:'Aquaa Spa &amp; Massage Centre',phone:'',niche:'spa',url:'https://kevinpratap.github.io/lead-demos/demos/massage-centre-in-andheri-west-mumbai-massage-in-mumbai/'}
+  {folder:'midtown-fitness',name:'MIDTOWN FITNESS',phone:'919819999103"',niche:'gym',url:'https://kevinpratap.github.io/lead-demos/demos/midtown-fitness/'}
+  {folder:'mumbai',name:'Diva Yoga Andheri',phone:'',niche:'other',url:'https://kevinpratap.github.io/lead-demos/demos/mumbai/'}
+  {folder:'mumbai-fitness-club',name:'Mumbai Fitness Club — Website Preview',phone:'919769000705"',niche:'gym',url:'https://kevinpratap.github.io/lead-demos/demos/mumbai-fitness-club/'}
+  {folder:'my-fitness-club-dharavi',name:'MY FITNESS CLUB DHARAVI',phone:'919930722213"',niche:'gym',url:'https://kevinpratap.github.io/lead-demos/demos/my-fitness-club-dharavi/'}
+  {folder:'myrah---juhu',name:'Myrah Spa Juhu',phone:'',niche:'other',url:'https://kevinpratap.github.io/lead-demos/demos/myrah---juhu/'}
+  {folder:'new-light-beauty-saloon',name:'New Light Beauty saloon — Website Preview',phone:'919967007734"',niche:'other',url:'https://kevinpratap.github.io/lead-demos/demos/new-light-beauty-saloon/'}
+  {folder:'oscars-unisex-salon-in-worli---best-unisex-salon-in-worli---best-beauty-salon-in-worli',name:'Oscar's Unisex Salon in Worli - Best Unisex Salon in Worli - Best Beauty Salon in Worli',phone:'918655100811"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/oscars-unisex-salon-in-worli---best-unisex-salon-in-worli---best-beauty-salon-in-worli/'}
+  {folder:'perfect-smile-dental-care-centre',name:'PERFECT SMILE DENTAL CARE CENTRE',phone:'912226201077"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/perfect-smile-dental-care-centre/'}
+  {folder:'perio-dent',name:'PERIO DENT',phone:'07021306774"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/perio-dent/'}
+  {folder:'physio-active-pro-fitness-gym',name:'Physio Active Pro Fitness Gym',phone:'919143438383"',niche:'gym',url:'https://kevinpratap.github.io/lead-demos/demos/physio-active-pro-fitness-gym/'}
+  {folder:'physio-fit-by-drtanvi-y-shah',name:'Physio-Fit by Dr. Tanvi Y. Shah',phone:'',niche:'physio',url:'https://kevinpratap.github.io/lead-demos/demos/physio-fit-by-drtanvi-y-shah/'}
+  {folder:'powai-medical-and-dental-centre',name:'Powai Medical and Dental Centre',phone:'09833368548"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/powai-medical-and-dental-centre/'}
+  {folder:'professionnel-unisex-salon-accdmy-classes-l-hair-stylist-salon-l-hair-patch-more',name:'Professionnel unisex salon &amp; Accdmy classes l Hair stylist salon l Hair patch &amp; more — Website Preview',phone:'919322964354"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/professionnel-unisex-salon-accdmy-classes-l-hair-stylist-salon-l-hair-patch-more/'}
+  {folder:'relax-at-a-spa-hotel-in-mumbai',name:'Sea Princess Spa Hotel',phone:'',niche:'spa',url:'https://kevinpratap.github.io/lead-demos/demos/relax-at-a-spa-hotel-in-mumbai/'}
+  {folder:'richie-rich-clinical-salon-spa-8-years-experience',name:'Richie Rich Clinical Salon &amp; Spa 8 years experience',phone:'918779398011"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/richie-rich-clinical-salon-spa-8-years-experience/'}
+  {folder:'royal-spa-andheri',name:'Royal Spa Andheri',phone:'',niche:'spa',url:'https://kevinpratap.github.io/lead-demos/demos/royal-spa-andheri/'}
+  {folder:'royal-thai-spa',name:'Royal Thai Spa',phone:'',niche:'spa',url:'https://kevinpratap.github.io/lead-demos/demos/royal-thai-spa/'}
+  {folder:'saifee-dental-clinic',name:'Saifee Dental Clinic',phone:'919870132176"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/saifee-dental-clinic/'}
+  {folder:'sanguine-fitness-studio',name:'Sanguine Fitness Studio',phone:'',niche:'gym',url:'https://kevinpratap.github.io/lead-demos/demos/sanguine-fitness-studio/'}
+  {folder:'saniya-beauty-salon---nanoplastia-hair-treatment-hydra-medi-facial-olaplex-hair-treatment-balayage-hair-colour',name:'Saniya Beauty Salon - Nanoplastia Hair Treatment | Hydra Medi Facial | Olaplex Hair Treatment-Balayage Hair colour',phone:'918080556399"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/saniya-beauty-salon---nanoplastia-hair-treatment-hydra-medi-facial-olaplex-hair-treatment-balayage-hair-colour/'}
+  {folder:'shearinsight-unisex-salon',name:'ShearInsight Unisex Salon',phone:'919833995345"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/shearinsight-unisex-salon/'}
+  {folder:'shining-smiles-dental-clinic',name:'Shining Smiles Dental Clinic',phone:'09892666407"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/shining-smiles-dental-clinic/'}
+  {folder:'shriji-beauty-touch',name:'SHRIJI BEAUTY TOUCH',phone:'447404995198"',niche:'other',url:'https://kevinpratap.github.io/lead-demos/demos/shriji-beauty-touch/'}
+  {folder:'smile-plus-dental-clinic',name:'Smile Plus Dental Clinic',phone:'09920548380"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/smile-plus-dental-clinic/'}
+  {folder:'smilee-dental-care',name:'Smilee Dental Care',phone:'02225775599"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/smilee-dental-care/'}
+  {folder:'specialist-dental-centre-since-1983',name:'Specialist Dental Centre (SINCE 1983) — Website Preview',phone:'919920407651"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/specialist-dental-centre-since-1983/'}
+  {folder:'style-lynn-ladies-salon-spa',name:'Style Lynn Ladies Salon &amp; Spa — Website Preview',phone:'918691933480"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/style-lynn-ladies-salon-spa/'}
+  {folder:'sudipa-yogalaya---yoga-classes-near-me-best-yoga-classesyoga-trainercorporate-yoga-in-andheri',name:'Sudipa Yogalaya',phone:'',niche:'yoga',url:'https://kevinpratap.github.io/lead-demos/demos/sudipa-yogalaya---yoga-classes-near-me-best-yoga-classesyoga-trainercorporate-yoga-in-andheri/'}
+  {folder:'taj-beauty-salon',name:'Taj Beauty Salon',phone:'918291366412"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/taj-beauty-salon/'}
+  {folder:'tfc---tarun-fitness-club-247',name:'TFC - Tarun Fitness Club 24/7 — Website Preview',phone:'919324636386"',niche:'gym',url:'https://kevinpratap.github.io/lead-demos/demos/tfc---tarun-fitness-club-247/'}
+  {folder:'the-glam-bar-salon',name:'The Glam Bar Salon',phone:'919819100099"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/the-glam-bar-salon/'}
+  {folder:'the-lash-house',name:'The Lash House',phone:'',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/the-lash-house/'}
+  {folder:'the-tooth-junction',name:'The Tooth Junction',phone:'918692896336"',niche:'other',url:'https://kevinpratap.github.io/lead-demos/demos/the-tooth-junction/'}
+  {folder:'tip-and-toe-luxe-the-nail-lashes-brows-microblading---bandra',name:'Tip and Toe Luxe Bandra',phone:'',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/tip-and-toe-luxe-the-nail-lashes-brows-microblading---bandra/'}
+  {folder:'tooth-smith-dental-clinic',name:'Tooth Smith Dental Clinic',phone:'919004345554"',niche:'dental',url:'https://kevinpratap.github.io/lead-demos/demos/tooth-smith-dental-clinic/'}
+  {folder:'unique-unisex-salon',name:'Unique unisex salon — Website Preview',phone:'917498312269"',niche:'salon',url:'https://kevinpratap.github.io/lead-demos/demos/unique-unisex-salon/'}
+  {folder:'urban-luxury-spa-in-juhu',name:'Urban Luxury Spa Juhu',phone:'',niche:'spa',url:'https://kevinpratap.github.io/lead-demos/demos/urban-luxury-spa-in-juhu/'}
+  {folder:'way-to-fitness---gyms-in-colaba-mumbai',name:'WAY TO FITNESS - Gyms in Colaba, Mumbai. — Website Preview',phone:'917506340313"',niche:'gym',url:'https://kevinpratap.github.io/lead-demos/demos/way-to-fitness---gyms-in-colaba-mumbai/'}
+  {folder:'yogasadhana',name:'Yogasadhana',phone:'',niche:'yoga',url:'https://kevinpratap.github.io/lead-demos/demos/yogasadhana/'}
+];
+const grid=document.getElementById('grid');
+const statsEl=document.getElementById('count');
+const buttons=document.querySelectorAll('.filter-btn');
+function render(f){grid.innerHTML='';let c=0;demosData.forEach(d=>{if(f!=='all'&&d.niche!==f)return;c++;const el=document.createElement('div');el.className='card';el.innerHTML=`<div class="card-header"><span class="card-niche niche-${d.niche}">${d.niche}</span></div><div class="card-name">${d.name}</div><div class="card-phone">${d.phone}</div><div class="card-links"><a href="${d.url}" target="_blank" class="link-site">View Site</a><a href="https://wa.me/${d.phone.replace(/[^0-9]/g,'')||''}" target="_blank" class="link-wa">WhatsApp</a></div>`;grid.appendChild(el)});statsEl.textContent=c}
+buttons.forEach(b=>{b.addEventListener('click',()=>{buttons.forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.dataset.filter)})})
+render('all');
+</script>
+</body>
+</html>
