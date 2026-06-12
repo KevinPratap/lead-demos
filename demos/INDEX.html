@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo Sites Index — Private</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,sans-serif;background:#0a0a0a;color:#e5e5e5;min-height:100vh}
+.header{padding:3rem 2rem 2rem;border-bottom:1px solid #1a1a1a;position:sticky;top:0;z-index:10;background:#0a0a0a}
+.header h1{font-size:1.4rem;font-weight:300;letter-spacing:-.02em;color:#fff}
+.header p{font-size:.8rem;color:#555;margin-top:.3rem;font-weight:300}
+.filters{padding:1.5rem 2rem;display:flex;gap:.5rem;flex-wrap:wrap;border-bottom:1px solid #1a1a1a}
+.filter-btn{padding:.4rem 1rem;font-size:.75rem;font-weight:400;border:1px solid #222;border-radius:100px;background:transparent;color:#666;cursor:pointer;font-family:'Inter',sans-serif}
+.filter-btn:hover{border-color:#444;color:#999}
+.filter-btn.active{background:#fff;color:#000;border-color:#fff}
+.stats{padding:1.5rem 2rem;font-size:.75rem;color:#444;font-weight:300}
+.stats span{color:#666}
+.grid{padding:0 2rem 3rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1px;background:#111}
+.card{background:#0a0a0a;padding:1.5rem;transition:background .2s ease}
+.card:hover{background:#111}
+.card-niche{display:inline-block;font-size:.65rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .6rem;border-radius:100px;border:1px solid #222;color:#555;margin-bottom:.8rem}
+.niche-dental{border-color:#1e3a5f;color:#5b8eb8}
+.niche-salon{border-color:#5c2d1e;color:#c4846a}
+.niche-spa{border-color:#4a3628;color:#c49a6c}
+.niche-yoga{border-color:#1a3d2e;color:#5dab8a}
+.niche-gym{border-color:#3d3d1a;color:#a0a050}
+.niche-physio{border-color:#1e3a5f;color:#5b8eb8}
+.niche-cafe{border-color:#3d2e1a;color:#b89a5b}
+.niche-skin{border-color:#4a2840;color:#b86a9e}
+.niche-bakery{border-color:#3d2e1a;color:#b89a5b}
+.niche-other{border-color:#333;color:#666}
+.card-name{font-size:.95rem;font-weight:400;color:#ddd;margin-bottom:.3rem}
+.card-phone{font-size:.8rem;color:#555;font-weight:300;margin-bottom:1rem}
+.card-links{display:flex;gap:.5rem}
+.card-links a{padding:.4rem .9rem;font-size:.72rem;font-weight:400;border-radius:100px;text-decoration:none;letter-spacing:.02em;transition:all .2s ease}
+.link-site{background:#fff;color:#000}
+.link-site:hover{background:#e5e5e5}
+.link-wa{background:#1a1a1a;color:#555;border:1px solid #222}
+.link-wa:hover{border-color:#333;color:#777}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Demo Sites Index</h1>
+<p>Private — 98 sites</p>
+</div>
+<div class="filters">
+<button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="dental">Dental</button>
+  <button class="filter-btn" data-filter="gym">Gym</button>
+  <button class="filter-btn" data-filter="other">Other</button>
+  <button class="filter-btn" data-filter="physio">Physio</button>
+  <button class="filter-btn" data-filter="salon">Salon</button>
+  <button class="filter-btn" data-filter="spa">Spa</button>
+  <button class="filter-btn" data-filter="yoga">Yoga</button>
+</div>
+<div class="stats">Showing <span id="count">98</span> sites</div>
+<div class="grid" id="grid"></div>
+<script>
+const D=[  {f:"32-smile-stones",n:"32 Smile Stones",p:"918097911154",niche:"other",u:"https://kevinpratap.github.io/lead-demos/demos/32-smile-stones/"},
+  {f:"advance-fitness",n:"Advance Fitness",p:"919769828930",niche:"gym",u:"https://kevinpratap.github.io/lead-demos/demos/advance-fitness/"},
+  {f:"allure-thai-spa-wellness---spa-in-marol-andheri-east",n:"Allure Thai Spa &amp; Wellness",p:"+917304455836",niche:"spa",u:"https://kevinpratap.github.io/lead-demos/demos/allure-thai-spa-wellness---spa-in-marol-andheri-east/"},
+  {f:"aroma-beauty-parlour-only-ladies",n:"Aroma beauty parlour ( only ladies) — Website Preview",p:"919769459321",niche:"other",u:"https://kevinpratap.github.io/lead-demos/demos/aroma-beauty-parlour-only-ladies/"},
+  {f:"aum-dental-clinic",n:"Aum Dental Clinic",p:"09769606450",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/aum-dental-clinic/"},
+  {f:"awesome-unisex-salon",n:"Awesome Unisex Salon",p:"919820329444",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/awesome-unisex-salon/"},
+  {f:"believe-unisex-salon",n:"Believe unisex salon",p:"919869648186",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/believe-unisex-salon/"},
+  {f:"best-body-spa-in-andheri-mumbai",n:"Angel Body Spa Andheri",p:"+919004974551",niche:"spa",u:"https://kevinpratap.github.io/lead-demos/demos/best-body-spa-in-andheri-mumbai/"},
+  {f:"best-salon",n:"Best Salon",p:"919819292015",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/best-salon/"},
+  {f:"blonde-me-salon---shaggy-ansari",n:"Blonde Me Salon - Shaggy Ansari — Website Preview",p:"917039694479",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/blonde-me-salon---shaggy-ansari/"},
+  {f:"braces-and-smiles",n:"Braces and Smiles — Website Preview",p:"09320272237",niche:"other",u:"https://kevinpratap.github.io/lead-demos/demos/braces-and-smiles/"},
+  {f:"care-dental-clinic",n:"CARE DENTAL CLINIC — Website Preview",p:"919167666796",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/care-dental-clinic/"},
+  {f:"dental-care-clinic",n:"Dental Care Clinic",p:"09152272063",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/dental-care-clinic/"},
+  {f:"dental-clinic",n:"Dental Clinic",p:"07208084400",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/dental-clinic/"},
+  {f:"dental-excellence-dental-clinic",n:"Dental Excellence dental clinic",p:"09820568583",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/dental-excellence-dental-clinic/"},
+  {f:"dental-house",n:"Dental house — Website Preview",p:"09152806198",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/dental-house/"},
+  {f:"dentium-dental-clinic",n:"Dentium dental clinic",p:"08080809482",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/dentium-dental-clinic/"},
+  {f:"divine-unisex-salon",n:"Divine Unisex Salon — Website Preview",p:"919619612461",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/divine-unisex-salon/"},
+  {f:"divyam-unisex-salon-and-spa-academy",n:"Divyam unisex salon and spa academy",p:"918828959773",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/divyam-unisex-salon-and-spa-academy/"},
+  {f:"dr-abbas-unwala-s-saifee-smiles-multispeciality",n:"Dr Abbas Unwala\'s Saifee Smiles Multispeciality — Website Preview",p:"919820854665",niche:"other",u:"https://kevinpratap.github.io/lead-demos/demos/dr-abbas-unwala-s-saifee-smiles-multispeciality/"},
+  {f:"dr-abbas-unwalas-saifee-smiles-multispeciality",n:"Dr Abbas Unwala\'s Saifee Smiles Multispeciality",p:"919820854665",niche:"other",u:"https://kevinpratap.github.io/lead-demos/demos/dr-abbas-unwalas-saifee-smiles-multispeciality/"},
+  {f:"dr-bera-s-dental-clinic-mumbai-dentist",n:"Dr.Bera\'s dental clinic Mumbai Dentist — Website Preview",p:"919702582286",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/dr-bera-s-dental-clinic-mumbai-dentist/"},
+  {f:"dr-karishmas-core-physio",n:"Dr. Karishma\'s Core Physio",p:"+918591128992",niche:"physio",u:"https://kevinpratap.github.io/lead-demos/demos/dr-karishmas-core-physio/"},
+  {f:"dr-merchant-s-dental-clinic",n:"Dr Merchant\'s Dental Clinic — Website Preview",p:"919081232785",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/dr-merchant-s-dental-clinic/"},
+  {f:"dr-merchants-dental-clinic",n:"Dr Merchant\'s Dental Clinic",p:"919081232785",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/dr-merchants-dental-clinic/"},
+  {f:"dr-namrata-patil-shiwalkar-dent-o-fit-total-dental-fitness-centre",n:"Dr. Namrata Patil Shiwalkar | Dent-O-Fit ~ Total Dental Fitness Centre",p:"07045888007",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/dr-namrata-patil-shiwalkar-dent-o-fit-total-dental-fitness-centre/"},
+  {f:"dr-ramona-s-dental-clinic",n:"Dr Ramona\'s Dental Clinic — Website Preview",p:"919820460169",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/dr-ramona-s-dental-clinic/"},
+  {f:"dr-ramonas-dental-clinic",n:"Dr Ramona\'s Dental Clinic",p:"09820460169",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/dr-ramonas-dental-clinic/"},
+  {f:"dr-vina-shah---1-stop-dental-clinic",n:"Dr. Vina Shah - 1 Stop Dental Clinic — Website Preview",p:"08080010095",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/dr-vina-shah---1-stop-dental-clinic/"},
+  {f:"dr-vina-shah-1-stop-dental-clinic",n:"Dr. Vina Shah - 1 Stop Dental Clinic — Website Preview",p:"918080010095",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/dr-vina-shah-1-stop-dental-clinic/"},
+  {f:"drberas-dental-clinic-mumbai-dentist",n:"Dr.Bera\'s dental clinic Mumbai Dentist — Website Preview",p:"919702582286",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/drberas-dental-clinic-mumbai-dentist/"},
+  {f:"dyson-hair-studio---unisex-salon",n:"Dyson Hair Studio - Unisex Salon",p:"918356814366",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/dyson-hair-studio---unisex-salon/"},
+  {f:"fair-salon",n:"Fair Salon",p:"918779917465",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/fair-salon/"},
+  {f:"fine-barber-shop",n:"FINE BARBER SHOP",p:"5164129210",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/fine-barber-shop/"},
+  {f:"fitness-conditioning-club-fc-gym",n:"Fitness &amp; Conditioning Club (FC² Gym)",p:"919930556987",niche:"gym",u:"https://kevinpratap.github.io/lead-demos/demos/fitness-conditioning-club-fc-gym/"},
+  {f:"flex-and-flow-physiotherapy-clinic-expert-physiotherapist-in-vile-parle-east",n:"Flex and Flow Physiotherapy Clinic",p:"+919833000468",niche:"physio",u:"https://kevinpratap.github.io/lead-demos/demos/flex-and-flow-physiotherapy-clinic-expert-physiotherapist-in-vile-parle-east/"},
+  {f:"fresh-look-beauty-salon",n:"Fresh Look Beauty Salon",p:"919892161746",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/fresh-look-beauty-salon/"},
+  {f:"fs-unisex-salon",n:"FS UNISEX SALON",p:"918108778492",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/fs-unisex-salon/"},
+  {f:"ganatras-dental-care",n:"Ganatras Dental Care",p:"09867440803",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/ganatras-dental-care/"},
+  {f:"glow-dent-clinic-dr-anjali-holambe-dentist-in-bandra-goregaon-mumbai",n:"Glow Dent Clinic – Dr. Anjali Holambe | Dentist in Bandra | Goregaon Mumbai — Website Preview",p:"919820088784",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/glow-dent-clinic-dr-anjali-holambe-dentist-in-bandra-goregaon-mumbai/"},
+  {f:"hair-and-care-by-beauty-palace",n:"Hair and Care by Beauty Palace",p:"492084515764",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/hair-and-care-by-beauty-palace/"},
+  {f:"hair-castle-salon",n:"Hair Castle Salon — Website Preview",p:"919022288846",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/hair-castle-salon/"},
+  {f:"hair-key-unisex-salon",n:"HAIR KEY UNISEX SALON",p:"919560294335",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/hair-key-unisex-salon/"},
+  {f:"hair-pray-love",n:"HAIR PRAY LOVE",p:"918850159641",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/hair-pray-love/"},
+  {f:"happy-tooth-dental-clinic",n:"Happy Tooth Dental Clinic",p:"09324341063",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/happy-tooth-dental-clinic/"},
+  {f:"heena-beauty-salon-academy-ladies-only",n:"HEENA BEAUTY SALON &amp; ACADEMY (Ladies only) — Website Preview",p:"919594023061",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/heena-beauty-salon-academy-ladies-only/"},
+  {f:"jack-n-jill-unisex-salon",n:"JACK N JILL UNISEX SALON",p:"919076054777",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/jack-n-jill-unisex-salon/"},
+  {f:"jgs-fitness-centre",n:"JGS Fitness Centre",p:"919324246680",niche:"gym",u:"https://kevinpratap.github.io/lead-demos/demos/jgs-fitness-centre/"},
+  {f:"krishna-dental-clinic",n:"Krishna Dental Clinic",p:"09769176005",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/krishna-dental-clinic/"},
+  {f:"kuts-and-kolor-unisex-salon",n:"Kuts and Kolor Unisex Salon",p:"919702060528",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/kuts-and-kolor-unisex-salon/"},
+  {f:"kuts-kolor-luxury-unisex-salon",n:"KUTS &amp; KOLOR Luxury Unisex Salon",p:"919167860528",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/kuts-kolor-luxury-unisex-salon/"},
+  {f:"lookout-salon",n:"Lookout Salon — Website Preview",p:"919819402381",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/lookout-salon/"},
+  {f:"looks-hair-studio-unisex-salon",n:"Looks hair studio unisex salon — Website Preview",p:"919718760279",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/looks-hair-studio-unisex-salon/"},
+  {f:"lovehair-studio",n:"love.hair studio",p:"919967901223",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/lovehair-studio/"},
+  {f:"lubss-spa-luxuries-juhu",n:"Lubss Spa Luxuries Juhu",p:"+918928269552",niche:"spa",u:"https://kevinpratap.github.io/lead-demos/demos/lubss-spa-luxuries-juhu/"},
+  {f:"luxury-spa-in-juhu-mumbai",n:"Bamboo Luxury Spa",p:"+919769551199",niche:"spa",u:"https://kevinpratap.github.io/lead-demos/demos/luxury-spa-in-juhu-mumbai/"},
+  {f:"luxury-spa-premium-unisex-salon-in-mumbai",n:"Myrah Spa &amp; Salon",p:"+919967797574",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/luxury-spa-premium-unisex-salon-in-mumbai/"},
+  {f:"lys-salon-spa-love-your-soul-best-unisex-salon-near-palladium-lower-parel",n:"LYS Salon &amp; Spa (Love your soul) : Best unisex Salon Near palladium Lower Parel",p:"919833535960",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/lys-salon-spa-love-your-soul-best-unisex-salon-near-palladium-lower-parel/"},
+  {f:"massage-centre-in-andheri-west-mumbai-massage-in-mumbai",n:"Aquaa Spa &amp; Massage Centre",p:"+919920942114",niche:"spa",u:"https://kevinpratap.github.io/lead-demos/demos/massage-centre-in-andheri-west-mumbai-massage-in-mumbai/"},
+  {f:"midtown-fitness",n:"MIDTOWN FITNESS",p:"919819999103",niche:"gym",u:"https://kevinpratap.github.io/lead-demos/demos/midtown-fitness/"},
+  {f:"mumbai",n:"Diva Yoga Andheri",p:"+917208088873",niche:"other",u:"https://kevinpratap.github.io/lead-demos/demos/mumbai/"},
+  {f:"mumbai-fitness-club",n:"Mumbai Fitness Club — Website Preview",p:"919769000705",niche:"gym",u:"https://kevinpratap.github.io/lead-demos/demos/mumbai-fitness-club/"},
+  {f:"my-fitness-club-dharavi",n:"MY FITNESS CLUB DHARAVI",p:"919930722213",niche:"gym",u:"https://kevinpratap.github.io/lead-demos/demos/my-fitness-club-dharavi/"},
+  {f:"myrah---juhu",n:"Myrah Spa Juhu",p:"+919820040002",niche:"spa",u:"https://kevinpratap.github.io/lead-demos/demos/myrah---juhu/"},
+  {f:"new-light-beauty-saloon",n:"New Light Beauty saloon — Website Preview",p:"919967007734",niche:"other",u:"https://kevinpratap.github.io/lead-demos/demos/new-light-beauty-saloon/"},
+  {f:"oscars-unisex-salon-in-worli---best-unisex-salon-in-worli---best-beauty-salon-in-worli",n:"Oscar\'s Unisex Salon in Worli - Best Unisex Salon in Worli - Best Beauty Salon in Worli",p:"918655100811",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/oscars-unisex-salon-in-worli---best-unisex-salon-in-worli---best-beauty-salon-in-worli/"},
+  {f:"perfect-smile-dental-care-centre",n:"PERFECT SMILE DENTAL CARE CENTRE",p:"912226201077",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/perfect-smile-dental-care-centre/"},
+  {f:"perio-dent",n:"PERIO DENT",p:"07021306774",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/perio-dent/"},
+  {f:"physio-active-pro-fitness-gym",n:"Physio Active Pro Fitness Gym",p:"919143438383",niche:"gym",u:"https://kevinpratap.github.io/lead-demos/demos/physio-active-pro-fitness-gym/"},
+  {f:"physio-fit-by-drtanvi-y-shah",n:"Physio-Fit by Dr. Tanvi Y. Shah",p:"+919082716737",niche:"physio",u:"https://kevinpratap.github.io/lead-demos/demos/physio-fit-by-drtanvi-y-shah/"},
+  {f:"powai-medical-and-dental-centre",n:"Powai Medical and Dental Centre",p:"09833368548",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/powai-medical-and-dental-centre/"},
+  {f:"professionnel-unisex-salon-accdmy-classes-l-hair-stylist-salon-l-hair-patch-more",n:"Professionnel unisex salon &amp; Accdmy classes l Hair stylist salon l Hair patch &amp; more — Website Preview",p:"919322964354",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/professionnel-unisex-salon-accdmy-classes-l-hair-stylist-salon-l-hair-patch-more/"},
+  {f:"relax-at-a-spa-hotel-in-mumbai",n:"Sea Princess Spa Hotel",p:"+919594342345",niche:"spa",u:"https://kevinpratap.github.io/lead-demos/demos/relax-at-a-spa-hotel-in-mumbai/"},
+  {f:"richie-rich-clinical-salon-spa-8-years-experience",n:"Richie Rich Clinical Salon &amp; Spa 8 years experience",p:"918779398011",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/richie-rich-clinical-salon-spa-8-years-experience/"},
+  {f:"royal-spa-andheri",n:"Royal Spa Andheri",p:"+918433854585",niche:"spa",u:"https://kevinpratap.github.io/lead-demos/demos/royal-spa-andheri/"},
+  {f:"royal-thai-spa",n:"Royal Thai Spa",p:"+918062429998",niche:"spa",u:"https://kevinpratap.github.io/lead-demos/demos/royal-thai-spa/"},
+  {f:"saifee-dental-clinic",n:"Saifee Dental Clinic",p:"919870132176",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/saifee-dental-clinic/"},
+  {f:"sanguine-fitness-studio",n:"Sanguine Fitness Studio",p:"+918108030202",niche:"gym",u:"https://kevinpratap.github.io/lead-demos/demos/sanguine-fitness-studio/"},
+  {f:"saniya-beauty-salon---nanoplastia-hair-treatment-hydra-medi-facial-olaplex-hair-treatment-balayage-hair-colour",n:"Saniya Beauty Salon - Nanoplastia Hair Treatment | Hydra Medi Facial | Olaplex Hair Treatment-Balayage Hair colour",p:"918080556399",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/saniya-beauty-salon---nanoplastia-hair-treatment-hydra-medi-facial-olaplex-hair-treatment-balayage-hair-colour/"},
+  {f:"shearinsight-unisex-salon",n:"ShearInsight Unisex Salon",p:"919833995345",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/shearinsight-unisex-salon/"},
+  {f:"shining-smiles-dental-clinic",n:"Shining Smiles Dental Clinic",p:"09892666407",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/shining-smiles-dental-clinic/"},
+  {f:"shriji-beauty-touch",n:"SHRIJI BEAUTY TOUCH",p:"447404995198",niche:"other",u:"https://kevinpratap.github.io/lead-demos/demos/shriji-beauty-touch/"},
+  {f:"smile-plus-dental-clinic",n:"Smile Plus Dental Clinic",p:"09920548380",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/smile-plus-dental-clinic/"},
+  {f:"smilee-dental-care",n:"Smilee Dental Care",p:"02225775599",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/smilee-dental-care/"},
+  {f:"specialist-dental-centre-since-1983",n:"Specialist Dental Centre (SINCE 1983) — Website Preview",p:"919920407651",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/specialist-dental-centre-since-1983/"},
+  {f:"style-lynn-ladies-salon-spa",n:"Style Lynn Ladies Salon &amp; Spa — Website Preview",p:"918691933480",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/style-lynn-ladies-salon-spa/"},
+  {f:"sudipa-yogalaya---yoga-classes-near-me-best-yoga-classesyoga-trainercorporate-yoga-in-andheri",n:"Sudipa Yogalaya",p:"+919821345639",niche:"yoga",u:"https://kevinpratap.github.io/lead-demos/demos/sudipa-yogalaya---yoga-classes-near-me-best-yoga-classesyoga-trainercorporate-yoga-in-andheri/"},
+  {f:"taj-beauty-salon",n:"Taj Beauty Salon",p:"918291366412",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/taj-beauty-salon/"},
+  {f:"tfc---tarun-fitness-club-247",n:"TFC - Tarun Fitness Club 24/7 — Website Preview",p:"919324636386",niche:"gym",u:"https://kevinpratap.github.io/lead-demos/demos/tfc---tarun-fitness-club-247/"},
+  {f:"the-glam-bar-salon",n:"The Glam Bar Salon",p:"919819100099",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/the-glam-bar-salon/"},
+  {f:"the-lash-house",n:"The Lash House",p:"+916398242517",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/the-lash-house/"},
+  {f:"the-tooth-junction",n:"The Tooth Junction",p:"918692896336",niche:"other",u:"https://kevinpratap.github.io/lead-demos/demos/the-tooth-junction/"},
+  {f:"tip-and-toe-luxe-the-nail-lashes-brows-microblading---bandra",n:"Tip and Toe Luxe Bandra",p:"+918879773556",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/tip-and-toe-luxe-the-nail-lashes-brows-microblading---bandra/"},
+  {f:"tooth-smith-dental-clinic",n:"Tooth Smith Dental Clinic",p:"919004345554",niche:"dental",u:"https://kevinpratap.github.io/lead-demos/demos/tooth-smith-dental-clinic/"},
+  {f:"unique-unisex-salon",n:"Unique unisex salon — Website Preview",p:"917498312269",niche:"salon",u:"https://kevinpratap.github.io/lead-demos/demos/unique-unisex-salon/"},
+  {f:"urban-luxury-spa-in-juhu",n:"Urban Luxury Spa Juhu",p:"+919372230456",niche:"spa",u:"https://kevinpratap.github.io/lead-demos/demos/urban-luxury-spa-in-juhu/"},
+  {f:"way-to-fitness---gyms-in-colaba-mumbai",n:"WAY TO FITNESS - Gyms in Colaba, Mumbai. — Website Preview",p:"917506340313",niche:"gym",u:"https://kevinpratap.github.io/lead-demos/demos/way-to-fitness---gyms-in-colaba-mumbai/"},
+  {f:"yogasadhana",n:"Yogasadhana",p:"+919594069549",niche:"yoga",u:"https://kevinpratap.github.io/lead-demos/demos/yogasadhana/"}];
+const grid=document.getElementById('grid');
+const cnt=document.getElementById('count');
+const btns=document.querySelectorAll('.filter-btn');
+function render(f){
+grid.innerHTML='';let c=0;
+D.forEach(d=>{
+if(f!=='all'&&d.niche!==f)return;c++;
+const wa=d.p?'https://wa.me/'+d.p:'#';
+grid.innerHTML+=`<div class="card"><span class="card-niche niche-${d.niche}">${d.niche}</span><div class="card-name">${d.n}</div><div class="card-phone">${d.p}</div><div class="card-links"><a href="${d.u}" target="_blank" class="link-site">View Site</a><a href="${wa}" target="_blank" class="link-wa">WhatsApp</a></div></div>`;
+});
+cnt.textContent=c;
+}
+btns.forEach(b=>b.addEventListener('click',()=>{btns.forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.dataset.filter)}));
+render('all');
+</script>
+</body>
+</html>
