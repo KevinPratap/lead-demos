@@ -3,598 +3,494 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Physio-Fit by Dr. Tanvi Y. Shah | Mumbai</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Physio-Fit by Dr. Tanvi Y. Shah</title>
   <style>
-    /* Reset & Base Styles */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+    :root {
+      --accent: #2563eb;
+      --accent-light: #e9effd;
+      --accent-dark: #1945a4;
+      --bg: #fafafa;
+      --text: #111111;
+      --text-light: #666666;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      color: rgba(0,0,0,0.95);
-      background-color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-    
-    /* Layout Container */
-    .container {
+
+    .navbar {
+      padding: 2.5rem 2rem;
+      width: 100%;
+    }
+
+    .nav-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 24px;
-    }
-    
-    /* Sticky Navigation */
-    nav {
-      position: sticky;
-      top: 0;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
-      z-index: 1000;
-      padding: 16px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
-    .nav-logo {
-      font-size: 20px;
-      font-weight: 700;
-      color: rgba(0,0,0,0.95);
+
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
       text-decoration: none;
-      letter-spacing: -0.5px;
+      color: var(--text);
     }
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
+
     .nav-phone {
-      color: #615d59;
+      font-size: 0.9rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
       text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s ease;
-      font-size: 15px;
+      color: var(--text-light);
+      transition: color 0.3s ease;
     }
+
     .nav-phone:hover {
-      color: #2a9d9d;
+      color: var(--accent);
     }
-    
-    /* Buttons */
-    .btn {
-      display: inline-block;
-      background-color: #2a9d9d;
-      color: #ffffff;
-      padding: 12px 28px;
-      font-weight: 600;
-      font-size: 15px;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-      border: none;
-      cursor: pointer;
+
+    .hero {
+      padding: 6rem 2rem 5rem 2rem;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
     }
-    .btn:hover {
-      transform: translateY(-1px);
-      opacity: 0.95;
-    }
-    .btn-sm {
-      padding: 8px 18px;
-      font-size: 14px;
-    }
-    
-    /* Badges */
+
     .rating-badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background-color: #f0f9f9;
-      color: #2a9d9d;
-      padding: 6px 12px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 14px;
-      margin-bottom: 16px;
+      gap: 0.5rem;
+      padding: 0.4rem 1.2rem;
+      border: 1px solid var(--accent-light);
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      color: var(--text-light);
+      margin-bottom: 2.5rem;
+      background-color: rgba(255, 255, 255, 0.02);
     }
-    
-    /* Hero Section - Split Layout (1) */
-    .hero-split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+
+    .rating-val {
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .rating-divider {
+      opacity: 0.4;
+    }
+
+    .reviews-count {
+      font-weight: 300;
+    }
+
+    .hero-label {
+      display: block;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      line-height: 1.2;
+      font-weight: 200;
+      margin-bottom: 2rem;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .hero-text {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      font-weight: 200;
+      max-width: 680px;
+      margin: 0 auto 4rem auto;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+    .stats-line {
+      display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 48px;
-      padding: 80px 24px;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--text-light);
+      letter-spacing: 0.08em;
+      border-top: 1px solid var(--accent-light);
+      border-bottom: 1px solid var(--accent-light);
+      padding: 1.2rem 0;
+      max-width: 800px;
+      margin: 0 auto;
+      text-transform: uppercase;
     }
-    .hero-content h1 {
-      font-size: 48px;
-      font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 20px;
-      letter-spacing: -1px;
+
+    .stats-line .bullet {
+      color: var(--accent);
+      opacity: 0.5;
     }
-    .hero-content .tagline {
-      font-size: 18px;
-      color: #615d59;
-      margin-bottom: 32px;
+
+    .services {
+      padding: 8rem 2rem;
+      background-color: var(--bg);
+      text-align: center;
     }
-    .hero-image-wrapper {
+
+    .services-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 200;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 5rem;
+      color: var(--text);
+    }
+
+    .services-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 100%;
-      height: 450px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: rgba(0, 0, 0, 0.01) 0px 1px 2px, rgba(0, 0, 0, 0.02) 0px 4px 12px;
-      border: 1px solid rgba(0,0,0,0.1);
     }
-    .hero-img {
+
+    .services-content ul {
+      list-style: none;
+      width: 100%;
+      padding: 0;
+    }
+
+    .services-content li, 
+    .services-content .service-item,
+    .services-content > div {
+      width: 100%;
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--accent-light);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s ease;
+    }
+
+    .services-content li:first-child, 
+    .services-content .service-item:first-child,
+    .services-content > div:first-child {
+      border-top: 1px solid var(--accent-light);
+    }
+
+    .services-content li:hover, 
+    .services-content .service-item:hover,
+    .services-content > div:hover {
+      background-color: rgba(255, 255, 255, 0.01);
+    }
+
+    .services-content h3 {
+      font-size: 1.3rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .services-content p {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--text-light);
+      max-width: 550px;
+      line-height: 1.7;
+      margin: 0 auto;
+    }
+
+    .gallery-break-section {
+      width: 100%;
+      padding: 0;
+      margin: 4rem 0;
+    }
+
+    .gallery-heading-container {
+      max-width: 1200px;
+      margin: 0 auto 2.5rem auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .gallery-heading-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text-light);
+      font-weight: 300;
+    }
+
+    .image-break {
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .image-break img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
+      filter: brightness(0.95);
+      transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
     }
-    
-    /* Hero Section - Centered Layout (2) */
-    .hero-centered {
+
+    .image-break:hover img {
+      transform: scale(1.03);
+    }
+
+    .featured-section {
+      padding: 9rem 2rem;
       text-align: center;
-      padding: 80px 24px;
-      max-width: 800px;
+      background-color: var(--bg);
     }
-    .hero-centered h1 {
-      font-size: 48px;
-      font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 20px;
-      letter-spacing: -1px;
+
+    .featured-container {
+      max-width: 750px;
+      margin: 0 auto;
     }
-    .hero-centered .tagline {
-      font-size: 18px;
-      color: #615d59;
-      margin-bottom: 24px;
+
+    .featured-title {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 200;
+      line-height: 1.35;
+      margin-bottom: 2rem;
+      color: var(--text);
+      letter-spacing: -0.01em;
     }
-    .hero-wide-image {
-      margin-top: 48px;
-      width: 100%;
-      height: 480px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: rgba(0, 0, 0, 0.01) 0px 1px 2px, rgba(0, 0, 0, 0.02) 0px 4px 12px;
-      border: 1px solid rgba(0,0,0,0.1);
+
+    .featured-text {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 3rem;
     }
-    
-    /* Hero Section - Overlay Layout (3) */
-    .hero-overlay {
-      padding: 40px 24px;
-    }
-    .hero-bg-wrapper {
-      width: 100%;
-      height: 550px;
-      border-radius: 12px;
-      overflow: hidden;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      display: flex;
-      align-items: center;
-      padding: 48px;
-      box-shadow: rgba(0, 0, 0, 0.01) 0px 1px 2px, rgba(0, 0, 0, 0.02) 0px 4px 12px;
-      border: 1px solid rgba(0,0,0,0.1);
-    }
-    .hero-bg-wrapper::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 100%);
-      z-index: 1;
-    }
-    .hero-card-overlay {
-      position: relative;
-      z-index: 2;
-      max-width: 500px;
-      background: rgba(255, 255, 255, 0.95);
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: rgba(0, 0, 0, 0.01) 0px 1px 2px, rgba(0, 0, 0, 0.02) 0px 4px 12px;
-    }
-    .hero-card-overlay h1 {
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 16px;
-      letter-spacing: -0.5px;
-    }
-    .hero-card-overlay .tagline {
-      font-size: 16px;
-      color: #615d59;
-      margin-bottom: 20px;
-    }
-    
-    /* General Sections */
-    .section {
-      padding: 80px 0;
-    }
-    .section-alt {
-      background-color: #f6f5f4;
-    }
-    .section-header {
-      text-align: center;
-      margin-bottom: 48px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .section-header h2 {
-      font-size: 36px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      letter-spacing: -0.5px;
-    }
-    .section-header .subtitle {
-      color: #615d59;
-      font-size: 16px;
-    }
-    
-    /* About Section */
-    .split-about {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 48px;
-    }
-    .about-left h2 {
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.5px;
-    }
-    .accent-bar {
-      width: 48px;
-      height: 4px;
-      background-color: #2a9d9d;
-      margin-top: 16px;
-      border-radius: 2px;
-    }
-    .about-right p {
-      font-size: 16px;
-      color: #615d59;
-      margin-bottom: 20px;
-    }
-    
-    /* Services Grid */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-    .service-card {
-      background: #ffffff;
-      padding: 32px;
-      border-radius: 12px;
-      box-shadow: rgba(0, 0, 0, 0.01) 0px 1px 2px, rgba(0, 0, 0, 0.02) 0px 4px 12px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border: 1px solid rgba(0,0,0,0.1);
-    }
-    .service-card:hover {
-      transform: translateY(-4px);
-    }
-    .service-icon {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-    .service-card h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-    .service-card p {
-      color: #615d59;
-      font-size: 15px;
-    }
-    
-    /* Why Choose Us Grid */
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
-    }
-    .why-card {
-      background: #ffffff;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: rgba(0, 0, 0, 0.01) 0px 1px 2px, rgba(0, 0, 0, 0.02) 0px 4px 12px;
-      border: 1px solid rgba(0,0,0,0.1);
-    }
-    .why-num {
-      font-size: 24px;
-      font-weight: 700;
-      color: #2a9d9d;
-      margin-bottom: 12px;
-    }
-    .why-card h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .why-card p {
-      color: #615d59;
-      font-size: 15px;
-    }
-    
-    /* Info Panel (Hours & Contact) */
-    .info-panel {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 48px;
-      padding-bottom: 80px;
-    }
-    .info-left h2 {
-      font-size: 32px;
-      font-weight: 700;
-      margin-bottom: 24px;
-      letter-spacing: -0.5px;
-    }
-    .hours-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 32px;
-    }
-    .hours-table td {
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      font-size: 15px;
-    }
-    .hours-table td:last-child {
-      text-align: right;
-      font-weight: 500;
-    }
-    .contact-details {
-      font-size: 15px;
-      color: rgba(0,0,0,0.95);
-    }
-    .contact-item {
-      margin-bottom: 12px;
-      display: flex;
-      flex-direction: column;
-    }
-    .contact-label {
-      font-weight: 600;
-      color: #615d59;
-      margin-bottom: 4px;
-    }
-    .contact-value a {
-      color: #2a9d9d;
+
+    .featured-cta {
+      font-size: 0.85rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text);
       text-decoration: none;
-      font-weight: 500;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--accent);
+      transition: all 0.3s ease;
     }
-    .info-right {
-      height: 100%;
-      min-height: 350px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: rgba(0, 0, 0, 0.01) 0px 1px 2px, rgba(0, 0, 0, 0.02) 0px 4px 12px;
-      border: 1px solid rgba(0,0,0,0.1);
+
+    .featured-cta:hover {
+      color: var(--accent-dark);
+      border-bottom-color: var(--accent-dark);
+      letter-spacing: 0.23em;
     }
-    .map-iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-    
-    /* Footer */
-    footer {
-      background-color: #f6f5f4;
-      padding: 48px 24px;
+
+    .cta-section {
+      padding: 9rem 2rem;
       text-align: center;
-      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      border-top: 1px solid var(--accent-light);
+      background-color: var(--bg);
     }
-    footer p {
-      font-size: 14px;
-      color: #615d59;
+
+    .cta-container {
+      max-width: 650px;
+      margin: 0 auto;
     }
-    footer a {
-      color: rgba(0,0,0,0.95);
+
+    .cta-title {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 200;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .cta-text {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text-light);
+      margin-bottom: 3.5rem;
+      line-height: 1.75;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1.1rem 3rem;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
       text-decoration: none;
-      font-weight: 500;
+      background-color: var(--accent);
+      color: var(--bg);
+      border-radius: 100px;
+      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     }
-    footer a:hover {
-      color: #2a9d9d;
+
+    .cta-button:hover {
+      background-color: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     }
-    
-    /* Responsive Styles */
-    @media (max-width: 992px) {
-      .hero-split {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        text-align: center;
-      }
-      .hero-image-wrapper {
-        height: 350px;
-      }
-      .split-about {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-      .info-panel {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-      .info-right {
-        height: 300px;
-      }
+
+    .footer {
+      padding: 5rem 2rem;
+      text-align: center;
+      border-top: 1px solid var(--accent-light);
+      background-color: var(--bg);
     }
-    
-    @media (max-width: 600px) {
-      .hero-content h1, .hero-centered h1 {
-        font-size: 32px;
+
+    .footer p {
+      font-size: 0.8rem;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 1.5rem 1.5rem;
       }
-      .hero-wide-image {
-        height: 250px;
-        margin-top: 32px;
+      .hero {
+        padding: 4rem 1.5rem 3.5rem 1.5rem;
       }
-      .hero-bg-wrapper {
-        height: auto;
-        padding: 24px;
+      .stats-line {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1.5rem 0;
       }
-      .hero-card-overlay {
-        padding: 24px;
+      .stats-line .bullet {
+        display: none;
       }
-      .section {
-        padding: 48px 0;
+      .services {
+        padding: 5rem 1.5rem;
+      }
+      .services-content li, 
+      .services-content .service-item,
+      .services-content > div {
+        padding: 2.2rem 0;
+      }
+      .gallery-break-section {
+        margin: 2rem 0;
+      }
+      .image-break {
+        height: 45vh;
+      }
+      .featured-section {
+        padding: 5rem 1.5rem;
+      }
+      .cta-section {
+        padding: 5rem 1.5rem;
+      }
+      .footer {
+        padding: 3.5rem 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-  
-  <!-- Navigation -->
-  <nav>
-    <a href="#" class="nav-logo">Physio-Fit by Dr. Tanvi Y. Shah</a>
-    <div class="nav-right">
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Physio-Fit by Dr. Tanvi Y. Shah</a>
       <a href="tel:+919082716737" class="nav-phone">+91 90827 16737</a>
-      <a href="tel:+919082716737" class="btn btn-sm">Call Now</a>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero -->
-  
-        <section class="hero-centered container">
-          <div class="rating-badge">★ 5.0 (17 reviews)</div>
-          <h1>Restore Your Movement and Live Pain Free</h1>
-          <p class="tagline">Dedicated physiotherapy solutions for sports injuries, chronic pain, and recovery</p>
-          <div style="margin-top: 24px;">
-            <a href="tel:+919082716737" class="btn">Book Appointment</a>
-          </div>
-          <div class="hero-wide-image">
-            <img class="hero-img" src="https://images.unsplash.com/photo-1530026405186-ed1ea0007a30?w=1200&h=600&fit=crop" alt="Physio-Fit by Dr. Tanvi Y. Shah">
-          </div>
-        </section>
-        
-
-  <!-- Alternating Sections -->
-  
-    <section id="about" class="section">
-      <div class="container split-about">
-        <div class="about-left">
-          <h2>About Our Studio</h2>
-          <div class="accent-bar"></div>
+  <main>
+    <section class="hero">
+      <div class="hero-container">
+        <div class="rating-badge">
+          <span class="rating-val">5.0</span>
+          <span class="rating-divider">/</span>
+          <span class="reviews-count">17 reviews</span>
         </div>
-        <div class="about-right">
-          <p>We specialize in restoring physical function and helping you live without pain. Our clinical approach combines advanced assessment techniques with personalized treatment plans to target the root cause of your discomfort.</p><p>We believe in active recovery. Our therapists work one-on-one with you, utilizing manual therapy, targeted exercise prescription, and education to ensure long-term wellness and prevent future injury.</p><p>Whether you are recovering from surgery, managing a chronic condition, or aiming to improve athletic performance, we are committed to helping you achieve your physical goals in a supportive environment.</p>
+        
+        <span class="hero-label">PHYSIOTHERAPY CLINIC</span>
+        <h1 class="hero-title">Restore Your Movement and Live Pain Free</h1>
+        <p class="hero-text">Dedicated physiotherapy solutions for sports injuries, chronic pain, and recovery</p>
+        
+        <div class="stats-line">
+          <span>Est. 3 Years of Care</span>
+          <span class="bullet">•</span>
+          <span>Clinical Rehabilitation</span>
+          <span class="bullet">•</span>
+          <span>4, Baptista Hacienda, Old Police Station Road, Bajiprabhu Deshpande Marg, opposite Suburban Diagnostics, Vile Parle West, Mumbai, Maharashtra 400056</span>
         </div>
       </div>
     </section>
-    
-    <section id="services" class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <h2>Our Professional Services</h2>
-          <p class="subtitle">Curated treatments and classes for your wellbeing.</p>
-        </div>
-        <div class="services-grid">
-          
-        <div class="service-card">
-          <div class="service-icon">🏃</div>
-          <h3>Sports Rehabilitation</h3>
-          <p>Tailored programs to help athletes recover from injuries and safely return to peak performance</p>
-        </div>
-        
-        <div class="service-card">
-          <div class="service-icon">🦾</div>
-          <h3>Manual Therapy</h3>
-          <p>Hands-on techniques including joint mobilization and soft tissue release to reduce pain and stiffness</p>
-        </div>
-        
-        <div class="service-card">
-          <div class="service-icon">🩹</div>
-          <h3>Post-Operative Care</h3>
-          <p>Structured recovery protocols to rebuild strength and mobility following orthopedic surgeries</p>
-        </div>
-        
-        <div class="service-card">
-          <div class="service-icon">📐</div>
-          <h3>Ergonomic Assessment</h3>
-          <p>Postural analysis and advice to prevent workplace strain and chronic back or neck pain</p>
-        </div>
-        
+
+    <section class="services">
+      <div class="services-container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-content">
+                    <div class="service-card"><h3>Sports Rehabilitation</h3><p>Tailored programs to help athletes recover from injuries and safely return to peak performance</p></div>\n          <div class="service-card"><h3>Manual Therapy</h3><p>Hands-on techniques including joint mobilization and soft tissue release to reduce pain and stiffness</p></div>\n          <div class="service-card"><h3>Post-Operative Care</h3><p>Structured recovery protocols to rebuild strength and mobility following orthopedic surgeries</p></div>\n          <div class="service-card"><h3>Ergonomic Assessment</h3><p>Postural analysis and advice to prevent workplace strain and chronic back or neck pain</p></div>\n
         </div>
       </div>
     </section>
-    
-    <section id="why" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Why Choose Us</h2>
-          <p class="subtitle">Experience the difference of dedicated care.</p>
-        </div>
-        <div class="why-grid">
-          
-        <div class="why-card">
-          <div class="why-num">01</div>
-          <h3>Evidence-Based</h3>
-          <p>We use current research and proven methods to deliver effective, efficient treatments.</p>
-        </div>
-        
-        <div class="why-card">
-          <div class="why-num">02</div>
-          <h3>Personalized Plans</h3>
-          <p>No generic exercises. Your program is customized to your specific lifestyle, body, and goals.</p>
-        </div>
-        
-        <div class="why-card">
-          <div class="why-num">03</div>
-          <h3>One-on-One Care</h3>
-          <p>You spend your entire session with a qualified therapist who is focused solely on your recovery.</p>
-        </div>
-        
+
+    <section class="gallery-break-section">
+      <div class="gallery-heading-container">
+        <span class="gallery-heading-label">Our Practice</span>
+      </div>
+      <div class="image-break">
+        <img src="https://images.unsplash.com/photo-1530026405186-ed1ea0007a30?auto=format&fit=crop&q=80&w=2000" alt="Premium Wellness Environment" />
+      </div>
+    </section>
+
+    <section class="featured-section">
+      <div class="featured-container">
+        <div class="featured-content">
+          <h2 class="featured-title">New Patient Special</h2>
+          <p class="featured-text">First consultation + assessment at a special rate. Experienced physical therapists, personalized treatment.</p>
+          <a href="tel:+919082716737" class="featured-cta">Call to Book</a>
         </div>
       </div>
     </section>
-    
 
-  <!-- Info & Contact Panel -->
-  <section id="contact" class="section section-alt">
-    <div class="container info-panel">
-      <div class="info-left">
-        <h2>Hours & Location</h2>
-        <table class="hours-table">
-          
-        <tr><td>Monday - Friday</td><td>8:00 AM - 8:00 PM</td></tr>
-        <tr><td>Saturday</td><td>9:00 AM - 3:00 PM</td></tr>
-        <tr><td>Sunday</td><td>Closed</td></tr>
-        
-        </table>
-        
-        <div class="contact-details">
-          <div class="contact-item">
-            <span class="contact-label">Address</span>
-            <span class="contact-value">4, Baptista Hacienda, Old Police Station Road, Bajiprabhu Deshpande Marg, opposite Suburban Diagnostics, Vile Parle West, Mumbai, Maharashtra 400056</span>
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Phone</span>
-            <span class="contact-value"><a href="tel:+919082716737">+91 90827 16737</a></span>
-          </div>
-        </div>
+    <section class="cta-section">
+      <div class="cta-container">
+        <h2 class="cta-title">Ready to live pain-free?</h2>
+        <p class="cta-text">Schedule your assessment today and start moving freely again.</p>
+        <a href="tel:+919082716737" class="cta-button">Schedule Assessment →</a>
       </div>
-      
-      <div class="info-right">
-        <iframe 
-          class="map-iframe"
-          src="https://maps.google.com/maps?q=Physio-Fit%20by%20Dr.%20Tanvi%20Y.%20Shah%2C%204%2C%20Baptista%20Hacienda%2C%20Old%20Police%20Station%20Road%2C%20Bajiprabhu%20Deshpande%20Marg%2C%20opposite%20Suburban%20Diagnostics%2C%20Vile%20Parle%20West%2C%20Mumbai%2C%20Maharashtra%20400056&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-          allowfullscreen="" 
-          loading="lazy">
-        </iframe>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Physio-Fit by Dr. Tanvi Y. Shah. All rights reserved.</p>
-      <p style="margin-top: 8px; font-size: 12px;">Demo by Kevin</p>
-    </div>
+  <footer class="footer">
+    <p>Built by Kevin</p>
   </footer>
 
 </body>

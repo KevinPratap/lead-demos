@@ -1,599 +1,531 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Urban Luxury Spa Juhu | Mumbai</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* Reset & Base Styles */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      color: #222222;
-      background-color: #ffffff;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    
-    /* Layout Container */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    
-    /* Sticky Navigation */
-    nav {
-      position: sticky;
-      top: 0;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
-      z-index: 1000;
-      padding: 16px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-    .nav-logo {
-      font-size: 20px;
-      font-weight: 700;
-      color: #222222;
-      text-decoration: none;
-      letter-spacing: -0.5px;
-    }
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-    .nav-phone {
-      color: #6a6a6a;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s ease;
-      font-size: 15px;
-    }
-    .nav-phone:hover {
-      color: #ff385c;
-    }
-    
-    /* Buttons */
-    .btn {
-      display: inline-block;
-      background-color: #ff385c;
-      color: #ffffff;
-      padding: 12px 28px;
-      font-weight: 600;
-      font-size: 15px;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-      border: none;
-      cursor: pointer;
-    }
-    .btn:hover {
-      transform: translateY(-1px);
-      opacity: 0.95;
-    }
-    .btn-sm {
-      padding: 8px 18px;
-      font-size: 14px;
-    }
-    
-    /* Badges */
-    .rating-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background-color: #fff0f2;
-      color: #ff385c;
-      padding: 6px 12px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-    
-    /* Hero Section - Split Layout (1) */
-    .hero-split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 48px;
-      padding: 80px 24px;
-    }
-    .hero-content h1 {
-      font-size: 48px;
-      font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 20px;
-      letter-spacing: -1px;
-    }
-    .hero-content .tagline {
-      font-size: 18px;
-      color: #6a6a6a;
-      margin-bottom: 32px;
-    }
-    .hero-image-wrapper {
-      width: 100%;
-      height: 450px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: rgba(0,0,0,0.02) 0px 0px 0px 1px, rgba(0,0,0,0.04) 0px 2px 6px, rgba(0,0,0,0.1) 0px 4px 8px;
-      
-    }
-    .hero-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    /* Hero Section - Centered Layout (2) */
-    .hero-centered {
-      text-align: center;
-      padding: 80px 24px;
-      max-width: 800px;
-    }
-    .hero-centered h1 {
-      font-size: 48px;
-      font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 20px;
-      letter-spacing: -1px;
-    }
-    .hero-centered .tagline {
-      font-size: 18px;
-      color: #6a6a6a;
-      margin-bottom: 24px;
-    }
-    .hero-wide-image {
-      margin-top: 48px;
-      width: 100%;
-      height: 480px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: rgba(0,0,0,0.02) 0px 0px 0px 1px, rgba(0,0,0,0.04) 0px 2px 6px, rgba(0,0,0,0.1) 0px 4px 8px;
-      
-    }
-    
-    /* Hero Section - Overlay Layout (3) */
-    .hero-overlay {
-      padding: 40px 24px;
-    }
-    .hero-bg-wrapper {
-      width: 100%;
-      height: 550px;
-      border-radius: 12px;
-      overflow: hidden;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      display: flex;
-      align-items: center;
-      padding: 48px;
-      box-shadow: rgba(0,0,0,0.02) 0px 0px 0px 1px, rgba(0,0,0,0.04) 0px 2px 6px, rgba(0,0,0,0.1) 0px 4px 8px;
-      
-    }
-    .hero-bg-wrapper::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 100%);
-      z-index: 1;
-    }
-    .hero-card-overlay {
-      position: relative;
-      z-index: 2;
-      max-width: 500px;
-      background: rgba(255, 255, 255, 0.95);
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: rgba(0,0,0,0.02) 0px 0px 0px 1px, rgba(0,0,0,0.04) 0px 2px 6px, rgba(0,0,0,0.1) 0px 4px 8px;
-    }
-    .hero-card-overlay h1 {
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 16px;
-      letter-spacing: -0.5px;
-    }
-    .hero-card-overlay .tagline {
-      font-size: 16px;
-      color: #6a6a6a;
-      margin-bottom: 20px;
-    }
-    
-    /* General Sections */
-    .section {
-      padding: 80px 0;
-    }
-    .section-alt {
-      background-color: #f8f7f6;
-    }
-    .section-header {
-      text-align: center;
-      margin-bottom: 48px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .section-header h2 {
-      font-size: 36px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      letter-spacing: -0.5px;
-    }
-    .section-header .subtitle {
-      color: #6a6a6a;
-      font-size: 16px;
-    }
-    
-    /* About Section */
-    .split-about {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 48px;
-    }
-    .about-left h2 {
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.5px;
-    }
-    .accent-bar {
-      width: 48px;
-      height: 4px;
-      background-color: #ff385c;
-      margin-top: 16px;
-      border-radius: 2px;
-    }
-    .about-right p {
-      font-size: 16px;
-      color: #6a6a6a;
-      margin-bottom: 20px;
-    }
-    
-    /* Services Grid */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-    .service-card {
-      background: #ffffff;
-      padding: 32px;
-      border-radius: 12px;
-      box-shadow: rgba(0,0,0,0.02) 0px 0px 0px 1px, rgba(0,0,0,0.04) 0px 2px 6px, rgba(0,0,0,0.1) 0px 4px 8px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      
-    }
-    .service-card:hover {
-      transform: translateY(-4px);
-    }
-    .service-icon {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-    .service-card h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-    .service-card p {
-      color: #6a6a6a;
-      font-size: 15px;
-    }
-    
-    /* Why Choose Us Grid */
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
-    }
-    .why-card {
-      background: #ffffff;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: rgba(0,0,0,0.02) 0px 0px 0px 1px, rgba(0,0,0,0.04) 0px 2px 6px, rgba(0,0,0,0.1) 0px 4px 8px;
-      
-    }
-    .why-num {
-      font-size: 24px;
-      font-weight: 700;
-      color: #ff385c;
-      margin-bottom: 12px;
-    }
-    .why-card h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .why-card p {
-      color: #6a6a6a;
-      font-size: 15px;
-    }
-    
-    /* Info Panel (Hours & Contact) */
-    .info-panel {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 48px;
-      padding-bottom: 80px;
-    }
-    .info-left h2 {
-      font-size: 32px;
-      font-weight: 700;
-      margin-bottom: 24px;
-      letter-spacing: -0.5px;
-    }
-    .hours-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 32px;
-    }
-    .hours-table td {
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      font-size: 15px;
-    }
-    .hours-table td:last-child {
-      text-align: right;
-      font-weight: 500;
-    }
-    .contact-details {
-      font-size: 15px;
-      color: #222222;
-    }
-    .contact-item {
-      margin-bottom: 12px;
-      display: flex;
-      flex-direction: column;
-    }
-    .contact-label {
-      font-weight: 600;
-      color: #6a6a6a;
-      margin-bottom: 4px;
-    }
-    .contact-value a {
-      color: #ff385c;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .info-right {
-      height: 100%;
-      min-height: 350px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: rgba(0,0,0,0.02) 0px 0px 0px 1px, rgba(0,0,0,0.04) 0px 2px 6px, rgba(0,0,0,0.1) 0px 4px 8px;
-      
-    }
-    .map-iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-    
-    /* Footer */
-    footer {
-      background-color: #f8f7f6;
-      padding: 48px 24px;
-      text-align: center;
-      border-top: 1px solid rgba(0, 0, 0, 0.05);
-    }
-    footer p {
-      font-size: 14px;
-      color: #6a6a6a;
-    }
-    footer a {
-      color: #222222;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    footer a:hover {
-      color: #ff385c;
-    }
-    
-    /* Responsive Styles */
-    @media (max-width: 992px) {
-      .hero-split {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        text-align: center;
-      }
-      .hero-image-wrapper {
-        height: 350px;
-      }
-      .split-about {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-      .info-panel {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-      .info-right {
-        height: 300px;
-      }
-    }
-    
-    @media (max-width: 600px) {
-      .hero-content h1, .hero-centered h1 {
-        font-size: 32px;
-      }
-      .hero-wide-image {
-        height: 250px;
-        margin-top: 32px;
-      }
-      .hero-bg-wrapper {
-        height: auto;
-        padding: 24px;
-      }
-      .hero-card-overlay {
-        padding: 24px;
-      }
-      .section {
-        padding: 48px 0;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Luxury Spa Juhu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #b76e5a;
+            --accent-light: #f7f0ee;
+            --accent-dark: #804d3e;
+            --bg: #fafafa;
+            --text: #111111;
+            --text-light: #666666;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--font-sans);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            padding: 2rem 0;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            font-weight: 500;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .phone-link {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #ffffff;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 0.6rem 1.2rem;
+            border-radius: 100px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            letter-spacing: 0.5px;
+        }
+
+        .phone-link:hover {
+            background-color: #ffffff;
+            color: #000000;
+            border-color: #ffffff;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            text-align: center;
+            padding: 8rem 2rem 4rem 2rem;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-label {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 2rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-text {
+            font-family: var(--font-sans);
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            line-height: 1.65;
+            max-width: 680px;
+            margin-bottom: 3.5rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 300;
+        }
+
+        .hero-stats {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.8rem 2rem;
+        }
+
+        .hero-stats span {
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-stats .separator {
+            opacity: 0.4;
+        }
+
+        .services-section {
+            padding: 8rem 0;
+            background-color: var(--bg);
+        }
+
+        .section-header {
+            max-width: 1200px;
+            margin: 0 auto 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .services-heading {
+            font-family: var(--font-serif);
+            font-size: clamp(2.25rem, 4vw, 3.25rem);
+            font-weight: 400;
+            color: var(--text);
+            letter-spacing: -0.5px;
+        }
+
+        .services-scroll-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .services-scroll {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            gap: 2rem;
+            padding: 1rem 2rem 3rem 2rem;
+        }
+
+        .services-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (min-width: 1240px) {
+            .services-scroll {
+                padding-left: calc((100vw - 1200px) / 2 + 2rem);
+                padding-right: calc((100vw - 1200px) / 2 + 2rem);
+            }
+        }
+
+        .services-scroll > * {
+            scroll-snap-align: start;
+            flex: 0 0 350px;
+            max-width: 85vw;
+            background-color: var(--bg);
+            border: 1px solid rgba(127, 127, 127, 0.15);
+            border-bottom: 3px solid var(--accent-light);
+            padding: 3.5rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 320px;
+            box-sizing: border-box;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .services-scroll > *:hover {
+            transform: translateY(-8px);
+            border-bottom-color: var(--accent);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+            border-color: rgba(127, 127, 127, 0.25);
+        }
+
+        .services-scroll > * h3 {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--text);
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.2px;
+        }
+
+        .services-scroll > * p {
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: var(--text-light);
+            font-weight: 300;
+        }
+
+        .gallery-section {
+            padding: 4rem 0 8rem 0;
+            background-color: var(--bg);
+        }
+
+        .gallery-heading {
+            font-family: var(--font-serif);
+            font-size: clamp(2.25rem, 4vw, 3.25rem);
+            font-weight: 400;
+            color: var(--text);
+            letter-spacing: -0.5px;
+            max-width: 1200px;
+            margin: 0 auto 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .gallery-fullwidth {
+            width: 100%;
+            height: clamp(450px, 70vh, 800px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+            padding: 6rem 2rem 4rem 2rem;
+            box-sizing: border-box;
+        }
+
+        .gallery-caption-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            color: #ffffff;
+        }
+
+        .gallery-caption {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .gallery-caption {
+                grid-template-columns: 1.2fr 2fr 1fr;
+                align-items: flex-end;
+                gap: 4rem;
+            }
+        }
+
+        .featured-title {
+            font-family: var(--font-serif);
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .featured-text {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+        }
+
+        .featured-cta {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 0.5rem;
+            width: fit-content;
+            transition: all 0.3s ease;
+        }
+
+        .featured-cta:hover {
+            color: var(--accent-light);
+            border-color: var(--accent-light);
+            opacity: 0.9;
+        }
+
+        .cta-section {
+            background-color: var(--accent-dark);
+            color: #ffffff;
+            padding: 10rem 2rem;
+            text-align: center;
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .cta-text {
+            font-family: var(--font-sans);
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 300;
+            margin-bottom: 3.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            font-family: var(--font-sans);
+            background-color: #ffffff;
+            color: var(--accent-dark);
+            font-weight: 600;
+            text-decoration: none;
+            padding: 1.25rem 2.75rem;
+            border-radius: 100px;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            background-color: var(--accent-light);
+            color: var(--accent-dark);
+        }
+
+        footer {
+            background-color: var(--bg);
+            border-top: 1px solid rgba(127, 127, 127, 0.15);
+            padding: 6rem 2rem 4rem 2rem;
+            color: var(--text-light);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-info {
+            margin-bottom: 4rem;
+        }
+
+        .footer-clinic-name {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.5px;
+        }
+
+        .footer-address {
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            border-top: 1px solid rgba(127, 127, 127, 0.15);
+            padding-top: 2.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .footer-copyright {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 300;
+        }
+
+        .built-by {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text);
+            letter-spacing: 0.5px;
+        }
+    </style>
 </head>
 <body>
-  
-  <!-- Navigation -->
-  <nav>
-    <a href="#" class="nav-logo">Urban Luxury Spa Juhu</a>
-    <div class="nav-right">
-      <a href="tel:+919372230456" class="nav-phone">+91 93722 30456</a>
-      <a href="tel:+919372230456" class="btn btn-sm">Call Now</a>
-    </div>
-  </nav>
 
-  <!-- Hero -->
-  
-        <section class="hero-split container">
-          <div class="hero-content">
-            <div class="rating-badge">★ 4.8 (313 reviews)</div>
-            <h1>Your Sanctuary of Peace and Rejuvenation</h1>
-            <p class="tagline">An oasis of calm in Mumbai offering traditional therapies and modern treatments</p>
-            <a href="tel:+919372230456" class="btn">Book Appointment</a>
-          </div>
-          <div class="hero-image-wrapper">
-            <img class="hero-img" src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&h=600&fit=crop" alt="Urban Luxury Spa Juhu">
-          </div>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">Urban Luxury Spa Juhu</a>
+            <a href="tel:+919372230456" class="phone-link">+91 93722 30456</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-label">PREMIUM SPA</span>
+                <h1 class="hero-title">Your Sanctuary of Peace and Rejuvenation</h1>
+                <p class="hero-text">An oasis of calm in Mumbai offering traditional therapies and modern treatments</p>
+                <div class="hero-stats">
+                    <span>Est. 3 Years</span>
+                    <span class="separator">•</span>
+                    <span>4.8 Rating</span>
+                    <span class="separator">•</span>
+                    <span>313 reviews</span>
+                </div>
+            </div>
         </section>
-        
 
-  <!-- Alternating Sections -->
-  
-    <section id="services" class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <h2>Our Professional Services</h2>
-          <p class="subtitle">Curated treatments and classes for your wellbeing.</p>
-        </div>
-        <div class="services-grid">
-          
-        <div class="service-card">
-          <div class="service-icon">💆</div>
-          <h3>Deep Tissue Massage</h3>
-          <p>Therapeutic pressure targeting chronic muscle tension to relieve stiffness and improve circulation</p>
-        </div>
-        
-        <div class="service-card">
-          <div class="service-icon">🌸</div>
-          <h3>Aromatherapy Ritual</h3>
-          <p>A gentle massage using custom-blended essential oils to promote deep mental and physical relaxation</p>
-        </div>
-        
-        <div class="service-card">
-          <div class="service-icon">🧖</div>
-          <h3>Radiance Facial</h3>
-          <p>A gentle treatment using organic botanicals to cleanse, exfoliate, and deeply hydrate your skin</p>
-        </div>
-        
-        <div class="service-card">
-          <div class="service-icon">🍃</div>
-          <h3>Body Scrub & Wrap</h3>
-          <p>A purifying treatment that exfoliates and hydrates, leaving your skin soft and refreshed</p>
-        </div>
-        
-        </div>
-      </div>
-    </section>
-    
-    <section id="about" class="section">
-      <div class="container split-about">
-        <div class="about-left">
-          <h2>About Our Studio</h2>
-          <div class="accent-bar"></div>
-        </div>
-        <div class="about-right">
-          <p>Step away from the vibrant energy of Mumbai and enter a world of pure tranquility. Our spa offers a curated collection of wellness treatments designed to melt away stress and restore your natural vitality.</p><p>We combine ancient healing rituals with organic, skin-nourishing botanicals. Every touch is intentional, delivered by skilled therapists who customize each session to your personal wellness needs.</p><p>From soft lighting to soothing aromas, every detail of our sanctuary is crafted for comfort. We invite you to arrive early, enjoy a cup of herbal tea, and begin your journey to relaxation.</p>
-        </div>
-      </div>
-    </section>
-    
-    <section id="why" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Why Choose Us</h2>
-          <p class="subtitle">Experience the difference of dedicated care.</p>
-        </div>
-        <div class="why-grid">
-          
-        <div class="why-card">
-          <div class="why-num">01</div>
-          <h3>Expert Therapists</h3>
-          <p>Our team is trained in traditional and modern techniques to ensure a safe, restorative experience.</p>
-        </div>
-        
-        <div class="why-card">
-          <div class="why-num">02</div>
-          <h3>Natural Botanicals</h3>
-          <p>We use only organic, clean products that are gentle on your skin and the environment.</p>
-        </div>
-        
-        <div class="why-card">
-          <div class="why-num">03</div>
-          <h3>Serene Atmosphere</h3>
-          <p>A quiet sanctuary designed to offer complete privacy and a peaceful escape from the city.</p>
-        </div>
-        
-        </div>
-      </div>
-    </section>
-    
+        <section class="services-section">
+            <div class="section-header">
+                <h2 class="services-heading">What We Offer</h2>
+            </div>
+            <div class="services-scroll-container">
+                <div class="services-scroll">
+                              <div class="service-card"><h3>Deep Tissue Massage</h3><p>Therapeutic pressure targeting chronic muscle tension to relieve stiffness and improve circulation</p></div>\n          <div class="service-card"><h3>Aromatherapy Ritual</h3><p>A gentle massage using custom-blended essential oils to promote deep mental and physical relaxation</p></div>\n          <div class="service-card"><h3>Radiance Facial</h3><p>A gentle treatment using organic botanicals to cleanse, exfoliate, and deeply hydrate your skin</p></div>\n          <div class="service-card"><h3>Body Scrub & Wrap</h3><p>A purifying treatment that exfoliates and hydrates, leaving your skin soft and refreshed</p></div>\n
+                </div>
+            </div>
+        </section>
 
-  <!-- Info & Contact Panel -->
-  <section id="contact" class="section section-alt">
-    <div class="container info-panel">
-      <div class="info-left">
-        <h2>Hours & Location</h2>
-        <table class="hours-table">
-          
-        <tr><td>Monday - Sunday</td><td>10:00 AM - 9:30 PM</td></tr>
-        
-        </table>
-        
-        <div class="contact-details">
-          <div class="contact-item">
-            <span class="contact-label">Address</span>
-            <span class="contact-value">Shop No 101, Ground floor, C-46, Juhu Tara Road, next to Starbucks, Juhu, Mumbai, Maharashtra 400049</span>
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Phone</span>
-            <span class="contact-value"><a href="tel:+919372230456">+91 93722 30456</a></span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="info-right">
-        <iframe 
-          class="map-iframe"
-          src="https://maps.google.com/maps?q=Urban%20Luxury%20Spa%20Juhu%2C%20Shop%20No%20101%2C%20Ground%20floor%2C%20C-46%2C%20Juhu%20Tara%20Road%2C%20next%20to%20Starbucks%2C%20Juhu%2C%20Mumbai%2C%20Maharashtra%20400049&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-          allowfullscreen="" 
-          loading="lazy">
-        </iframe>
-      </div>
-    </div>
-  </section>
+        <section class="gallery-section">
+            <h2 class="gallery-heading">Our Work</h2>
+            <div class="gallery-fullwidth">
+                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=80" alt="Urban Luxury Spa Juhu Featured Gallery" class="gallery-image">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption-container">
+                        <div class="gallery-caption">
+                            <h3 class="featured-title">Signature Treatment Special</h3>
+                            <p class="featured-text">Experience 90 minutes of total relaxation with our signature massage and facial package. Reserved slots only.</p>
+                            <a href="tel:+919372230456" class="featured-cta">Call to Reserve</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Urban Luxury Spa Juhu. All rights reserved.</p>
-      <p style="margin-top: 8px; font-size: 12px;">Demo by Kevin</p>
-    </div>
-  </footer>
+        <section id="cta" class="cta-section">
+            <div class="cta-container">
+                <h2 class="cta-title">Book your moment of peace</h2>
+                <p class="cta-text">Escape the daily hustle. Reserve your custom therapeutic massage today.</p>
+                <a href="tel:+919372230456" class="cta-button">Call to Book →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3 class="footer-clinic-name">Urban Luxury Spa Juhu</h3>
+                <p class="footer-address">Shop No 101, Ground floor, C-46, Juhu Tara Road, next to Starbucks, Juhu, Mumbai, Maharashtra 400049</p>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Urban Luxury Spa Juhu. All rights reserved.</p>
+                <p class="built-by">Built by Kevin</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
