@@ -18,7 +18,7 @@ _SCRIPTS_DIR = Path(__file__).resolve().parent
 if str(_SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS_DIR))
 
-import apify_client as ac
+import google_maps_client as ac
 import lead_cache as lc
 import export_local
 
@@ -62,11 +62,12 @@ def should_rescrape(cfg: dict) -> bool:
 def run():
     cfg = load_cfg()
     n = cfg.get("leads_per_day", 5)
-    max_results = cfg.get("apify_max_results", 100)
+    max_results = cfg.get("apify_max_results", 100)  # renamed: max_results_per_query
 
     print(f"=== Hermes daily run · {time.strftime('%Y-%m-%d %H:%M:%S')} ===\n")
     print(f"Niche: {cfg['niche']} in {cfg['city']}")
-    print(f"Targets/day: {n} | Rescrape cadence: {cfg.get('rescrape_cadence','weekly')}\n")
+    print(f"Targets/day: {n} | Rescrape cadence: {cfg.get('rescrape_cadence','weekly')}")
+    print(f"Provider: Google Maps Places API (New)\n")
 
     # 1) Scrape if needed
     if should_rescrape(cfg):
@@ -74,6 +75,7 @@ def run():
             try:
                 items = ac.run_scrape(q, max_results=max_results)
                 lc.ingest(items)
+                print(f"  + {q!r}: {len(items)} results")
             except Exception as e:
                 print(f"  ! scrape failed for {q!r}: {e}", file=sys.stderr)
     else:

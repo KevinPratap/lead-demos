@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr Merchant's Dental Clinic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #2563eb;
+      --accent-light: #e9effd;
+      --accent-dark: #1945a4;
+      --bg: #fafafa;
+      --text: #111111;
+      --text-light: #666666;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Typography & Badges */
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 2.25rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #ffffff;
+      border: 1px solid transparent;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+      border-color: rgba(0, 0, 0, 0.2);
+    }
+
+    /* Header & Navigation */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .nav-logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-light);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .btn-nav {
+      padding: 0.55rem 1.35rem;
+      background-color: var(--accent);
+      color: #ffffff !important;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .btn-nav:hover {
+      background-color: var(--accent-dark);
+    }
+
+    /* Hero Section (50/50 Split) */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: calc(100vh - 80px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .hero-image-side {
+      position: relative;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+
+    .hero-image-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .hero-content-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6rem 10% 6rem 8%;
+      background-color: var(--bg);
+    }
+
+    .hero-content-side h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      color: var(--text-light);
+      line-height: 1.65;
+      margin-bottom: 3.5rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      padding-top: 3.5rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .stat-number {
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--accent-dark);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Services Section */
+    .services-section {
+      padding: 10rem 0;
+      background-color: var(--bg);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .section-header {
+      margin-bottom: 6rem;
+      text-align: center;
+    }
+
+    .section-header h2 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+
+    .services-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+    }
+
+    /* Alternating Services Layout */
+    .service-card, .service-item, .service-row {
+      display: flex;
+      align-items: center;
+      gap: 6rem;
+    }
+
+    .service-card:nth-child(even), .service-item:nth-child(even), .service-row:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .service-image-wrapper, .service-card-image, .service-img {
+      flex: 1;
+      aspect-ratio: 16/11;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .service-image-wrapper img, .service-card-image img, .service-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .service-image-wrapper img:hover, .service-card-image img:hover, .service-img img:hover {
+      transform: scale(1.02);
+    }
+
+    .service-content, .service-card-info, .service-info {
+      flex: 1;
+    }
+
+    .service-content h3, .service-card-info h3, .service-info h3 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .service-content p, .service-card-info p, .service-info p {
+      color: var(--text-light);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* Featured Banner Section */
+    .featured-section {
+      padding: 10rem 0;
+      background-color: var(--bg);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .featured-banner {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      background-color: var(--accent-light);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.04);
+    }
+
+    .featured-content {
+      padding: 6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .featured-content h2 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .featured-content p {
+      font-size: 1.15rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    .featured-image {
+      position: relative;
+      min-height: 400px;
+    }
+
+    .featured-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Dark Testimonial Section */
+    .testimonial-section {
+      background-color: var(--accent-dark);
+      color: #ffffff;
+      padding: 12rem 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .testimonial-container {
+      max-width: 850px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .quote-icon {
+      font-family: 'Inter', Georgia, serif;
+      font-size: 9rem;
+      line-height: 1;
+      color: rgba(255, 255, 255, 0.08);
+      margin-bottom: -2.5rem;
+    }
+
+    .testimonial-quote {
+      font-size: 2.5rem;
+      font-weight: 500;
+      line-height: 1.45;
+      letter-spacing: -0.02em;
+      margin-bottom: 3.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .author-name {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .author-title {
+      display: block;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 0.3rem;
+    }
+
+    .testimonial-meta {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .rating-stars {
+      color: #ffb800;
+      font-size: 1.35rem;
+      letter-spacing: 0.12em;
+    }
+
+    .rating-text {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+      letter-spacing: 0.02em;
+    }
+
+    /* Masonry Gallery Section */
+    .gallery-section {
+      padding: 10rem 0;
+      background-color: var(--bg);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .gallery-grid {
+      column-count: 3;
+      column-gap: 2.25rem;
+    }
+
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 2.25rem;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: var(--bg);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.015);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: var(--transition);
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Centered CTA Section */
+    .cta-section {
+      padding: 12rem 0;
+      text-align: center;
+      background-color: var(--bg);
+    }
+
+    .cta-container {
+      max-width: 750px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cta-container h2 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+      line-height: 1.15;
+    }
+
+    .cta-container p {
+      font-size: 1.25rem;
+      color: var(--text-light);
+      line-height: 1.65;
+      margin-bottom: 3.5rem;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .phone-label {
+      font-size: 1rem;
+      color: var(--text-light);
+    }
+
+    .phone-label strong {
+      color: var(--text);
+    }
+
+    /* Minimal Footer */
+    .footer {
+      background-color: var(--bg);
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 7rem 0 4rem 0;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 4rem;
+      margin-bottom: 5rem;
+    }
+
+    .footer-left {
+      max-width: 320px;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      display: block;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-tagline {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .footer-right {
+      display: flex;
+      gap: 5rem;
+    }
+
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-info-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+    }
+
+    .footer-info a, .footer-info span {
+      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-info a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .footer-bottom p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .footer-links a {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 991px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .hero-image-side {
+        height: 450px;
+      }
+      .hero-image-side img {
+        position: relative;
+      }
+      .hero-content-side {
+        padding: 5rem 2rem;
+      }
+      .hero-content-side h1 {
+        font-size: 3rem;
+      }
+      .featured-banner {
+        grid-template-columns: 1fr;
+      }
+      .featured-image {
+        height: 350px;
+        min-height: auto;
+      }
+      .featured-content {
+        padding: 4rem 2.5rem;
+      }
+      .featured-content h2 {
+        font-size: 2.25rem;
+      }
+      .services-section, .featured-section, .gallery-section, .cta-section {
+        padding: 7rem 0;
+      }
+      .gallery-grid {
+        column-count: 2;
+        column-gap: 1.5rem;
+      }
+      .gallery-item {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar-container {
+        height: 70px;
+      }
+      .nav-links {
+        gap: 1.5rem;
+      }
+      .nav-links a:not(.btn-nav) {
+        display: none;
+      }
+      .service-card, .service-item, .service-row {
+        flex-direction: column !important;
+        gap: 3rem;
+      }
+      .service-image-wrapper, .service-card-image, .service-img {
+        width: 100%;
+      }
+      .service-content h3, .service-card-info h3, .service-info h3 {
+        font-size: 1.75rem;
+      }
+      .testimonial-quote {
+        font-size: 1.85rem;
+      }
+      .testimonial-section {
+        padding: 8rem 0;
+      }
+      .cta-container h2 {
+        font-size: 2.75rem;
+      }
+      .footer-container {
+        flex-direction: column;
+        gap: 3rem;
+      }
+      .footer-right {
+        flex-direction: column;
+        gap: 2.5rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1.25rem;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        column-count: 1;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .hero-content-side h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <a href="#" class="nav-logo">Dr Merchant's Dental</a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#featured">Featured</a>
+        <a href="#gallery">Gallery</a>
+        <a href="tel:919081232785" class="btn btn-nav">Call Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Split Hero Section -->
+  <section class="hero">
+    <div class="hero-image-side">
+      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80" alt="Dr Merchant's Dental Clinic Hero Image">
+    </div>
+    <div class="hero-content-side">
+      <span class="badge">TRUSTED DENTAL CARE</span>
+      <h1>Modern Dentistry in 131/133</h1>
+      <p class="hero-desc">Dr Merchant's Dental Clinic provides exceptional dental services to the 131/133 community. Rated 5.0 stars from 221 patient reviews — trusted care, gentle touch.</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Years of Care</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5.0</span>
+          <span class="stat-label">Average Rating</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">221</span>
+          <span class="stat-label">Verified Reviews</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alternating Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Expert Care</span>
+        <h2>Our Services</h2>
+      </div>
+      <div class="services-container">
+            <div class="service-card"><h3>General Dentistry</h3><p>Cleanings, fillings, root canals & preventive care</p></div>
+    <div class="service-card"><h3>Cosmetic Dentistry</h3><p>Veneers, whitening & complete smile makeovers</p></div>
+    <div class="service-card"><h3>Orthodontics</h3><p>Braces & Invisalign for perfect alignment</p></div>
+    <div class="service-card"><h3>Emergency Care</h3><p>Same-day appointments for dental emergencies</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Banner Section -->
+  <section id="featured" class="featured-section">
+    <div class="container">
+      <div class="featured-banner">
+        <div class="featured-content">
+          <span class="badge">Featured Service</span>
+          <h2>New Patient Special</h2>
+          <p>First consultation + cleaning at a special rate. Experienced team, modern equipment, comfortable care.</p>
+          <a href="tel:919081232785" class="btn btn-secondary">Call to Book</a>
+        </div>
+        <div class="featured-image">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1000&q=80" alt="New Patient Special">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Quote Section (Full Width Dark) -->
+  <section class="testimonial-section">
+    <div class="container testimonial-container">
+      <div class="quote-icon">“</div>
+      <blockquote class="testimonial-quote">
+        "The level of care and professional expertise at Dr Merchant's Dental Clinic is truly unmatched. They made me feel completely at ease throughout my entire treatment journey, and the results speak for themselves."
+      </blockquote>
+      <div class="testimonial-author">
+        <span class="author-name">Sarah Jenkins</span>
+        <span class="author-title">Verified Patient</span>
+        <div class="testimonial-meta">
+          <div class="rating-stars">★★★★★</div>
+          <span class="rating-text">5.0 / 5.0 Rating based on 221 Reviews</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Masonry Gallery Section -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Our Space</span>
+        <h2>Our Work</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="Clinic Interior Detail">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=800&h=1000&q=80" alt="Modern Consultation Room">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="Our Medical Specialists">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&h=1100&q=80" alt="Advanced Medical Diagnostics">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" alt="Clinical Laboratory Equipment">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Patient Care Excellence">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Centered CTA Section -->
+  <section class="cta-section">
+    <div class="container cta-container">
+      <span class="badge">Book Now</span>
+      <h2>Ready for a healthier smile?</h2>
+      <p>Call or message us today. Walk-ins welcome.</p>
+      <div class="cta-actions">
+        <a href="tel:919081232785" class="btn btn-primary">Book Appointment →</a>
+        <span class="phone-label">Or call us directly at <strong>919081232785</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-logo">Dr Merchant's Dental</span>
+        <p class="footer-tagline">Providing exceptional healthcare services with advanced technology and professional experts.</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-info">
+          <span class="footer-info-title">Contact</span>
+          <a href="tel:919081232785">919081232785</a>
+        </div>
+        <div class="footer-info">
+          <span class="footer-info-title">Location</span>
+          <span>131/133, ME Sarang Marg, Mandvi, Mumbai, Maharashtra 400003, India</span>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Dr Merchant's Dental Clinic. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

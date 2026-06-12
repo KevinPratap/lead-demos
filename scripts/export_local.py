@@ -11,6 +11,7 @@ from pathlib import Path
 import yaml
 
 import lead_cache as lc
+import pitch_messages
 
 OUT_DIR = Path(__file__).resolve().parent.parent / "data" / "exports"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -61,25 +62,90 @@ def export_markdown() -> Path:
     rows = _new_leads()
     p = OUT_DIR / "pitch_sheet.md"
     cfg = yaml.safe_load((Path(__file__).resolve().parent.parent / "config.yaml").read_text())
+
     lines = [
         f"# {cfg['niche'].title()} in {cfg['city']} — Daily Pitch Sheet",
         "",
         f"_Generated from local Apify cache. {len(rows)} leads ready to pitch._",
         "",
-        "| # | Business | Phone | Address | Rating | Google Maps |",
-        "|---|----------|-------|---------|--------|-------------|",
+        "---",
+        "",
+        "## 📋 Quick Overview",
+        "",
+        "| # | Business | Phone | Rating | Area | AG Folder |",
+        "|---|----------|-------|--------|------|-----------|",
     ]
     for i, r in enumerate(rows, 1):
         rating = f"{r['rating']:.1f}⭐" if r.get("rating") else "—"
+        area = (r.get("address") or "").split(",")[0].strip() if r.get("address") else "—"
+        slug = pitch_messages._slug(r)
         lines.append(
-            f"| {i} | {r['name']} | {r['phone'] or '—'} | {r['address'] or '—'} | {rating} | [Maps]({r['google_url']}) |"
+            f"| {i} | {r['name']} | {r['phone'] or '—'} | {rating} | {area} | `leads/{slug}` |"
         )
+
+    lines += [
+        "",
+        "---",
+        "",
+        "## 📞 Full Pitch Scripts",
+        "",
+    ]
+
+    for i, r in enumerate(rows, 1):
+        rating = f"{r['rating']:.1f}⭐" if r.get("rating") else "—"
+        reviews = f"{r.get('reviews', 0) or 0} reviews"
+        address = r.get("address") or "—"
+        maps = r.get("google_url") or ""
+
+        lines += [
+            f"### {i}. {r['name']}",
+            "",
+            f"**Phone:** {r['phone'] or '—'} | **Rating:** {rating} ({reviews})",
+            f"**Address:** {address}",
+            f"**Maps:** {maps}",
+            "",
+            "#### 💬 WhatsApp (copy-paste)",
+            "",
+            pitch_messages.whatsapp(r),
+            "",
+            "#### 📞 Call Script",
+            "",
+            pitch_messages.call_script(r),
+            "",
+            "#### 🤖 Antigravity Prompt (copy-paste into AG IDE)",
+            "",
+            "```",
+            pitch_messages.antigravity(r),
+            "```",
+            "",
+            "#### 📤 Auto-Send WhatsApp (terminal)",
+            "",
+            "```bash",
+            f"node scripts/send_whatsapp.js --lead \"{r['name']}\" --url <DEMO_URL>",
+            "```",
+            "",
+        ]
+        if i < len(rows):
+            lines.append("---")
+            lines.append("")
+
     lines += [
         "",
         "## How to use",
-        "1. Pick the highest-rating / most-reviewed clinic from this list",
-        "2. Build a demo site for them (Antigravity prompt → GitHub Pages)",
-        "3. Call them, open the demo, pitch website services",
+        "1. Pick a lead from the overview table above",
+        "2. Copy the 🤖 Antigravity Prompt → paste into Antigravity IDE → site built",
+        "3. Deploy to GitHub Pages. Copy the live URL.",
+        "4. Run the 📤 send command below the lead (replace <DEMO_URL> with the live URL)",
+        "5. First run: scan QR code with WhatsApp. After that: fully automatic.",
+        "",
+        "### 💡 Pro tip: bulk send all demos",
+        "```bash",
+        "# After all demo sites are deployed, send them all:",
+        "for lead in leads/dr-merchants-dental-clinic leads/care-dental-clinic; do",
+        "  node scripts/send_whatsapp.js --lead \"$lead\" --url \"https://kevin.github.io/lead-demos/$lead/\"",
+        "  sleep 30  # human-like delay",
+        "done",
+        "```",
         "",
         f"_Database: data/leads.db · Total in cache: {len(_all_leads())}_",
     ]
@@ -92,6 +158,15 @@ def main():
     md_p = export_markdown()
     print(f"CSV:  {csv_p} ({csv_p.stat().st_size} bytes)")
     print(f"MD:   {md_p} ({md_p.stat().st_size} bytes)")
+
+    # Auto-copy to Windows Downloads for easy access
+    downloads = Path("/mnt/c/Users/prata/Downloads/pitch_sheet.md")
+    try:
+        downloads.write_bytes(md_p.read_bytes())
+        print(f"CP:   {downloads}")
+    except Exception as e:
+        print(f"CP:   skipped ({e})")
+
     return csv_p, md_p
 
 
