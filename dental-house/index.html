@@ -1,448 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dental house — Website Preview</title>
-<style>
-  :root {
-    --accent: #2563eb;
-    --accent-light: #e9effd;
-    --surface: #ffffff;
-    --bg: #fafaf9;
-    --text: #1a1a1a;
-    --text-muted: #6b6b6b;
-    --border: #f0efed;
-    --radius: 14px;
-    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
-    --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.03);
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental house</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #2563eb;
+            --accent-light: #e9effd;
+            --accent-dark: #1945a4;
+            --bg: #fafafa;
+            --text: #111111;
+            --text-light: #666666;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--font-sans);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
 
-  .container {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 48px 20px 60px;
-  }
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            padding: 2rem 0;
+        }
 
-  /* ── Header ── */
-  .header {
-    margin-bottom: 44px;
-  }
-  .logo {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: -0.4px;
-    line-height: 1.15;
-    color: var(--text);
-    margin-bottom: 6px;
-  }
-  .tagline {
-    font-size: 14px;
-    color: var(--text-muted);
-    font-weight: 400;
-  }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-  /* ── Stats row ── */
-  .stats {
-    display: flex;
-    gap: 28px;
-    margin-bottom: 40px;
-    padding: 20px 24px;
-    background: var(--surface);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-card);
-  }
-  .stat {
-    flex: 1;
-    text-align: center;
-  }
-  .stat-value {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--text);
-    letter-spacing: -0.3px;
-  }
-  .stat-label {
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-top: 2px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            font-weight: 500;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
 
-  /* ── Hero Banner ── */
-  .hero-banner {
-    width: 100%;
-    height: 220px;
-    border-radius: var(--radius);
-    background: {{HERO_GRADIENT}};
-    margin-bottom: 28px;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero-banner::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 30% 40%, transparent 30%, rgba(0,0,0,0.15) 100%);
-  }
+        .phone-link {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #ffffff;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 0.6rem 1.2rem;
+            border-radius: 100px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            letter-spacing: 0.5px;
+        }
 
-  /* ── Hero ── */
-  .hero {
-    background: var(--surface);
-    border-radius: var(--radius);
-    padding: 44px 36px;
-    box-shadow: var(--shadow-card);
-    margin-bottom: 48px;
-    border: 1px solid var(--border);
-  }
-  .hero-label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: var(--accent);
-    font-weight: 600;
-    margin-bottom: 16px;
-  }
-  .hero h1 {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    line-height: 1.2;
-    margin-bottom: 14px;
-    color: var(--text);
-  }
-  .hero p {
-    color: var(--text-muted);
-    font-size: 15px;
-    line-height: 1.7;
-    max-width: 540px;
-  }
+        .phone-link:hover {
+            background-color: #ffffff;
+            color: #000000;
+            border-color: #ffffff;
+        }
 
-  /* ── Gallery Strip ── */
-  .gallery-heading {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-muted);
-    margin-bottom: 16px;
-    font-weight: 600;
-  }
-  .gallery-strip {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 48px;
-  }
-  .gallery-img {
-    aspect-ratio: 4/5;
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .gallery-img::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.25) 100%);
-  }
-  .gallery-img:nth-child(1) { background: https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=600&h=800&fit=crop; }
-  .gallery-img:nth-child(2) { background: https://images.unsplash.com/photo-1512223792601-592a9809eed4?w=600&h=800&fit=crop; }
-  .gallery-img:nth-child(3) { background: https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=600&h=400&fit=crop; }
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            text-align: center;
+            padding: 8rem 2rem 4rem 2rem;
+        }
 
-  /* ── Services Grid ── */
-  .services-heading {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-muted);
-    margin-bottom: 20px;
-    font-weight: 600;
-  }
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    margin-bottom: 48px;
-  }
-  .service-card {
-    background: var(--surface);
-    border-radius: var(--radius);
-    padding: 28px 22px;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--border);
-    transition: box-shadow 0.2s;
-  }
-  .service-card:hover {
-    box-shadow: var(--shadow-card);
-  }
-  .service-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    background: var(--accent-light);
-    margin-bottom: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-  }
-  .service-card h3 {
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    letter-spacing: -0.2px;
-  }
-  .service-card p {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.5;
-  }
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-  /* ── Featured Strip (dark) ── */
-  .featured-strip {
-    background: #1c1c1e;
-    color: #fff;
-    border-radius: var(--radius);
-    padding: 40px 32px;
-    margin-bottom: 36px;
-    text-align: center;
-  }
-  .featured-strip h2 {
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: -0.3px;
-    margin-bottom: 10px;
-  }
-  .featured-strip p {
-    color: #999;
-    font-size: 14px;
-    margin-bottom: 24px;
-    line-height: 1.6;
-  }
-  .btn-light {
-    display: inline-block;
-    background: #fff;
-    color: #1c1c1e;
-    padding: 13px 34px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: -0.1px;
-    transition: opacity 0.15s;
-  }
-  .btn-light:hover { opacity: 0.9; }
+        .hero-label {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-light);
+            margin-bottom: 1.5rem;
+        }
 
-  /* ── CTA ── */
-  .cta-section {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  .cta-section h2 {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: -0.3px;
-    margin-bottom: 8px;
-  }
-  .cta-section p {
-    color: var(--text-muted);
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-  .btn-primary {
-    display: inline-block;
-    background: var(--accent);
-    color: #fff;
-    padding: 14px 36px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-    letter-spacing: -0.2px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    transition: transform 0.1s, box-shadow 0.15s;
-  }
-  .btn-primary:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-  }
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 2rem;
+            letter-spacing: -1px;
+        }
 
-  /* ── Footer ── */
-  .footer {
-    text-align: center;
-    padding: 32px 0 0;
-    border-top: 1px solid var(--border);
-    color: #aaa;
-    font-size: 12px;
-  }
-  .footer p { margin-bottom: 4px; }
-  .footer a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .footer a:hover { text-decoration: underline; }
+        .hero-text {
+            font-family: var(--font-sans);
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            line-height: 1.65;
+            max-width: 680px;
+            margin-bottom: 3.5rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 300;
+        }
 
-  /* ── Mobile: 428px and below (iPhone 14 Pro Max / Pixel) ── */
-  @media (max-width: 428px) {
-    .container { padding: 32px 16px 48px; }
+        .hero-stats {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.8rem 2rem;
+        }
 
-    /* Header */
-    .header { margin-bottom: 32px; }
-    .logo { font-size: 22px; }
-    .tagline { font-size: 13px; word-break: break-word; overflow-wrap: break-word; }
+        .hero-stats span {
+            display: flex;
+            align-items: center;
+        }
 
-    /* Hero Banner */
-    .hero-banner { height: 180px; margin-bottom: 20px; }
+        .hero-stats .separator {
+            opacity: 0.4;
+        }
 
-    /* Stats — horizontal row, tight */
-    .stats { gap: 8px; padding: 16px 10px; margin-bottom: 28px; }
-    .stat-value { font-size: 22px; }
-    .stat-label { font-size: 10px; letter-spacing: 0.3px; }
+        .services-section {
+            padding: 8rem 0;
+            background-color: var(--bg);
+        }
 
-    /* Hero */
-    .hero { padding: 28px 18px; margin-bottom: 36px; }
-    .hero-label { font-size: 10px; letter-spacing: 1px; margin-bottom: 12px; }
-    .hero h1 { font-size: 20px; }
-    .hero p { font-size: 14px; line-height: 1.6; }
+        .section-header {
+            max-width: 1200px;
+            margin: 0 auto 4rem auto;
+            padding: 0 2rem;
+        }
 
-    /* Services — 2 columns, tight */
-    .services-heading { font-size: 11px; margin-bottom: 14px; }
-    .services-grid { grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 36px; }
-    .service-card { padding: 18px 14px; }
-    .service-icon { width: 32px; height: 32px; border-radius: 8px; margin-bottom: 10px; font-size: 14px; }
-    .service-card h3 { font-size: 14px; }
-    .service-card p { font-size: 12px; }
+        .services-heading {
+            font-family: var(--font-serif);
+            font-size: clamp(2.25rem, 4vw, 3.25rem);
+            font-weight: 400;
+            color: var(--text);
+            letter-spacing: -0.5px;
+        }
 
-    /* Gallery */
-    .gallery-heading { font-size: 11px; margin-bottom: 12px; }
-    .gallery-strip { gap: 6px; margin-bottom: 36px; }
+        .services-scroll-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
 
-    /* Featured strip */
-    .featured-strip { padding: 28px 18px; margin-bottom: 28px; }
-    .featured-strip h2 { font-size: 18px; }
-    .featured-strip p { font-size: 13px; margin-bottom: 18px; }
+        .services-scroll {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            gap: 2rem;
+            padding: 1rem 2rem 3rem 2rem;
+        }
 
-    /* Buttons — full width, 48px tall minimum tap target */
-    .btn-light,
-    .btn-primary {
-      display: block;
-      width: 100%;
-      text-align: center;
-      padding: 15px 20px;
-      font-size: 15px;
-      border-radius: 10px;
-    }
+        .services-scroll::-webkit-scrollbar {
+            display: none;
+        }
 
-    /* CTA section */
-    .cta-section { margin-bottom: 32px; }
-    .cta-section h2 { font-size: 18px; }
-    .cta-section p { font-size: 13px; margin-bottom: 16px; }
+        @media (min-width: 1240px) {
+            .services-scroll {
+                padding-left: calc((100vw - 1200px) / 2 + 2rem);
+                padding-right: calc((100vw - 1200px) / 2 + 2rem);
+            }
+        }
 
-    /* Footer */
-    .footer { padding: 24px 0 0; font-size: 11px; }
-  }
+        .services-scroll > * {
+            scroll-snap-align: start;
+            flex: 0 0 350px;
+            max-width: 85vw;
+            background-color: var(--bg);
+            border: 1px solid rgba(127, 127, 127, 0.15);
+            border-bottom: 3px solid var(--accent-light);
+            padding: 3.5rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 320px;
+            box-sizing: border-box;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
 
-  /* ── Tiny phones: 374px and below (iPhone SE, older Androids) ── */
-  @media (max-width: 374px) {
-    .container { padding: 24px 12px 40px; }
-    .stats { gap: 4px; padding: 12px 6px; }
-    .stat-value { font-size: 20px; }
-    .hero h1 { font-size: 18px; }
-    .hero p { font-size: 13px; }
-    .services-grid { gap: 6px; }
-    .service-card { padding: 14px 10px; }
-    .service-card h3 { font-size: 13px; }
-    .featured-strip h2 { font-size: 16px; }
-    .featured-strip p { font-size: 12px; }
-  }
-</style>
+        .services-scroll > *:hover {
+            transform: translateY(-8px);
+            border-bottom-color: var(--accent);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+            border-color: rgba(127, 127, 127, 0.25);
+        }
+
+        .services-scroll > * h3 {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--text);
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.2px;
+        }
+
+        .services-scroll > * p {
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: var(--text-light);
+            font-weight: 300;
+        }
+
+        .gallery-section {
+            padding: 4rem 0 8rem 0;
+            background-color: var(--bg);
+        }
+
+        .gallery-heading {
+            font-family: var(--font-serif);
+            font-size: clamp(2.25rem, 4vw, 3.25rem);
+            font-weight: 400;
+            color: var(--text);
+            letter-spacing: -0.5px;
+            max-width: 1200px;
+            margin: 0 auto 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .gallery-fullwidth {
+            width: 100%;
+            height: clamp(450px, 70vh, 800px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+            padding: 6rem 2rem 4rem 2rem;
+            box-sizing: border-box;
+        }
+
+        .gallery-caption-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            color: #ffffff;
+        }
+
+        .gallery-caption {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .gallery-caption {
+                grid-template-columns: 1.2fr 2fr 1fr;
+                align-items: flex-end;
+                gap: 4rem;
+            }
+        }
+
+        .featured-title {
+            font-family: var(--font-serif);
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .featured-text {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+        }
+
+        .featured-cta {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 0.5rem;
+            width: fit-content;
+            transition: all 0.3s ease;
+        }
+
+        .featured-cta:hover {
+            color: var(--accent-light);
+            border-color: var(--accent-light);
+            opacity: 0.9;
+        }
+
+        .cta-section {
+            background-color: var(--accent-dark);
+            color: #ffffff;
+            padding: 10rem 2rem;
+            text-align: center;
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .cta-text {
+            font-family: var(--font-sans);
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 300;
+            margin-bottom: 3.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            font-family: var(--font-sans);
+            background-color: #ffffff;
+            color: var(--accent-dark);
+            font-weight: 600;
+            text-decoration: none;
+            padding: 1.25rem 2.75rem;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            background-color: var(--accent-light);
+            color: var(--accent-dark);
+        }
+
+        footer {
+            background-color: var(--bg);
+            border-top: 1px solid rgba(127, 127, 127, 0.15);
+            padding: 6rem 2rem 4rem 2rem;
+            color: var(--text-light);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-info {
+            margin-bottom: 4rem;
+        }
+
+        .footer-clinic-name {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.5px;
+        }
+
+        .footer-address {
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            border-top: 1px solid rgba(127, 127, 127, 0.1);
+            padding-top: 2.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .footer-copyright {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 300;
+        }
+
+        .built-by {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text);
+            letter-spacing: 0.5px;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
 
-  <!-- Header -->
-  <div class="header">
-    <div class="logo">Dental house</div>
-    <div class="tagline">Ground floor, near carewell hospital, opposite koyna colony, Koyna Colony, vashinaka, S V Patel Nagar, Chembur, Mumbai, Maharashtra 400074, India</div>
-  </div>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">Dental house</a>
+            <a href="tel:09152806198" class="phone-link">09152806198</a>
+        </div>
+    </header>
 
-  <!-- Hero Banner -->
-  <div class="hero-banner"></div>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-label">TRUSTED DENTAL CARE</span>
+                <h1 class="hero-title">Modern Dentistry in Ground floor</h1>
+                <p class="hero-text">Dental house provides exceptional dental services to the Ground floor community. Rated 4.9 stars from 686 patient reviews — trusted care, gentle touch.</p>
+                <div class="hero-stats">
+                    <span>Est. 5 Years</span>
+                    <span class="separator">•</span>
+                    <span>4.9 Rating</span>
+                    <span class="separator">•</span>
+                    <span>686 Reviews</span>
+                </div>
+            </div>
+        </section>
 
-  <!-- Stats -->
-  <div class="stats">
-    <div class="stat">
-      <div class="stat-value">4.9 ★</div>
-      <div class="stat-label">Google Rating</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value">686</div>
-      <div class="stat-label">Reviews</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value">3+</div>
-      <div class="stat-label">Years Active</div>
-    </div>
-  </div>
-
-  <!-- Hero -->
-  <div class="hero">
-    <div class="hero-label">TRUSTED DENTAL CARE</div>
-    <h1>Modern Dentistry in Ground floor</h1>
-    <p>Dental house provides exceptional dental services to the Ground floor community. Rated 4.9 stars from 686 patient reviews — trusted care, gentle touch.</p>
-  </div>
-
-  <!-- Services Grid -->
-  <div class="services-heading">Our Services</div>
-  <div class="services-grid">
-        <div class="service-card"><h3>General Dentistry</h3><p>Cleanings, fillings, root canals & preventive care</p></div>
+        <section class="services-section">
+            <div class="section-header">
+                <h2 class="services-heading">Our Services</h2>
+            </div>
+            <div class="services-scroll-container">
+                <div class="services-scroll">
+                        <div class="service-card"><h3>General Dentistry</h3><p>Cleanings, fillings, root canals & preventive care</p></div>
     <div class="service-card"><h3>Cosmetic Dentistry</h3><p>Veneers, whitening & complete smile makeovers</p></div>
     <div class="service-card"><h3>Orthodontics</h3><p>Braces & Invisalign for perfect alignment</p></div>
     <div class="service-card"><h3>Emergency Care</h3><p>Same-day appointments for dental emergencies</p></div>
-  </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Gallery -->
-  <div class="gallery-heading">Our Work</div>
-  <div class="gallery-strip">
-    <div class="gallery-img"></div>
-    <div class="gallery-img"></div>
-    <div class="gallery-img"></div>
-  </div>
+        <section class="gallery-section">
+            <h2 class="gallery-heading">Our Work</h2>
+            <div class="gallery-fullwidth">
+                <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=2400&q=80" alt="Dental house Featured Gallery" class="gallery-image">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption-container">
+                        <div class="gallery-caption">
+                            <h3 class="featured-title">New Patient Special</h3>
+                            <p class="featured-text">First consultation + cleaning at a special rate. Experienced team, modern equipment, comfortable care.</p>
+                            <a href="#cta" class="featured-cta">Call to Book</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Dark Featured Strip (from B1) -->
-  <div class="featured-strip">
-    <h2>New Patient Special</h2>
-    <p>First consultation + cleaning at a special rate. Experienced team, modern equipment, comfortable care.</p>
-    <a href="tel:09152806198" class="btn-light">Call to Book</a>
-  </div>
+        <section id="cta" class="cta-section">
+            <div class="cta-container">
+                <h2 class="cta-title">Ready for a healthier smile?</h2>
+                <p class="cta-text">Call or message us today. Walk-ins welcome.</p>
+                <a href="tel:09152806198" class="cta-button">Book Appointment</a>
+            </div>
+        </section>
+    </main>
 
-  <!-- Bottom CTA (from B4 — secondary CTA) -->
-  <div class="cta-section">
-    <h2>Ready for a healthier smile?</h2>
-    <p>Call or message us today. Walk-ins welcome.</p>
-    <a href="https://wa.me/918828022624" class="btn-primary">Book Appointment →</a>
-  </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3 class="footer-clinic-name">Dental house</h3>
+                <p class="footer-address">Ground floor, near carewell hospital, opposite koyna colony, Koyna Colony, vashinaka, S V Patel Nagar, Chembur, Mumbai, Maharashtra 400074, India</p>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Dental house. All rights reserved.</p>
+                <p class="built-by">Built by Kevin</p>
+            </div>
+        </div>
+    </footer>
 
-  <!-- Footer -->
-  <div class="footer">
-    <p>Preview built for Dental house</p>
-    <p>Want a full website? <a href="https://wa.me/918828022624">Message Kevin on WhatsApp</a></p>
-  </div>
-
-</div>
 </body>
 </html>
