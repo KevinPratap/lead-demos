@@ -18,7 +18,7 @@ _SCRIPTS_DIR = Path(__file__).resolve().parent
 if str(_SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS_DIR))
 
-import google_maps_client as ac
+import apify_client
 import lead_cache as lc
 import export_local
 
@@ -73,7 +73,7 @@ def run():
     if should_rescrape(cfg):
         for q in cfg.get("queries", []):
             try:
-                items = ac.run_scrape(q, max_results=max_results)
+                items = apify_client.run_scrape(q, max_results=max_results)
                 lc.ingest(items)
                 print(f"  + {q!r}: {len(items)} results")
             except Exception as e:

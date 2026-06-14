@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cafe de Provence: Website Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent: #5b7b9e;
+    --accent-light: #d8e4f0;
+    --surface: #ffffff;
+    --bg: #fafaf9;
+    --text: #2c3e50;
+    --text-muted: #6b7280;
+    --border: #f0efed;
+    --radius: 14px;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.03);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 20px 60px;
+  }
+
+  /* Header */
+  .header {
+    margin-bottom: 44px;
+  }
+  .logo {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    line-height: 1.15;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .tagline {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  /* Stats row */
+  .stats {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 40px;
+    padding: 20px 24px;
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+  }
+  .stat {
+    flex: 1;
+    text-align: center;
+  }
+  .stat-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.3px;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Hero Banner */
+  .hero-banner {
+    width: 100%;
+    height: 300px;
+    border-radius: var(--radius);
+    background: linear-gradient(rgba(91, 123, 158, 0.1), rgba(91, 123, 158, 0.25)), url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80') center/cover no-repeat;
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 40%, transparent 30%, rgba(0,0,0,0.1) 100%);
+  }
+
+  /* Hero */
+  .hero {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 44px 36px;
+    box-shadow: var(--shadow-card);
+    margin-bottom: 48px;
+    border: 1px solid var(--border);
+  }
+  .hero-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    color: var(--text);
+  }
+  .hero p {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 540px;
+  }
+
+  /* Menu List */
+  .services-heading {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border);
+  }
+  .menu-item {
+    border-bottom: 1px dashed var(--border);
+    padding-bottom: 20px;
+  }
+  .menu-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+  .menu-item-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.3px;
+  }
+  .menu-item-price {
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .menu-item-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* Gallery */
+  .gallery-heading {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .gallery-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .gallery-img {
+    aspect-ratio: 4/3;
+    border-radius: var(--radius);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+  }
+  .gallery-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 70%, rgba(0,0,0,0.15) 100%);
+  }
+  .gallery-img:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=80'); }
+  .gallery-img:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1486427944544-d2c246c4df4e?w=400&q=80'); }
+
+  /* Featured Strip */
+  .featured-strip {
+    background: #2c3e50;
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 40px 32px;
+    margin-bottom: 36px;
+    text-align: center;
+  }
+  .featured-strip h2 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 12px;
+  }
+  .featured-strip p {
+    color: #cbd5e1;
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+  .btn-light {
+    display: inline-block;
+    background: #fff;
+    color: #2c3e50;
+    padding: 13px 34px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -0.1px;
+    transition: opacity 0.15s;
+    margin-top: 16px;
+  }
+  .btn-light:hover { opacity: 0.9; }
+
+  /* CTA */
+  .cta-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .cta-section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 8px;
+  }
+  .cta-section p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 14px 36px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -0.2px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.1s, box-shadow 0.15s;
+  }
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 32px 0 0;
+    border-top: 1px solid var(--border);
+    color: #aaa;
+    font-size: 12px;
+  }
+  .footer p { margin-bottom: 6px; }
+  .footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .footer a:hover { text-decoration: underline; }
+
+  /* Mobile style overrides */
+  @media (max-width: 428px) {
+    .container { padding: 32px 16px 48px; }
+    .header { margin-bottom: 32px; }
+    .logo { font-size: 22px; }
+    .tagline { font-size: 13px; word-break: break-word; overflow-wrap: break-word; }
+    .hero-banner { height: 200px; margin-bottom: 20px; }
+    .stats { gap: 8px; padding: 16px 10px; margin-bottom: 28px; }
+    .stat-value { font-size: 22px; }
+    .stat-label { font-size: 10px; letter-spacing: 0.3px; }
+    .hero { padding: 28px 18px; margin-bottom: 36px; }
+    .hero-label { font-size: 10px; letter-spacing: 1px; margin-bottom: 12px; }
+    .hero h1 { font-size: 20px; }
+    .hero p { font-size: 14px; line-height: 1.6; }
+    .menu-list { padding: 20px 16px; gap: 16px; margin-bottom: 36px; }
+    .menu-item { padding-bottom: 14px; }
+    .menu-item-name { font-size: 15px; }
+    .menu-item-price { font-size: 12px; }
+    .menu-item-desc { font-size: 13px; }
+    .gallery-heading { font-size: 11px; margin-bottom: 12px; }
+    .gallery-strip { gap: 12px; margin-bottom: 36px; }
+    .featured-strip { padding: 28px 18px; margin-bottom: 28px; }
+    .featured-strip h2 { font-size: 18px; }
+    .featured-strip p { font-size: 13px; margin-bottom: 6px; }
+    .btn-light, .btn-primary {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 15px;
+      border-radius: 10px;
+    }
+    .cta-section { margin-bottom: 32px; }
+    .cta-section h2 { font-size: 18px; }
+    .cta-section p { font-size: 13px; margin-bottom: 16px; }
+    .footer { padding: 24px 0 0; font-size: 11px; }
+  }
+
+  @media (max-width: 374px) {
+    .container { padding: 24px 12px 40px; }
+    .stats { gap: 4px; padding: 12px 6px; }
+    .stat-value { font-size: 20px; }
+    .hero h1 { font-size: 18px; }
+    .hero p { font-size: 13px; }
+    .menu-list { padding: 14px 10px; }
+    .menu-item-name { font-size: 14px; }
+    .featured-strip h2 { font-size: 16px; }
+    .featured-strip p { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">Cafe de Provence</div>
+    <div class="tagline">A taste of Provence in London &bull; London, UK</div>
+  </div>
+
+  <!-- Hero Banner -->
+  <div class="hero-banner"></div>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-value">4.7 ★</div>
+      <div class="stat-label">Google Rating</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">595</div>
+      <div class="stat-label">Reviews</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">Daily</div>
+      <div class="stat-label">Fresh Baking</div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-label">Cafe de Provence</div>
+    <h1>A taste of Provence in London</h1>
+    <p>French-inspired cafe in the heart of London. Real croissants, proper coffee, and a little slice of Provence without the flight.</p>
+  </div>
+
+  <!-- Menu List -->
+  <div class="services-heading">Our Menu</div>
+  <div class="menu-list">
+    <div class="menu-item">
+      <div class="menu-item-header">
+        <span class="menu-item-name">Fresh Croissants & Baguettes</span>
+        <span class="menu-item-price">Baked Daily</span>
+      </div>
+      <p class="menu-item-desc">Prepared daily using traditional French methods and imported butter.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-header">
+        <span class="menu-item-name">French Press Coffee</span>
+        <span class="menu-item-price">Brewed to Order</span>
+      </div>
+      <p class="menu-item-desc">Rich, aromatic coffee brewed to order for the perfect morning start.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-header">
+        <span class="menu-item-name">Quiche & Tarts</span>
+        <span class="menu-item-price">Freshly Made</span>
+      </div>
+      <p class="menu-item-desc">Savory tarts and quiches featuring seasonal ingredients and flaky crusts.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-header">
+        <span class="menu-item-name">Afternoon Tea</span>
+        <span class="menu-item-price">Daily Selection</span>
+      </div>
+      <p class="menu-item-desc">A refined selection of teas accompanied by house-made pastries and finger sandwiches.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-header">
+        <span class="menu-item-name">Patisserie Display</span>
+        <span class="menu-item-price">Chef's Special</span>
+      </div>
+      <p class="menu-item-desc">Exquisite cakes, macarons, and sweet treats crafted by our pastry chef.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-header">
+        <span class="menu-item-name">Takeaway Counter</span>
+        <span class="menu-item-price">On the Go</span>
+      </div>
+      <p class="menu-item-desc">Quick options including fresh sandwiches, pastries, and hot drinks.</p>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery-heading">Inside the Cafe</div>
+  <div class="gallery-strip">
+    <div class="gallery-img"></div>
+    <div class="gallery-img"></div>
+  </div>
+
+  <!-- Featured Strip -->
+  <div class="featured-strip">
+    <h2>Visit Us in London</h2>
+    <p>Address: London, UK</p>
+    <p>Hours: Mon-Fri: 7am-6pm | Sat-Sun: 8am-5pm</p>
+    <a href="tel:+447943290340" class="btn-light">Call +44 7943 290340</a>
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="cta-section">
+    <h2>Get a Website for Your Cafe</h2>
+    <p>We build beautiful, fast websites that help local businesses attract more customers.</p>
+    <a href="https://wa.me/918828022624" class="btn-primary">Message on WhatsApp</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2026 Cafe de Provence. All rights reserved.</p>
+    <p style="margin-top: 8px;">Preview built for Cafe de Provence</p>
+    <p>Want a full website? <a href="https://wa.me/918828022624">Message Kevin on WhatsApp</a></p>
+  </div>
+
+</div>
+</body>
+</html>

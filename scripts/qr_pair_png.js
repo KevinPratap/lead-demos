@@ -2,57 +2,42 @@
 const { makeWASocket, useMultiFileAuthState } = require("@whiskeysockets/baileys");
 const P = require("pino");
 const QRCode = require("qrcode");
-const fs = require("fs");
 const path = require("path");
+const os = require("os");
+const fs = require("fs");
 
-const AUTH_DIR = path.join(__dirname, "..", "data", "wa_auth");
-const QR_PNG = path.join(__dirname, "..", "data", "wa_qr.png");
+const AUTH_DIR = path.join(os.homedir(), ".hermes", "wa_auth");
+fs.mkdirSync(AUTH_DIR, { recursive: true });
 
-async function main() {
+(async () => {
   const { state, saveCreds } = await useMultiFileAuthState(AUTH_DIR);
   
   const sock = makeWASocket({
     auth: state,
     logger: P({ level: "silent" }),
-    browser: ["Kevin (Hermes)", "Chrome", "1.0"],
-  });
-
-  let paired = false;
-
-  sock.ev.on("connection.update", async (update) => {
-    const { connection, qr } = update;
-    
-    if (qr && !paired) {
-      // Write QR as PNG image
-      await QRCode.toFile(QR_PNG, qr, { 
-        type: "png", 
-        width: 500,
-        margin: 2,
-        color: { dark: "#000000", light: "#ffffff" }
-      });
-      console.log("✅ QR saved to data/wa_qr.png");
-      console.log("📱 Open the file in Windows Explorer and scan with WhatsApp");
-      console.log(`   Path: /mnt/c/Users/prata/leads/data/wa_qr.png`);
-      console.log("   WhatsApp → Settings → Linked Devices → Link a Device");
-    }
-    
-    if (connection === "open") {
-      if (!paired) {
-        paired = true;
-        console.log("✅ WhatsApp paired! You can close this now (Ctrl+C).");
-        console.log("   Session saved. Ready to auto-send from send_whatsapp.js");
-      }
-    }
-    
-    if (connection === "close" && !paired) {
-      console.log("QR expired. Generating new one...");
-    }
+    printQRInTerminal: false,
   });
 
   sock.ev.on("creds.update", saveCreds);
-  
-  // Keep alive
-  await new Promise(() => {});
-}
 
-main().catch(err => { console.error("Fatal:", err); process.exit(1); });
+  sock.ev.on("connection.update", async ({ qr, connection }) => {
+    if (qr) {
+      console.log("Generating QR code...");
+      const qrPath = path.join(os.homedir(), ".hermes", "wa_qr.png");
+      await QRCode.toFile(qrPath, qr, { width: 500 });
+      console.log("✅ QR saved to:", qrPath);
+      console.log("Open this PNG and scan with WhatsApp");
+      
+
+      process.exit(0);
+    }
+    if (connection === "open") {
+      console.log("Already authenticated");
+      process.exit(0);
+    }
+    if (connection === "close") {
+      console.log("Connection closed");
+      process.exit(0);
+    }
+  });
+})();

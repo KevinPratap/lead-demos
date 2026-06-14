@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tip and Toe Nail, Lashes & Brows - Website Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent: #c490a0;
+    --accent-light: #f5e8ee;
+    --surface: #ffffff;
+    --bg: #fafaf9;
+    --text: #1a1a1a;
+    --text-muted: #6b6b6b;
+    --border: #f0efed;
+    --radius: 14px;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.03);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 20px 60px;
+  }
+
+  /* Header */
+  .header {
+    margin-bottom: 44px;
+  }
+  .logo {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    line-height: 1.15;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .tagline {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  /* Stats row */
+  .stats {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 40px;
+    padding: 20px 24px;
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+  }
+  .stat {
+    flex: 1;
+    text-align: center;
+  }
+  .stat-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.3px;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Hero Banner */
+  .hero-banner {
+    width: 100%;
+    height: 240px;
+    border-radius: var(--radius);
+    background: url('https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&q=80') center/cover no-repeat;
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(196, 144, 160, 0.15), rgba(224, 184, 200, 0.4));
+  }
+
+  /* Hero */
+  .hero {
+    background: var(--accent-light);
+    border-radius: var(--radius);
+    padding: 44px 36px;
+    box-shadow: var(--shadow-card);
+    margin-bottom: 48px;
+    border: 1px solid rgba(196, 144, 160, 0.2);
+  }
+  .hero-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    color: var(--text);
+  }
+  .hero p {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 540px;
+  }
+
+  /* Services list */
+  .services-heading {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 48px;
+  }
+  .service-item {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .service-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+    border-color: var(--accent);
+  }
+  .service-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  .service-details {
+    flex-grow: 1;
+  }
+  .service-details h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .service-details p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* Before/After Gallery */
+  .gallery-heading {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .gallery-before-after {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 48px;
+  }
+  .gallery-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .gallery-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+  }
+  .gallery-img-container {
+    aspect-ratio: 4/3;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .gallery-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    border-radius: 20px;
+  }
+  .gallery-tag.highlight {
+    background: var(--accent);
+  }
+  .gallery-desc {
+    padding: 12px 16px;
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* Featured Strip */
+  .featured-strip {
+    background: #1c1c1e;
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 40px 32px;
+    margin-bottom: 36px;
+    text-align: center;
+  }
+  .featured-strip h2 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 10px;
+  }
+  .featured-strip p {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+  .btn-light {
+    display: inline-block;
+    background: #fff;
+    color: #1c1c1e;
+    padding: 13px 34px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -0.1px;
+    transition: opacity 0.15s;
+  }
+  .btn-light:hover { opacity: 0.9; }
+
+  /* CTA */
+  .cta-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .cta-section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 8px;
+  }
+  .cta-section p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 14px 36px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -0.2px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.1s, box-shadow 0.15s;
+  }
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 32px 0 0;
+    border-top: 1px solid var(--border);
+    color: #aaa;
+    font-size: 12px;
+  }
+  .footer p { margin-bottom: 4px; }
+  .footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .footer a:hover { text-decoration: underline; }
+
+  /* Mobile: 428px and below */
+  @media (max-width: 428px) {
+    .container { padding: 32px 16px 48px; }
+
+    /* Header */
+    .header { margin-bottom: 32px; }
+    .logo { font-size: 22px; }
+    .tagline { font-size: 13px; word-break: break-word; overflow-wrap: break-word; }
+
+    /* Hero Banner */
+    .hero-banner { height: 180px; margin-bottom: 20px; }
+
+    /* Stats */
+    .stats { gap: 8px; padding: 16px 10px; margin-bottom: 28px; }
+    .stat-value { font-size: 22px; }
+    .stat-label { font-size: 10px; letter-spacing: 0.3px; }
+
+    /* Hero */
+    .hero { padding: 28px 18px; margin-bottom: 36px; }
+    .hero-label { font-size: 10px; letter-spacing: 1px; margin-bottom: 12px; }
+    .hero h1 { font-size: 20px; }
+    .hero p { font-size: 14px; line-height: 1.6; }
+
+    /* Services List */
+    .services-heading { font-size: 11px; margin-bottom: 14px; }
+    .services-list { gap: 10px; margin-bottom: 36px; }
+    .service-item { padding: 16px 14px; gap: 12px; }
+    .service-icon { width: 36px; height: 36px; font-size: 16px; }
+    .service-details h3 { font-size: 14px; }
+    .service-details p { font-size: 12px; }
+
+    /* Gallery */
+    .gallery-heading { font-size: 11px; margin-bottom: 12px; }
+    .gallery-before-after { grid-template-columns: 1fr; gap: 10px; margin-bottom: 36px; }
+
+    /* Featured strip */
+    .featured-strip { padding: 28px 18px; margin-bottom: 28px; }
+    .featured-strip h2 { font-size: 18px; }
+    .featured-strip p { font-size: 13px; margin-bottom: 18px; }
+
+    /* Buttons */
+    .btn-light,
+    .btn-primary {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 15px;
+      border-radius: 10px;
+    }
+
+    /* CTA section */
+    .cta-section { margin-bottom: 32px; }
+    .cta-section h2 { font-size: 18px; }
+    .cta-section p { font-size: 13px; margin-bottom: 16px; }
+
+    /* Footer */
+    .footer { padding: 24px 0 0; font-size: 11px; }
+  }
+
+  /* Tiny phones */
+  @media (max-width: 374px) {
+    .container { padding: 24px 12px 40px; }
+    .stats { gap: 4px; padding: 12px 6px; }
+    .stat-value { font-size: 20px; }
+    .hero h1 { font-size: 18px; }
+    .hero p { font-size: 13px; }
+    .service-item { padding: 12px 10px; }
+    .service-details h3 { font-size: 13px; }
+    .featured-strip h2 { font-size: 16px; }
+    .featured-strip p { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">Tip and Toe Nail, Lashes & Brows</div>
+    <div class="tagline">Peddar Road, Mumbai, Maharashtra, India</div>
+  </div>
+
+  <!-- Hero Banner -->
+  <div class="hero-banner"></div>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-value">4.7 ★</div>
+      <div class="stat-label">Google Rating</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">958</div>
+      <div class="stat-label">Reviews</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">2026</div>
+      <div class="stat-label">Est. Year</div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-label">Premium nail studio & microblading on Peddar Road</div>
+    <h1>Tip and Toe Nail, Lashes & Brows</h1>
+    <p>Premium nail studio on Peddar Road. From everyday nail art to bridal packages, we do it all with top hygiene standards.</p>
+  </div>
+
+  <!-- Services List -->
+  <div class="services-heading">Our Services</div>
+  <div class="services-list">
+    <div class="service-item">
+      <div class="service-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+      </div>
+      <div class="service-details">
+        <h3>Nail Art & Extensions</h3>
+        <p>Custom acrylic & gel overlays, premium art, chrome finishes</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+      </div>
+      <div class="service-details">
+        <h3>Eyelash Extensions</h3>
+        <p>Classic & volume lash sets, lightweight, hybrid designs</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+      </div>
+      <div class="service-details">
+        <h3>Eyebrow Microblading</h3>
+        <p>Precision semi-permanent eyebrow shaping, natural hair strokes</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7Z"/><path d="M3 20h18"/></svg>
+      </div>
+      <div class="service-details">
+        <h3>Bridal Packages</h3>
+        <p>Comprehensive nail, lash, and skincare bridal makeovers</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"/><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/></svg>
+      </div>
+      <div class="service-details">
+        <h3>Pedicure & Manicure</h3>
+        <p>Relaxing spa treatments with premium scrubs and massage</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7Z"/></svg>
+      </div>
+      <div class="service-details">
+        <h3>Skin Treatments</h3>
+        <p>Specialized facial treatments, hydration, and glow therapies</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Before/After Gallery -->
+  <div class="gallery-heading">Before and After Gallery</div>
+  <div class="gallery-before-after">
+    <div class="gallery-card">
+      <div class="gallery-img-container" style="background-image: url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=400&q=80');">
+        <span class="gallery-tag">Before</span>
+      </div>
+      <p class="gallery-desc">Natural lashes and nails before custom treatment</p>
+    </div>
+    <div class="gallery-card">
+      <div class="gallery-img-container" style="background-image: url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&q=80');">
+        <span class="gallery-tag highlight">After</span>
+      </div>
+      <p class="gallery-desc">Polished, premium results with custom shaping and style</p>
+    </div>
+  </div>
+
+  <!-- Dark Featured Strip -->
+  <div class="featured-strip">
+    <h2>First-Time Client Offer</h2>
+    <p>Enjoy twenty percent off your first visit. Experience premium nail care and lash extensions from top-rated beauty professionals on Peddar Road.</p>
+    <a href="tel:+918879743694" class="btn-light">Call to Reserve</a>
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="cta-section">
+    <h2>Book your booking slot</h2>
+    <p>Slots fill fast. Call or message us to secure your appointment.</p>
+    <a href="https://wa.me/918879743694" class="btn-primary">Book on WhatsApp</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2026 Tip and Toe Nail, Lashes & Brows. All rights reserved.</p>
+    <p>Peddar Road, Mumbai, Maharashtra, India | Mon-Sat: 10am-8pm | Sun: 11am-6pm</p>
+    <p style="margin-top: 12px;">Want a full website? <a href="https://wa.me/918828022624">Message Kevin on WhatsApp</a></p>
+  </div>
+
+</div>
+</body>
+</html>

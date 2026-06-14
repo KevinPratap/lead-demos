@@ -1,7 +1,8 @@
 version: 1
-niche: Mumbai businesses without websites
+niche: Businesses without websites — global
 city: Mumbai
 queries:
+  # India
   - "dental clinic in Mumbai"
   - "dentist in Andheri Mumbai"
   - "hair salon in Mumbai"
@@ -17,17 +18,39 @@ queries:
   - "yoga studio in Mumbai"
   - "eyelash salon in Mumbai"
   - "barber shop in Mumbai"
+  # Dubai
+  - "dental clinic in Dubai"
+  - "hair salon in Dubai Marina"
+  - "cafe in Dubai"
+  - "restaurant in Dubai"
+  - "spa in Dubai"
+  - "gym in Dubai"
+  - "clinic in Dubai"
+  # Singapore
+  - "dental clinic in Singapore"
+  - "hair salon in Singapore"
+  - "cafe in Singapore"
+  - "restaurant in Singapore"
+  - "gym in Singapore"
+  # London
+  - "dental clinic in London"
+  - "hair salon in London"
+  - "cafe in London"
+  # Toronto
+  - "dental clinic in Toronto"
+  - "hair salon in Toronto"
+  - "cafe in Toronto"
+  # Sydney
+  - "dental clinic in Sydney"
+  - "hair salon in Sydney"
+  - "cafe in Sydney"
 
-leads_per_day: 200
-apify_max_results: 200
+leads_per_day: 300
+apify_max_results: 300
 rescrape_cadence: daily
 
 google:
   api_key: "AIzaSy...D0Yw"
 
 serpapi:
-  api_key: "7e8f..."
-
-github:
-  repo: KevinPratap/lead-demos
-  branch: main
+  api_key: "7e8fbacc1bfa5d0a1b162f596e734999342199bb11a1c0472771adf210e500e6"

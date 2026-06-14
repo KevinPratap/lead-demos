@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr.Pravin's Advanced Physiotherapy Clinic | Website Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #1a6b5a;
+      --accent-light: #cce8e4;
+      --accent-dark: #114a3e;
+      --surface: #ffffff;
+      --bg: #fafaf9;
+      --text: #1c2e2a;
+      --text-muted: #506e67;
+      --border: #e2ebe9;
+      --radius: 14px;
+      --shadow-sm: 0 1px 2px rgba(26, 107, 90, 0.04);
+      --shadow-card: 0 10px 30px rgba(26, 107, 90, 0.06), 0 1px 3px rgba(26, 107, 90, 0.02);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .navbar {
+      padding: 24px 20px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+
+    .nav-phone {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-phone:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Split Hero Section */
+    .hero-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 20px;
+    }
+
+    .hero-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      padding: 6px 12px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      align-self: flex-start;
+    }
+
+    .rating-star {
+      color: #f59e0b;
+    }
+
+    .hero-title {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text);
+      letter-spacing: -1px;
+    }
+
+    .hero-text {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(26, 107, 90, 0.15);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(26, 107, 90, 0.2);
+    }
+
+    .btn-secondary {
+      background: var(--accent-light);
+      color: var(--accent-dark);
+    }
+
+    .btn-secondary:hover {
+      background: #b6ded8;
+      transform: translateY(-1px);
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: var(--shadow-card);
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Stats Line */
+    .stats-strip {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 20px;
+    }
+
+    .stats-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .stat-card {
+      background: var(--surface);
+      padding: 20px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat-num {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .stat-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+
+    /* Main Sections Container */
+    .main-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.5px;
+    }
+
+    /* Services 2-Column Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 32px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+      display: flex;
+      gap: 20px;
+    }
+
+    .service-card:hover {
+      box-shadow: var(--shadow-card);
+      transform: translateY(-2px);
+      border-color: var(--accent-light);
+    }
+
+    .service-icon-wrapper {
+      width: 48px;
+      height: 48px;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .service-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .service-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .service-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .gallery-image-wrapper {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 16/10;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-image-wrapper:hover .gallery-image {
+      transform: scale(1.02);
+    }
+
+    /* Testimonials Section */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .testimonial-text {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .author-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .author-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .author-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .author-location {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* Contact / CTA section */
+    .cta-section {
+      background: linear-gradient(135deg, #1a6b5a 0%, #3db89a 100%);
+      color: #ffffff;
+      border-radius: var(--radius);
+      padding: 60px 40px;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .cta-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .cta-text {
+      font-size: 16px;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      background: #ffffff;
+      color: #1a6b5a;
+    }
+
+    .btn-white:hover {
+      background: #f0f7f5;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(255,255,255,0.2);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 13px;
+      background: var(--surface);
+    }
+
+    .footer p { margin-bottom: 8px; }
+    .footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer a:hover { text-decoration: underline; }
+
+    /* Responsive Design */
+    @media (max-width: 900px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 32px;
+      }
+      .hero-content {
+        align-items: center;
+      }
+      .hero-ctas {
+        justify-content: center;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .stats-container {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-ctas {
+        flex-direction: column;
+        width: 100%;
+      }
+      .btn {
+        width: 100%;
+      }
+      .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <div>
+        <a href="#" class="logo">Dr.Pravin's Physio</a>
+        <div style="font-size: 12px; color: var(--text-muted); font-weight: 400; margin-top: 2px;">Mumbai, Maharashtra, India</div>
+      </div>
+      <a href="tel:+919920689423" class="nav-phone">+91 99206 89423</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="rating-badge">
+            <span class="rating-star">★</span>
+            <span>4.9 Google Rating (989 reviews)</span>
+          </div>
+          <h1 class="hero-title">Advanced physiotherapy &amp; home visits in Mumbai</h1>
+          <p class="hero-text">Dr. Pravin and his team provide advanced physiotherapy for sports injuries, back pain, and post-surgery recovery. Home visits available across Mumbai.</p>
+          <div class="hero-ctas">
+            <a href="tel:+919920689423" class="btn btn-primary">Call +91 99206 89423</a>
+            <a href="https://wa.me/919920689423" class="btn btn-secondary">Book Session</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img class="hero-image" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80" alt="Advanced Physiotherapy Clinic">
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-num">4.9 ★</div>
+          <div class="stat-desc">Patient Satisfaction Rating</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">989</div>
+          <div class="stat-desc">Verified Google Reviews</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">Home Visits</div>
+          <div class="stat-desc">Available Across Mumbai</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="main-container">
+      <!-- Services -->
+      <section>
+        <div class="section-header">
+          <span class="section-label">Our Expertise</span>
+          <h2 class="section-title">Comprehensive Rehabilitation Services</h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon-wrapper">🏋️</div>
+            <div class="service-info">
+              <h3 class="service-title">Sports Injury Rehab</h3>
+              <p class="service-desc">Comprehensive rehabilitation programs to help athletes recover from injuries, rebuild strength, and safely return to peak performance.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon-wrapper">🧘</div>
+            <div class="service-info">
+              <h3 class="service-title">Back Pain Treatment</h3>
+              <p class="service-desc">Advanced spinal mobilization, posture correction, and targeted exercises to relieve acute and chronic back and neck discomfort.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon-wrapper">🏥</div>
+            <div class="service-info">
+              <h3 class="service-title">Post-Surgery Physiotherapy</h3>
+              <p class="service-desc">Structured post-operative recovery protocols to restore joint mobility, rebuild muscle strength, and speed up rehabilitation.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon-wrapper">🏠</div>
+            <div class="service-info">
+              <h3 class="service-title">Home Visits</h3>
+              <p class="service-desc">Professional physiotherapy assessments and personalized treatments conducted in the comfort and convenience of your home.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon-wrapper">🦴</div>
+            <div class="service-info">
+              <h3 class="service-title">Chiropractic Care</h3>
+              <p class="service-desc">Specialized joint adjustments and spinal manipulation techniques to improve alignment, relieve pressure, and restore mobility.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon-wrapper">👶</div>
+            <div class="service-info">
+              <h3 class="service-title">Pediatric Physio</h3>
+              <p class="service-desc">Gentle, specialized physical therapy designed to support movement development, coordination, and physical recovery in children.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section>
+        <div class="section-header">
+          <span class="section-label">Clinic and Care</span>
+          <h2 class="section-title">Our Practice Environment</h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-image-wrapper">
+            <img class="gallery-image" src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=400&q=80" alt="Physiotherapy Exercise Area">
+          </div>
+          <div class="gallery-image-wrapper">
+            <img class="gallery-image" src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&q=80" alt="Physiotherapy Treatment Session">
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section>
+        <div class="section-header">
+          <span class="section-label">Patient Feedback</span>
+          <h2 class="section-title">What Our Patients Say</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-text">"The home visits were a lifesaver after my knee surgery. Dr. Pravin is extremely patient and professional. Highly recommended."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RM</div>
+              <div class="author-info">
+                <span class="author-name">Rajesh Mehta</span>
+                <span class="author-location">Mumbai</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Excellent treatment for my sports injury. I was back on the field within weeks thanks to their personalized rehabilitation plan."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">PS</div>
+              <div class="author-info">
+                <span class="author-name">Priya Sharma</span>
+                <span class="author-location">Mumbai</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Very knowledgeable team and clean clinic environment. The back pain treatment was highly effective and long lasting."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AP</div>
+              <div class="author-info">
+                <span class="author-name">Amit Patel</span>
+                <span class="author-location">Mumbai</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom CTA -->
+      <section class="cta-section">
+        <h2 class="cta-title">Ready to Move Pain Free?</h2>
+        <p class="cta-text">Schedule your clinical assessment or request a home visit today. Open Monday to Saturday from 8am to 8pm, and Sunday from 10am to 2pm for home visits.</p>
+        <div class="cta-buttons">
+          <a href="tel:+919920689423" class="btn btn-white">Call +91 99206 89423</a>
+          <a href="https://wa.me/919920689423" class="btn btn-outline">Message on WhatsApp</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Dr.Pravin's Advanced Physiotherapy Clinic. Preview built for Dr.Pravin's Advanced Physiotherapy Clinic</p>
+    <p>Want a full website? <a href="https://wa.me/918828022624">Message Kevin on WhatsApp</a></p>
+  </footer>
+
+</body>
+</html>

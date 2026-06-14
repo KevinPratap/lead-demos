@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bandstand Pantry | Website Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent: #6b4c3d;
+    --accent-light: #f0e0d4;
+    --surface: #ffffff;
+    --bg: #faf8f6;
+    --text: #2c2520;
+    --text-muted: #82756e;
+    --border: #ede8e4;
+    --radius: 16px;
+    --shadow-sm: 0 1px 2px rgba(107, 76, 61, 0.04);
+    --shadow-card: 0 1px 3px rgba(107, 76, 61, 0.06), 0 4px 16px rgba(107, 76, 61, 0.04);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 300;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 20px 60px;
+  }
+
+  /* Header */
+  .header {
+    margin-bottom: 44px;
+  }
+  .logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .tagline {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  /* Stats row */
+  .stats {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 40px;
+    padding: 20px 24px;
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+  }
+  .stat {
+    flex: 1;
+    text-align: center;
+  }
+  .stat-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.3px;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Hero Banner */
+  .hero-banner {
+    width: 100%;
+    height: 320px;
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(44, 37, 32, 0.1) 0%, rgba(44, 37, 32, 0.5) 100%), url('https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=800&q=80') center/cover no-repeat;
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 40%, transparent 30%, rgba(0,0,0,0.1) 100%);
+  }
+
+  /* Hero */
+  .hero {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 44px 36px;
+    box-shadow: var(--shadow-card);
+    margin-bottom: 48px;
+    border: 1px solid var(--border);
+  }
+  .hero-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    color: var(--text);
+  }
+  .hero p {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 540px;
+  }
+
+  /* Services list */
+  .services-heading {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+  .services-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--text);
+    font-weight: 500;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .services-item:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-card);
+    border-color: var(--accent);
+  }
+
+  /* Gallery Strip */
+  .gallery-heading {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .gallery-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+  .gallery-img {
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .gallery-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.15) 100%);
+  }
+  .gallery-img:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80'); }
+  .gallery-img:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80'); }
+
+  /* Featured Strip */
+  .featured-strip {
+    background: #2c2520;
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 40px 32px;
+    margin-bottom: 36px;
+    text-align: center;
+  }
+  .featured-strip h2 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 10px;
+  }
+  .featured-strip p {
+    color: #bfaea5;
+    font-size: 14px;
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+  .btn-light {
+    display: inline-block;
+    background: #fff;
+    color: #2c2520;
+    padding: 13px 34px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -0.1px;
+    transition: opacity 0.15s;
+  }
+  .btn-light:hover { opacity: 0.9; }
+
+  /* CTA */
+  .cta-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .cta-section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 8px;
+  }
+  .cta-section p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 14px 36px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -0.2px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.1s, box-shadow 0.15s;
+  }
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 32px 0 0;
+    border-top: 1px solid var(--border);
+    color: #aaa;
+    font-size: 12px;
+  }
+  .footer p { margin-bottom: 4px; }
+  .footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .footer a:hover { text-decoration: underline; }
+
+  /* Mobile */
+  @media (max-width: 428px) {
+    .container { padding: 32px 16px 48px; }
+
+    /* Header */
+    .header { margin-bottom: 32px; }
+    .logo { font-size: 24px; }
+    .tagline { font-size: 13px; word-break: break-word; overflow-wrap: break-word; }
+
+    /* Hero Banner */
+    .hero-banner { height: 240px; margin-bottom: 20px; }
+
+    /* Stats */
+    .stats { gap: 8px; padding: 16px 10px; margin-bottom: 28px; }
+    .stat-value { font-size: 22px; }
+    .stat-label { font-size: 10px; letter-spacing: 0.3px; }
+
+    /* Hero */
+    .hero { padding: 28px 18px; margin-bottom: 36px; }
+    .hero-label { font-size: 10px; letter-spacing: 1px; margin-bottom: 12px; }
+    .hero h1 { font-size: 20px; }
+    .hero p { font-size: 14px; line-height: 1.6; }
+
+    /* Services list */
+    .services-heading { font-size: 11px; margin-bottom: 14px; }
+    .services-list { gap: 8px; margin-bottom: 36px; }
+    .services-item { padding: 8px 14px; font-size: 13px; }
+
+    /* Gallery */
+    .gallery-heading { font-size: 11px; margin-bottom: 12px; }
+    .gallery-strip { gap: 8px; margin-bottom: 36px; }
+
+    /* Featured strip */
+    .featured-strip { padding: 28px 18px; margin-bottom: 28px; }
+    .featured-strip h2 { font-size: 18px; }
+    .featured-strip p { font-size: 13px; margin-bottom: 18px; }
+
+    /* Buttons */
+    .btn-light,
+    .btn-primary {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 15px;
+      border-radius: 10px;
+    }
+
+    /* CTA section */
+    .cta-section { margin-bottom: 32px; }
+    .cta-section h2 { font-size: 18px; }
+    .cta-section p { font-size: 13px; margin-bottom: 16px; }
+
+    /* Footer */
+    .footer { padding: 24px 0 0; font-size: 11px; }
+  }
+
+  /* Tiny phones */
+  @media (max-width: 374px) {
+    .container { padding: 24px 12px 40px; }
+    .stats { gap: 4px; padding: 12px 6px; }
+    .stat-value { font-size: 20px; }
+    .hero h1 { font-size: 18px; }
+    .hero p { font-size: 13px; }
+    .services-list { gap: 6px; }
+    .services-item { padding: 6px 10px; font-size: 12px; }
+    .featured-strip h2 { font-size: 16px; }
+    .featured-strip p { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">The Bandstand Pantry</div>
+    <div class="tagline">All-day breakfast, craft coffee &amp; good vibes</div>
+  </div>
+
+  <!-- Hero Banner -->
+  <div class="hero-banner"></div>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-value">4.2 ★</div>
+      <div class="stat-label">Google Rating</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">763</div>
+      <div class="stat-label">Reviews</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">Mumbai</div>
+      <div class="stat-label">Location</div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-label">Cafe &amp; Restaurant</div>
+    <h1>The Bandstand Pantry</h1>
+    <p>Come hungry, leave happy. All-day breakfasts, proper coffee, and a space that doesn't rush you. Mumbai's kind of place.</p>
+  </div>
+
+  <!-- Services Grid -->
+  <div class="services-heading">On the Menu &amp; Offerings</div>
+  <div class="services-list">
+    <div class="services-item">All-Day Breakfast</div>
+    <div class="services-item">Pour-Over Coffee</div>
+    <div class="services-item">Fresh Juices &amp; Smoothies</div>
+    <div class="services-item">Weekend Brunch Specials</div>
+    <div class="services-item">Indoor &amp; Outdoor Seating</div>
+    <div class="services-item">Free WiFi</div>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery-heading">The Cafe Vibe</div>
+  <div class="gallery-strip">
+    <div class="gallery-img"></div>
+    <div class="gallery-img"></div>
+  </div>
+
+  <!-- Dark Featured Strip -->
+  <div class="featured-strip">
+    <h2>Visit Us in Mumbai</h2>
+    <p>Enjoy our eclectic menu, warm atmosphere, and beautiful views. Open daily from 8am to 10pm.</p>
+    <a href="tel:+919920100084" class="btn-light">Call +91 99201 00084</a>
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="cta-section">
+    <h2>Claim This Website</h2>
+    <p>Upgrade your online presence with a beautiful, custom-built website designed to attract more customers and showcase your craft coffee.</p>
+    <a href="https://wa.me/918828022624" class="btn-primary">Message on WhatsApp</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2026 The Bandstand Pantry. Preview built for The Bandstand Pantry.</p>
+    <p>Want a full website? <a href="https://wa.me/918828022624">Message Kevin on WhatsApp</a></p>
+  </div>
+
+</div>
+</body>
+</html>

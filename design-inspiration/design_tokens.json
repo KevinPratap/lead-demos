@@ -1,0 +1,541 @@
+{
+  "https://www.seattledentalco.com": {
+    "title": "Queen Anne Dentist | Seattle Dental Co.",
+    "font": "Lato",
+    "h1Text": "We're Sharing Our\u00a0Passion",
+    "h1Size": "45px",
+    "h1Weight": "700",
+    "h1Color": "rgb(58, 58, 58)",
+    "sections": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(37, 37, 37)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(37, 37, 37)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(37, 37, 37)"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(37, 37, 37)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(37, 37, 37)"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Request an Appointment",
+        "bg": "rgb(58, 58, 58)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "padding": "10px 14px",
+        "fontSize": "10px"
+      },
+      {
+        "text": "Contact",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px",
+        "padding": "10px 0px",
+        "fontSize": "13px"
+      },
+      {
+        "text": "Request an Appointment",
+        "bg": "rgb(58, 58, 58)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "padding": "10px 14px",
+        "fontSize": "10px"
+      },
+      {
+        "text": "Contact",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px",
+        "padding": "10px 0px",
+        "fontSize": "13px"
+      }
+    ]
+  },
+  "https://www.scandinave.com": {
+    "title": "Scandinave Spa | Thermal Journey in Canada",
+    "font": "Times New Roman",
+    "h1Text": "Explore our iconic thermal spa destinations",
+    "h1Size": "72px",
+    "h1Weight": "400",
+    "h1Color": "rgb(255, 255, 255)",
+    "sections": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)"
+      }
+    ],
+    "buttons": []
+  },
+  "https://www.spabelles.com": {
+    "title": "SpaBelles",
+    "font": "proxima-nova",
+    "h1Text": "Elevated Beauty & Wellness",
+    "h1Size": "72px",
+    "h1Weight": "400",
+    "h1Color": "rgb(255, 255, 255)",
+    "sections": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(85, 85, 85)"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(85, 85, 85)"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(85, 85, 85)"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(85, 85, 85)",
+        "radius": "0px",
+        "padding": "0px",
+        "fontSize": "16px"
+      },
+      {
+        "text": "",
+        "bg": "rgb(150, 150, 150)",
+        "color": "rgb(85, 85, 85)",
+        "radius": "0px",
+        "padding": "0px",
+        "fontSize": "0px"
+      },
+      {
+        "text": "",
+        "bg": "rgb(34, 34, 34)",
+        "color": "rgb(85, 85, 85)",
+        "radius": "50%",
+        "padding": "0px",
+        "fontSize": "16px"
+      },
+      {
+        "text": "Contact",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px",
+        "padding": "0px 12px 0px 0px",
+        "fontSize": "12px"
+      }
+    ]
+  },
+  "https://www.oasisaveda.com": {
+    "title": "Home | OASIS AVEDA Day Spa - Luxury Spa Treatments & Holistic Wellness",
+    "font": "Poppins",
+    "h1Text": "Enhance your natural allure with OASis aveda",
+    "h1Size": "84px",
+    "h1Weight": "400",
+    "h1Color": "rgb(240, 200, 224)",
+    "sections": [
+      {
+        "bg": "rgb(248, 236, 243)",
+        "color": "rgb(51, 40, 100)"
+      },
+      {
+        "bg": "rgb(21, 17, 42)",
+        "color": "rgb(240, 200, 224)"
+      },
+      {
+        "bg": "rgb(248, 236, 243)",
+        "color": "rgb(51, 40, 100)"
+      },
+      {
+        "bg": "rgb(248, 236, 243)",
+        "color": "rgb(51, 40, 100)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 40, 100)"
+      },
+      {
+        "bg": "rgb(248, 236, 243)",
+        "color": "rgb(51, 40, 100)"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Book Now",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(240, 200, 224)",
+        "radius": "0px",
+        "padding": "0px",
+        "fontSize": "11.2px"
+      },
+      {
+        "text": "Contact",
+        "bg": "rgb(216, 235, 240)",
+        "color": "rgb(51, 40, 100)",
+        "radius": "0px",
+        "padding": "14px",
+        "fontSize": "14px"
+      },
+      {
+        "text": "Contact",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(192, 124, 165)",
+        "radius": "0px",
+        "padding": "12.195px 0px",
+        "fontSize": "32.52px"
+      },
+      {
+        "text": "",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(20, 70, 49)",
+        "radius": "0px",
+        "padding": "14px",
+        "fontSize": "14px"
+      }
+    ]
+  },
+  "https://www.yogaworks.com": {
+    "title": "Homepage - Yogaworks",
+    "font": "Seabirds Trial",
+    "h1Text": "Whenever\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tWherever",
+    "h1Size": "64px",
+    "h1Weight": "430",
+    "h1Color": "rgb(31, 31, 31)",
+    "sections": [
+      {
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(84, 84, 84)"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(84, 84, 84)"
+      },
+      {
+        "bg": "rgb(248, 248, 248)",
+        "color": "rgb(84, 84, 84)"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(84, 84, 84)"
+      },
+      {
+        "bg": "rgb(247, 247, 247)",
+        "color": "rgb(84, 84, 84)"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(84, 84, 84)"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Log in",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(36, 35, 35)",
+        "radius": "100px",
+        "padding": "12px 15px",
+        "fontSize": "14px"
+      },
+      {
+        "text": "Sign up",
+        "bg": "rgb(31, 31, 31)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "100px",
+        "padding": "12px 15px",
+        "fontSize": "14px"
+      },
+      {
+        "text": "Log in",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(36, 35, 35)",
+        "radius": "100px",
+        "padding": "12px 15px",
+        "fontSize": "14px"
+      },
+      {
+        "text": "Sign up",
+        "bg": "rgb(31, 31, 31)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "100px",
+        "padding": "12px 15px",
+        "fontSize": "14px"
+      }
+    ]
+  },
+  "https://www.corepoweryoga.com": {
+    "title": "CorePower Yoga | Yoga Classes, Yoga Sculpt & Hot Yoga Near Me",
+    "font": "Poppins",
+    "h1Text": "30% off",
+    "h1Size": "14px",
+    "h1Weight": "400",
+    "h1Color": "rgb(0, 0, 0)",
+    "sections": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(27, 27, 27)"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Book a class",
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(27, 27, 27)",
+        "radius": "40px",
+        "padding": "12px 24px",
+        "fontSize": "13px"
+      },
+      {
+        "text": "Book a class",
+        "bg": "rgb(27, 27, 27)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "40px",
+        "padding": "12px 24px",
+        "fontSize": "13px"
+      },
+      {
+        "text": "Sign in",
+        "bg": "rgb(27, 27, 27)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "40px",
+        "padding": "12px 24px",
+        "fontSize": "13px"
+      },
+      {
+        "text": "Create Account",
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(27, 27, 27)",
+        "radius": "40px",
+        "padding": "12px 24px",
+        "fontSize": "13px"
+      }
+    ]
+  },
+  "https://www.athletico.com": {
+    "title": "Athletico Physical Therapy - Outpatient Physical Therapy and Rehabilitation",
+    "font": "acumin-pro",
+    "h1Text": "IT STARTS HERE",
+    "h1Size": "90px",
+    "h1Weight": "400",
+    "h1Color": "rgb(255, 255, 255)",
+    "sections": [
+      {
+        "bg": "rgb(0, 0, 0)",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "bg": "rgb(253, 253, 253)",
+        "color": "rgb(0, 0, 0)"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Schedule Appointment",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "padding": "8px 12px",
+        "fontSize": "16px"
+      },
+      {
+        "text": "Contact Us",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "padding": "8px 12px",
+        "fontSize": "16px"
+      },
+      {
+        "text": "SCHEDULE APPOINTMENT",
+        "bg": "rgb(1, 92, 183)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "4px",
+        "padding": "9px 30px 8px",
+        "fontSize": "14px"
+      },
+      {
+        "text": "SCHEDULE APPOINTMENT",
+        "bg": "rgb(1, 92, 183)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "4px",
+        "padding": "9px 30px 8px",
+        "fontSize": "14px"
+      }
+    ]
+  },
+  "https://www.barrys.com": {
+    "title": "Barry\u2019s: The Best HIIT Workouts & Full Body Fitness Classes",
+    "font": "Benton Sans Pro",
+    "h1Text": "Try the best workout in the world\u2122",
+    "h1Size": "48px",
+    "h1Weight": "700",
+    "h1Color": "rgb(255, 255, 255)",
+    "sections": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(17, 17, 17)"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Learn more about this provider",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 0, 0)",
+        "radius": "0px",
+        "padding": "15px 0px 0px",
+        "fontSize": "15px"
+      },
+      {
+        "text": "",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(45, 98, 255)",
+        "radius": "0px",
+        "padding": "0px",
+        "fontSize": "16px"
+      },
+      {
+        "text": "Contact Us",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "padding": "0px",
+        "fontSize": "12px"
+      },
+      {
+        "text": "Gift Cards",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "padding": "0px",
+        "fontSize": "12px"
+      }
+    ]
+  },
+  "https://www.bitestudio.co": {
+    "title": "BiteStudio",
+    "font": "Assistant",
+    "h1Text": "",
+    "h1Size": "40px",
+    "h1Weight": "400",
+    "h1Color": "rgb(18, 18, 18)",
+    "sections": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgba(18, 18, 18, 0.75)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgba(18, 18, 18, 0.75)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgba(18, 18, 18, 0.75)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgba(18, 18, 18, 0.75)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgba(18, 18, 18, 0.75)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgba(18, 18, 18, 0.75)"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Contact",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(18, 18, 18)",
+        "radius": "0px",
+        "padding": "11px 30px",
+        "fontSize": "18px"
+      },
+      {
+        "text": "Contact",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgba(18, 18, 18, 0.75)",
+        "radius": "0px",
+        "padding": "12px",
+        "fontSize": "14px"
+      },
+      {
+        "text": "Book a Scan",
+        "bg": "rgb(255, 0, 61)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "8px",
+        "padding": "12px 20px",
+        "fontSize": "22px"
+      }
+    ]
+  }
+}
