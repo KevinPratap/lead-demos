@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{CLINIC_NAME}} — Website Preview</title>
+<title>Kromakay Salon Juhu — Website Preview</title>
 <style>
   :root {
-    --accent: {{ACCENT}};
-    --accent-light: {{ACCENT_LIGHT}};
+    --accent: #db2777;
+    --accent-light: #fce7f3;
     --surface: #ffffff;
     --bg: #fafaf9;
     --text: #1a1a1a;
@@ -85,7 +85,7 @@
     width: 100%;
     height: 220px;
     border-radius: var(--radius);
-    background: {{HERO_GRADIENT}};
+    background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
     margin-bottom: 28px;
     position: relative;
     overflow: hidden;
@@ -158,9 +158,9 @@
     inset: 0;
     background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.25) 100%);
   }
-  .gallery-img:nth-child(1) { background: {{GALLERY_IMG1}}; }
-  .gallery-img:nth-child(2) { background: {{GALLERY_IMG2}}; }
-  .gallery-img:nth-child(3) { background: {{GALLERY_IMG3}}; }
+  .gallery-img:nth-child(1) { background: url('https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=600&h=800&fit=crop'); }
+  .gallery-img:nth-child(2) { background: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=600&h=800&fit=crop'); }
+  .gallery-img:nth-child(3) { background: url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&h=800&fit=crop'); }
 
   /* ── Services Grid ── */
   .services-heading {
@@ -376,8 +376,8 @@
 
   <!-- Header -->
   <div class="header">
-    <div class="logo">{{CLINIC_NAME_SHORT}}</div>
-    <div class="tagline">{{CLINIC_ADDRESS}}</div>
+    <div class="logo">Kromakay Salon Juhu</div>
+    <div class="tagline">1 & 2, Amber Building, 10th Rd, opposite Pink Wasabi, Sainath Nagar, JVPD Scheme, Juhu, Mumbai, Maharashtra 400049, India</div>
   </div>
 
   <!-- Hero Banner -->
@@ -386,34 +386,63 @@
   <!-- Stats -->
   <div class="stats">
     <div class="stat">
-      <div class="stat-value">{{RATING}} ★</div>
+      <div class="stat-value">4.5 ★</div>
       <div class="stat-label">Google Rating</div>
     </div>
     <div class="stat">
-      <div class="stat-value">{{REVIEWS}}</div>
+      <div class="stat-value">342</div>
       <div class="stat-label">Reviews</div>
     </div>
     <div class="stat">
-      <div class="stat-value">{{YEARS_ACTIVE}}+</div>
+      <div class="stat-value">5+</div>
       <div class="stat-label">Years Active</div>
     </div>
   </div>
 
   <!-- Hero -->
   <div class="hero">
-    <div class="hero-label">{{HERO_LABEL}}</div>
-    <h1>{{HERO_TITLE}}</h1>
-    <p>{{HERO_TEXT}}</p>
+    <div class="hero-label">Beauty Salon</div>
+    <h1>Unlock Your Signature Look at Kromakay Salon Juhu</h1>
+    <p>Indulge in premium hair, skin, and beauty services tailored just for you. Highly recommended with 4.5 ★ from 342 reviews.</p>
   </div>
 
   <!-- Services Grid -->
-  <div class="services-heading">{{SERVICES_HEADING}}</div>
+  <div class="services-heading">Our Services</div>
   <div class="services-grid">
-    {{SERVICES_HTML}}
+        <div class="service-card">
+      <div class="service-icon">✂️</div>
+      <h3>Hair Styling & Cuts</h3>
+      <p>Expert cuts, blowouts, and styling tailored to your unique look.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🎨</div>
+      <h3>Color & Highlights</h3>
+      <p>Transform your hair with balayage, highlights, or full color treatments.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">💆‍♀️</div>
+      <h3>Hair Spa & Treatments</h3>
+      <p>Deep conditioning, keratin, and nourishing therapies for shiny hair.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">💅</div>
+      <h3>Manicure & Pedicure</h3>
+      <p>Premium nail grooming, shaping, and gel polish application.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">✨</div>
+      <h3>Facial & Skincare</h3>
+      <p>Rejuvenating facials and cleanups for a glowing, radiant complexion.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">💄</div>
+      <h3>Professional Makeup</h3>
+      <p>Bridal, party, and event makeup by experienced artists.</p>
+    </div>
   </div>
 
   <!-- Gallery -->
-  <div class="gallery-heading">{{GALLERY_HEADING}}</div>
+  <div class="gallery-heading">Gallery</div>
   <div class="gallery-strip">
     <div class="gallery-img"></div>
     <div class="gallery-img"></div>
@@ -422,21 +451,21 @@
 
   <!-- Dark Featured Strip (from B1) -->
   <div class="featured-strip">
-    <h2>{{FEATURED_TITLE}}</h2>
-    <p>{{FEATURED_TEXT}}</p>
-    <a href="tel:+91 98215 52099" class="btn-light">{{FEATURED_CTA}}</a>
+    <h2>Ready to Book Your Next Look?</h2>
+    <p>Experience premium styling, color, and nail care from our expert beauty professionals. Let us pamper you.</p>
+    <a href="tel:919821552099" class="btn-light">Call Now</a>
   </div>
 
   <!-- Bottom CTA (from B4 — secondary CTA) -->
   <div class="cta-section">
-    <h2>{{CTA_TITLE}}</h2>
-    <p>{{CTA_TEXT}}</p>
-    <a href="https://wa.me/918828022624" class="btn-primary">{{CTA_BUTTON}}</a>
+    <h2>Ready to get started?</h2>
+    <p>Slots fill fast! Message us on WhatsApp to book your styling slot.</p>
+    <a href="https://wa.me/918828022624" class="btn-primary">Book Appointment</a>
   </div>
 
   <!-- Footer -->
   <div class="footer">
-    <p>Preview built for {{CLINIC_NAME}}</p>
+    <p>Preview built for Kromakay Salon Juhu</p>
     <p>Want a full website? <a href="https://wa.me/918828022624">Message Kevin on WhatsApp</a></p>
   </div>
 
