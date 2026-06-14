@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awesome Unisex Salon - Dombivli West, Mumbai</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #c57b57;
+      --primary-dark: #a8623f;
+      --primary-light: #fbf0eb;
+      --bg: #fdf8f5;
+      --card-bg: #ffffff;
+      --text: #432c23;
+      --text-muted: #8b7365;
+      --border: #f5e5dd;
+      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(253, 248, 245, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(197, 123, 87, 0.08);
+      transition: var(--transition);
+    }
+
+    .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 90px;
+    }
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .logo-tagline {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      margin-top: 2px;
+    }
+
+    .nav-links-desktop {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-links-desktop a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      transition: var(--transition);
+      position: relative;
+      padding: 0.5rem 0;
+    }
+
+    .nav-links-desktop a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: var(--transition);
+    }
+
+    .nav-links-desktop a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links-desktop a:hover::after {
+      width: 100%;
+    }
+
+    .header-phone-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      padding: 0.6rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid rgba(197, 123, 87, 0.15);
+      transition: var(--transition);
+    }
+
+    .header-phone-btn:hover {
+      background-color: var(--primary);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .hero-section {
+      position: relative;
+      height: 75vh;
+      min-height: 550px;
+      display: flex;
+      align-items: center;
+      background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1200');
+      background-size: cover;
+      background-position: center;
+      border-radius: 0 0 40px 40px;
+      overflow: hidden;
+      margin-bottom: -60px;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(67, 44, 35, 0.85) 0%, rgba(197, 123, 87, 0.45) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 650px;
+      color: #ffffff;
+      padding: 2rem;
+    }
+
+    .hero-heading {
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-subheading {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #faf1ec;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary);
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 1rem 2.2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(197, 123, 87, 0.3);
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-cta:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(197, 123, 87, 0.4);
+    }
+
+    .stats-section {
+      position: relative;
+      z-index: 10;
+      padding-bottom: 4rem;
+    }
+
+    .stats-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .stat-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #c57b57 0%, #e6a382 100%);
+      padding: 4px;
+      box-shadow: 0 10px 25px rgba(197, 123, 87, 0.15);
+      transition: var(--transition);
+    }
+
+    .stat-badge:hover .stat-circle {
+      transform: scale(1.05) rotate(5deg);
+    }
+
+    .stat-inner {
+      width: 100%;
+      height: 100%;
+      background-color: var(--bg);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .stat-number {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .services-section {
+      padding: 5rem 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .service-card {
+      background-color: var(--card-bg);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      border: 1px solid rgba(197, 123, 87, 0.08);
+      box-shadow: 0 15px 35px rgba(67, 44, 35, 0.02), 0 1px 3px rgba(67, 44, 35, 0.01);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(197, 123, 87, 0.2);
+      box-shadow: 0 20px 40px rgba(197, 123, 87, 0.06);
+    }
+
+    .service-icon {
+      font-size: 2rem;
+      background-color: var(--primary-light);
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+
+    .service-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .gallery-section {
+      padding: 5rem 0;
+      background-color: var(--primary-light);
+      border-radius: 40px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 1;
+      box-shadow: 0 10px 25px rgba(67, 44, 35, 0.03);
+      cursor: pointer;
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(67, 44, 35, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: var(--transition);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1.1rem;
+      gap: 1.5rem;
+    }
+
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.08);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .pricing-section {
+      padding: 5rem 0;
+    }
+
+    .pricing-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--card-bg);
+      border-radius: 32px;
+      border: 1px solid rgba(197, 123, 87, 0.1);
+      padding: 3rem;
+      box-shadow: 0 20px 40px rgba(67, 44, 35, 0.02);
+    }
+
+    .pricing-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .pricing-item {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .pricing-name-container {
+      background-color: var(--card-bg);
+      padding-right: 0.5rem;
+      z-index: 2;
+    }
+
+    .pricing-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .pricing-leader {
+      position: absolute;
+      bottom: 6px;
+      left: 0;
+      right: 0;
+      border-bottom: 2px dotted rgba(197, 123, 87, 0.18);
+      z-index: 1;
+    }
+
+    .pricing-price {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      background-color: var(--card-bg);
+      padding-left: 0.5rem;
+      z-index: 2;
+    }
+
+    .testimonial-section {
+      padding: 5rem 0;
+    }
+
+    .testimonial-card {
+      max-width: 750px;
+      margin: 0 auto;
+      background-color: var(--primary-light);
+      border-radius: 32px;
+      padding: 3.5rem 3rem;
+      text-align: center;
+      position: relative;
+      border: 1px solid rgba(197, 123, 87, 0.1);
+      box-shadow: 0 15px 35px rgba(197, 123, 87, 0.05);
+    }
+
+    .quote-icon {
+      font-size: 3.5rem;
+      color: var(--primary);
+      opacity: 0.2;
+      position: absolute;
+      top: 1.5rem;
+      left: 3rem;
+      line-height: 1;
+    }
+
+    .testimonial-quote {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .testimonial-author {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary);
+      letter-spacing: 0.02em;
+    }
+
+    .special-offer-section {
+      padding: 4rem 0;
+    }
+
+    .offer-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #ffffff;
+      border-radius: 32px;
+      padding: 3.5rem 2.5rem;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(197, 123, 87, 0.25);
+    }
+
+    .offer-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .offer-subtitle {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #faf1ec;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+
+    .btn-offer-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      color: var(--primary);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-offer-cta:hover {
+      background-color: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
+    .contact-section {
+      padding: 5rem 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .contact-detail-icon {
+      background-color: var(--primary-light);
+      color: var(--primary);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .contact-detail-text h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .contact-detail-text p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .contact-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .btn-action {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.9rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-call {
+      background-color: var(--primary);
+      color: #ffffff;
+      border: 1px solid var(--primary);
+    }
+
+    .btn-call:hover {
+      background-color: var(--primary-dark);
+      border-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-wa {
+      background-color: #25d366;
+      color: #ffffff;
+      border: 1px solid #25d366;
+    }
+
+    .btn-wa:hover {
+      background-color: #20ba59;
+      border-color: #20ba59;
+      transform: translateY(-2px);
+    }
+
+    .map-container {
+      border-radius: 32px;
+      overflow: hidden;
+      border: 1px solid rgba(197, 123, 87, 0.1);
+      box-shadow: 0 15px 35px rgba(67, 44, 35, 0.03);
+      height: 350px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    footer {
+      background-color: #2a1b15;
+      color: #faf1ec;
+      padding: 3.5rem 0;
+      text-align: center;
+      border-radius: 40px 40px 0 0;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+      color: #c4b0a7;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: #9c847a;
+    }
+
+    .footer-kevin {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #faf1ec;
+    }
+
+    .footer-kevin a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid var(--primary);
+      transition: var(--transition);
+    }
+
+    .footer-kevin a:hover {
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+
+    .sticky-mobile-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+      background-color: rgba(253, 248, 245, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(197, 123, 87, 0.1);
+      padding: 0.75rem 1rem;
+      box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.03);
+    }
+
+    @media (max-width: 992px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-nav {
+        height: 80px;
+      }
+      .nav-links-desktop {
+        display: none;
+      }
+      .hero-section {
+        height: 65vh;
+        min-height: 480px;
+      }
+      .hero-heading {
+        font-size: 2.6rem;
+      }
+      .hero-subheading {
+        font-size: 1.05rem;
+      }
+      .stats-grid {
+        gap: 2rem;
+      }
+      .stat-circle {
+        width: 100px;
+        height: 100px;
+      }
+      .stat-number {
+        font-size: 1.25rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-section {
+        height: 60vh;
+        border-radius: 0 0 30px 30px;
+      }
+      .hero-content {
+        padding: 1rem;
+      }
+      .hero-heading {
+        font-size: 2.2rem;
+      }
+      .hero-subheading {
+        font-size: 0.95rem;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .pricing-container {
+        padding: 1.8rem;
+      }
+      .pricing-name {
+        font-size: 0.95rem;
+      }
+      .pricing-price {
+        font-size: 0.95rem;
+      }
+      .testimonial-card {
+        padding: 2.5rem 1.5rem;
+      }
+      .testimonial-quote {
+        font-size: 1.1rem;
+      }
+      .offer-banner {
+        padding: 2.5rem 1.5rem;
+      }
+      .offer-title {
+        font-size: 1.6rem;
+      }
+      .contact-actions {
+        flex-direction: column;
+      }
+      .sticky-mobile-bar {
+        display: flex;
+        gap: 0.8rem;
+      }
+      body {
+        padding-bottom: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="header-nav">
+        <a href="#" class="logo-container">
+          <span class="logo-text">Awesome</span>
+          <span class="logo-tagline">Unisex Salon & Style Studio</span>
+        </a>
+        <nav class="nav-links-desktop">
+          <a href="#services">Services</a>
+          <a href="#gallery">Our Work</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div>
+          <a href="tel:+919820329444" class="header-phone-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 98203 29444
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-heading">Look Good. Feel Great.</h1>
+        <p class="hero-subheading">Dombivli's Favorite Salon - 945 Happy Clients</p>
+        <a href="#contact" class="btn-cta">Book Your Appointment</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-badge">
+          <div class="stat-circle">
+            <div class="stat-inner">
+              <span class="stat-number">945+</span>
+            </div>
+          </div>
+          <span class="stat-label">Clients</span>
+        </div>
+        <div class="stat-badge">
+          <div class="stat-circle">
+            <div class="stat-inner">
+              <span class="stat-number">4.2★</span>
+            </div>
+          </div>
+          <span class="stat-label">Rating</span>
+        </div>
+        <div class="stat-badge">
+          <div class="stat-circle">
+            <div class="stat-inner">
+              <span class="stat-number">8+</span>
+            </div>
+          </div>
+          <span class="stat-label">Years</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">What We Do</h2>
+        <p class="section-subtitle">A full range of luxury hair and beauty treatments tailored to your style</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">✂️</div>
+          <h3 class="service-name">Haircuts & Styling</h3>
+          <p class="service-desc">trendy cuts, blowouts</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3 class="service-name">Hair Color</h3>
+          <p class="service-desc">highlights, balayage, global color</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✨</div>
+          <h3 class="service-name">Hair Treatments</h3>
+          <p class="service-desc">keratin, smoothening, conditioning</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🧔</div>
+          <h3 class="service-name">Beard Grooming</h3>
+          <p class="service-desc">trimming, shaping, spa</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💆</div>
+          <h3 class="service-name">Facial & Cleanup</h3>
+          <p class="service-desc">deep cleansing, brightening</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💄</div>
+          <h3 class="service-name">Bridal & Party Makeup</h3>
+          <p class="service-desc">special occasion styling</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Work</h2>
+        <p class="section-subtitle">Real results from our studio feed. Follow our journey on Instagram</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600" alt="Awesome Hair Design" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-meta">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              128
+            </span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=600" alt="Trendy Styling" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-meta">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              245
+            </span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=600" alt="Beautiful Balayage" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-meta">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              189
+            </span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=600" alt="Beard Grooming" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-meta">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              164
+            </span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=600" alt="Relaxing Facial" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-meta">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              211
+            </span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=600" alt="Bridal Styling" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-meta">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              312
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="pricing-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Popular Services</h2>
+        <p class="section-subtitle">Chic pricing for exceptional styling. Book your preferred service today</p>
+      </div>
+      <div class="pricing-container">
+        <div class="pricing-list">
+          <div class="pricing-item">
+            <div class="pricing-name-container">
+              <span class="pricing-name">Haircut</span>
+            </div>
+            <div class="pricing-leader"></div>
+            <span class="pricing-price">₹299 - ₹599</span>
+          </div>
+          <div class="pricing-item">
+            <div class="pricing-name-container">
+              <span class="pricing-name">Hair Color</span>
+            </div>
+            <div class="pricing-leader"></div>
+            <span class="pricing-price">₹1499 - ₹3999</span>
+          </div>
+          <div class="pricing-item">
+            <div class="pricing-name-container">
+              <span class="pricing-name">Facial</span>
+            </div>
+            <div class="pricing-leader"></div>
+            <span class="pricing-price">₹799 - ₹1499</span>
+          </div>
+          <div class="pricing-item">
+            <div class="pricing-name-container">
+              <span class="pricing-name">Beard Grooming</span>
+            </div>
+            <div class="pricing-leader"></div>
+            <span class="pricing-price">₹199 - ₹399</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="testimonial-card">
+        <span class="quote-icon">“</span>
+        <p class="testimonial-quote">Best salon in Dombivli. Great staff and amazing haircuts at affordable prices.</p>
+        <span class="testimonial-author">- Vikram S., Client</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="special-offer-section">
+    <div class="container">
+      <div class="offer-banner">
+        <h2 class="offer-title">Weekend Special: 15% Off First Visit</h2>
+        <p class="offer-subtitle">Walk In or Book Ahead</p>
+        <a href="#contact" class="btn-offer-cta">Claim Offer</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">Walk in or schedule an appointment. We look forward to styling you</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="contact-detail-text">
+                <h4>Address</h4>
+                <p>Shop No. 5, Shiv Ashish, Swami Vivekanand Rd, opp. Bank of Maharashtra, Dombivli West, Mumbai</p>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="contact-detail-text">
+                <h4>Phone</h4>
+                <p>+91 98203 29444</p>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              </div>
+              <div class="contact-detail-text">
+                <h4>Hours</h4>
+                <p>Tuesday - Sunday: 10:00 AM - 9:00 PM (Monday Closed)</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-actions">
+            <a href="tel:+919820329444" class="btn-action btn-call">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              Call Now
+            </a>
+            <a href="https://wa.me/919820329444?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Awesome%20Unisex%20Salon" target="_blank" class="btn-action btn-wa">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.863-9.864.001-2.637-1.03-5.116-2.905-6.994C16.556 1.87 14.08 .837 11.446.836 6.005.836 1.58 5.26 1.577 10.7c-.002 1.8.48 3.55 1.396 5.11l-.993 3.627 3.72-.976.347.206c1.52.9 3.05 1.348 4.607 1.348h.003zM18.06 14.93c-.33-.165-1.937-.954-2.235-1.063-.298-.11-.515-.165-.73.165-.218.33-.84.84-1.03 1.063-.19.223-.38.248-.71.083-1.637-.818-2.673-1.5-3.66-3.21-.263-.45.262-.419.75-.14.437.252.92.51.92.51s.204-.33.306-.51c.102-.18.05-.34-.025-.505-.075-.165-.73-1.757-.998-2.4-.26-.628-.528-.543-.728-.553l-.62-.01c-.244 0-.643.09-.98.463-.336.374-1.285 1.257-1.285 3.064 0 1.807 1.316 3.553 1.5 3.8.182.246 2.587 3.95 6.267 5.538 2.2.95 3.02 1.09 4.103.88.636-.125 1.937-.79 2.21-1.554.272-.764.272-1.42.19-1.554-.082-.132-.298-.215-.628-.38z"/></svg>
+              WhatsApp Us
+            </a>
+          </div>
+        </div>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.430034444583!2d73.0763264752089!3d19.209191982030043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c10b777a8b41%3A0xad5263625f4ccab3!2sAwesome%20Unisex%20salon!5e0!3m2!1sen!2sin!4v1718356784561!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span class="footer-logo">Awesome</span>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#gallery">Our Work</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <p class="footer-copy">Built for Awesome Unisex Salon</p>
+        <p class="footer-kevin">Want a premium website? <a href="https://wa.me/918828022624?text=Hi%20Kevin%2C%20I%20saw%20the%20Awesome%20Salon%20demo%20website" target="_blank">Message Kevin on WhatsApp</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-mobile-bar">
+    <a href="tel:+919820329444" class="btn-action btn-call" style="padding: 0.75rem 1.2rem; font-size: 0.85rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      Call Now
+    </a>
+    <a href="https://wa.me/919820329444?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Awesome%20Unisex%20Salon" target="_blank" class="btn-action btn-wa" style="padding: 0.75rem 1.2rem; font-size: 0.85rem;">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.863-9.864.001-2.637-1.03-5.116-2.905-6.994C16.556 1.87 14.08 .837 11.446.836 6.005.836 1.58 5.26 1.577 10.7c-.002 1.8.48 3.55 1.396 5.11l-.993 3.627 3.72-.976.347.206c1.52.9 3.05 1.348 4.607 1.348h.003zM18.06 14.93c-.33-.165-1.937-.954-2.235-1.063-.298-.11-.515-.165-.73.165-.218.33-.84.84-1.03 1.063-.19.223-.38.248-.71.083-1.637-.818-2.673-1.5-3.66-3.21-.263-.45.262-.419.75-.14.437.252.92.51.92.51s.204-.33.306-.51c.102-.18.05-.34-.025-.505-.075-.165-.73-1.757-.998-2.4-.26-.628-.528-.543-.728-.553l-.62-.01c-.244 0-.643.09-.98.463-.336.374-1.285 1.257-1.285 3.064 0 1.807 1.316 3.553 1.5 3.8.182.246 2.587 3.95 6.267 5.538 2.2.95 3.02 1.09 4.103.88.636-.125 1.937-.79 2.21-1.554.272-.764.272-1.42.19-1.554-.082-.132-.298-.215-.628-.38z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+
+</body>
+</html>

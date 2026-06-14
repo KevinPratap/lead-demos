@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Richie Rich Clinical Salon & Spa | Skin Care Clinic Mumbai</title>
+  <meta name="description" content="Experience premium clinical beauty and luxury spa care at Richie Rich Clinical Salon & Spa in Mumbai. Rated 4.9★ by our clients.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-primary: #fdfbfb;
+      --bg-secondary: #faf6f5;
+      --accent-pink: #f8e8e8;
+      --accent-pink-hover: #f3dadb;
+      --text-dark: #2c2827;
+      --text-muted: #7c7270;
+      --text-light: #9e9593;
+      --border-color: rgba(44, 40, 39, 0.08);
+      --btn-bg: #3d3534;
+      --btn-bg-hover: #564c4b;
+      --btn-text: #ffffff;
+      
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      
+      --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-primary);
+      color: var(--text-dark);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--text-dark);
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    a, button {
+      transition: var(--transition-smooth);
+    }
+
+    /* Layout & Structure */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+    }
+
+    section {
+      padding: 8rem 0;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      color: var(--text-light);
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .section-header {
+      margin-bottom: 5rem;
+      max-width: 700px;
+    }
+
+    .section-title {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      color: var(--text-dark);
+      margin-top: 0.5rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 1.1rem 2.8rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 1px solid transparent;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: var(--btn-bg);
+      color: var(--btn-text);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--btn-bg-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(44, 40, 39, 0.08);
+    }
+
+    /* Header */
+    .header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 2rem 0;
+      border-bottom: 1px solid rgba(44, 40, 39, 0.04);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      text-decoration: none;
+      color: var(--text-dark);
+    }
+
+    .brand-title {
+      font-size: 1rem;
+      letter-spacing: 0.3em;
+      font-weight: 600;
+      text-transform: uppercase;
+      display: block;
+      line-height: 1.2;
+    }
+
+    .brand-subtitle {
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      display: block;
+      margin-top: 0.3rem;
+    }
+
+    .header-phone {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--text-dark);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+    }
+
+    .header-phone:hover {
+      border-bottom-color: var(--text-dark);
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: var(--bg-secondary);
+      padding: 12rem 0 10rem 0;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4rem;
+      background: linear-gradient(to bottom, transparent, var(--bg-primary));
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--accent-pink);
+      padding: 0.5rem 1.25rem;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--text-dark);
+      margin-bottom: 2.5rem;
+    }
+
+    .rating-badge .star {
+      color: var(--text-dark);
+    }
+
+    .hero-title {
+      font-size: clamp(3rem, 7.5vw, 5.5rem);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      color: var(--text-muted);
+      font-weight: 300;
+      margin-bottom: 3.5rem;
+      letter-spacing: 0.01em;
+    }
+
+    /* About Section */
+    .about {
+      background-color: var(--bg-primary);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-content {
+      padding-right: 2rem;
+    }
+
+    .about-title {
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      margin-bottom: 2rem;
+    }
+
+    .about-text {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .image-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 125%;
+      border-radius: 4px;
+    }
+
+    .image-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: -20px;
+      bottom: -20px;
+      background-color: var(--accent-pink);
+      z-index: -1;
+      border-radius: 4px;
+      transition: var(--transition-smooth);
+    }
+
+    .image-wrapper:hover::after {
+      top: 15px;
+      left: 15px;
+      right: -15px;
+      bottom: -15px;
+    }
+
+    .about-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 10px 40px rgba(44, 40, 39, 0.05);
+    }
+
+    /* Services Section */
+    .services {
+      background-color: var(--bg-secondary);
+    }
+
+    .services-list {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .service-item {
+      display: flex;
+      align-items: stretch;
+      padding: 3.5rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .service-item:first-child {
+      border-top: 1px solid var(--border-color);
+    }
+
+    .service-num {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      color: var(--text-dark);
+      line-height: 0.9;
+      min-width: 4.5rem;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .service-line {
+      width: 1px;
+      background-color: rgba(44, 40, 39, 0.12);
+      margin: 0 3rem;
+      flex-shrink: 0;
+    }
+
+    .service-details {
+      flex-grow: 1;
+    }
+
+    .service-title {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .service-desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      max-width: 580px;
+    }
+
+    .service-price {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* Process Section */
+    .process {
+      background-color: var(--bg-primary);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4rem;
+    }
+
+    .process-step {
+      position: relative;
+    }
+
+    .step-num {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      color: var(--text-light);
+      margin-bottom: 1.25rem;
+    }
+
+    .step-divider {
+      height: 1px;
+      background-color: var(--accent-pink);
+      width: 60px;
+      margin-bottom: 1.5rem;
+    }
+
+    .step-title {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .step-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* Results Section */
+    .results {
+      background-color: var(--bg-secondary);
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .result-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 110%;
+      overflow: hidden;
+      border-radius: 4px;
+      box-shadow: 0 10px 40px rgba(44, 40, 39, 0.03);
+    }
+
+    .result-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-smooth);
+    }
+
+    .result-container:hover .result-image {
+      transform: scale(1.03);
+    }
+
+    .result-tag {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      background-color: rgba(253, 251, 251, 0.95);
+      color: var(--text-dark);
+      padding: 0.6rem 1.4rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      z-index: 10;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Testimonial Section */
+    .testimonial {
+      background-color: var(--bg-primary);
+    }
+
+    .testimonial-card {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: var(--accent-pink);
+      padding: 6rem 5rem;
+      border-radius: 4px;
+      text-align: center;
+      position: relative;
+    }
+
+    .testimonial-quote {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      line-height: 1.45;
+      color: var(--text-dark);
+      margin-bottom: 2.5rem;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* Pricing Section */
+    .pricing {
+      background-color: var(--bg-secondary);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .price-card {
+      background-color: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      padding: 3rem 2.2rem;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 250px;
+    }
+
+    .price-card:hover {
+      border-color: var(--text-light);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(44, 40, 39, 0.04);
+    }
+
+    .price-details {
+      margin-bottom: 2rem;
+    }
+
+    .price-name {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .price-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .price-value {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      border-top: 1px solid var(--border-color);
+      padding-top: 1.25rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* CTA Section */
+    .cta {
+      background-color: var(--accent-pink);
+      padding: 9rem 0;
+      text-align: center;
+    }
+
+    .cta-content {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .cta-title {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-text {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 3.5rem;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #2c2827;
+      color: #faf6f5;
+      padding: 6rem 0 4rem 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 6rem;
+      border-bottom: 1px solid rgba(250, 246, 245, 0.08);
+      padding-bottom: 4rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .brand-title {
+      color: #faf6f5;
+      font-size: 1.25rem;
+    }
+
+    .footer-brand .brand-subtitle {
+      color: #9e9593;
+    }
+
+    .footer-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .footer-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: #9e9593;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+
+    .footer-text, .footer-link {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #e5dfdd;
+      font-weight: 300;
+      text-decoration: none;
+    }
+
+    .footer-link {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-link:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-copyright {
+      font-size: 0.8rem;
+      color: #9e9593;
+      font-weight: 300;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-social-link {
+      font-size: 0.8rem;
+      color: #e5dfdd;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-social-link:hover {
+      color: #ffffff;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      section {
+        padding: 6rem 0;
+      }
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+      .about-content {
+        padding-right: 0;
+      }
+      .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .process-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .results-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .service-item {
+        padding: 2.5rem 0;
+      }
+      .service-num {
+        font-size: 3rem;
+        min-width: 3rem;
+      }
+      .service-line {
+        margin: 0 1.5rem;
+      }
+      .service-title {
+        font-size: 1.5rem;
+      }
+      .testimonial-card {
+        padding: 4rem 2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-info {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .header-phone {
+        display: none; /* simple, minimal on mobile */
+      }
+      .hero {
+        padding: 10rem 0 7rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Header -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="brand">
+        <span class="brand-title">Richie Rich</span>
+        <span class="brand-subtitle">clinical salon & spa</span>
+      </a>
+      <a href="tel:+918779398011" class="header-phone">+91 87793 98011</a>
+    </div>
+  </header>
+
+  <main>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-content">
+        <div class="rating-badge">
+          <span class="star">★</span>
+          <span>4.9 from 113 Clients</span>
+        </div>
+        <h1 class="hero-title">Clinical Beauty</h1>
+        <p class="hero-subtitle">Where Science Meets Skincare</p>
+        <a href="#cta" class="btn btn-primary">Book a Consultation</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-content">
+          <span class="section-label">Our Philosophy</span>
+          <h2 class="about-title">A New Standard of Care</h2>
+          <p class="about-text">At Richie Rich Clinical Salon, we combine advanced clinical treatments with luxury spa care. Every service is designed to enhance your natural beauty.</p>
+        </div>
+        <div class="about-image-area">
+          <div class="image-wrapper">
+            <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=800" alt="Botanical oil drop on skin, luxury minimalist bottle" class="about-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Treatments</span>
+          <h2 class="section-title">Clinical Skin Solutions</h2>
+        </div>
+        
+        <div class="services-list">
+          <!-- 01 HydraFacial -->
+          <div class="service-item">
+            <div class="service-num">01</div>
+            <div class="service-line"></div>
+            <div class="service-details">
+              <h3 class="service-title">HydraFacial</h3>
+              <p class="service-desc">Deep cleansing, hydration boost, instant glow</p>
+              <p class="service-price">₹4,500 - ₹7,500</p>
+            </div>
+          </div>
+
+          <!-- 02 Chemical Peels -->
+          <div class="service-item">
+            <div class="service-num">02</div>
+            <div class="service-line"></div>
+            <div class="service-details">
+              <h3 class="service-title">Chemical Peels</h3>
+              <p class="service-desc">Skin resurfacing, pigment reduction, anti-aging</p>
+              <p class="service-price">₹3,500 - ₹6,000</p>
+            </div>
+          </div>
+
+          <!-- 03 LED Light Therapy -->
+          <div class="service-item">
+            <div class="service-num">03</div>
+            <div class="service-line"></div>
+            <div class="service-details">
+              <h3 class="service-title">LED Light Therapy</h3>
+              <p class="service-desc">Acne treatment, collagen boost, skin healing</p>
+              <p class="service-price">₹2,500 - ₹4,500</p>
+            </div>
+          </div>
+
+          <!-- 04 Anti-Aging Treatments -->
+          <div class="service-item">
+            <div class="service-num">04</div>
+            <div class="service-line"></div>
+            <div class="service-details">
+              <h3 class="service-title">Anti-Aging Treatments</h3>
+              <p class="service-desc">Botox, fillers, skin tightening</p>
+              <p class="service-price">₹12,000 - ₹25,000</p>
+            </div>
+          </div>
+
+          <!-- 05 Laser Hair Removal -->
+          <div class="service-item">
+            <div class="service-num">05</div>
+            <div class="service-line"></div>
+            <div class="service-details">
+              <h3 class="service-title">Laser Hair Removal</h3>
+              <p class="service-desc">Painless, long-lasting, all skin types</p>
+              <p class="service-price">₹5,000 - ₹15,000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">How It Works</span>
+          <h2 class="section-title">The Path to Radiant Skin</h2>
+        </div>
+        
+        <div class="process-grid">
+          <!-- Step 1 -->
+          <div class="process-step">
+            <div class="step-num">01</div>
+            <div class="step-divider"></div>
+            <h3 class="step-title">Book Consultation</h3>
+            <p class="step-desc">Schedule your initial assessment where we analyze your skin profile and health goals.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-step">
+            <div class="step-num">02</div>
+            <div class="step-divider"></div>
+            <h3 class="step-title">Personalized Plan</h3>
+            <p class="step-desc">Receive a custom-tailored treatment plan designed around your skin requirements.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-step">
+            <div class="step-num">03</div>
+            <div class="step-divider"></div>
+            <h3 class="step-title">Glow & Love Results</h3>
+            <p class="step-desc">Undergo clinical treatments and watch your skin transform over weeks of careful care.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before/After Section -->
+    <section class="results" id="results">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Results</span>
+          <h2 class="section-title">Real Transformations</h2>
+        </div>
+        
+        <div class="results-grid">
+          <!-- Before -->
+          <div class="result-container">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600" alt="Skin profile before treatment" class="result-image">
+            <span class="result-tag">Pre-Treatment</span>
+          </div>
+
+          <!-- After -->
+          <div class="result-container">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=600" alt="Glowing skin profile after treatment" class="result-image">
+            <span class="result-tag">Post-Treatment</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial" id="testimonials">
+      <div class="container">
+        <span class="section-label" style="text-align: center; margin-bottom: 3rem;">Client Words</span>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"My skin has never looked better. The treatments are professional and the results are real."</p>
+          <p class="testimonial-author">Anita D., Client</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="menu">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Menu</span>
+          <h2 class="section-title">Treatment Catalog</h2>
+        </div>
+        
+        <div class="pricing-grid">
+          <!-- Card 1 -->
+          <div class="price-card">
+            <div class="price-details">
+              <h3 class="price-name">HydraFacial Glow</h3>
+              <p class="price-desc">Our signature treatment for deep cleansing, extraction, and intense serum hydration.</p>
+            </div>
+            <div class="price-value">Starting at ₹4,500</div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="price-card">
+            <div class="price-details">
+              <h3 class="price-name">Chemical Resurfacing</h3>
+              <p class="price-desc">Curated peels targeting acne, fine lines, uneven tone, and textural irregularities.</p>
+            </div>
+            <div class="price-value">Starting at ₹3,500</div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="price-card">
+            <div class="price-details">
+              <h3 class="price-name">LED Light Healing</h3>
+              <p class="price-desc">Non-invasive phototherapy using specific wavelengths to accelerate skin repair.</p>
+            </div>
+            <div class="price-value">Starting at ₹2,500</div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="price-card">
+            <div class="price-details">
+              <h3 class="price-name">Anti-Aging Lift</h3>
+              <p class="price-desc">Custom procedures incorporating advanced tightening, Botox, and dermal fillers.</p>
+            </div>
+            <div class="price-value">Starting at ₹12,000</div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="price-card">
+            <div class="price-details">
+              <h3 class="price-name">Laser Hair Removal</h3>
+              <p class="price-desc">Long-lasting and painless hair reduction across targeted areas for all skin types.</p>
+            </div>
+            <div class="price-value">Starting at ₹5,000</div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="price-card">
+            <div class="price-details">
+              <h3 class="price-name">Ultimate Renewal</h3>
+              <p class="price-desc">Comprehensive luxury skin rejuvenation combining multiple clinic methodologies.</p>
+            </div>
+            <div class="price-value">Starting at ₹18,000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="cta">
+      <div class="container cta-content">
+        <h2 class="cta-title">Ready to Transform Your Skin?</h2>
+        <p class="cta-text">Book your consultation today and begin your journey to healthy, glowing skin.</p>
+        <a href="https://wa.me/918779398011?text=Hi,%20I'd%20like%20to%20book%20a%20consultation%20with%20Richie%20Rich%20Clinical%20Salon%20%26%20Spa" target="_blank" class="btn btn-primary">Book Now</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="brand">
+            <span class="brand-title">Richie Rich</span>
+            <span class="brand-subtitle">clinical salon & spa</span>
+          </a>
+        </div>
+        <div class="footer-info">
+          <div>
+            <span class="footer-label">Location</span>
+            <p class="footer-text">
+              Ground Floor, 5, Nawab Mansion,<br>
+              45, Dr Maheshwari Rd, Mumbai
+            </p>
+          </div>
+          <div>
+            <span class="footer-label">Contact</span>
+            <a href="tel:+918779398011" class="footer-link">+91 87793 98011</a>
+            <a href="https://wa.me/918779398011?text=Hi,%20I'd%20like%20to%20book%20a%20consultation%20with%20Richie%20Rich%20Clinical%20Salon%20%26%20Spa" target="_blank" class="footer-link">WhatsApp Chat</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">Built for Richie Rich Clinical Salon</p>
+        <div class="footer-socials">
+          <a href="https://wa.me/918779398011" class="footer-social-link">WhatsApp</a>
+          <a href="tel:+918779398011" class="footer-social-link">Phone</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
