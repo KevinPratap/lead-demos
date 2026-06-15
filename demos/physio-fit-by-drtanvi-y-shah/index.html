@@ -3,27 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Physio-Fit by Dr. Tanvi Y. Shah</title>
+  <title>Physio-Fit | Dr. Tanvi Y. Shah | Physiotherapy in Vile Parle West, Mumbai</title>
+  <meta name="description" content="Physio-Fit by Dr. Tanvi Yash Shah (BPT, Certified Cupping, Dry Needling & Aquatic Therapist). Dedicated physiotherapy and active rehabilitation in Vile Parle West, Mumbai. 5.0 rating on Google based on patient reviews.">
+  
+  <!-- Font Imports -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
-
+    /* CSS Variables for Clean Theming */
     :root {
-      --accent: #2563eb;
-      --accent-light: #e9effd;
-      --accent-dark: #1945a4;
-      --bg: #fafafa;
-      --text: #111111;
-      --text-light: #666666;
+      --primary: #1b4332;
+      --primary-rgb: 27, 67, 50;
+      --primary-light: #2d6a4f;
+      --accent: #40916c;
+      --accent-light: #d8f3dc;
+      --accent-bg: #e9f5ed;
+      --bg: #f8f9fa;
+      --white: #ffffff;
+      --text: #1a1c1a;
+      --text-muted: #525c55;
+      --border: rgba(27, 67, 50, 0.08);
+      --border-focus: #40916c;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      
+      /* Spacing Variables (8px grid system) */
+      --sp-xs: 8px;
+      --sp-sm: 16px;
+      --sp-md: 24px;
+      --sp-lg: 32px;
+      --sp-xl: 48px;
+      --sp-2xl: 64px;
+      --sp-3xl: 96px;
     }
 
+    /* Reset & Base Styles */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Outfit', sans-serif;
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -31,9 +58,20 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
+    h1, h2, h3, .font-serif {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    /* Navbar styling */
     .navbar {
-      padding: 2.5rem 2rem;
-      width: 100%;
+      padding: var(--sp-sm) var(--sp-md);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
     }
 
     .nav-container {
@@ -44,456 +82,1217 @@
       align-items: center;
     }
 
-    .logo {
-      font-size: 1.1rem;
-      font-weight: 400;
-      letter-spacing: 0.1em;
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+
+    .logo-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.1;
+    }
+
+    .logo-subtitle {
+      font-size: 0.75rem;
       text-transform: uppercase;
-      text-decoration: none;
-      color: var(--text);
-    }
-
-    .nav-phone {
-      font-size: 0.9rem;
-      font-weight: 300;
-      letter-spacing: 0.05em;
-      text-decoration: none;
-      color: var(--text-light);
-      transition: color 0.3s ease;
-    }
-
-    .nav-phone:hover {
+      letter-spacing: 0.15em;
       color: var(--accent);
+      font-weight: 500;
     }
 
-    .hero {
-      padding: 6rem 2rem 5rem 2rem;
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .rating-badge {
+    .nav-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.4rem 1.2rem;
-      border: 1px solid var(--accent-light);
+      gap: var(--sp-xs);
+      padding: 10px 20px;
+      background-color: var(--primary);
+      color: var(--white);
+      text-decoration: none;
       border-radius: 100px;
-      font-size: 0.8rem;
-      font-weight: 300;
-      letter-spacing: 0.05em;
-      color: var(--text-light);
-      margin-bottom: 2.5rem;
-      background-color: rgba(255, 255, 255, 0.02);
-    }
-
-    .rating-val {
+      font-size: 0.9rem;
       font-weight: 500;
-      color: var(--accent);
+      letter-spacing: 0.05em;
+      transition: var(--transition);
+      border: 1px solid transparent;
     }
 
-    .rating-divider {
-      opacity: 0.4;
+    .nav-btn:hover {
+      background-color: var(--primary-light);
+      transform: translateY(-2px);
     }
 
-    .reviews-count {
+    /* Hero Section (Split Layout) */
+    .hero {
+      position: relative;
+      padding: var(--sp-2xl) var(--sp-md) var(--sp-xl) var(--sp-md);
+      background: linear-gradient(135deg, var(--accent-bg) 0%, rgba(255,255,255,1) 100%);
+      overflow: hidden;
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: var(--sp-xl);
+      align-items: center;
+    }
+
+    /* Left Side: Form Container */
+    .booking-card {
+      background-color: var(--white);
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(27, 67, 50, 0.06);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .booking-header {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: var(--sp-md) var(--sp-md);
+      text-align: center;
+    }
+
+    .booking-header h3 {
+      font-size: 1.4rem;
+      margin-bottom: 4px;
+    }
+
+    .booking-header p {
+      font-size: 0.85rem;
+      color: var(--accent-light);
       font-weight: 300;
     }
 
-    .hero-label {
-      display: block;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.25em;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
-      font-weight: 400;
+    .booking-form {
+      padding: var(--sp-md);
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-sm);
     }
 
-    .hero-title {
-      font-size: clamp(2.2rem, 5.5vw, 4rem);
-      line-height: 1.2;
-      font-weight: 200;
-      margin-bottom: 2rem;
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-sm);
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .form-input {
+      font-family: inherit;
+      font-size: 0.95rem;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background-color: #fdfdfd;
       color: var(--text);
+      transition: var(--transition);
+      width: 100%;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--border-focus);
+      background-color: var(--white);
+      box-shadow: 0 0 0 3px rgba(64, 145, 108, 0.15);
+    }
+
+    .form-submit-btn {
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--white);
+      background-color: var(--primary);
+      border: none;
+      border-radius: 8px;
+      padding: 14px 20px;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 8px;
+    }
+
+    .form-submit-btn:hover {
+      background-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    /* Right Side: Text & Badge */
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--sp-md);
+    }
+
+    .badge-google {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: rgba(255, 255, 255, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      backdrop-filter: blur(5px);
+    }
+
+    .badge-google span.rating {
+      color: #dfa100;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .hero-tagline {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--primary);
+      line-height: 1.15;
       letter-spacing: -0.01em;
     }
 
-    .hero-text {
-      font-size: clamp(1.05rem, 2vw, 1.25rem);
-      font-weight: 200;
-      max-width: 680px;
-      margin: 0 auto 4rem auto;
-      color: var(--text-light);
+    .hero-description {
+      font-size: 1.15rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .cta-subtext {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-top: 10px;
+    }
+
+    /* Credentials & About Section */
+    .credentials {
+      padding: var(--sp-xl) var(--sp-md);
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .credentials-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: var(--sp-xl);
+      align-items: center;
+    }
+
+    .dr-photo-card {
+      position: relative;
+      background-color: var(--accent-bg);
+      border-radius: 24px;
+      overflow: hidden;
+      aspect-ratio: 1;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Vector Representation for Dr Tanvi Photo placeholder */
+    .dr-photo-illustration {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: var(--primary);
+      padding: var(--sp-md);
+    }
+
+    .dr-photo-illustration svg {
+      width: 120px;
+      height: 120px;
+      margin-bottom: var(--sp-sm);
+      opacity: 0.85;
+    }
+
+    .dr-photo-illustration h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      margin-bottom: 4px;
+    }
+
+    .dr-photo-illustration p {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .about-details {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-sm);
+    }
+
+    .section-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      font-weight: 600;
+      display: block;
+    }
+
+    .about-details h2 {
+      font-size: 2.2rem;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .about-details p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
       line-height: 1.75;
     }
 
-    .stats-line {
+    .credentials-list {
+      list-style: none;
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-wrap: wrap;
-      gap: 1.5rem;
-      font-size: 0.85rem;
-      font-weight: 300;
-      color: var(--text-light);
-      letter-spacing: 0.08em;
-      border-top: 1px solid var(--accent-light);
-      border-bottom: 1px solid var(--accent-light);
-      padding: 1.2rem 0;
-      max-width: 800px;
-      margin: 0 auto;
-      text-transform: uppercase;
+      gap: 12px;
+      margin-top: 10px;
     }
 
-    .stats-line .bullet {
-      color: var(--accent);
-      opacity: 0.5;
-    }
-
-    .services {
-      padding: 8rem 2rem;
+    .credential-tag {
       background-color: var(--bg);
-      text-align: center;
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    /* Services Bento Grid */
+    .services {
+      padding: var(--sp-xl) var(--sp-md);
+      background-color: var(--bg);
     }
 
     .services-container {
-      max-width: 800px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
-    .section-title {
-      font-size: 1.8rem;
-      font-weight: 200;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 5rem;
-      color: var(--text);
-    }
-
-    .services-content {
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto var(--sp-2xl) auto;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      width: 100%;
+      gap: 8px;
     }
 
-    .services-content ul {
-      list-style: none;
-      width: 100%;
-      padding: 0;
+    .section-header h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
     }
 
-    .services-content li,
-    .services-content .service-item,
-    .services-content > div {
-      width: 100%;
-      padding: 3rem 0;
-      border-bottom: 1px solid var(--accent-light);
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--sp-md);
+    }
+
+    .bento-card {
+      background-color: var(--white);
+      border-radius: 20px;
+      padding: var(--sp-md);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 25px rgba(27, 67, 50, 0.03);
+      transition: var(--transition);
       display: flex;
       flex-direction: column;
+      gap: 14px;
+    }
+
+    .bento-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(27, 67, 50, 0.08);
+      border-color: var(--accent-light);
+    }
+
+    .bento-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background-color: var(--accent-bg);
+      color: var(--primary);
+      display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.4s ease;
+      font-size: 1.5rem;
     }
 
-    .services-content li:first-child,
-    .services-content .service-item:first-child,
-    .services-content > div:first-child {
-      border-top: 1px solid var(--accent-light);
+    .bento-card h3 {
+      font-size: 1.25rem;
+      color: var(--primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
     }
 
-    .services-content li:hover,
-    .services-content .service-item:hover,
-    .services-content > div:hover {
-      background-color: rgba(255, 255, 255, 0.01);
-    }
-
-    .services-content h3 {
-      font-size: 1.3rem;
-      font-weight: 300;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.75rem;
-      color: var(--text);
-    }
-
-    .services-content p {
+    .bento-card p {
       font-size: 0.95rem;
-      font-weight: 300;
-      color: var(--text-light);
-      max-width: 550px;
-      line-height: 1.7;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Large bento card */
+    .bento-card.large {
+      grid-column: span 2;
+      background: linear-gradient(135deg, var(--primary) 0%, #0d281e 100%);
+      color: var(--white);
+      border: none;
+    }
+
+    .bento-card.large h3 {
+      color: var(--white);
+    }
+
+    .bento-card.large p {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .bento-card.large .bento-icon {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--white);
+    }
+
+    .conditions-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--sp-xs);
+      margin-top: 8px;
+    }
+
+    .condition-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .condition-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50px;
+      background-color: var(--accent-light);
+    }
+
+    /* 3-Step Recovery Journey */
+    .journey {
+      padding: var(--sp-xl) var(--sp-md);
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .journey-container {
+      max-width: 1200px;
       margin: 0 auto;
     }
 
-    .gallery-break-section {
-      width: 100%;
-      padding: 0;
-      margin: 4rem 0;
-    }
-
-    .gallery-heading-container {
-      max-width: 1200px;
-      margin: 0 auto 2.5rem auto;
-      padding: 0 2rem;
-      text-align: center;
-    }
-
-    .gallery-heading-label {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--text-light);
-      font-weight: 300;
-    }
-
-    .image-break {
-      width: 100%;
-      height: 70vh;
-      overflow: hidden;
+    .journey-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-xl);
+      margin-top: var(--sp-lg);
       position: relative;
     }
 
-    .image-break img {
+    .journey-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--sp-sm);
+      position: relative;
+      padding: var(--sp-md);
+      background-color: var(--bg);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+    }
+
+    .journey-step-num {
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: var(--accent-light);
+      line-height: 1;
+    }
+
+    .journey-card h3 {
+      font-size: 1.3rem;
+      color: var(--primary);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+    }
+
+    .journey-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Testimonials (Reviews) Section */
+    .reviews {
+      padding: var(--sp-xl) var(--sp-md);
+      background-color: var(--bg);
+    }
+
+    .reviews-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-md);
+    }
+
+    .review-card {
+      background-color: var(--white);
+      border-radius: 16px;
+      padding: var(--sp-md);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: var(--sp-sm);
+      box-shadow: 0 8px 20px rgba(27, 67, 50, 0.02);
+    }
+
+    .review-stars {
+      color: #dfa100;
+      font-size: 1.15rem;
+    }
+
+    .review-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-xs);
+    }
+
+    .author-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: var(--accent-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .author-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* Contact & Maps Bento Section */
+    .contact-bento {
+      padding: var(--sp-xl) var(--sp-md);
+      background-color: var(--white);
+    }
+
+    .contact-bento-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: var(--sp-xl);
+    }
+
+    .contact-info-panel {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-md);
+    }
+
+    .info-bento-card {
+      background-color: var(--bg);
+      border-radius: 20px;
+      padding: var(--sp-md);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-sm);
+    }
+
+    .info-row {
+      display: flex;
+      gap: var(--sp-sm);
+      align-items: flex-start;
+    }
+
+    .info-icon {
+      font-size: 1.3rem;
+      color: var(--primary);
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .info-text h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+
+    .info-text p, .info-text a {
+      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .info-text a {
+      font-weight: 600;
+      color: var(--primary);
+      transition: var(--transition);
+    }
+
+    .info-text a:hover {
+      color: var(--accent);
+    }
+
+    .hours-badge {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 0.9rem;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed rgba(27, 67, 50, 0.15);
+      padding-bottom: 4px;
+    }
+
+    .hours-row:last-child {
+      border: none;
+    }
+
+    .hours-row span.days {
+      font-weight: 500;
+    }
+
+    .hours-row span.time {
+      color: var(--primary-light);
+      font-weight: 600;
+    }
+
+    .map-panel {
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 25px rgba(27, 67, 50, 0.04);
+      min-height: 350px;
+    }
+
+    .map-panel iframe {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: center;
-      filter: brightness(0.95);
-      transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+      border: none;
+      display: block;
     }
 
-    .image-break:hover img {
-      transform: scale(1.03);
-    }
-
-    .featured-section {
-      padding: 9rem 2rem;
-      text-align: center;
-      background-color: var(--bg);
-    }
-
-    .featured-container {
-      max-width: 750px;
-      margin: 0 auto;
-    }
-
-    .featured-title {
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
-      font-weight: 200;
-      line-height: 1.35;
-      margin-bottom: 2rem;
-      color: var(--text);
-      letter-spacing: -0.01em;
-    }
-
-    .featured-text {
-      font-size: 1.05rem;
-      font-weight: 300;
-      color: var(--text-light);
-      line-height: 1.8;
-      margin-bottom: 3rem;
-    }
-
-    .featured-cta {
-      font-size: 0.85rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--text);
-      text-decoration: none;
-      display: inline-block;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--accent);
-      transition: all 0.3s ease;
-    }
-
-    .featured-cta:hover {
-      color: var(--accent-dark);
-      border-bottom-color: var(--accent-dark);
-      letter-spacing: 0.23em;
-    }
-
-    .cta-section {
-      padding: 9rem 2rem;
-      text-align: center;
-      border-top: 1px solid var(--accent-light);
-      background-color: var(--bg);
-    }
-
-    .cta-container {
-      max-width: 650px;
-      margin: 0 auto;
-    }
-
-    .cta-title {
-      font-size: clamp(2rem, 4.5vw, 3.2rem);
-      font-weight: 200;
-      margin-bottom: 1.5rem;
-      color: var(--text);
-    }
-
-    .cta-text {
-      font-size: 1.05rem;
-      font-weight: 300;
-      color: var(--text-light);
-      margin-bottom: 3.5rem;
-      line-height: 1.75;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 1.1rem 3rem;
-      font-size: 0.9rem;
-      font-weight: 400;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      text-decoration: none;
-      background-color: var(--accent);
-      color: var(--bg);
-      border-radius: 100px;
-      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-
-    .cta-button:hover {
-      background-color: var(--accent-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    }
-
+    /* Footer styling */
     .footer {
-      padding: 5rem 2rem;
+      background-color: var(--primary);
+      color: var(--white);
+      padding: var(--sp-xl) var(--sp-md) var(--sp-md) var(--sp-md);
       text-align: center;
-      border-top: 1px solid var(--accent-light);
-      background-color: var(--bg);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .footer p {
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--sp-md);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: var(--sp-md);
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    .footer-copy {
       font-size: 0.8rem;
-      font-weight: 300;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-light);
-      opacity: 0.8;
+      color: rgba(255, 255, 255, 0.5);
+      letter-spacing: 0.05em;
+      margin-top: var(--sp-sm);
     }
 
-    @media (max-width: 768px) {
+    /* Form Success State styling */
+    .form-success-message {
+      padding: var(--sp-lg) var(--sp-md);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--sp-sm);
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    .success-icon {
+      font-size: 3rem;
+      color: var(--accent);
+      background-color: var(--accent-bg);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--sp-xs);
+    }
+
+    .success-title {
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+
+    .success-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 320px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: var(--sp-xl);
+      }
+      .booking-card {
+        order: 2;
+      }
+      .hero-content {
+        order: 1;
+        align-items: center;
+        text-align: center;
+      }
+      .hero-content .badge-google {
+        align-self: center;
+      }
+      .credentials-container {
+        grid-template-columns: 1fr;
+        gap: var(--sp-lg);
+      }
+      .dr-photo-card {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .journey-grid {
+        grid-template-columns: 1fr;
+        gap: var(--sp-md);
+      }
+      .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: var(--sp-sm);
+      }
+      .contact-bento-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 576px) {
+      :root {
+        --sp-xl: 32px;
+        --sp-2xl: 48px;
+        --sp-3xl: 64px;
+      }
       .navbar {
-        padding: 1.5rem 1.5rem;
+        padding: var(--sp-xs) var(--sp-sm);
+      }
+      .logo-title {
+        font-size: 1.3rem;
       }
       .hero {
-        padding: 4rem 1.5rem 3.5rem 1.5rem;
+        padding: var(--sp-xl) var(--sp-sm);
       }
-      .stats-line {
-        flex-direction: column;
-        gap: 0.8rem;
-        padding: 1.5rem 0;
+      .booking-form {
+        padding: var(--sp-sm);
       }
-      .stats-line .bullet {
-        display: none;
+      .form-row {
+        grid-template-columns: 1fr;
       }
-      .services {
-        padding: 5rem 1.5rem;
+      .bento-grid {
+        grid-template-columns: 1fr;
       }
-      .services-content li,
-      .services-content .service-item,
-      .services-content > div {
-        padding: 2.2rem 0;
+      .bento-card.large {
+        grid-column: span 1;
       }
-      .gallery-break-section {
-        margin: 2rem 0;
+      .conditions-grid {
+        grid-template-columns: 1fr;
       }
-      .image-break {
-        height: 45vh;
+      .nav-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
       }
-      .featured-section {
-        padding: 5rem 1.5rem;
+    }
+
+    /* Accessibility: Respect Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-delay: 0s !important;
+        animation-duration: 0s !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0s !important;
+        scroll-behavior: auto !important;
       }
-      .cta-section {
-        padding: 5rem 1.5rem;
-      }
-      .footer {
-        padding: 3.5rem 1.5rem;
+      .bento-card:hover, .nav-btn:hover {
+        transform: none !important;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Sticky Navigation Header -->
   <header class="navbar">
     <div class="nav-container">
-      <a href="#" class="logo">Physio-Fit</a>
-      <a href="tel:+919****6737" class="nav-phone">+91 9****6737</a>
+      <a href="#" class="logo-container" aria-label="Physio-Fit home">
+        <span class="logo-title">Physio-Fit</span>
+        <span class="logo-subtitle">Dr. Tanvi Y. Shah</span>
+      </a>
+      <a href="tel:+919082716737" class="nav-btn" aria-label="Call +91 90827 16737">
+        <span>📞</span>
+        <span>Call Now</span>
+      </a>
     </div>
   </header>
 
   <main>
+    <!-- Hero Banner with booking form & taglines -->
     <section class="hero">
       <div class="hero-container">
-        <div class="rating-badge">
-          <span class="rating-val">4.8</span>
-          <span class="rating-divider">/</span>
-          <span class="reviews-count">189 reviews</span>
+        
+        <!-- Left Side: Interactive Booking Card -->
+        <div class="booking-card" id="booking">
+          <div class="booking-header">
+            <h3>Schedule Your Recovery</h3>
+            <p>Book an in-clinic consultation or home visit</p>
+          </div>
+          
+          <form class="booking-form" id="appt-form" action="#" method="POST" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="full-name">Full Name</label>
+              <input type="text" id="full-name" name="name" class="form-input" placeholder="e.g. Rahul Sharma" required>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g. +91 98765 43210" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="e.g. rahul@example.com" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label for="treatment">Treatment Focus</label>
+                <select id="treatment" name="treatment" class="form-input" required>
+                  <option value="" disabled selected>Select service</option>
+                  <option value="manual">Manual Therapy</option>
+                  <option value="needling">Dry Needling</option>
+                  <option value="cupping">Cupping Therapy</option>
+                  <option value="ortho">Orthopaedic Rehabilitation</option>
+                  <option value="neuro">Neurological Rehab</option>
+                  <option value="home">Home Care Visit</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Briefly describe your symptoms</label>
+              <input type="text" id="message" name="message" class="form-input" placeholder="e.g. Back pain for 3 weeks, knee pain while climbing stairs">
+            </div>
+            
+            <button type="submit" class="form-submit-btn">Request Callback</button>
+          </form>
         </div>
+        
+        <!-- Right Side: Heading, Description & Star Badge -->
+        <div class="hero-content">
+          <div class="badge-google">
+            <span class="rating">5.0 ★★★★★</span>
+            <span>·</span>
+            <span>17 verified Google reviews</span>
+          </div>
+          <h1 class="hero-tagline">Recover. Rebuild. Rise Again.</h1>
+          <p class="hero-description">
+            Physio-Fit by Dr. Tanvi Yash Shah provides evidence-based, customized physical therapy treatments. We focus on active restoration, hands-on joint mobilization, and patient-centered healing in Vile Parle West, Mumbai.
+          </p>
+          <p class="cta-subtext">⭐ Specialized Orthopaedic, Aquatic & Needling Care</p>
+        </div>
+        
+      </div>
+    </section>
 
-        <span class="hero-label">EXPERT PHYSIOTHERAPY CARE</span>
-        <h1 class="hero-title">Restore Movement, Reclaim Life</h1>
-        <p class="hero-text">Physio-Fit by Dr. Tanvi Y. Shah provides expert physiotherapy services. Rated 4.8 stars from 189 patient reviews — compassionate care, proven results.</p>
-
-        <div class="stats-line">
-          <span>Est. 5+ Years of Care</span>
-          <span class="bullet">•</span>
-          <span>Personalized Treatment Plans</span>
-          <span class="bullet">•</span>
-          <span>Mumbai</span>
+    <!-- Meet the Doctor Credentials -->
+    <section class="credentials" id="about">
+      <div class="credentials-container">
+        <div class="dr-photo-card">
+          <div class="dr-photo-illustration">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+            <h4>Dr. Tanvi Yash Shah</h4>
+            <p>Founder & Head Therapist</p>
+          </div>
+        </div>
+        
+        <div class="about-details">
+          <span class="section-label">Meet the Doctor</span>
+          <h2>Dr. Tanvi Yash Shah (BPT)</h2>
+          <p>
+            Dr. Tanvi Yash Shah completed her Bachelor of Physiotherapy (BPT) from D.Y. Patil College of Physiotherapy, Mumbai. She is a dedicated clinician with specialized certifications in Cupping Therapy, Dry Needling, and Aquatic Therapy.
+          </p>
+          <p>
+            Her clinical philosophy focuses on educational empowerment and exercise-based biomechanical correction, helping patients understand their symptoms to prevent recurrences. She conducts treatments both at her Vile Parle clinic and through home visits for bedridden or post-surgical patients.
+          </p>
+          <ul class="credentials-list">
+            <li class="credential-tag">BPT (D.Y. Patil)</li>
+            <li class="credential-tag">Certified Dry Needling</li>
+            <li class="credential-tag">Certified Cupping Therapist</li>
+            <li class="credential-tag">Certified Aquatic Therapist</li>
+            <li class="credential-tag">IASTM Practitioner</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="services">
+    <!-- Services Bento Grid -->
+    <section class="services" id="services">
       <div class="services-container">
-        <h2 class="section-title">Our Services</h2>
-        <div class="services-content">
-          <div class="service-card"><h3>Sports Rehabilitation</h3><p>Recovery programs for athletes & active individuals recovering from injury</p></div>
-          <div class="service-card"><h3>Joint & Muscle Therapy</h3><p>Targeted treatment for back pain, neck pain, arthritis & chronic conditions</p></div>
-          <div class="service-card"><h3>Post-Surgery Recovery</h3><p>Guided rehabilitation after orthopedic surgeries for optimal recovery</p></div>
-          <div class="service-card"><h3>Geriatric Physiotherapy</h3><p>Specialized care for seniors to improve mobility, balance & quality of life</p></div>
+        <div class="section-header">
+          <span class="section-label">Expert Therapies</span>
+          <h2>Physiotherapy Services</h2>
+          <p>Evidence-based treatments for acute and chronic conditions, customized to your physical requirements.</p>
+        </div>
+        
+        <div class="bento-grid">
+          
+          <!-- Card 1: Manual Therapy -->
+          <div class="bento-card">
+            <div class="bento-icon">👐</div>
+            <h3>Manual Therapy</h3>
+            <p>Hands-on joint mobilization, soft tissue release, and structural alignment to reduce pain and restore flexibility.</p>
+          </div>
+          
+          <!-- Card 2: Needling & Cupping -->
+          <div class="bento-card">
+            <div class="bento-icon">🪡</div>
+            <h3>Dry Needling & Cupping</h3>
+            <p>Certified treatments targeting deep trigger points to relieve severe muscle tension, stiffness, and enhance circulation.</p>
+          </div>
+          
+          <!-- Card 3: Large Bento (Targeted Conditions) -->
+          <div class="bento-card large">
+            <div class="bento-icon">✨</div>
+            <h3>Conditions We Treat</h3>
+            <p>Comprehensive rehabilitation programs customized for structural, neuromuscular, and sports-related issues:</p>
+            <div class="conditions-grid">
+              <div class="condition-item"><span class="condition-dot"></span>Back Pain & Sciatica</div>
+              <div class="condition-item"><span class="condition-dot"></span>Neck & Shoulder Pain</div>
+              <div class="condition-item"><span class="condition-dot"></span>Frozen Shoulder Rehab</div>
+              <div class="condition-item"><span class="condition-dot"></span>Knee & Hip Osteoarthritis</div>
+              <div class="condition-item"><span class="condition-dot"></span>Sports Injuries & Sprains</div>
+              <div class="condition-item"><span class="condition-dot"></span>Post-Surgery Mobility</div>
+            </div>
+          </div>
+          
+          <!-- Card 4: Aquatic Therapy -->
+          <div class="bento-card">
+            <div class="bento-icon">💧</div>
+            <h3>Aquatic Therapy</h3>
+            <p>Certified water-based rehab utilizing buoyancy to reduce pressure on joints, enabling pain-free movement.</p>
+          </div>
+          
+          <!-- Card 5: Home Care Visits -->
+          <div class="bento-card">
+            <div class="bento-icon">🏠</div>
+            <h3>Home Care Visits</h3>
+            <p>Specialized home treatment visits for orthopedic, post-surgical, and geriatric patients across western suburbs.</p>
+          </div>
+          
         </div>
       </div>
     </section>
 
-    <section class="gallery-break-section">
-      <div class="gallery-heading-container">
-        <span class="gallery-heading-label">Our Practice</span>
-      </div>
-      <div class="image-break">
-        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=2000" alt="Modern Physiotherapy Practice" />
-      </div>
-    </section>
-
-    <section class="featured-section">
-      <div class="featured-container">
-        <div class="featured-content">
-          <h2 class="featured-title">First Consultation Assessment</h2>
-          <p class="featured-text">Comprehensive movement assessment and personalized treatment plan. Expert care from Dr. Tanvi Y. Shah with modern techniques.</p>
-          <a href="tel:+919****6737" class="featured-cta">Call to Book</a>
+    <!-- 3-Step Recovery Journey -->
+    <section class="journey">
+      <div class="journey-container">
+        <div class="section-header">
+          <span class="section-label">Your Recovery Pathway</span>
+          <h2>The 3-Step Process</h2>
+          <p>Our structured recovery pipeline designed to guide you from initial diagnosis back to full strength.</p>
+        </div>
+        
+        <div class="journey-grid">
+          <div class="journey-card">
+            <span class="journey-step-num">01</span>
+            <h3>Movement Assessment</h3>
+            <p>Dr. Tanvi Shah conducts a detailed biomechanical and postural evaluation to diagnose the root cause of your pain rather than just treating the symptoms.</p>
+          </div>
+          
+          <div class="journey-card">
+            <span class="journey-step-num">02</span>
+            <h3>Targeted Therapy</h3>
+            <p>A customized plan combining certified needling, cupping, manual release, and specialized clinical exercise programs tailored to your daily schedule.</p>
+          </div>
+          
+          <div class="journey-card">
+            <span class="journey-step-num">03</span>
+            <h3>Strength & Prevention</h3>
+            <p>Active corrective exercises, posture training, and fitness modifications to fortify joints, build muscle resilience, and prevent future recurrences.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="cta-section">
-      <div class="cta-container">
-        <h2 class="cta-title">Ready to move pain-free?</h2>
-        <p class="cta-text">Call or message today. Consultations available.</p>
-        <a href="tel:+919****6737" class="cta-button">Book Appointment →</a>
+    <!-- Testimonials Section -->
+    <section class="reviews" id="reviews">
+      <div class="reviews-container">
+        <div class="section-header">
+          <span class="section-label">Patient Success</span>
+          <h2>What Our Patients Say</h2>
+          <p>Hear from patients who recovered from frozen shoulder, spine, and muscle stiffness under our care.</p>
+        </div>
+        
+        <div class="reviews-grid">
+          
+          <!-- Review 1: Pratik Jani -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "I had frozen shoulder twice and she treated me and gave the best treatment."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">PJ</div>
+              <span class="author-name">Pratik Jani</span>
+            </div>
+          </div>
+          
+          <!-- Review 2: Jash Shah -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "A great doctor and explains everything in detail. The exercise-based active rehab really helped resolve my muscle stiffness."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">JS</div>
+              <span class="author-name">Jash Shah</span>
+            </div>
+          </div>
+          
+          <!-- Review 3: Utsav Banka -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Great experience overall! Excellent knowledge of musculoskeletal therapies and very professional environment."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">UB</div>
+              <span class="author-name">Utsav Banka</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact details, Hours & Map -->
+    <section class="contact-bento" id="contact">
+      <div class="contact-bento-container">
+        
+        <!-- Left Column: Contact cards -->
+        <div class="contact-info-panel">
+          <div class="info-bento-card">
+            
+            <div class="info-row">
+              <span class="info-icon">📍</span>
+              <div class="info-text">
+                <h4>Clinic Location</h4>
+                <p>
+                  4, Baptista Hacienda, Old Police Station Road,<br>
+                  Bajiprabhu Deshpande Marg,<br>
+                  opposite Suburban Diagnostics, Vile Parle West,<br>
+                  Mumbai, Maharashtra 400056
+                </p>
+              </div>
+            </div>
+            
+            <div class="info-row">
+              <span class="info-icon">📞</span>
+              <div class="info-text">
+                <h4>Phone Call & WhatsApp</h4>
+                <p><a href="tel:+919082716737" aria-label="Call +91 90827 16737">+91 90827 16737</a></p>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="info-bento-card">
+            <div class="info-row">
+              <span class="info-icon">⏰</span>
+              <div class="info-text" style="width: 100%;">
+                <h4>Operating Hours</h4>
+                <div class="hours-badge">
+                  <div class="hours-row">
+                    <span class="days">In-Clinic Consultation</span>
+                    <span class="time">12:00 PM – 06:00 PM</span>
+                  </div>
+                  <div class="hours-row">
+                    <span class="days">Home Treatment Visits</span>
+                    <span class="time">01:30 PM – 05:30 PM</span>
+                  </div>
+                  <div class="hours-row">
+                    <span class="days">Sunday</span>
+                    <span class="time" style="color: #b71c1c;">Closed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Column: Interactive Map -->
+        <div class="map-panel">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3770.187315573426!2d72.8416303!3d19.1025198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9cf53f8aad1%3A0x640aed03a3bd68e6!2sPhysio-Fit%20by%20Dr.Tanvi%20Y%20Shah!5e0!3m2!1sen!2sin!4v1781524314152!5m2!1sen!2sin" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Map location of Physio-Fit by Dr. Tanvi Y. Shah in Vile Parle West">
+          </iframe>
+        </div>
+        
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Built by Kevin</p>
+    <div class="footer-container">
+      <a href="#" class="logo-container" style="align-items: center;">
+        <span class="logo-title" style="color: var(--white);">Physio-Fit</span>
+        <span class="logo-subtitle" style="color: var(--accent-light);">Dr. Tanvi Y. Shah</span>
+      </a>
+      <div class="footer-links">
+        <a href="#about">About Dr. Tanvi</a>
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <p class="footer-copy">&copy; 2026 Physio-Fit. All rights reserved.</p>
+        <p class="footer-copy" style="opacity: 0.3; margin-top: 4px;">Built by Kevin</p>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      const form = document.getElementById('appt-form');
+      const card = document.getElementById('booking');
+      const name = document.getElementById('full-name').value;
+      const phone = document.getElementById('phone').value;
+      
+      // Simulate form submission to backend/sheets
+      card.innerHTML = `
+        <div class="form-success-message">
+          <div class="success-icon">✓</div>
+          <h3 class="success-title">Callback Requested!</h3>
+          <p class="success-desc">Thank you, <strong>${name}</strong>. Dr. Tanvi Yash Shah or our clinic representative will contact you shortly at <strong>${phone}</strong> to confirm your slot.</p>
+        </div>
+      `;
+    }
+  </script>
 
 </body>
 </html>
