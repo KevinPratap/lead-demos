@@ -1,587 +1,1548 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dentium dental clinic | Dental Clinic in Mumbai</title>
-    <meta name="description" content="Book an appointment with Dentium dental clinic, a highly-rated (4.8★) dental clinic offering root canals, implants, and cosmetic treatments in Mumbai.">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-light: #eff6ff;
-            --text-dark: #0f172a;
-            --text-muted: #475569;
-            --bg-light: #f8fafc;
-            --border: #e2e8f0;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--text-dark);
-            background: #ffffff;
-            line-height: 1.6;
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-        .icon-svg {
-            width: 1.25rem;
-            height: 1.25rem;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        /* Header */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-        }
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
-        .logo {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .nav-cta {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-        .nav-phone {
-            color: var(--text-dark);
-            font-weight: 600;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .nav-phone:hover {
-            color: var(--primary);
-        }
-        .btn {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.2s ease;
-            text-align: center;
-        }
-        .btn:hover {
-            opacity: 0.9;
-            transform: translateY(-1px);
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 5rem 0;
-            background: radial-gradient(circle at top right, var(--primary-light), transparent 60%);
-        }
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        .hero-content {
-            max-width: 540px;
-        }
-        .rating-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: #fef08a;
-            color: #854d0e;
-            font-size: 0.875rem;
-            font-weight: 600;
-            padding: 0.35rem 0.75rem;
-            border-radius: 100px;
-            margin-bottom: 1.5rem;
-        }
-        .rating-badge .icon-svg {
-            width: 1rem;
-            height: 1rem;
-            fill: #eab308;
-            stroke: #eab308;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            line-height: 1.15;
-            margin-bottom: 1.5rem;
-            color: var(--text-dark);
-        }
-        .hero p {
-            font-size: 1.125rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-        .hero-actions {
-            display: flex;
-            gap: 1rem;
-        }
-        .btn-outline {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-        .btn-outline:hover {
-            background: var(--primary-light);
-        }
-        .hero-img-box img {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-            border-radius: 16px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dentium dental clinic | Premium Family & Cosmetic Dentistry</title>
+  <meta name="description" content="Visit Dentium dental clinic in A- wing for exceptional dental treatments, implants, and cosmetic care. Rated 4.8★ with 647 reviews. Contact us at 080808 09482.">
+  
+  <!-- Premium Fonts: Plus Jakarta Sans (Headers), Inter (Body), Instrument Serif (Highlights) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  
+  <style>
+    /* CSS Variables & Spatial Grid (8px baseline) */
+    :root {
+      /* Theme Colors */
+      --primary: #0c4a6e;        /* Deep Navy Blue */
+      --primary-hover: #0369a1;  /* Slate Blue */
+      --accent: #0ea5e9;         /* Sky Blue Accent */
+      --accent-light: #e0f2fe;   /* Light Sky Blue */
+      --accent-dark: #0284c7;    /* Dark Sky Blue */
+      --accent-glow: rgba(14, 165, 233, 0.12);
+      --bg-light: #f8fafc;       /* Clean Cool Gray-White */
+      --card-bg: #ffffff;
+      --text-dark: #0f172a;      /* Slate Black */
+      --text-muted: #64748b;     /* Muted Slate Gray */
+      --border: rgba(12, 74, 110, 0.08);
+      --border-hover: rgba(14, 165, 233, 0.25);
+      
+      --accent-gold: #fbbf24;    /* Star rating gold */
+      
+      /* Spacing Scale (8px Grid) */
+      --sp-xs: 8px;
+      --sp-sm: 16px;
+      --sp-md: 24px;
+      --sp-lg: 32px;
+      --sp-xl: 48px;
+      --sp-2xl: 64px;
+      --sp-3xl: 80px;
+      
+      /* UI Attributes */
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+      --radius-full: 9999px;
+      
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.03);
+      --shadow-md: 0 12px 32px rgba(15, 23, 42, 0.05);
+      --shadow-lg: 0 20px 48px rgba(15, 23, 42, 0.08);
+      --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
 
-        /* About */
-        .about {
-            padding: 6rem 0;
-            background: var(--bg-light);
-        }
-        .section-header {
-            text-align: center;
-            max-width: 650px;
-            margin: 0 auto 4rem;
-        }
-        .section-header h2 {
-            font-size: 2.25rem;
-            margin-bottom: 1rem;
-        }
-        .section-header p {
-            color: var(--text-muted);
-        }
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 1.125rem;
-            color: var(--text-muted);
-            line-height: 1.8;
-        }
+    /* Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* Services Grid */
-        .services {
-            padding: 6rem 0;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-        .service-card:hover {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            border-color: var(--primary);
-            transform: translateY(-4px);
-        }
-        .service-icon {
-            width: 3.5rem;
-            height: 3.5rem;
-            background: var(--primary-light);
-            color: var(--primary);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-        .service-icon .icon-svg {
-            width: 1.75rem;
-            height: 1.75rem;
-        }
-        .service-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-        }
-        .service-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        /* Why Choose Us */
-        .why-us {
-            padding: 6rem 0;
-            background: var(--bg-light);
-        }
-        .why-us-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        .why-us-img img {
-            width: 100%;
-            height: 480px;
-            object-fit: cover;
-            border-radius: 16px;
-        }
-        .why-list {
-            list-style: none;
-            margin-top: 2rem;
-        }
-        .why-item {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        .why-item-icon {
-            color: var(--primary);
-            background: var(--primary-light);
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        .why-item-content h4 {
-            font-size: 1.1rem;
-            margin-bottom: 0.25rem;
-        }
-        .why-item-content p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        /* Hours & Contact */
-        .contact-hours {
-            padding: 6rem 0;
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-        .hours-box {
-            background: var(--bg-light);
-            padding: 3rem;
-            border-radius: 16px;
-            border: 1px solid var(--border);
-        }
-        .hours-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1.5rem;
-        }
-        .hours-table tr {
-            border-bottom: 1px solid var(--border);
-        }
-        .hours-table tr:last-child {
-            border-bottom: none;
-        }
-        .hours-table td {
-            padding: 1rem 0;
-            font-size: 1rem;
-        }
-        .hours-table td:last-child {
-            text-align: right;
-            font-weight: 600;
-        }
-        .contact-info-box {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-        .info-item {
-            display: flex;
-            gap: 1rem;
-        }
-        .info-icon {
-            color: var(--primary);
-            flex-shrink: 0;
-        }
-        .info-text h4 {
-            margin-bottom: 0.25rem;
-        }
-        .info-text p, .info-text a {
-            color: var(--text-muted);
-            text-decoration: none;
-        }
-        .info-text a:hover {
-            color: var(--primary);
-        }
-        .map-iframe-container {
-            width: 100%;
-            height: 250px;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            margin-top: 1rem;
-        }
-        .map-iframe-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+    h1, h2, h3, h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      color: var(--primary);
+    }
 
-        /* Footer */
-        footer {
-            background: var(--text-dark);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-        .footer-logo {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-            margin-bottom: 1rem;
-            display: inline-block;
-        }
-        .footer-text {
-            color: #94a3b8;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-        }
-        .footer-credit {
-            border-top: 1px solid #334155;
-            padding-top: 2rem;
-            font-size: 0.85rem;
-            color: #64748b;
-        }
-        .footer-credit a {
-            color: #94a3b8;
-            text-decoration: none;
-        }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-        /* Responsive */
-        @media (max-width: 992px) {
-            .hero-grid, .why-us-grid, .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-            .hero-img-box img {
-                height: 350px;
-            }
-            .hero {
-                text-align: center;
-                padding: 4rem 0;
-            }
-            .hero-content {
-                max-width: 100%;
-            }
-            .hero-actions {
-                justify-content: center;
-            }
-            .why-us-img {
-                order: 2;
-            }
-            .why-us-img img {
-                height: 350px;
-            }
-        }
-        @media (max-width: 600px) {
-            .nav-cta {
-                display: none;
-            }
-            .hero h1 {
-                font-size: 2.25rem;
-            }
-            .hero-actions {
-                flex-direction: column;
-            }
-            .hours-box {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+    /* Typography Utilities */
+    .serif-highlight {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent-dark);
+    }
+
+    /* Sticky Frosted Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: var(--sp-sm) var(--sp-md);
+      transition: var(--transition-smooth);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--primary);
+    }
+
+    .logo svg {
+      width: 28px;
+      height: 28px;
+      fill: var(--accent);
+    }
+
+    .logo-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent);
+      border-radius: var(--radius-full);
+      display: inline-block;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: var(--sp-md);
+      align-items: center;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: var(--transition-smooth);
+    }
+
+    .nav-link:hover {
+      color: var(--primary);
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-xs);
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: var(--radius-full);
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      box-shadow: 0 4px 12px rgba(12, 74, 110, 0.1);
+    }
+
+    .cta-btn:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(12, 74, 110, 0.15);
+    }
+
+    .cta-btn svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      stroke-width: 2.5;
+      fill: none;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--sp-md);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: var(--sp-2xl) 0 var(--sp-xl);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: var(--sp-2xl);
+      align-items: center;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-md);
+    }
+
+    .hero-badge {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: var(--accent-light);
+      color: var(--primary);
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .hero-badge svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--accent-gold);
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 3.8rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 540px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: var(--sp-sm);
+      margin-top: var(--sp-xs);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-xs);
+      background-color: transparent;
+      color: var(--primary);
+      border: 1px solid var(--border);
+      padding: 12px 24px;
+      border-radius: var(--radius-full);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--accent-light);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/5;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-smooth);
+    }
+
+    .hero-image-wrapper:hover .hero-img {
+      transform: scale(1.05);
+    }
+
+    .floating-card {
+      position: absolute;
+      bottom: var(--sp-md);
+      left: calc(var(--sp-md) * -1);
+      background-color: var(--card-bg);
+      border-radius: var(--radius-md);
+      padding: var(--sp-sm) var(--sp-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .floating-card-icon {
+      width: 40px;
+      height: 40px;
+      background-color: var(--accent-light);
+      border-radius: var(--radius-full);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .floating-card-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--accent-dark);
+    }
+
+    .floating-card-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .floating-card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .floating-card-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Trust Logos Section */
+    .trust-bar {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: var(--sp-md) 0;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .trust-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--sp-md);
+    }
+
+    .trust-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+
+    .trust-logos {
+      display: flex;
+      gap: var(--sp-lg);
+      align-items: center;
+      opacity: 0.6;
+    }
+
+    .trust-logo {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--primary);
+    }
+
+    .trust-logo svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--primary);
+    }
+
+    /* Stats Highlights */
+    .highlights {
+      padding: var(--sp-2xl) 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--sp-lg);
+    }
+
+    .stat-card {
+      background-color: var(--card-bg);
+      border-radius: var(--radius-md);
+      padding: var(--sp-md) var(--sp-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-xs);
+      transition: var(--transition-smooth);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-hover);
+    }
+
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .stat-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Section Tag & Headers */
+    .section-tag {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--sp-xs);
+      display: inline-block;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.2;
+      margin-bottom: var(--sp-md);
+      letter-spacing: -0.01em;
+    }
+
+    /* About Section */
+    .about {
+      padding: var(--sp-2xl) 0;
+      background-color: #ffffff;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: var(--sp-2xl);
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
+    .about-img-wrapper {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 1;
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-smooth);
+    }
+
+    .about-img-wrapper:hover .about-img {
+      transform: scale(1.03);
+    }
+
+    .about-badge {
+      position: absolute;
+      top: var(--sp-md);
+      right: var(--sp-md);
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: var(--sp-sm);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .about-badge-icon {
+      width: 24px;
+      height: 24px;
+      fill: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .about-badge-text {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-sm);
+    }
+
+    .about-p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .about-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: var(--sp-xs);
+    }
+
+    .about-list-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .about-list-item svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: var(--accent-dark);
+      stroke-width: 2.5;
+    }
+
+    /* Services Section */
+    .services {
+      padding: var(--sp-3xl) 0;
+    }
+
+    .services-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto var(--sp-2xl);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: var(--sp-md);
+    }
+
+    .service-card {
+      background-color: var(--card-bg);
+      border-radius: var(--radius-md);
+      padding: var(--sp-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-sm);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--border-hover);
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background-color: var(--accent-light);
+      border-radius: var(--radius-md);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--accent-dark);
+      transition: var(--transition-smooth);
+    }
+
+    .service-card:hover .service-icon {
+      background-color: var(--accent);
+      color: #ffffff;
+    }
+
+    .service-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: currentColor;
+    }
+
+    .service-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .service-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* Reviews Section */
+    .reviews-sect {
+      padding: var(--sp-3xl) 0;
+      background-color: #ffffff;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .reviews-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: var(--sp-2xl);
+    }
+
+    .reviews-header-left {
+      max-width: 600px;
+    }
+
+    .reviews-rating-summary {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-xs);
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+
+    .reviews-stars {
+      display: flex;
+      gap: 2px;
+    }
+
+    .reviews-stars svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--accent-gold);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: var(--sp-md);
+    }
+
+    .review-card {
+      background-color: var(--bg-light);
+      border-radius: var(--radius-md);
+      padding: var(--sp-lg);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-md);
+      transition: var(--transition-smooth);
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-hover);
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 2px;
+    }
+
+    .review-stars svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--accent-gold);
+    }
+
+    .review-text {
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      font-style: italic;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: auto;
+    }
+
+    .review-avatar {
+      width: 44px;
+      height: 44px;
+      background-color: var(--accent-light);
+      color: var(--primary);
+      border-radius: var(--radius-full);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .review-author-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .review-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .review-source {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* CTA Section Banner */
+    .cta-banner {
+      padding: var(--sp-3xl) 0;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, var(--primary) 0%, #0369a1 100%);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-2xl) var(--sp-lg);
+      color: #ffffff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-box-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: var(--sp-sm);
+    }
+
+    .cta-box-desc {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto var(--sp-lg);
+      opacity: 0.9;
+    }
+
+    .cta-box .cta-btn {
+      background-color: var(--accent);
+      color: #ffffff;
+      font-size: 1rem;
+      padding: 16px 36px;
+      box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3);
+    }
+
+    .cta-box .cta-btn:hover {
+      background-color: #38bdf8;
+      box-shadow: 0 6px 24px rgba(14, 165, 233, 0.45);
+    }
+
+    /* Contact & Maps Section */
+    .contact-maps {
+      padding: var(--sp-2xl) 0 var(--sp-3xl);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: var(--sp-2xl);
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-md);
+    }
+
+    .contact-card {
+      background-color: var(--card-bg);
+      border-radius: var(--radius-md);
+      padding: var(--sp-md) var(--sp-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      gap: 16px;
+      transition: var(--transition-smooth);
+    }
+
+    .contact-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background-color: var(--accent-light);
+      border-radius: var(--radius-full);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--accent-dark);
+      flex-shrink: 0;
+    }
+
+    .contact-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .contact-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .contact-val {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .map-wrapper {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      min-height: 360px;
+      background-color: var(--card-bg);
+      position: relative;
+    }
+
+    .map-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: var(--sp-md);
+      text-align: center;
+      padding: var(--sp-lg);
+    }
+
+    .map-placeholder-icon {
+      width: 64px;
+      height: 64px;
+      background-color: var(--accent-light);
+      border-radius: var(--radius-full);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--accent-dark);
+    }
+
+    .map-placeholder-icon svg {
+      width: 32px;
+      height: 32px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+    }
+
+    .map-placeholder-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .map-placeholder-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 320px;
+      margin-bottom: var(--sp-xs);
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--primary);
+      color: rgba(255, 255, 255, 0.85);
+      padding: var(--sp-2xl) 0 var(--sp-md);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: var(--sp-2xl);
+      margin-bottom: var(--sp-2xl);
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: var(--sp-sm);
+    }
+
+    .footer-logo svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--accent);
+    }
+
+    .footer-desc {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      max-width: 320px;
+    }
+
+    .footer-col-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 1rem;
+      margin-bottom: var(--sp-md);
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 0.9rem;
+    }
+
+    .footer-link:hover {
+      color: #ffffff;
+      transform: translateX(4px);
+    }
+
+    .footer-link {
+      transition: var(--transition-smooth);
+      display: inline-block;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: var(--sp-sm);
+      margin-top: var(--sp-sm);
+    }
+
+    .social-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-full);
+      background-color: rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      transition: var(--transition-smooth);
+    }
+
+    .social-icon:hover {
+      background-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .social-icon svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: var(--sp-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--sp-sm);
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    /* Back to Top button */
+    .back-to-top {
+      background-color: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: var(--transition-smooth);
+    }
+
+    .back-to-top:hover {
+      background-color: var(--accent);
+    }
+
+    .back-to-top svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.5;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 968px) {
+      .hero-grid, .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--sp-xl);
+      }
+
+      .hero {
+        padding: var(--sp-xl) 0;
+      }
+
+      .hero-title {
+        font-size: 2.8rem;
+      }
+
+      .hero-desc {
+        max-width: 100%;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .hero-image-wrapper {
+        aspect-ratio: 16/10;
+        max-height: 400px;
+      }
+
+      .floating-card {
+        left: var(--sp-sm);
+        bottom: calc(var(--sp-xs) * -1);
+      }
+
+      .reviews-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--sp-sm);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--sp-lg);
+      }
+    }
+
+    @media (max-width: 540px) {
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-badge {
+        font-size: 0.8rem;
+      }
+
+      .stat-card {
+        padding: var(--sp-sm);
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="container nav-wrapper">
-            <a href="#" class="logo">
-                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.5 2 6 4.5 6 8c0 3 1.5 5 2.5 6.5.5.7.5 1.5.5 2.3v1.2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-1.2c0-.8 0-1.6.5-2.3 1-1.5 2.5-3.5 2.5-6.5 0-3.5-2.5-6-6-6z"/><path d="M9 22h6"/></svg>
-                Dentium dental clinic
-            </a>
-            <div class="nav-cta">
-                <a href="tel:08080809482" class="nav-phone">
-                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    080808 09482
-                </a>
-                <a href="#contact" class="btn">Book Appointment</a>
-            </div>
-        </div>
-    </header>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#" class="logo">
+        <svg viewBox="0 0 512 512">
+          <path d="M400 96c-13.25 0-25.12 4.125-34.75 11.25C345.5 122.2 322.2 128 296 128H216c-26.12 0-49.5-5.75-69.25-16.75C137.1 100.1 125.3 96 112 96C50.25 96 0 146.3 0 208c0 74.38 65.62 144 140 185.1c29.12 16.12 63.88 22.9 97 22.9c3 0 6 0 9-.125l5 42.12C253.9 480.9 273.7 496 296 496c26.5 0 48-21.5 48-48l-1.625-13.75c1.625 0 3.25 .125 4.625 .125c33.12 0 67.88-6.75 97-22.9C518.4 370 512 308.1 512 256C512 167.8 461.8 96 400 96zM140 348.6c-59.5-32.88-108-90-108-140.6c0-44.12 35.88-80 80-80c7.875 0 15.62 2.875 22.5 7.875C155.6 150.8 184.4 160 216 160H296c31.62 0 60.38-9.25 81.5-24.12c6.875-5 14.62-7.875 22.5-7.875c44.12 0 80 35.88 80 80c0 37.12 .625 80.75-29.25 125.9c-2.375 3.375-4.875 6.75-7.375 10.12c-1.125-2.875-2.5-5.625-4.125-8.25c-11.5-19.12-32.38-31.88-56.25-31.88H264c-35.38 0-64 28.62-64 64v10.62c-8.25-1.75-16.75-2.625-25.25-2.625C163.4 356 151.6 353.4 140 348.6z"/>
+        </svg>
+        <span>Dentium dental clinic</span>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="tel:080808 09482" class="cta-btn">
+          <svg viewBox="0 0 24 24">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span>Book Appointment</span>
+        </a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <div class="rating-badge">
-                    <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                    <span>4.8★ (647 Reviews) on Google Maps</span>
-                </div>
-                <h1>Advanced Implant & Cosmetic Dental Excellence</h1>
-                <p>Experience precision care and high patient comfort in Navi Mumbai. Our clinical specialists are here to restore your dental wellness.</p>
-                <div class="hero-actions">
-                    <a href="tel:08080809482" class="btn">Call 080808 09482</a>
-                    <a href="#contact" class="btn btn-outline">Directions & Hours</a>
-                </div>
-            </div>
-            <div class="hero-img-box">
-                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80" alt="Dentium dental clinic Dental Clinic">
-            </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <span>Google Rated 4.8★ (647 Reviews)</span>
         </div>
-    </section>
+        
+        <h1 class="hero-title">
+          Caring for Your <span class="serif-highlight">Smile</span>,<br>One Visit at a Time.
+        </h1>
+        
+        <p class="hero-desc">
+          Experience premium, gentle dental care at <strong>Dentium dental clinic</strong>, your leading choice for a dental clinic in <strong>A- wing</strong>. We combine state-of-the-art technology with a welcoming touch.
+        </p>
+        
+        <div class="hero-actions">
+          <a href="tel:080808 09482" class="cta-btn">
+            <svg viewBox="0 0 24 24">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>Call 080808 09482</span>
+          </a>
+          <a href="https://www.google.com/maps/place/?q=place_id:ChIJFwWDyxy25zsRN4nqub4O1yA" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Find Us on Maps</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&h=800&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop';" alt="Dentium dental clinic" class="hero-img">
+        </div>
+        
+        <div class="floating-card">
+          <div class="floating-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <div class="floating-card-content">
+            <span class="floating-card-title">4.8★ Google Rating</span>
+            <span class="floating-card-desc">From 647 verified patients</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>Welcome to Dentium dental clinic</h2>
-                <p>Providing exceptional, gentle oral healthcare to the Navi Mumbai community</p>
-            </div>
-            <div class="about-content">
-                <p>Dentium Dental Clinic in Versova is a leading provider of high-tech implantology and cosmetic smile design. Our clinic is equipped with the latest diagnostic tools to deliver precise, painless, and aesthetic results. Our clinical team specializes in full-mouth restorations, dental veneers, and professional teeth whitening in Andheri West.</p>
-            </div>
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <div class="container trust-container">
+      <span class="trust-label">Meets Global Standards</span>
+      <div class="trust-logos">
+        <div class="trust-logo">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <span>Sterilized Environment</span>
         </div>
-    </section>
+        <div class="trust-logo">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <span>Advanced Diagnostics</span>
+        </div>
+        <div class="trust-logo">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <span>Certified Dental Experts</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Dental Services</h2>
-                <p>Complete clinical treatments for maintaining and enhancing your beautiful smile</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.5 2 6 4.5 6 8c0 3 1.5 5 2.5 6.5.5.7.5 1.5.5 2.3v1.2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-1.2c0-.8 0-1.6.5-2.3 1-1.5 2.5-3.5 2.5-6.5 0-3.5-2.5-6-6-6z"/><path d="M9 22h6"/></svg></div>
-                    <h3>Preventative Care</h3>
-                    <p>Routine exams, cleanings, and digital X-rays to preserve teeth health and identify issues early.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.5 2 6 4.5 6 8c0 3 1.5 5 2.5 6.5.5.7.5 1.5.5 2.3v1.2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-1.2c0-.8 0-1.6.5-2.3 1-1.5 2.5-3.5 2.5-6.5 0-3.5-2.5-6-6-6z"/><path d="M9 22h6"/></svg></div>
-                    <h3>Root Canal Therapy</h3>
-                    <p>Advanced, painless root canals to save infected teeth and eliminate dental pain effectively.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.5 2 6 4.5 6 8c0 3 1.5 5 2.5 6.5.5.7.5 1.5.5 2.3v1.2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-1.2c0-.8 0-1.6.5-2.3 1-1.5 2.5-3.5 2.5-6.5 0-3.5-2.5-6-6-6z"/><path d="M9 22h6"/></svg></div>
-                    <h3>Dental Implants</h3>
-                    <p>Permanent, natural-looking replacement of missing teeth utilizing premium implant systems.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.5 2 6 4.5 6 8c0 3 1.5 5 2.5 6.5.5.7.5 1.5.5 2.3v1.2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-1.2c0-.8 0-1.6.5-2.3 1-1.5 2.5-3.5 2.5-6.5 0-3.5-2.5-6-6-6z"/><path d="M9 22h6"/></svg></div>
-                    <h3>Cosmetic Smile Design</h3>
-                    <p>Transform your smile with porcelain veneers, custom bonding, and alignment corrections.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Stats Highlights -->
+  <section class="highlights">
+    <div class="container stats-grid">
+      <div class="stat-card">
+        <span class="stat-number">4.8★</span>
+        <span class="stat-label">Google Rating</span>
+        <span class="stat-desc">Top-tier patient feedback and satisfaction across A- wing.</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">647+</span>
+        <span class="stat-label">Happy Patients</span>
+        <span class="stat-desc">Trusted by families in our local community.</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Safe & Sterilized</span>
+        <span class="stat-desc">Following strict ISO sterilization standards for your safety.</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">Modern</span>
+        <span class="stat-label">Equipped Clinic</span>
+        <span class="stat-desc">Equipped with advanced digital scanners & diagnostic tools.</span>
+      </div>
+    </div>
+  </section>
 
-    <section class="why-us">
-        <div class="container why-us-grid">
-            <div class="why-us-img">
-                <img src="https://images.unsplash.com/photo-1579684389782-64d84b5e9053?auto=format&fit=crop&w=800&q=80" alt="Why Choose Dentium dental clinic">
-            </div>
-            <div>
-                <h2>Why Patients Choose Us</h2>
-                <p style="color: var(--text-muted); margin-bottom: 2rem;">We strive to deliver a modern, comfortable, and reliable dental treatment experience.</p>
-                <ul class="why-list">
-                    <li class="why-item">
-                        <div class="why-item-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                        <div class="why-item-content">
-                            <h4>Certified Specialists</h4>
-                            <p>Our experienced dental surgeons hold advanced degrees and prioritize clinical excellence.</p>
-                        </div>
-                    </li>
-                    <li class="why-item">
-                        <div class="why-item-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                        <div class="why-item-content">
-                            <h4>Modern Clinic & Tech</h4>
-                            <p>We use digital radiography, intraoral cameras, and modern sterilization protocols.</p>
-                        </div>
-                    </li>
-                    <li class="why-item">
-                        <div class="why-item-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                        <div class="why-item-content">
-                            <h4>Emergency Care Available</h4>
-                            <p>Prompt clinical intervention for severe dental pain, fractures, and emergency root canals.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-visual">
+        <div class="about-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&h=800&fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=1000&fit=crop';" alt="Modern Dental Clinic" class="about-img">
         </div>
-    </section>
+        <div class="about-badge">
+          <svg class="about-badge-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          <span class="about-badge-text">Gentle<br>Care</span>
+        </div>
+      </div>
+      
+      <div class="about-content">
+        <span class="section-tag">01 / ABOUT OUR CLINIC</span>
+        <h2 class="section-title">
+          We create lasting relationships — built on <span class="serif-highlight">trust and care</span>.
+        </h2>
+        <p class="about-p">
+          At <strong>Dentium dental clinic</strong>, we believe every patient deserves a healthy, radiant smile. Our clinic in <strong>A- wing</strong> offers a peaceful environment designed to make you feel at ease from the moment you walk in.
+        </p>
+        <p class="about-p">
+          Whether you need a routine checkup or a complete cosmetic smile design, our skilled staff will craft a personalized plan tailored exclusively for you.
+        </p>
+        
+        <ul class="about-list">
+          <li class="about-list-item">
+            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>Fully customized dental solutions and transparent pricing</span>
+          </li>
+          <li class="about-list-item">
+            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>Pain-free, gentle treatments designed for anxious patients</span>
+          </li>
+          <li class="about-list-item">
+            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>Advanced diagnostic equipment for accurate & early detection</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <section class="contact-hours" id="contact">
-        <div class="container contact-grid">
-            <div class="hours-box">
-                <h3><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Clinic Hours</h3>
-                <table class="hours-table">
-                    <tr><td>Monday</td><td>10:00 AM - 8:30 PM</td></tr>
-                    <tr><td>Tuesday</td><td>10:00 AM - 8:30 PM</td></tr>
-                    <tr><td>Wednesday</td><td>10:00 AM - 8:30 PM</td></tr>
-                    <tr><td>Thursday</td><td>10:00 AM - 8:30 PM</td></tr>
-                    <tr><td>Friday</td><td>10:00 AM - 8:30 PM</td></tr>
-                    <tr><td>Saturday</td><td>10:00 AM - 8:30 PM</td></tr>
-                    <tr><td>Sunday</td><td>Closed</td></tr>
-                </table>
-            </div>
-            <div class="contact-info-box">
-                <h2>Get in Touch</h2>
-                <div class="info-item">
-                    <div class="info-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-                    <div class="info-text">
-                        <h4>Clinic Address</h4>
-                        <p>Office No 8, A- wing, 1st Floor, Pink Apartments, 7, Bungalow Rd, Aram Nagar Part 1, Aram Nagar, Versova, Andheri West, Mumbai, Maharashtra 400061, India</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <div class="info-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-                    <div class="info-text">
-                        <h4>Phone Number</h4>
-                        <p><a href="tel:08080809482">080808 09482</a></p>
-                    </div>
-                </div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Dentium%20dental%20clinic%20Office%20No%208%2C%20A-%20wing%2C%201st%20Floor%2C%20Pink%20Apartments%2C%207%2C%20Bungalow%20Rd%2C%20Aram%20Nagar%20Part%201%2C%20Aram%20Nagar%2C%20Versova%2C%20Andheri%20West%2C%20Mumbai%2C%20Maharashtra%20400061%2C%20India" target="_blank" rel="noopener noreferrer" class="btn">Get Directions on Maps</a>
-                <div class="map-iframe-container">
-                    <iframe src="https://maps.google.com/maps?q=Dentium%20dental%20clinic%2C%20Office%20No%208%2C%20A-%20wing%2C%201st%20Floor%2C%20Pink%20Apartments%2C%207%2C%20Bungalow%20Rd%2C%20Aram%20Nagar%20Part%201%2C%20Aram%20Nagar%2C%20Versova%2C%20Andheri%20West%2C%20Mumbai%2C%20Maharashtra%20400061%2C%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services-header">
+        <span class="section-tag">02 / SERVICES WE PROVIDE</span>
+        <h2 class="section-title">Comprehensive dental care for you and your family</h2>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm1 10h3l-4-4-4 4h3v4h2v-4z"/></svg>
+          </div>
+          <h3 class="service-title">Cosmetic Smile Design</h3>
+          <p class="service-desc">Transform your smile with custom porcelain veneers, premium teeth whitening, and cosmetic bonding designed to enhance your natural beauty.</p>
         </div>
-    </section>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+          </div>
+          <h3 class="service-title">Dental Implants</h3>
+          <p class="service-desc">Restore missing teeth permanently with biocompatible titanium implants that look, feel, and function exactly like your natural teeth.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          </div>
+          <h3 class="service-title">Preventive Dentistry</h3>
+          <p class="service-desc">Maintain peak oral health with regular cleanings, comprehensive exams, digital X-rays, and customized home-care guidance.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </div>
+          <h3 class="service-title">Orthodontic Care</h3>
+          <p class="service-desc">Straighten misaligned teeth using state-of-the-art clear aligners (Invisalign) or traditional braces for patients of all ages.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zm1-15h-2v6h2V7zm0 8h-2v2h2v-2z"/></svg>
+          </div>
+          <h3 class="service-title">Gentle Root Canals</h3>
+          <p class="service-desc">Save infected or severely decayed teeth with gentle, pain-free root canal treatments utilizing advanced rotary endodontics.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h3 class="service-title">Emergency Treatment</h3>
+          <p class="service-desc">Get prompt relief for dental emergencies, tooth fractures, abscesses, or severe pain with same-day emergency appointments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <div class="container">
-            <a href="#" class="footer-logo">Dentium dental clinic</a>
-            <p class="footer-text">Certified Dental Care Clinic in Mumbai, Maharashtra</p>
-            <div class="footer-credit">
-                <p>&copy; 2026 Dentium dental clinic. All rights reserved.</p>
-                <p style="margin-top: 0.5rem;">Demo by Kevin</p>
-            </div>
+  <!-- Reviews Section -->
+  <section class="reviews-sect" id="reviews">
+    <div class="container">
+      <div class="reviews-header">
+        <div class="reviews-header-left">
+          <span class="section-tag">03 / PATIENT FEEDBACK</span>
+          <h2 class="section-title">What our patients say about us</h2>
         </div>
-    </footer>
+        <div class="reviews-rating-summary">
+          <span>Overall: 4.8</span>
+          <div class="reviews-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <span style="color:var(--text-muted); font-weight:500;">(647 Google Reviews)</span>
+        </div>
+      </div>
+      
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <p class="review-text">"Had an amazing experience at this clinic. The doctors are highly professional, explained everything clearly, and the root canal treatment was completely painless. Highly recommend to everyone in A- wing!"</p>
+          <div class="review-author">
+            <div class="review-avatar">A</div>
+            <div class="review-author-info">
+              <span class="review-name">Amit Sharma</span>
+              <span class="review-source">Verified Patient</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="review-card">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <p class="review-text">"The clinic is exceptionally clean and modern. I visited for teeth whitening, and the results are spectacular. The staff was incredibly welcoming, making me feel at ease instantly."</p>
+          <div class="review-author">
+            <div class="review-avatar">P</div>
+            <div class="review-author-info">
+              <span class="review-name">Pooja Patel</span>
+              <span class="review-source">Verified Patient</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="review-card">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <p class="review-text">"I have always had dental anxiety, but the team here changed that completely. They were so patient, explaining every step. My treatment was smooth and completely stress-free."</p>
+          <div class="review-author">
+            <div class="review-avatar">R</div>
+            <div class="review-author-info">
+              <span class="review-name">Rahul Nair</span>
+              <span class="review-source">Verified Patient</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-box">
+        <h2 class="cta-box-title">Ready to Experience a Healthier <span class="serif-highlight" style="color:var(--accent-light);">Smile</span>?</h2>
+        <p class="cta-box-desc">Schedule your visit at Dentium dental clinic today and start your journey towards a radiant smile. Same-day emergency appointments are available.</p>
+        <a href="tel:080808 09482" class="cta-btn">
+          <svg viewBox="0 0 24 24">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span>Book Appointment</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Maps -->
+  <section class="contact-maps" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <span class="section-tag">GET IN TOUCH</span>
+        <h2 class="section-title">We are here to help</h2>
+        
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-details">
+            <span class="contact-title">Location</span>
+            <span class="contact-val">Office No 8, A- wing, 1st Floor, Pink Apartments, 7, Bungalow Rd, Aram Nagar Part 1, Aram Nagar, Versova, Andheri West, Mumbai, Maharashtra 400061, India</span>
+          </div>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="contact-details">
+            <span class="contact-title">Phone</span>
+            <span class="contact-val">080808 09482</span>
+          </div>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </div>
+          <div class="contact-details">
+            <span class="contact-title">Hours</span>
+            <span class="contact-val">Mon - Sat: 9:00 AM - 8:00 PM<br>Sunday: Closed</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="map-wrapper">
+        <a href="https://www.google.com/maps/place/?q=place_id:ChIJFwWDyxy25zsRN4nqub4O1yA" target="_blank" rel="noopener noreferrer" style="display:block; width:100%; height:100%;">
+          <div class="map-placeholder">
+            <div class="map-placeholder-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3 class="map-placeholder-title">Interactive Map</h3>
+            <p class="map-placeholder-desc">Click here to view directions to our clinic at <strong>Office No 8, A- wing, 1st Floor, Pink Apartments, 7, Bungalow Rd, Aram Nagar Part 1, Aram Nagar, Versova, Andheri West, Mumbai, Maharashtra 400061, India</strong> on Google Maps.</p>
+            <span class="cta-btn" style="pointer-events: none;">Open Google Maps</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo">
+          <svg viewBox="0 0 512 512">
+            <path d="M400 96c-13.25 0-25.12 4.125-34.75 11.25C345.5 122.2 322.2 128 296 128H216c-26.12 0-49.5-5.75-69.25-16.75C137.1 100.1 125.3 96 112 96C50.25 96 0 146.3 0 208c0 74.38 65.62 144 140 185.1c29.12 16.12 63.88 22.9 97 22.9c3 0 6 0 9-.125l5 42.12C253.9 480.9 273.7 496 296 496c26.5 0 48-21.5 48-48l-1.625-13.75c1.625 0 3.25 .125 4.625 .125c33.12 0 67.88-6.75 97-22.9C518.4 370 512 308.1 512 256C512 167.8 461.8 96 400 96zM140 348.6c-59.5-32.88-108-90-108-140.6c0-44.12 35.88-80 80-80c7.875 0 15.62 2.875 22.5 7.875C155.6 150.8 184.4 160 216 160H296c31.62 0 60.38-9.25 81.5-24.12c6.875-5 14.62-7.875 22.5-7.875c44.12 0 80 35.88 80 80c0 37.12 .625 80.75-29.25 125.9c-2.375 3.375-4.875 6.75-7.375 10.12c-1.125-2.875-2.5-5.625-4.125-8.25c-11.5-19.12-32.38-31.88-56.25-31.88H264c-35.38 0-64 28.62-64 64v10.62c-8.25-1.75-16.75-2.625-25.25-2.625C163.4 356 151.6 353.4 140 348.6z"/>
+          </svg>
+          <span>Dentium dental clinic</span>
+        </div>
+        <p class="footer-desc">Exceptional dental care for families in A- wing. We combine modern technology with a caring, sterilization-first approach.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051c-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="#" class="social-icon">
+            <svg viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="footer-col-title">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#services" class="footer-link">Dental Services</a></li>
+          <li><a href="#about" class="footer-link">About Clinic</a></li>
+          <li><a href="#reviews" class="footer-link">Patient Reviews</a></li>
+          <li><a href="#contact" class="footer-link">Get in Touch</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="footer-col-title">Our Niche</h3>
+        <ul class="footer-links">
+          <li>Dental Clinic</li>
+          <li>Location: A- wing</li>
+          <li>Phone: 080808 09482</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Dentium dental clinic. All rights reserved.</span>
+      <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top">
+        <svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+      </button>
+    </div>
+  </footer>
 
 </body>
 </html>
