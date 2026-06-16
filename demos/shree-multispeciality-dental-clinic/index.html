@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHREE MULTISPECIALITY DENTAL CLINIC | Dental Clinic in Mumbai</title>
+    <meta name="description" content="Book an appointment with SHREE MULTISPECIALITY DENTAL CLINIC, a highly-rated (4.9★) dental clinic offering root canals, implants, and cosmetic treatments in Mumbai.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --bg-light: #f8fafc;
+            --border: #e2e8f0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-dark);
+            background: #ffffff;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .icon-svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .nav-phone {
+            color: var(--text-dark);
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-phone:hover {
+            color: var(--primary);
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 5rem 0;
+            background: radial-gradient(circle at top right, var(--primary-light), transparent 60%);
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .hero-content {
+            max-width: 540px;
+        }
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #fef08a;
+            color: #854d0e;
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 0.35rem 0.75rem;
+            border-radius: 100px;
+            margin-bottom: 1.5rem;
+        }
+        .rating-badge .icon-svg {
+            width: 1rem;
+            height: 1rem;
+            fill: #eab308;
+            stroke: #eab308;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-outline:hover {
+            background: var(--primary-light);
+        }
+        .hero-img-box img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+        }
+
+        /* About */
+        .about {
+            padding: 6rem 0;
+            background: var(--bg-light);
+        }
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 4rem;
+        }
+        .section-header h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+        .section-header p {
+            color: var(--text-muted);
+        }
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* Services Grid */
+        .services {
+            padding: 6rem 0;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+        .service-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .service-icon .icon-svg {
+            width: 1.75rem;
+            height: 1.75rem;
+        }
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            padding: 6rem 0;
+            background: var(--bg-light);
+        }
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .why-us-img img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+        .why-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        .why-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .why-item-icon {
+            color: var(--primary);
+            background: var(--primary-light);
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .why-item-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        .why-item-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Hours & Contact */
+        .contact-hours {
+            padding: 6rem 0;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        .hours-box {
+            background: var(--bg-light);
+            padding: 3rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+        .hours-table tr {
+            border-bottom: 1px solid var(--border);
+        }
+        .hours-table tr:last-child {
+            border-bottom: none;
+        }
+        .hours-table td {
+            padding: 1rem 0;
+            font-size: 1rem;
+        }
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+        .contact-info-box {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .info-item {
+            display: flex;
+            gap: 1rem;
+        }
+        .info-icon {
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+        .info-text h4 {
+            margin-bottom: 0.25rem;
+        }
+        .info-text p, .info-text a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+        .info-text a:hover {
+            color: var(--primary);
+        }
+        .map-iframe-container {
+            width: 100%;
+            height: 250px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-top: 1rem;
+        }
+        .map-iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .footer-logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        .footer-text {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+        .footer-credit {
+            border-top: 1px solid #334155;
+            padding-top: 2rem;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        .footer-credit a {
+            color: #94a3b8;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-grid, .why-us-grid, .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .hero-img-box img {
+                height: 350px;
+            }
+            .hero {
+                text-align: center;
+                padding: 4rem 0;
+            }
+            .hero-content {
+                max-width: 100%;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+            .why-us-img {
+                order: 2;
+            }
+            .why-us-img img {
+                height: 350px;
+            }
+        }
+        @media (max-width: 600px) {
+            .nav-cta {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+            .hero-actions {
+                flex-direction: column;
+            }
+            .hours-box {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.5 2 6 4.5 6 8c0 3 1.5 5 2.5 6.5.5.7.5 1.5.5 2.3v1.2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-1.2c0-.8 0-1.6.5-2.3 1-1.5 2.5-3.5 2.5-6.5 0-3.5-2.5-6-6-6z"/><path d="M9 22h6"/></svg>
+                SHREE MULTISPECIALITY DENTAL CLINIC
+            </a>
+            <div class="nav-cta">
+                <a href="tel:+917263025220" class="nav-phone">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    +91 72630 25220
+                </a>
+                <a href="#contact" class="btn">Book Appointment</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="rating-badge">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <span>4.9★ (563 Reviews) on Google Maps</span>
+                </div>
+                <h1>Multispeciality Dental Care & Complete Oral Wellness</h1>
+                <p>Experience precision care and high patient comfort in Navi Mumbai. Our clinical specialists are here to restore your dental wellness.</p>
+                <div class="hero-actions">
+                    <a href="tel:+917263025220" class="btn">Call +91 72630 25220</a>
+                    <a href="#contact" class="btn btn-outline">Directions & Hours</a>
+                </div>
+            </div>
+            <div class="hero-img-box">
+                <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1200&q=80" alt="SHREE MULTISPECIALITY DENTAL CLINIC Dental Clinic">
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Welcome to SHREE MULTISPECIALITY DENTAL CLINIC</h2>
+                <p>Providing exceptional, gentle oral healthcare to the Navi Mumbai community</p>
+            </div>
+            <div class="about-content">
+                <p>Shree Multispeciality Dental Clinic provides comprehensive oral healthcare under one roof in Kopar Khairane. We specialize in orthodontics, root canal treatments, pediatric dentistry, and oral surgery. Our team is dedicated to clinical precision, high hygiene standards, and restoring optimal function and beauty to your teeth.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Dental Services</h2>
+                <p>Complete clinical treatments for maintaining and enhancing your beautiful smile</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.5 2 6 4.5 6 8c0 3 1.5 5 2.5 6.5.5.7.5 1.5.5 2.3v1.2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-1.2c0-.8 0-1.6.5-2.3 1-1.5 2.5-3.5 2.5-6.5 0-3.5-2.5-6-6-6z"/><path d="M9 22h6"/></svg></div>
+                    <h3>Preventative Care</h3>
+                    <p>Routine exams, cleanings, and digital X-rays to preserve teeth health and identify issues early.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.5 2 6 4.5 6 8c0 3 1.5 5 2.5 6.5.5.7.5 1.5.5 2.3v1.2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-1.2c0-.8 0-1.6.5-2.3 1-1.5 2.5-3.5 2.5-6.5 0-3.5-2.5-6-6-6z"/><path d="M9 22h6"/></svg></div>
+                    <h3>Root Canal Therapy</h3>
+                    <p>Advanced, painless root canals to save infected teeth and eliminate dental pain effectively.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.5 2 6 4.5 6 8c0 3 1.5 5 2.5 6.5.5.7.5 1.5.5 2.3v1.2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-1.2c0-.8 0-1.6.5-2.3 1-1.5 2.5-3.5 2.5-6.5 0-3.5-2.5-6-6-6z"/><path d="M9 22h6"/></svg></div>
+                    <h3>Dental Implants</h3>
+                    <p>Permanent, natural-looking replacement of missing teeth utilizing premium implant systems.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.5 2 6 4.5 6 8c0 3 1.5 5 2.5 6.5.5.7.5 1.5.5 2.3v1.2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-1.2c0-.8 0-1.6.5-2.3 1-1.5 2.5-3.5 2.5-6.5 0-3.5-2.5-6-6-6z"/><path d="M9 22h6"/></svg></div>
+                    <h3>Cosmetic Smile Design</h3>
+                    <p>Transform your smile with porcelain veneers, custom bonding, and alignment corrections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us">
+        <div class="container why-us-grid">
+            <div class="why-us-img">
+                <img src="https://images.unsplash.com/photo-1579684389782-64d84b5e9053?auto=format&fit=crop&w=800&q=80" alt="Why Choose SHREE MULTISPECIALITY DENTAL CLINIC">
+            </div>
+            <div>
+                <h2>Why Patients Choose Us</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">We strive to deliver a modern, comfortable, and reliable dental treatment experience.</p>
+                <ul class="why-list">
+                    <li class="why-item">
+                        <div class="why-item-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="why-item-content">
+                            <h4>Certified Specialists</h4>
+                            <p>Our experienced dental surgeons hold advanced degrees and prioritize clinical excellence.</p>
+                        </div>
+                    </li>
+                    <li class="why-item">
+                        <div class="why-item-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="why-item-content">
+                            <h4>Modern Clinic & Tech</h4>
+                            <p>We use digital radiography, intraoral cameras, and modern sterilization protocols.</p>
+                        </div>
+                    </li>
+                    <li class="why-item">
+                        <div class="why-item-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="why-item-content">
+                            <h4>Emergency Care Available</h4>
+                            <p>Prompt clinical intervention for severe dental pain, fractures, and emergency root canals.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-hours" id="contact">
+        <div class="container contact-grid">
+            <div class="hours-box">
+                <h3><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Clinic Hours</h3>
+                <table class="hours-table">
+                    <tr><td>Monday</td><td>10:00 AM - 8:30 PM</td></tr>
+                    <tr><td>Tuesday</td><td>10:00 AM - 8:30 PM</td></tr>
+                    <tr><td>Wednesday</td><td>10:00 AM - 8:30 PM</td></tr>
+                    <tr><td>Thursday</td><td>10:00 AM - 8:30 PM</td></tr>
+                    <tr><td>Friday</td><td>10:00 AM - 8:30 PM</td></tr>
+                    <tr><td>Saturday</td><td>10:00 AM - 8:30 PM</td></tr>
+                    <tr><td>Sunday</td><td>Closed</td></tr>
+                </table>
+            </div>
+            <div class="contact-info-box">
+                <h2>Get in Touch</h2>
+                <div class="info-item">
+                    <div class="info-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                    <div class="info-text">
+                        <h4>Clinic Address</h4>
+                        <p>Shop No 10, SS 2-A, near Annasaheb Patil Garden, Sector 8, Kopar Khairane, Navi Mumbai, Maharashtra 400709, India</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+                    <div class="info-text">
+                        <h4>Phone Number</h4>
+                        <p><a href="tel:+917263025220">+91 72630 25220</a></p>
+                    </div>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=SHREE%20MULTISPECIALITY%20DENTAL%20CLINIC%20Shop%20No%2010%2C%20SS%202-A%2C%20near%20Annasaheb%20Patil%20Garden%2C%20Sector%208%2C%20Kopar%20Khairane%2C%20Navi%20Mumbai%2C%20Maharashtra%20400709%2C%20India" target="_blank" rel="noopener noreferrer" class="btn">Get Directions on Maps</a>
+                <div class="map-iframe-container">
+                    <iframe src="https://maps.google.com/maps?q=SHREE%20MULTISPECIALITY%20DENTAL%20CLINIC%2C%20Shop%20No%2010%2C%20SS%202-A%2C%20near%20Annasaheb%20Patil%20Garden%2C%20Sector%208%2C%20Kopar%20Khairane%2C%20Navi%20Mumbai%2C%20Maharashtra%20400709%2C%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="#" class="footer-logo">SHREE MULTISPECIALITY DENTAL CLINIC</a>
+            <p class="footer-text">Certified Dental Care Clinic in Mumbai, Maharashtra</p>
+            <div class="footer-credit">
+                <p>&copy; 2026 SHREE MULTISPECIALITY DENTAL CLINIC. All rights reserved.</p>
+                <p style="margin-top: 0.5rem;">Demo by Kevin</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

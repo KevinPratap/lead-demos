@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSTRENGTH UNPLUGGED | Minimalist Strength Nerul</title>
+    <meta name="description" content="Discover SSTRENGTH UNPLUGGED, a premium strength-focused gym at Palm Beach Residency, Nerul. Rating: 5.0★. Expert strength coaching.">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #16a34a;
+            --bg-dark: #121212;
+            --panel-dark: #1a1a1a;
+            --text-light: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border: #2d2d2d;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-light);
+            background: var(--bg-dark);
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .icon-svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        /* Header */
+        header {
+            background: var(--bg-dark);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .logo span {
+            color: var(--primary);
+        }
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .nav-phone {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-phone:hover {
+            color: var(--primary);
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.6rem;
+            font-weight: 600;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        
+        /* Strength Hero */
+        .hero {
+            padding: 7rem 0;
+            background: radial-gradient(circle at bottom left, #1b2e1e 0%, var(--bg-dark) 70%);
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        .rating-badge .icon-svg {
+            fill: var(--primary);
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.05;
+            margin-bottom: 1.5rem;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--text-light);
+            border: 1.5px solid var(--text-light);
+        }
+        .btn-outline:hover {
+            background: var(--text-light);
+            color: black;
+        }
+        .hero-img img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .about-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* Services Strength Grid */
+        .services {
+            padding: 6rem 0;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: var(--panel-dark);
+            padding: 2.5rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+        }
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+        }
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Why SSTRENGTH */
+        .why-us {
+            padding: 6rem 0;
+            background: var(--panel-dark);
+            border-top: 1px solid var(--border);
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .why-img img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        .why-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .why-list {
+            list-style: none;
+        }
+        .why-item {
+            margin-bottom: 1.5rem;
+        }
+        .why-item h4 {
+            color: var(--primary);
+            font-size: 1.15rem;
+            margin-bottom: 0.25rem;
+        }
+        .why-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Hours & Contact */
+        .contact-hours {
+            padding: 6rem 0;
+            border-top: 1px solid var(--border);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        .hours-box {
+            background: var(--panel-dark);
+            padding: 3rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        .hours-table td {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+        .hours-table tr:last-child td {
+            border-bottom: none;
+        }
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+        .contact-box h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        .details-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .details-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+        .details-item p {
+            font-size: 1.05rem;
+        }
+        .details-item a {
+            color: white;
+            text-decoration: underline;
+        }
+        .details-item a:hover {
+            color: var(--primary);
+        }
+        .map-box {
+            height: 250px;
+            border: 1px solid var(--border);
+            margin-top: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .map-box iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: grayscale(1) invert(0.9);
+        }
+
+        /* Footer */
+        footer {
+            background: #000000;
+            border-top: 1px solid var(--border);
+            padding: 4rem 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+        .footer-logo span {
+            color: var(--primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-grid, .why-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.75rem;
+            }
+            .hero {
+                text-align: center;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+        }
+        @media (max-width: 600px) {
+            .nav-cta {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+            .hero-actions {
+                flex-direction: column;
+            }
+            .hours-box {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">SSTRENGTH <span>UNPLUGGED</span></a>
+            <div class="nav-cta">
+                <a href="tel:+917039251338" class="nav-phone">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    +91 70392 51338
+                </a>
+                <a href="#contact" class="btn">REQUEST A COACH</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="rating-badge">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <span>5.0★ (132 Reviews) | Strength Focused</span>
+                </div>
+                <h1>RAW POWER. UNLEASHED STRENGTH.</h1>
+                <p>Welcome to SSTRENGTH UNPLUGGED, Nerul's premier coaching and barbell club. Located at Palm Beach Residency, we specialize in powerlifting, athletic development, and functional muscle gain.</p>
+                <div class="hero-actions">
+                    <a href="tel:+917039251338" class="btn">Call +91 70392 51338</a>
+                    <a href="#contact" class="btn btn-outline">Directions & Hours</a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80" alt="Deadlift weights lifting">
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>THE BARBELL CLUB</h2>
+                <p>SSTRENGTH UNPLUGGED is a minimalist strength conditioning center in Nerul, Navi Mumbai. We build high-performance athletes using scientific training principles, barbells, and structural weight lifting. Our facility provides certified strength coaching, customized lifting programs, and a dedicated environment for physical improvement.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>STRENGTH DOMAINS</h2>
+                <p style="color: var(--text-muted);">Scientific lifting methods for physical development</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Athletic Performance</h3>
+                    <p>Power development, plyometric force, and sprint conditioning for competitive athletes.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Barbell Club Coaching</h3>
+                    <p>Professional instruction in squat, bench press, deadlift, and overhead press mechanics.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Body Composition</h3>
+                    <p>Targeted hypertrophy programs, conditioning circuits, and science-backed nutritional guides.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Injury Risk Reduction</h3>
+                    <p>Postural screen assessments, movement patterns corrective steps, and mobility exercises.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us">
+        <div class="container why-grid">
+            <div class="why-content">
+                <h2>BUILT ON STRUCTURE</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">We prioritize technique, safety, and consistent loading patterns.</p>
+                <ul class="why-list">
+                    <li class="why-item">
+                        <h4>Technique-First Coaching</h4>
+                        <p>We assess every lift to ensure correct movement patterns and long-term joint health.</p>
+                    </li>
+                    <li class="why-item">
+                        <h4>Premium Equipment</h4>
+                        <p>Standard Olympic bars, bumper plates, cast iron weights, and solid wood platforms.</p>
+                    </li>
+                    <li class="why-item">
+                        <h4>Supportive Community</h4>
+                        <p>A focused, ego-free lifting culture that drives daily improvements.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="why-img">
+                <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Lifting weights in clean gym">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-hours" id="contact">
+        <div class="container contact-grid">
+            <div class="hours-box">
+                <h3>SSTRENGTH SCHEDULE</h3>
+                <table class="hours-table">
+                    <tr><td>Monday</td><td>06:00 AM - 10:00 PM</td></tr>
+                    <tr><td>Tuesday</td><td>06:00 AM - 10:00 PM</td></tr>
+                    <tr><td>Wednesday</td><td>06:00 AM - 10:00 PM</td></tr>
+                    <tr><td>Thursday</td><td>06:00 AM - 10:00 PM</td></tr>
+                    <tr><td>Friday</td><td>06:00 AM - 10:00 PM</td></tr>
+                    <tr><td>Saturday</td><td>06:00 AM - 08:00 PM</td></tr>
+                    <tr><td>Sunday</td><td>Closed</td></tr>
+                </table>
+            </div>
+            <div class="contact-box">
+                <h2>THE CLUB</h2>
+                <div class="details-list">
+                    <div class="details-item">
+                        <h4>CLUB ADDRESS</h4>
+                        <p>Shop no- 12, First Floor, Palm Beach Residency { Wadhwa society Sector 4, Nerul, West, Sarsole, Navi Mumbai, Maharashtra 400706, India</p>
+                    </div>
+                    <div class="details-item">
+                        <h4>DIAL DECK</h4>
+                        <p><a href="tel:+917039251338">+91 70392 51338</a></p>
+                    </div>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=SSTRENGTH%20UNPLUGGED%20Shop%20no-%2012%2C%20First%20Floor%2C%20Palm%20Beach%20Residency%20%7B%20Wadhwa%20society%20Sector%204%2C%20Nerul%2C%20West%2C%20Sarsole%2C%20Navi%20Mumbai%2C%20Maharashtra%20400706%2C%20India" target="_blank" rel="noopener noreferrer" class="btn">GET DIRECTIONS</a>
+                <div class="map-box">
+                    <iframe src="https://maps.google.com/maps?q=SSTRENGTH%20UNPLUGGED%2C%20Shop%20no-%2012%2C%20First%20Floor%2C%20Palm%20Beach%20Residency%20%7B%20Wadhwa%20society%20Sector%204%2C%20Nerul%2C%20West%2C%20Sarsole%2C%20Navi%20Mumbai%2C%20Maharashtra%20400706%2C%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="#" class="footer-logo">SSTRENGTH <span>UNPLUGGED</span></a>
+            <p>&copy; 2026 SSTRENGTH UNPLUGGED Nerul. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; color: #444444;">Demo by Kevin</p>
+        </div>
+    </footer>
+
+</body>
+</html>

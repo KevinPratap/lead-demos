@@ -3,85 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Physio-Fit | Dr. Tanvi Y. Shah | Premium Physiotherapy Vile Parle West, Mumbai</title>
-  <meta name="description" content="Physio-Fit by Dr. Tanvi Yash Shah (BPT, Certified Cupping, Dry Needling & Aquatic Therapist). Dedicated clinical physiotherapy & active joint rehabilitation in Vile Parle West, Mumbai. 5.0 rating on Google based on patient reviews.">
-  
-  <!-- Font Imports: Prata (Premium Serif) & Urbanist (Geometric Sans-Serif) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prata&family=Urbanist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+  <title>Physio-Fit by Dr. Tanvi Y. Shah</title>
   <style>
-    /* CSS Variables for Theming & 8px Spatial Grid */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
     :root {
-      --primary: #0b2e22;       /* Luxury Dark Slate Green */
-      --primary-light: #164a37; /* Medium Forest Green */
-      --accent: #2d6a4f;        /* Deep Mint Green */
-      --accent-light: #e8f5e9;  /* Light Sage Accent */
-      --accent-bg: #f0f7f4;     /* Sage Soft Backdrop */
-      --bg-dark: #071f16;       /* Near Black Green */
-      --bg-light: #f9fbf9;      /* Warm Off-White */
-      --white: #ffffff;
-      --text-dark: #0b1a14;
-      --text-muted: #4e655d;
-      --border: rgba(11, 46, 34, 0.06);
-      --border-focus: rgba(45, 106, 79, 0.3);
-      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      
-      /* Spacing Scale (8px Grid) */
-      --sp-xs: 8px;
-      --sp-sm: 16px;
-      --sp-md: 24px;
-      --sp-lg: 32px;
-      --sp-xl: 48px;
-      --sp-2xl: 64px;
-      --sp-3xl: 96px;
-      
-      /* Box Shadows */
-      --shadow-sm: 0 4px 12px rgba(11, 46, 34, 0.03);
-      --shadow-md: 0 12px 36px rgba(11, 46, 34, 0.05);
-      --shadow-lg: 0 20px 48px rgba(11, 46, 34, 0.08);
+      --accent: #2563eb;
+      --accent-light: #e9effd;
+      --accent-dark: #1945a4;
+      --bg: #fafafa;
+      --text: #111111;
+      --text-light: #666666;
     }
 
-    /* Reset & Base Styles */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: 'Urbanist', sans-serif;
-      background-color: var(--white);
-      color: var(--text-dark);
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    h1, h2, h3, h4, .font-serif {
-      font-family: 'Prata', serif;
-      font-weight: 400;
-      color: var(--primary);
-    }
-
-    .italic {
-      font-style: italic;
-    }
-
-    /* Sticky Navbar Header */
     .navbar {
-      padding: var(--sp-sm) var(--sp-md);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background-color: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      transition: var(--transition);
+      padding: 2.5rem 2rem;
+      width: 100%;
     }
 
     .nav-container {
@@ -92,1712 +44,456 @@
       align-items: center;
     }
 
-    .logo-container {
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-      color: var(--primary);
-    }
-
-    .logo-title {
-      font-family: 'Prata', serif;
-      font-size: 1.5rem;
-      line-height: 1.1;
-    }
-
-    .logo-subtitle {
-      font-family: 'Urbanist', sans-serif;
-      font-size: 0.7rem;
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--accent);
-      font-weight: 600;
-      margin-top: 2px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: var(--sp-md);
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: var(--transition);
+      color: var(--text);
     }
 
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-
-    .nav-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--sp-xs);
-      padding: 10px 24px;
-      background-color: var(--primary);
-      color: var(--white);
-      text-decoration: none;
-      border-radius: 100px;
+    .nav-phone {
       font-size: 0.9rem;
-      font-weight: 600;
-      transition: var(--transition);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      color: var(--text-light);
+      transition: color 0.3s ease;
     }
 
-    .nav-btn:hover {
-      background-color: var(--primary-light);
-      transform: translateY(-2px);
+    .nav-phone:hover {
+      color: var(--accent);
     }
 
-    .nav-btn svg {
-      width: 14px;
-      height: 14px;
-      stroke-width: 2.5;
-    }
-
-    /* Hero Section */
     .hero {
-      background: radial-gradient(circle at 80% 20%, var(--accent-bg) 0%, rgba(255, 255, 255, 1) 70%);
-      padding: var(--sp-3xl) var(--sp-md);
-      border-bottom: 1px solid var(--border);
-      overflow: hidden;
-    }
-
-    .hero-container {
-      max-width: 1200px;
+      padding: 6rem 2rem 5rem 2rem;
+      text-align: center;
+      max-width: 900px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: var(--sp-xl);
-      align-items: center;
     }
 
-    .hero-content {
-      display: flex;
-      flex-direction: column;
-      gap: var(--sp-md);
-    }
-
-    /* Premium Overlapping Avatar Rating Badge */
-    .rating-capsule {
+    .rating-badge {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      background-color: var(--white);
-      border: 1px solid var(--border);
-      padding: 6px 16px 6px 8px;
+      gap: 0.5rem;
+      padding: 0.4rem 1.2rem;
+      border: 1px solid var(--accent-light);
       border-radius: 100px;
-      align-self: flex-start;
-      box-shadow: var(--shadow-sm);
+      font-size: 0.8rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      color: var(--text-light);
+      margin-bottom: 2.5rem;
+      background-color: rgba(255, 255, 255, 0.02);
     }
 
-    .avatar-stack {
-      display: flex;
-      align-items: center;
+    .rating-val {
+      font-weight: 500;
+      color: var(--accent);
     }
 
-    .avatar-stack img {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--white);
-      margin-right: -8px;
+    .rating-divider {
+      opacity: 0.4;
     }
 
-    .avatar-stack img:last-child {
-      margin-right: 0;
+    .reviews-count {
+      font-weight: 300;
     }
 
-    .rating-info {
+    .hero-label {
+      display: block;
       font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-dark);
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .rating-info svg {
-      color: #b29d6c; /* Rich Premium Gold */
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
     }
 
     .hero-title {
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-      line-height: 1.12;
-      color: var(--primary);
-    }
-
-    .hero-desc {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      font-weight: 400;
-      line-height: 1.65;
-      max-width: 580px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: var(--sp-sm);
-      margin-top: 8px;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 28px;
-      background-color: var(--primary);
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 100px;
-      font-size: 0.95rem;
-      box-shadow: 0 10px 24px rgba(11, 46, 34, 0.15);
-      transition: var(--transition);
-      border: 1px solid var(--primary);
-    }
-
-    .btn-primary:hover {
-      background-color: var(--primary-light);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(11, 46, 34, 0.2);
-    }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 28px;
-      background-color: var(--white);
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 100px;
-      font-size: 0.95rem;
-      border: 1px solid rgba(11, 46, 34, 0.15);
-      transition: var(--transition);
-    }
-
-    .btn-secondary:hover {
-      background-color: var(--bg-light);
-      border-color: var(--primary);
-      transform: translateY(-2px);
-    }
-
-    /* Trust Stats list */
-    .hero-stats {
-      display: flex;
-      gap: var(--sp-lg);
-      margin-top: var(--sp-sm);
-      border-top: 1px solid var(--border);
-      padding-top: var(--sp-md);
-    }
-
-    .stat-item {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .stat-number {
-      font-family: 'Prata', serif;
-      font-size: 1.8rem;
-      color: var(--primary);
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
       line-height: 1.2;
+      font-weight: 200;
+      margin-bottom: 2rem;
+      color: var(--text);
+      letter-spacing: -0.01em;
     }
 
-    .stat-label {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      font-weight: 600;
-      margin-top: 2px;
+    .hero-text {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      font-weight: 200;
+      max-width: 680px;
+      margin: 0 auto 4rem auto;
+      color: var(--text-light);
+      line-height: 1.75;
     }
 
-    /* Hero Right Visual Column with Floating Cards */
-    .hero-visual {
-      position: relative;
+    .stats-line {
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    .hero-img-wrapper {
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      width: 100%;
-      aspect-ratio: 0.85;
-      border: 1px solid rgba(11, 46, 34, 0.03);
-    }
-
-    .hero-img-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-    }
-
-    .hero-img-wrapper:hover img {
-      transform: scale(1.03);
-    }
-
-    /* Elegant Floating Cards */
-    .floater {
-      position: absolute;
-      background-color: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      padding: var(--sp-sm) var(--sp-md);
-      border-radius: 16px;
-      box-shadow: var(--shadow-md);
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      transition: var(--transition);
-      z-index: 5;
-    }
-
-    .floater:hover {
-      transform: translateY(-4px);
-      background-color: var(--white);
-    }
-
-    .floater-1 {
-      top: 32px;
-      left: -20px;
-    }
-
-    .floater-2 {
-      bottom: 40px;
-      right: -20px;
-    }
-
-    .floater-title {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--primary);
-    }
-
-    .floater-subtitle {
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .floater-subtitle svg {
-      width: 12px;
-      height: 12px;
-      stroke-width: 3;
-      color: var(--accent);
-    }
-
-    /* Section Core Styles */
-    .section {
-      padding: var(--sp-3xl) var(--sp-md);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .section.bg-light {
-      background-color: var(--bg-light);
-    }
-
-    .section-container {
-      max-width: 1200px;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--text-light);
+      letter-spacing: 0.08em;
+      border-top: 1px solid var(--accent-light);
+      border-bottom: 1px solid var(--accent-light);
+      padding: 1.2rem 0;
+      max-width: 800px;
       margin: 0 auto;
-    }
-
-    .section-header {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto var(--sp-2xl) auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--sp-xs);
-    }
-
-    .section-label {
-      font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 0.2em;
+    }
+
+    .stats-line .bullet {
       color: var(--accent);
-      font-weight: 700;
+      opacity: 0.5;
+    }
+
+    .services {
+      padding: 8rem 2rem;
+      background-color: var(--bg);
+      text-align: center;
+    }
+
+    .services-container {
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .section-title {
-      font-size: 2.5rem;
-      color: var(--primary);
-      line-height: 1.2;
+      font-size: 1.8rem;
+      font-weight: 200;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 5rem;
+      color: var(--text);
     }
 
-    .section-desc {
-      color: var(--text-muted);
-      font-size: 1.1rem;
-      font-weight: 400;
-      margin-top: var(--sp-xs);
-    }
-
-    /* About Doctor Section */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: var(--sp-xl);
+    .services-content {
+      display: flex;
+      flex-direction: column;
       align-items: center;
-    }
-
-    .about-content {
-      display: flex;
-      flex-direction: column;
-      gap: var(--sp-sm);
-    }
-
-    .about-content p {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-
-    .cred-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: var(--sp-xs);
-    }
-
-    .cred-capsule {
-      background-color: var(--accent-bg);
-      color: var(--primary-light);
-      padding: 8px 16px;
-      border-radius: 100px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      border: 1px solid rgba(45, 106, 79, 0.08);
-      transition: var(--transition);
-    }
-
-    .cred-capsule:hover {
-      background-color: var(--white);
-      border-color: var(--accent);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .about-visual {
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-      aspect-ratio: 0.9;
-      border: 1px solid var(--border);
-    }
-
-    .about-visual img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
     }
 
-    /* Services Grid Section */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--sp-md);
-    }
-
-    .service-card {
-      background-color: var(--white);
-      border-radius: 24px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: var(--transition);
-    }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-lg);
-      border-color: rgba(45, 106, 79, 0.12);
-    }
-
-    .service-body {
-      padding: var(--sp-lg);
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      flex-grow: 1;
-    }
-
-    .service-icon-wrapper {
-      width: 54px;
-      height: 54px;
-      background-color: var(--accent-bg);
-      color: var(--primary);
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 4px;
-      transition: var(--transition);
-    }
-
-    .service-card:hover .service-icon-wrapper {
-      background-color: var(--primary);
-      color: var(--white);
-    }
-
-    .service-body h3 {
-      font-size: 1.35rem;
-      font-family: 'Prata', serif;
-      color: var(--primary);
-    }
-
-    .service-body p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .service-img-wrapper {
-      height: 180px;
-      width: 100%;
-      overflow: hidden;
-      border-top: 1px solid var(--border);
-    }
-
-    .service-img-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: var(--transition);
-    }
-
-    .service-card:hover .service-img-wrapper img {
-      transform: scale(1.05);
-    }
-
-    /* Conditions Bento Grid */
-    .conditions-container {
-      margin-top: var(--sp-2xl);
-      background-color: var(--accent-bg);
-      border-radius: 24px;
-      padding: var(--sp-xl);
-      border: 1px solid rgba(45, 106, 79, 0.1);
-      display: flex;
-      flex-direction: column;
-      gap: var(--sp-md);
-    }
-
-    .conditions-container h4 {
-      font-size: 1.3rem;
-      color: var(--primary);
-      font-family: 'Prata', serif;
-    }
-
-    .conditions-list {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--sp-sm);
+    .services-content ul {
       list-style: none;
+      width: 100%;
+      padding: 0;
     }
 
-    .condition-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    .condition-item svg {
-      color: var(--accent);
-      flex-shrink: 0;
-      width: 16px;
-      height: 16px;
-    }
-
-    /* Booking Section */
-    .booking-section {
-      background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary) 100%);
-      color: var(--white);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .booking-section h2, .booking-section h3 {
-      color: var(--white);
-    }
-
-    .booking-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: var(--sp-2xl);
-      align-items: center;
-    }
-
-    .booking-info {
+    .services-content li,
+    .services-content .service-item,
+    .services-content > div {
+      width: 100%;
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--accent-light);
       display: flex;
       flex-direction: column;
-      gap: var(--sp-md);
-    }
-
-    .booking-info .section-label {
-      color: var(--accent-light);
-    }
-
-    .booking-info p {
-      font-size: 1.1rem;
-      color: rgba(255, 255, 255, 0.75);
-      line-height: 1.65;
-    }
-
-    .info-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin-top: var(--sp-xs);
-    }
-
-    .info-item {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.85);
-    }
-
-    .info-item-icon {
-      width: 24px;
-      height: 24px;
-      background-color: rgba(255, 255, 255, 0.08);
-      border-radius: 50%;
-      display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--accent-light);
-      flex-shrink: 0;
+      transition: all 0.4s ease;
     }
 
-    .info-item-icon svg {
-      width: 14px;
-      height: 14px;
-      stroke-width: 2.5;
+    .services-content li:first-child,
+    .services-content .service-item:first-child,
+    .services-content > div:first-child {
+      border-top: 1px solid var(--accent-light);
     }
 
-    /* Booking Card Form */
-    .booking-card {
-      background-color: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 24px;
-      padding: var(--sp-xl);
-      box-shadow: var(--shadow-lg);
+    .services-content li:hover,
+    .services-content .service-item:hover,
+    .services-content > div:hover {
+      background-color: rgba(255, 255, 255, 0.01);
     }
 
-    .booking-card h3 {
-      font-size: 1.4rem;
-      font-family: 'Prata', serif;
-      margin-bottom: var(--sp-xs);
-    }
-
-    .booking-card p {
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.55);
-      margin-bottom: var(--sp-lg);
-    }
-
-    .booking-form {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .form-group label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: rgba(255, 255, 255, 0.8);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .form-input {
-      font-family: 'Urbanist', sans-serif;
-      font-size: 0.95rem;
-      padding: 12px 16px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 10px;
-      background-color: rgba(255, 255, 255, 0.03);
-      color: var(--white);
-      transition: var(--transition);
-      width: 100%;
-    }
-
-    .form-input:focus {
-      outline: none;
-      border-color: var(--accent-light);
-      background-color: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 0 0 3px rgba(232, 245, 233, 0.15);
-    }
-
-    .form-input::placeholder {
-      color: rgba(255, 255, 255, 0.35);
-    }
-
-    select.form-input option {
-      background-color: var(--primary);
-      color: var(--white);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .form-btn {
-      font-family: 'Urbanist', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--primary);
-      background-color: var(--accent-light);
-      border: none;
-      border-radius: 10px;
-      padding: 14px 24px;
-      cursor: pointer;
-      transition: var(--transition);
-      margin-top: 8px;
-    }
-
-    .form-btn:hover {
-      background-color: var(--white);
-      transform: translateY(-1px);
-      box-shadow: var(--shadow-md);
-    }
-
-    /* 3-Step Journey Timeline */
-    .timeline-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--sp-xl);
-      position: relative;
-    }
-
-    .timeline-card {
-      background-color: var(--white);
-      border-radius: 24px;
-      border: 1px solid var(--border);
-      padding: var(--sp-lg);
-      display: flex;
-      flex-direction: column;
-      gap: var(--sp-sm);
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      transition: var(--transition);
-    }
-
-    .timeline-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
-      border-color: rgba(45, 106, 79, 0.08);
-    }
-
-    .timeline-number {
-      font-family: 'Prata', serif;
-      font-size: 3.5rem;
-      color: var(--accent-light);
-      line-height: 1;
-    }
-
-    .timeline-card h3 {
+    .services-content h3 {
       font-size: 1.3rem;
-      font-family: 'Prata', serif;
-      color: var(--primary);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+      color: var(--text);
     }
 
-    .timeline-card p {
+    .services-content p {
       font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .timeline-img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      margin-top: 4px;
-      display: block;
-    }
-
-    /* Testimonials Section */
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--sp-md);
-    }
-
-    .testimonial-card {
-      background-color: var(--white);
-      border-radius: 24px;
-      padding: var(--sp-lg);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: var(--sp-md);
-      transition: var(--transition);
-    }
-
-    .testimonial-card:hover {
-      box-shadow: var(--shadow-md);
-      border-color: rgba(45, 106, 79, 0.08);
-    }
-
-    .stars-row {
-      display: flex;
-      gap: 2px;
-      color: #b29d6c; /* Rich Gold */
-    }
-
-    .stars-row svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    .testimonial-quote {
-      font-size: 1rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-      font-style: italic;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      border-top: 1px solid var(--border);
-      padding-top: var(--sp-sm);
-    }
-
-    .author-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1px solid var(--border);
-    }
-
-    .author-details {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .author-name {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--text-dark);
-      line-height: 1.2;
-    }
-
-    .author-role {
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: var(--text-muted);
-    }
-
-    /* Hours, Contact & Maps Bento Layout */
-    .bento-grid {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: var(--sp-xl);
-    }
-
-    .contact-bento-box {
-      display: flex;
-      flex-direction: column;
-      gap: var(--sp-md);
-    }
-
-    .bento-card {
-      background-color: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: var(--sp-lg);
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-      gap: var(--sp-sm);
-    }
-
-    .bento-row {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-    }
-
-    .bento-icon-box {
-      width: 38px;
-      height: 38px;
-      background-color: var(--accent-bg);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--primary);
-      flex-shrink: 0;
-    }
-
-    .bento-icon-box svg {
-      width: 18px;
-      height: 18px;
-      stroke-width: 2.2;
-    }
-
-    .bento-text h4 {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 4px;
-    }
-
-    .bento-text p, .bento-text a {
-      font-size: 1rem;
-      color: var(--text-dark);
-      text-decoration: none;
-      line-height: 1.5;
-    }
-
-    .bento-text a {
-      font-weight: 700;
-      color: var(--primary);
-      transition: var(--transition);
-    }
-
-    .bento-text a:hover {
-      color: var(--accent);
-    }
-
-    .timetable {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      width: 100%;
-      margin-top: 4px;
-    }
-
-    .timetable-row {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px dashed rgba(11, 46, 34, 0.08);
-      padding-bottom: 6px;
-      font-size: 0.9rem;
-    }
-
-    .timetable-row:last-child {
-      border: none;
-      padding-bottom: 0;
-    }
-
-    .timetable-label {
-      font-weight: 500;
-      color: var(--text-muted);
-    }
-
-    .timetable-value {
-      font-weight: 700;
-      color: var(--primary);
-    }
-
-    .map-bento-card {
-      border-radius: 28px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-md);
-      min-height: 380px;
-      position: relative;
-    }
-
-    .map-bento-card iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
-
-    /* Minimal Footer */
-    .footer {
-      background-color: var(--primary);
-      color: rgba(255, 255, 255, 0.6);
-      padding: var(--sp-2xl) var(--sp-md);
-      text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.04);
-    }
-
-    .footer-container {
-      max-width: 1200px;
+      font-weight: 300;
+      color: var(--text-light);
+      max-width: 550px;
+      line-height: 1.7;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--sp-md);
     }
 
-    .footer-logo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .gallery-break-section {
+      width: 100%;
+      padding: 0;
+      margin: 4rem 0;
     }
 
-    .footer-logo span.logo-title {
-      font-family: 'Prata', serif;
-      font-size: 1.6rem;
-      color: var(--white);
+    .gallery-heading-container {
+      max-width: 1200px;
+      margin: 0 auto 2.5rem auto;
+      padding: 0 2rem;
+      text-align: center;
     }
 
-    .footer-logo span.logo-subtitle {
-      font-family: 'Urbanist', sans-serif;
-      font-size: 0.75rem;
+    .gallery-heading-label {
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.2em;
-      color: var(--accent-light);
+      color: var(--text-light);
+      font-weight: 300;
     }
 
-    .footer-links {
-      display: flex;
-      gap: var(--sp-md);
+    .image-break {
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+      position: relative;
     }
 
-    .footer-links a {
-      color: rgba(255, 255, 255, 0.7);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: var(--transition);
+    .image-break img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(0.95);
+      transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
     }
 
-    .footer-links a:hover {
-      color: var(--white);
+    .image-break:hover img {
+      transform: scale(1.03);
     }
 
-    .footer-copy {
-      font-size: 0.8rem;
-      color: rgba(255, 255, 255, 0.35);
-      margin-top: var(--sp-xs);
-    }
-
-    /* Form Success State styling */
-    .form-success {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .featured-section {
+      padding: 9rem 2rem;
       text-align: center;
-      padding: var(--sp-lg) var(--sp-sm);
-      animation: fadeIn 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+      background-color: var(--bg);
     }
 
-    .success-icon-box {
-      width: 56px;
-      height: 56px;
-      background-color: var(--accent-light);
-      color: var(--primary);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: var(--sp-sm);
+    .featured-container {
+      max-width: 750px;
+      margin: 0 auto;
     }
 
-    .success-icon-box svg {
-      width: 24px;
-      height: 24px;
-      stroke-width: 3;
+    .featured-title {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 200;
+      line-height: 1.35;
+      margin-bottom: 2rem;
+      color: var(--text);
+      letter-spacing: -0.01em;
     }
 
-    .success-title {
-      font-size: 1.35rem;
-      margin-bottom: 8px;
-      color: var(--white);
+    .featured-text {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 3rem;
     }
 
-    .success-desc {
-      font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.75);
-      line-height: 1.5;
+    .featured-cta {
+      font-size: 0.85rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text);
+      text-decoration: none;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--accent);
+      transition: all 0.3s ease;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
+    .featured-cta:hover {
+      color: var(--accent-dark);
+      border-bottom-color: var(--accent-dark);
+      letter-spacing: 0.23em;
     }
 
-    /* Adaptive Mobile Media Queries */
-    @media (max-width: 992px) {
-      .hero-container {
-        grid-template-columns: 1fr;
-        gap: var(--sp-2xl);
-        text-align: center;
-      }
-      .rating-capsule {
-        align-self: center;
-      }
-      .hero-desc {
-        margin: 0 auto;
-      }
-      .hero-actions {
-        justify-content: center;
-      }
-      .hero-stats {
-        justify-content: center;
-      }
-      .floater-1 {
-        left: 10px;
-      }
-      .floater-2 {
-        right: 10px;
-      }
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: var(--sp-xl);
-      }
-      .about-visual {
-        max-width: 440px;
-        margin: 0 auto;
-        order: 2;
-      }
-      .about-content {
-        order: 1;
-      }
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .conditions-container {
-        grid-column: span 2;
-      }
-      .booking-grid {
-        grid-template-columns: 1fr;
-        gap: var(--sp-xl);
-      }
-      .bento-grid {
-        grid-template-columns: 1fr;
-      }
+    .cta-section {
+      padding: 9rem 2rem;
+      text-align: center;
+      border-top: 1px solid var(--accent-light);
+      background-color: var(--bg);
+    }
+
+    .cta-container {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .cta-title {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 200;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    .cta-text {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text-light);
+      margin-bottom: 3.5rem;
+      line-height: 1.75;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1.1rem 3rem;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: var(--accent);
+      color: var(--bg);
+      border-radius: 100px;
+      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .cta-button:hover {
+      background-color: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .footer {
+      padding: 5rem 2rem;
+      text-align: center;
+      border-top: 1px solid var(--accent-light);
+      background-color: var(--bg);
+    }
+
+    .footer p {
+      font-size: 0.8rem;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      opacity: 0.8;
     }
 
     @media (max-width: 768px) {
       .navbar {
-        padding: var(--sp-sm) var(--sp-md);
-      }
-      .nav-links {
-        display: none; /* Collapses menu links on phone viewports */
+        padding: 1.5rem 1.5rem;
       }
       .hero {
-        padding: var(--sp-2xl) var(--sp-md);
+        padding: 4rem 1.5rem 3.5rem 1.5rem;
       }
-      .services-grid {
-        grid-template-columns: 1fr;
+      .stats-line {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1.5rem 0;
       }
-      .conditions-container {
-        grid-column: span 1;
-        padding: var(--sp-lg);
+      .stats-line .bullet {
+        display: none;
       }
-      .conditions-list {
-        grid-template-columns: 1fr;
+      .services {
+        padding: 5rem 1.5rem;
       }
-      .timeline-grid {
-        grid-template-columns: 1fr;
-        gap: var(--sp-md);
+      .services-content li,
+      .services-content .service-item,
+      .services-content > div {
+        padding: 2.2rem 0;
       }
-      .testimonials-grid {
-        grid-template-columns: 1fr;
-        gap: var(--sp-sm);
+      .gallery-break-section {
+        margin: 2rem 0;
       }
-      .map-bento-card {
-        min-height: 300px;
+      .image-break {
+        height: 45vh;
       }
-    }
-
-    /* Accessibility: Respect Reduced Motion preferences */
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.01s !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01s !important;
-        scroll-behavior: auto !important;
+      .featured-section {
+        padding: 5rem 1.5rem;
       }
-      .btn-primary:hover, .btn-secondary:hover, .service-card:hover, .timeline-card:hover {
-        transform: none !important;
+      .cta-section {
+        padding: 5rem 1.5rem;
       }
-      .hero-img-wrapper:hover img {
-        transform: none !important;
+      .footer {
+        padding: 3.5rem 1.5rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Sticky Full-Width Navigation Header -->
   <header class="navbar">
     <div class="nav-container">
-      <a href="#" class="logo-container" aria-label="Physio-Fit homepage">
-        <span class="logo-title">Physio-Fit</span>
-        <span class="logo-subtitle">Dr. Tanvi Y. Shah</span>
-      </a>
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#process">Journey</a>
-        <a href="#reviews">Testimonials</a>
-        <a href="#contact">Contact</a>
-        <a href="tel:+919082716737" class="nav-btn" aria-label="Call +91 90827 16737">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          <span>Call Now</span>
-        </a>
-      </nav>
+      <a href="#" class="logo">Physio-Fit</a>
+      <a href="tel:+919****6737" class="nav-phone">+91 9****6737</a>
     </div>
   </header>
 
   <main>
-    
-    <!-- Hero Section -->
     <section class="hero">
       <div class="hero-container">
-        
-        <!-- Left Side: Heading, Badges, Stats & Buttons -->
-        <div class="hero-content">
-          <div class="rating-capsule">
-            <div class="avatar-stack">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" alt="Patient avatar Pratik">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150" alt="Patient avatar Jash">
-              <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=150" alt="Patient avatar Utsav">
-            </div>
-            <div class="rating-info">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <span>5.0 Rating (17 Verified Reviews)</span>
-            </div>
-          </div>
-          
-          <h1 class="hero-title">Recover. Rebuild. <span class="italic">Rise Again.</span></h1>
-          <p class="hero-desc">
-            Personalized physiotherapy care designed to restore your strength, mobility, and confidence. Dr. Tanvi Yash Shah (BPT) focuses on biomechanical assessment and active rehabilitation to treat the root cause of your pain.
-          </p>
-          
-          <div class="hero-actions">
-            <a href="#booking" class="btn-primary">
-              <span>Book Appointment</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-            <a href="tel:+919082716737" class="btn-secondary">
-              <span>Call +91 90827 16737</span>
-            </a>
-          </div>
-          
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-number">5+</span>
-              <span class="stat-label">Years Experience</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">1k+</span>
-              <span class="stat-label">Happy Patients</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">100%</span>
-              <span class="stat-label">Active Focus</span>
-            </div>
-          </div>
+        <div class="rating-badge">
+          <span class="rating-val">4.8</span>
+          <span class="rating-divider">/</span>
+          <span class="reviews-count">189 reviews</span>
         </div>
-        
-        <!-- Right Side: High-res Therapy Image with Float Cards -->
-        <div class="hero-visual">
-          <div class="hero-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&q=80&w=800" alt="Orthopedic mobility and active rehabilitation stretching" />
-          </div>
-          
-          <!-- Floater Card 1 -->
-          <div class="floater floater-1">
-            <span class="floater-title">Dr. Tanvi Y. Shah (BPT)</span>
-            <span class="floater-subtitle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              D.Y. Patil College Alumna
-            </span>
-          </div>
-          
-          <!-- Floater Card 2 -->
-          <div class="floater floater-2">
-            <span class="floater-title">Active Joint Mobility</span>
-            <span class="floater-subtitle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Biomechanical Rehab
-            </span>
-          </div>
-        </div>
-        
-      </div>
-    </section>
 
-    <!-- Meet the Doctor Section -->
-    <section class="section" id="about">
-      <div class="section-container">
-        <div class="about-grid">
-          
-          <div class="about-content">
-            <span class="section-label">Meet Dr. Tanvi Shah</span>
-            <h2 class="section-title">Clinical Expertise for a Healthier, <span class="italic">Pain-Free</span> Life</h2>
-            <p>
-              Dr. Tanvi Yash Shah (BPT) is the founder and head therapist at Physio-Fit. She completed her clinical graduation from the prestigious <strong>D.Y. Patil College of Physiotherapy, Mumbai</strong>, and has spent over five years managing complex orthopedic, musculoskeletal, and active sports injuries.
-            </p>
-            <p>
-              Dr. Tanvi's treatment philosophy focuses on patient biomechanical education and manual corrective adjustments over simple passive machines. She holds specialized clinical certifications to provide high-quality targeted therapies.
-            </p>
-            <div class="cred-list">
-              <span class="cred-capsule">BPT (D.Y. Patil, Mumbai)</span>
-              <span class="cred-capsule">Certified Cupping Therapist</span>
-              <span class="cred-capsule">Certified Dry Needling Practitioner</span>
-              <span class="cred-capsule">Certified Aquatic Therapist</span>
-              <span class="cred-capsule">IASTM Soft-Tissue Practitioner</span>
-            </div>
-          </div>
-          
-          <div class="about-visual">
-            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800" alt="Dr. Tanvi Shah's clinic consultation environment" />
-          </div>
-          
+        <span class="hero-label">EXPERT PHYSIOTHERAPY CARE</span>
+        <h1 class="hero-title">Restore Movement, Reclaim Life</h1>
+        <p class="hero-text">Physio-Fit by Dr. Tanvi Y. Shah provides expert physiotherapy services. Rated 4.8 stars from 189 patient reviews — compassionate care, proven results.</p>
+
+        <div class="stats-line">
+          <span>Est. 5+ Years of Care</span>
+          <span class="bullet">•</span>
+          <span>Personalized Treatment Plans</span>
+          <span class="bullet">•</span>
+          <span>Mumbai</span>
         </div>
       </div>
     </section>
 
-    <!-- Physiotherapy Services Section -->
-    <section class="section bg-light" id="services">
-      <div class="section-container">
-        <div class="section-header">
-          <span class="section-label">Our Specializations</span>
-          <h2 class="section-title">Clinical <span class="italic">Physiotherapy</span> Services</h2>
-          <p class="section-desc">Custom assessment-driven treatment programs for acute and chronic conditions.</p>
-        </div>
-        
-        <div class="services-grid">
-          
-          <!-- Card 1: Manual Therapy -->
-          <div class="service-card">
-            <div class="service-body">
-              <div class="service-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v3"></path><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v6"></path><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path><path d="M6 14v-1.5a1.5 1.5 0 0 0-3 0V18a6 6 0 0 0 6 6h4a8 8 0 0 0 8-8v-2a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v.5"></path></svg>
-              </div>
-              <h3>Manual Therapy</h3>
-              <p>Hands-on joint mobilization, deep tissue manipulation, and spinal adjustments to alleviate stiffness and restore fluid movement.</p>
-            </div>
-            <div class="service-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&q=80&w=600" alt="Manual joint alignment adjustments" />
-            </div>
-          </div>
-          
-          <!-- Card 2: Injury Rehab -->
-          <div class="service-card">
-            <div class="service-body">
-              <div class="service-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2"></circle><path d="M14 7h-4L5 11v6"></path><path d="M17 12V9c0-1.1-.9-2-2-2h-3"></path><path d="M8 14v4l3 3"></path><path d="M13 14v3l4 3"></path></svg>
-              </div>
-              <h3>Injury Rehabilitation</h3>
-              <p>Active movement therapy, stretching schemes, and tailored clinical exercise plans for sports and posture injuries.</p>
-            </div>
-            <div class="service-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&q=80&w=600" alt="Targeted therapy exercise stretching" />
-            </div>
-          </div>
-          
-          <!-- Card 3: Needling & Cupping -->
-          <div class="service-card">
-            <div class="service-body">
-              <div class="service-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="18"></line><circle cx="12" cy="18" r="1"></circle><path d="M6 8a6 6 0 0 1 12 0v4H6Z"></path></svg>
-              </div>
-              <h3>Needling & Cupping</h3>
-              <p>Trigger-point dry needling and clinical cupping therapy to relieve deep muscle spasms, tension, and boost circulation.</p>
-            </div>
-            <div class="service-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=600" alt="Clinical dry needling acupuncture" />
-            </div>
-          </div>
-          
-        </div>
-
-        <!-- Bento Box: Conditions Treated List -->
-        <div class="conditions-container">
-          <h4>Common Conditions Treated & Managed</h4>
-          <ul class="conditions-list">
-            <li class="condition-item">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Back Pain, Sciatica & Slip Disc</span>
-            </li>
-            <li class="condition-item">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Neck Pain & Cervical Spondylosis</span>
-            </li>
-            <li class="condition-item">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Frozen Shoulder & Rotator Cuff stiffness</span>
-            </li>
-            <li class="condition-item">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Knee Osteoarthritis & Joint stiffness</span>
-            </li>
-            <li class="condition-item">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Sports ligament tears (ACL/MCL sprains)</span>
-            </li>
-            <li class="condition-item">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Post-Operative Joint Rehabilitation</span>
-            </li>
-          </ul>
-        </div>
-        
-      </div>
-    </section>
-
-    <!-- Booking consultation form section -->
-    <section class="section booking-section" id="booking">
-      <div class="section-container">
-        <div class="booking-grid">
-          
-          <!-- Left: Callback details -->
-          <div class="booking-info">
-            <span class="section-label">Schedule Consultation</span>
-            <h2 class="section-title">Take the First Step to <span class="italic">Active</span> Recovery</h2>
-            <p>Request a clinic consultation or home visit callback. Dr. Tanvi Yash Shah or a clinic representative will contact you directly to confirm your assessment date.</p>
-            
-            <div class="info-list">
-              <div class="info-item">
-                <div class="info-item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                </div>
-                <span>Initial biomechanical posture & movement diagnostic checks.</span>
-              </div>
-              <div class="info-item">
-                <div class="info-item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </div>
-                <span>Personalized therapy schedules matching your comfort level.</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Right: Interactive Callback form card -->
-          <div class="booking-card" id="booking-container">
-            <h3>Book an Appointment</h3>
-            <p>Submit details below and our team will get back to you shortly.</p>
-            
-            <form class="booking-form" id="booking-form" onsubmit="submitAppointment(event)">
-              <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Rahul Sharma" required>
-              </div>
-              
-              <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" class="form-input" placeholder="e.g. rahul@gmail.com" required>
-              </div>
-              
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="phone">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g. +91 98765..." required>
-                </div>
-                <div class="form-group">
-                  <label for="date">Preferred Date</label>
-                  <input type="date" id="date" name="date" class="form-input" required>
-                </div>
-              </div>
-              
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="service">Treatment Focus</label>
-                  <select id="service" name="service" class="form-input" required>
-                    <option value="" disabled selected>Select service</option>
-                    <option value="manual">Manual Therapy</option>
-                    <option value="needling">Dry Needling</option>
-                    <option value="cupping">Cupping Therapy</option>
-                    <option value="rehab">Sports/Injury Rehab</option>
-                    <option value="aquatic">Aquatic Therapy</option>
-                    <option value="home">Home Visit Session</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="message">Symptoms (Optional)</label>
-                  <input type="text" id="message" name="message" class="form-input" placeholder="e.g. Back stiffness">
-                </div>
-              </div>
-              
-              <button type="submit" class="form-btn">Book Appointment</button>
-            </form>
-          </div>
-          
+    <section class="services">
+      <div class="services-container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-content">
+          <div class="service-card"><h3>Sports Rehabilitation</h3><p>Recovery programs for athletes & active individuals recovering from injury</p></div>
+          <div class="service-card"><h3>Joint & Muscle Therapy</h3><p>Targeted treatment for back pain, neck pain, arthritis & chronic conditions</p></div>
+          <div class="service-card"><h3>Post-Surgery Recovery</h3><p>Guided rehabilitation after orthopedic surgeries for optimal recovery</p></div>
+          <div class="service-card"><h3>Geriatric Physiotherapy</h3><p>Specialized care for seniors to improve mobility, balance & quality of life</p></div>
         </div>
       </div>
     </section>
 
-    <!-- 3-Step Journey Timeline Section -->
-    <section class="section" id="process">
-      <div class="section-container">
-        <div class="section-header">
-          <span class="section-label">How We Work</span>
-          <h2 class="section-title">The Recovery <span class="italic">Journey</span></h2>
-          <p class="section-desc">A structured, clinical progression designed to return you to peak physical shape.</p>
-        </div>
-        
-        <div class="timeline-grid">
-          
-          <!-- Step 1 -->
-          <div class="timeline-card">
-            <span class="timeline-number">01</span>
-            <h3>Movement Assessment</h3>
-            <p>Postural analysis and biomechanical diagnostic checks to locate structural stressors.</p>
-            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600" class="timeline-img" alt="Diagnostic biomechanics review" />
-          </div>
-          
-          <!-- Step 2 -->
-          <div class="timeline-card">
-            <span class="timeline-number">02</span>
-            <h3>Targeted Therapy</h3>
-            <p>A customized plan combining certified cupping, dry needling, and clinical manual adjustments.</p>
-            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=600" class="timeline-img" alt="Direct joint mobilization adjustment" />
-          </div>
-          
-          <!-- Step 3 -->
-          <div class="timeline-card">
-            <span class="timeline-number">03</span>
-            <h3>Continuous Support</h3>
-            <p>Home exercises, postural guidance, and movement education to ensure long-term resilience.</p>
-            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=600" class="timeline-img" alt="Stretching recovery fitness coaching" />
-          </div>
-          
+    <section class="gallery-break-section">
+      <div class="gallery-heading-container">
+        <span class="gallery-heading-label">Our Practice</span>
+      </div>
+      <div class="image-break">
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=2000" alt="Modern Physiotherapy Practice" />
+      </div>
+    </section>
+
+    <section class="featured-section">
+      <div class="featured-container">
+        <div class="featured-content">
+          <h2 class="featured-title">First Consultation Assessment</h2>
+          <p class="featured-text">Comprehensive movement assessment and personalized treatment plan. Expert care from Dr. Tanvi Y. Shah with modern techniques.</p>
+          <a href="tel:+919****6737" class="featured-cta">Call to Book</a>
         </div>
       </div>
     </section>
 
-    <!-- Patient Testimonials Section -->
-    <section class="section bg-light" id="reviews">
-      <div class="section-container">
-        <div class="section-header">
-          <span class="section-label">Patient Feedback</span>
-          <h2 class="section-title">Stories of <span class="italic">Recovery</span></h2>
-          <p class="section-desc">Read reviews from real patients who restored their mobility and eliminated pain.</p>
-        </div>
-        
-        <div class="testimonials-grid">
-          
-          <!-- Review 1: Pratik Jani -->
-          <div class="testimonial-card">
-            <div class="stars-row">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            </div>
-            <p class="testimonial-quote">
-              "I struggled with a painful frozen shoulder for months. Dr. Tanvi Shah's manual stretching sessions completely resolved the stiffness twice. Her approach is excellent."
-            </p>
-            <div class="testimonial-author">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" class="author-avatar" alt="Patient Pratik Jani" />
-              <div class="author-details">
-                <span class="author-name">Pratik Jani</span>
-                <span class="author-role">Verified Patient</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Review 2: Jash Shah -->
-          <div class="testimonial-card">
-            <div class="stars-row">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            </div>
-            <p class="testimonial-quote">
-              "An extremely professional doctor who explains spinal mechanics and joint root stresses in great detail. The active exercises completely fixed my back stiffness."
-            </p>
-            <div class="testimonial-author">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150" class="author-avatar" alt="Patient Jash Shah" />
-              <div class="author-details">
-                <span class="author-name">Jash Shah</span>
-                <span class="author-role">Verified Patient</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Review 3: Utsav Banka -->
-          <div class="testimonial-card">
-            <div class="stars-row">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            </div>
-            <p class="testimonial-quote">
-              "Great experience overall! Excellent biomechanical assessment skills. She helped me recover from an ankle sprain and return to active training."
-            </p>
-            <div class="testimonial-author">
-              <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=150" class="author-avatar" alt="Patient Utsav Banka" />
-              <div class="author-details">
-                <span class="author-name">Utsav Banka</span>
-                <span class="author-role">Verified Patient</span>
-              </div>
-            </div>
-          </div>
-          
-        </div>
+    <section class="cta-section">
+      <div class="cta-container">
+        <h2 class="cta-title">Ready to move pain-free?</h2>
+        <p class="cta-text">Call or message today. Consultations available.</p>
+        <a href="tel:+919****6737" class="cta-button">Book Appointment →</a>
       </div>
     </section>
-
-    <!-- Hours, Location & Bento Details -->
-    <section class="section" id="contact">
-      <div class="section-container">
-        <div class="section-header">
-          <span class="section-label">Visit Us</span>
-          <h2 class="section-title">Hours & <span class="italic">Location</span></h2>
-        </div>
-        
-        <div class="bento-grid">
-          
-          <!-- Left Column: Timetable and Contact Cards -->
-          <div class="contact-bento-box">
-            
-            <div class="bento-card">
-              <div class="bento-row">
-                <div class="bento-icon-box">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                </div>
-                <div class="bento-text">
-                  <h4>Clinic Location</h4>
-                  <p>
-                    4, Baptista Hacienda, Old Police Station Road,<br>
-                    Bajiprabhu Deshpande Marg,<br>
-                    Opposite Suburban Diagnostics,<br>
-                    Vile Parle West, Mumbai 400056
-                  </p>
-                </div>
-              </div>
-              
-              <div class="bento-row" style="margin-top: 6px;">
-                <div class="bento-icon-box">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                </div>
-                <div class="bento-text">
-                  <h4>Call / WhatsApp</h4>
-                  <p><a href="tel:+919082716737" aria-label="Call +91 90827 16737">+91 90827 16737</a></p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="bento-card">
-              <div class="bento-row">
-                <div class="bento-icon-box">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                </div>
-                <div class="bento-text" style="width: 100%;">
-                  <h4>Consultation Timings</h4>
-                  <div class="timetable">
-                    <div class="timetable-row">
-                      <span class="timetable-label">In-Clinic Appointments</span>
-                      <span class="timetable-value">12:00 PM – 06:00 PM</span>
-                    </div>
-                    <div class="timetable-row">
-                      <span class="timetable-label">Home Therapy Visits</span>
-                      <span class="timetable-value">01:30 PM – 05:30 PM</span>
-                    </div>
-                    <div class="timetable-row">
-                      <span class="timetable-label">Sundays</span>
-                      <span class="timetable-value" style="color: #c62828;">Closed</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-          
-          <!-- Right Column: Interactive Map Card -->
-          <div class="map-bento-card">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.187315573426!2d72.8416303!3d19.1025198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9cf53f8aad1%3A0x640aed03a3bd68e6!2sPhysio-Fit%20by%20Dr.Tanvi%20Y%20Shah!5e0!3m2!1sen!2sin!4v1781524314152!5m2!1sen!2sin" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Google Map showing clinic coordinates for Physio-Fit by Dr. Tanvi Y. Shah in Vile Parle West, Mumbai">
-            </iframe>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- Minimal Footer -->
   <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <span class="logo-title">Physio-Fit</span>
-        <span class="logo-subtitle">Dr. Tanvi Y. Shah</span>
-      </div>
-      <div class="footer-links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#process">Journey</a>
-        <a href="#reviews">Testimonials</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div>
-        <p class="footer-copy">&copy; 2026 Physio-Fit. All rights reserved.</p>
-        <p class="footer-copy" style="opacity: 0.2;">Designed with precision</p>
-      </div>
-    </div>
+    <p>Built by Kevin</p>
   </footer>
-
-  <script>
-    function submitAppointment(event) {
-      event.preventDefault();
-      
-      const container = document.getElementById('booking-container');
-      const name = document.getElementById('name').value;
-      const phone = document.getElementById('phone').value;
-      
-      container.innerHTML = `
-        <div class="form-success">
-          <div class="success-icon-box">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <h3 class="success-title">Appointment Requested</h3>
-          <p class="success-desc">Thank you, <strong>${name}</strong>. Dr. Tanvi Shah or a clinic assistant will reach out to you shortly at <strong>${phone}</strong> to finalize your appointment details.</p>
-        </div>
-      `;
-    }
-  </script>
 
 </body>
 </html>

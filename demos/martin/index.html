@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin | Beauty Salon CBD Belapur</title>
+    <meta name="description" content="Book your styling session at Martin, a highly-rated (4.8★) beauty and hair salon in CBD Belapur, Navi Mumbai. Precise styling and makeup.">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #b76e5a;
+            --text-dark: #111111;
+            --text-muted: #555555;
+            --bg-light: #f5f5f5;
+            --border: #dddddd;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-dark);
+            background: #ffffff;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .icon-svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        /* Header */
+        header {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        .logo {
+            font-size: 1.6rem;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .nav-phone {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-phone:hover {
+            color: var(--primary);
+        }
+        .btn {
+            display: inline-block;
+            background: var(--text-dark);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .btn:hover {
+            background: var(--primary);
+        }
+        
+        /* Split Hero */
+        .hero {
+            padding: 0;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border);
+        }
+        .hero-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 550px;
+        }
+        .hero-info {
+            padding: 5rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #fafafa;
+        }
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--text-dark);
+            border: 1px solid var(--text-dark);
+        }
+        .btn-outline:hover {
+            background: var(--text-dark);
+            color: white;
+        }
+        .hero-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 450px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 0;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-title h2 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        .about-desc {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* Services Grid */
+        .services {
+            padding: 6rem 0;
+            background: var(--bg-light);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+        .service-icon {
+            width: 3rem;
+            height: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        .service-icon .icon-svg {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Why Martin */
+        .why-us {
+            padding: 6rem 0;
+        }
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .why-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .why-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        .why-item {
+            margin-bottom: 1.5rem;
+        }
+        .why-item h4 {
+            font-size: 1.15rem;
+            margin-bottom: 0.25rem;
+        }
+        .why-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .why-img img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        /* Contact & Hours Split */
+        .contact-hours {
+            padding: 6rem 0;
+            background: var(--bg-light);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        .hours-box {
+            background: white;
+            padding: 3rem;
+            border: 1px solid var(--border);
+        }
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        .hours-table td {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 500;
+        }
+        .contact-box h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        .contact-details p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+        .contact-details a {
+            color: var(--text-dark);
+            text-decoration: underline;
+        }
+        .contact-details a:hover {
+            color: var(--primary);
+        }
+        .map-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-top: 1.5rem;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #111111;
+            color: #999999;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .footer-logo {
+            color: white;
+            font-size: 1.8rem;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+        .footer-credit {
+            margin-top: 2rem;
+            border-top: 1px solid #222222;
+            padding-top: 2rem;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-split, .about-grid, .why-us-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-info {
+                padding: 4rem 1.5rem;
+            }
+            .hero-image-box img {
+                height: 350px;
+            }
+        }
+        @media (max-width: 600px) {
+            .nav-cta {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">MARTIN</a>
+            <div class="nav-cta">
+                <a href="tel:+918440859896" class="nav-phone">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    +91 84408 59896
+                </a>
+                <a href="#contact" class="btn">Book Now</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-split">
+            <div class="hero-info">
+                <div class="rating-badge">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <span>4.8★ (621 Reviews) | Expert Grooming</span>
+                </div>
+                <h1>Bold Styles. Modern Cuts. Martin Salon.</h1>
+                <p>Experience creative hair design, expert colorists, and premium grooming services in CBD Belapur, Navi Mumbai.</p>
+                <div class="hero-actions">
+                    <a href="tel:+918440859896" class="btn">Call Now</a>
+                    <a href="#contact" class="btn btn-outline">Directions</a>
+                </div>
+            </div>
+            <div class="hero-image-box">
+                <img src="https://images.unsplash.com/photo-1605497746444-ac9da5848ba7?auto=format&fit=crop&w=800&q=80" alt="Barber styling haircut details">
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container about-grid">
+            <div class="about-title">
+                <h2>Tailored Hair Artistry</h2>
+            </div>
+            <div class="about-desc">
+                <p>Welcome to Martin, Belapur's premier hair and beauty destination. Our salon specializes in tailored grooming and hair styling that highlights your individual personality. Located in Sector 11, we have built a reputation for styling precision, luxury comfort, and using the finest global salon care lines.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p style="color: var(--text-muted);">Crafting contemporary looks with clinical expertise</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+                    <h3>Precision Cuts</h3>
+                    <p>Gentlemen's fades, ladies' layered cuts, and children's styling suited to your style.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+                    <h3>Global Coloring</h3>
+                    <p>Vibrant hair coloring, high-fidelity balayage, ombre, and restorative color-locking treatments.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+                    <h3>Luxury Grooming</h3>
+                    <p>Clean beard line detail, mustache styling, face steam massages, and detox therapies.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+                    <h3>Skincare Facials</h3>
+                    <p>Revitalizing treatments, skin polishing, and anti-pollution facials for a refreshed look.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us">
+        <div class="container why-us-grid">
+            <div class="why-content">
+                <h2>The Martin Experience</h2>
+                <p style="color: var(--text-muted);">We are committed to delivering sharp details, comfortable treatments, and standard hygiene practices.</p>
+                <ul class="why-list">
+                    <li class="why-item">
+                        <h4>Expert Barbers & Stylists</h4>
+                        <p>Our barbers and beauty therapists hold industry certifications and keep up with creative trends.</p>
+                    </li>
+                    <li class="why-item">
+                        <h4>Strict Sanitation</h4>
+                        <p>We sanitize all blades, scissors, towels, and stations before every client session.</p>
+                    </li>
+                    <li class="why-item">
+                        <h4>Premium Grooming Lines</h4>
+                        <p>We work with high-quality styling gels, waxes, facial creams, and coloring agents.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="why-img">
+                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="Male hair styling detailing">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-hours" id="contact">
+        <div class="container contact-grid">
+            <div class="hours-box">
+                <h3>Opening Hours</h3>
+                <table class="hours-table">
+                    <tr><td>Monday</td><td>10:00 AM - 9:00 PM</td></tr>
+                    <tr><td>Tuesday</td><td>10:00 AM - 9:00 PM</td></tr>
+                    <tr><td>Wednesday</td><td>10:00 AM - 9:00 PM</td></tr>
+                    <tr><td>Thursday</td><td>10:00 AM - 9:00 PM</td></tr>
+                    <tr><td>Friday</td><td>10:00 AM - 9:00 PM</td></tr>
+                    <tr><td>Saturday</td><td>10:00 AM - 9:00 PM</td></tr>
+                    <tr><td>Sunday</td><td>10:00 AM - 9:00 PM</td></tr>
+                </table>
+            </div>
+            <div class="contact-box">
+                <h2>Location</h2>
+                <div class="contact-details">
+                    <p><strong>Martin Salon Belapur</strong></p>
+                    <p>Shop no 16, Punit Tower, I, Sector 11, CBD Belapur, Navi Mumbai, Maharashtra 400614, India</p>
+                    <p><strong>Phone:</strong> <a href="tel:+918440859896">+91 84408 59896</a></p>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Martin%20Shop%20no%2016%2C%20Punit%20Tower%2C%20I%2C%20Sector%2011%2C%20CBD%20Belapur%2C%20Navi%20Mumbai%2C%20Maharashtra%20400614%2C%20India" target="_blank" rel="noopener noreferrer" class="btn">Get Directions</a>
+                <div class="map-container">
+                    <iframe src="https://maps.google.com/maps?q=Martin%2C%20Shop%20no%2016%2C%20Punit%20Tower%2C%20I%2C%20Sector%2011%2C%20CBD%20Belapur%2C%20Navi%20Mumbai%2C%20Maharashtra%20400614%2C%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="#" class="footer-logo">MARTIN</a>
+            <p>&copy; 2026 Martin Salon Belapur. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; color: #555555;">Demo by Kevin</p>
+        </div>
+    </footer>
+
+</body>
+</html>
