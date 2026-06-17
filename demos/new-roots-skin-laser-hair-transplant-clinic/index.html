@@ -7,611 +7,611 @@
  <meta name="description" content="Book a clinical consultation at New Roots: Skin, Laser & Hair Transplant Clinic, a premier (4.9★) skin, laser, and hair transplant clinic in Vashi, Navi Mumbai.">
  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
  <style>
-  :root {
-   --primary: #be185d;
-   --primary-light: #fdf2f8;
-   --text-dark: #1f2937;
-   --text-muted: #4b5563;
-   --bg-light: #fafaf9;
-   --border: #fbcfe8;
+ :root {
+  --primary: #be185d;
+  --primary-light: #fdf2f8;
+  --text-dark: #1f2937;
+  --text-muted: #4b5563;
+  --bg-light: #fafaf9;
+  --border: #fbcfe8;
+ }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text-dark);
+  background: #ffffff;
+  line-height: 1.6;
+ }
+ h1, h2, h3, h4 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+ }
+ .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+ }
+ .icon-svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  vertical-align: middle;
+ }
+
+ /* Header */
+ header {
+  background: white;
+  border-bottom: 1px solid #f3f4f6;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+ }
+ .nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+ }
+ .logo {
+  font-size: 1.4rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+ }
+ .nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+ }
+ .nav-phone {
+  color: var(--text-dark);
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+ }
+ .nav-phone:hover {
+  color: var(--primary);
+ }
+ .btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem 1.6rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  text-align: center;
+ }
+ .btn:hover {
+  opacity: 0.9;
+ }
+
+ /* Skin Hero */
+ .hero {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--primary-light) 0%, #ffffff 100%);
+ }
+ .hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+ }
+ .rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #fce7f3;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+ }
+ .rating-badge .icon-svg {
+  fill: var(--primary);
+ }
+ .hero h1 {
+  font-size: 3.25rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+ }
+ .hero p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+ }
+ .hero-actions {
+  display: flex;
+  gap: 1rem;
+ }
+ .btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+ }
+ .btn-outline:hover {
+  background: var(--primary-light);
+ }
+ .hero-img img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+ }
+
+ /* About Section */
+ .about {
+  padding: 6rem 0;
+  background: var(--bg-light);
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+ }
+ .about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+ }
+ .about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+ }
+ .about-content p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+ }
+
+ /* Services Skin Grid */
+ .services {
+  padding: 6rem 0;
+ }
+ .section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+ }
+ .section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+ }
+ .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+ }
+ .service-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+ }
+ .service-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+ }
+ .service-icon {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+ }
+ .service-icon .icon-svg {
+  width: 2.5rem;
+  height: 2.5rem;
+ }
+ .service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+ }
+ .service-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+ }
+
+ /* CSS Only Before After Gallery */
+ .gallery-section {
+  padding: 6rem 0;
+  background: var(--bg-light);
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+ }
+ .gallery-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+ }
+ .gallery-wrap h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+ }
+ .gallery-toggle-box {
+  margin-bottom: 2rem;
+  display: inline-flex;
+  gap: 0.5rem;
+  background: #e5e7eb;
+  padding: 0.25rem;
+  border-radius: 4px;
+ }
+ .gallery-toggle-box label {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+ }
+ .tab-content {
+  display: none;
+  border: 4px solid white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 400px;
+ }
+ .tab-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ }
+ /* Hide radio buttons */
+ #tab-before:checked ~ .gallery-toggle-box label[for="tab-before"]
+ #tab-after:checked ~ .gallery-toggle-box label[for="tab-after"] {
+  background: var(--primary);
+  color: white;
+ }
+ #tab-before:checked ~ #content-before
+ #tab-after:checked ~ #content-after {
+  display: block;
+ }
+ .radio-hidden {
+  display: none;
+ }
+
+ /* Why Choose Skin Clinic */
+ .why-us {
+  padding: 6rem 0;
+ }
+ .why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+ }
+ .why-img img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+ }
+ .why-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+ }
+ .why-list {
+  list-style: none;
+ }
+ .why-item {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+ }
+ .why-check {
+  color: var(--primary);
+  background: var(--primary-light);
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+ }
+ .why-txt h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+ }
+ .why-txt p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+ }
+
+ /* Hours & Contact */
+ .contact-hours {
+  padding: 6rem 0;
+  background: var(--primary-light);
+ }
+ .contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+ }
+ .hours-box {
+  background: white;
+  padding: 3rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+ }
+ .hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+ }
+ .hours-table td {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 0.95rem;
+ }
+ .hours-table tr:last-child td {
+  border-bottom: none;
+ }
+ .hours-table td:last-child {
+  text-align: right;
+  font-weight: 600;
+ }
+ .contact-box h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+ }
+ .details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+ }
+ .details-item h4 {
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+ }
+ .details-item p {
+  font-size: 1.05rem;
+ }
+ .details-item a {
+  color: var(--text-dark);
+  text-decoration: underline;
+ }
+ .details-item a:hover {
+  color: var(--primary);
+ }
+ .map-box {
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  margin-top: 1.5rem;
+ }
+ .map-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+ }
+
+ /* Footer */
+ footer {
+  background: #18181b;
+  color: #d4d4d8;
+  padding: 4rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+ }
+ .footer-logo {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+ }
+ .footer-credit {
+  margin-top: 2rem;
+  border-top: 1px solid #27272a;
+  padding-top: 2rem;
+ }
+
+ /* Responsive */
+ @media (max-width: 992px) {
+  .hero-grid, .why-grid, .contact-grid {
+  grid-template-columns: 1fr;
   }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-   font-family: 'Plus Jakarta Sans', sans-serif;
-   color: var(--text-dark);
-   background: #ffffff;
-   line-height: 1.6;
-  }
-  h1, h2, h3, h4 {
-   font-family: 'DM Serif Display', serif;
-   font-weight: 400;
-  }
-  .container {
-   max-width: 1100px;
-   margin: 0 auto;
-   padding: 0 1.5rem;
-  }
-  .icon-svg {
-   width: 1.25rem;
-   height: 1.25rem;
-   display: inline-block;
-   vertical-align: middle;
-  }
-  
-  /* Header */
-  header {
-   background: white;
-   border-bottom: 1px solid #f3f4f6;
-   position: sticky;
-   top: 0;
-   z-index: 100;
-  }
-  .nav-wrapper {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   height: 80px;
-  }
-  .logo {
-   font-size: 1.4rem;
-   color: var(--primary);
-   text-decoration: none;
-   font-weight: 700;
-  }
-  .nav-cta {
-   display: flex;
-   align-items: center;
-   gap: 2rem;
-  }
-  .nav-phone {
-   color: var(--text-dark);
-   font-weight: 600;
-   text-decoration: none;
-   display: flex;
-   align-items: center;
-   gap: 0.5rem;
-  }
-  .nav-phone:hover {
-   color: var(--primary);
-  }
-  .btn {
-   display: inline-block;
-   background: var(--primary);
-   color: white;
-   padding: 0.75rem 1.6rem;
-   font-weight: 600;
-   border-radius: 4px;
-   text-decoration: none;
-   transition: all 0.2s ease;
-   text-align: center;
-  }
-  .btn:hover {
-   opacity: 0.9;
-  }
-  
-  /* Skin Hero */
   .hero {
-   padding: 6rem 0;
-   background: linear-gradient(135deg, var(--primary-light) 0%, #ffffff 100%);
-  }
-  .hero-grid {
-   display: grid;
-   grid-template-columns: 1.1fr 0.9fr;
-   gap: 4rem;
-   align-items: center;
-  }
-  .rating-badge {
-   display: inline-flex;
-   align-items: center;
-   gap: 0.4rem;
-   background: #fce7f3;
-   color: var(--primary);
-   font-size: 0.85rem;
-   font-weight: 700;
-   padding: 0.4rem 0.8rem;
-   border-radius: 4px;
-   margin-bottom: 1.5rem;
-  }
-  .rating-badge .icon-svg {
-   fill: var(--primary);
-  }
-  .hero h1 {
-   font-size: 3.25rem;
-   line-height: 1.1;
-   margin-bottom: 1.5rem;
-  }
-  .hero p {
-   font-size: 1.1rem;
-   color: var(--text-muted);
-   margin-bottom: 2rem;
+  text-align: center;
   }
   .hero-actions {
-   display: flex;
-   gap: 1rem;
+  justify-content: center;
   }
-  .btn-outline {
-   background: transparent;
-   color: var(--primary);
-   border: 2px solid var(--primary);
+  .why-img {
+  order: 2;
   }
-  .btn-outline:hover {
-   background: var(--primary-light);
+ }
+ @media (max-width: 600px) {
+  .nav-cta {
+  display: none;
   }
-  .hero-img img {
-   width: 100%;
-   height: 420px;
-   object-fit: cover;
-   border-radius: 8px;
+  .hero h1 {
+  font-size: 2.25rem;
   }
-
-  /* About Section */
-  .about {
-   padding: 6rem 0;
-   background: var(--bg-light);
-   border-top: 1px solid #e5e7eb;
-   border-bottom: 1px solid #e5e7eb;
-  }
-  .about-content {
-   max-width: 800px;
-   margin: 0 auto;
-   text-align: center;
-  }
-  .about-content h2 {
-   font-size: 2.5rem;
-   margin-bottom: 1.5rem;
-  }
-  .about-content p {
-   font-size: 1.1rem;
-   color: var(--text-muted);
-   line-height: 1.8;
-  }
-
-  /* Services Skin Grid */
-  .services {
-   padding: 6rem 0;
-  }
-  .section-header {
-   text-align: center;
-   margin-bottom: 4rem;
-  }
-  .section-header h2 {
-   font-size: 2.5rem;
-   margin-bottom: 0.5rem;
-  }
-  .services-grid {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-   gap: 2rem;
-  }
-  .service-card {
-   background: white;
-   padding: 2.5rem;
-   border-radius: 6px;
-   border: 1px solid #e5e7eb;
-   transition: all 0.2s ease;
-  }
-  .service-card:hover {
-   border-color: var(--primary);
-   transform: translateY(-3px);
-  }
-  .service-icon {
-   color: var(--primary);
-   margin-bottom: 1.5rem;
-  }
-  .service-icon .icon-svg {
-   width: 2.5rem;
-   height: 2.5rem;
-  }
-  .service-card h3 {
-   font-size: 1.25rem;
-   margin-bottom: 0.75rem;
-  }
-  .service-card p {
-   color: var(--text-muted);
-   font-size: 0.9rem;
-  }
-
-  /* CSS Only Before After Gallery */
-  .gallery-section {
-   padding: 6rem 0;
-   background: var(--bg-light);
-   border-top: 1px solid #e5e7eb;
-   border-bottom: 1px solid #e5e7eb;
-  }
-  .gallery-wrap {
-   max-width: 700px;
-   margin: 0 auto;
-   text-align: center;
-  }
-  .gallery-wrap h2 {
-   font-size: 2.5rem;
-   margin-bottom: 1rem;
-  }
-  .gallery-toggle-box {
-   margin-bottom: 2rem;
-   display: inline-flex;
-   gap: 0.5rem;
-   background: #e5e7eb;
-   padding: 0.25rem;
-   border-radius: 4px;
-  }
-  .gallery-toggle-box label {
-   padding: 0.5rem 1.5rem;
-   font-size: 0.9rem;
-   font-weight: 600;
-   cursor: pointer;
-   border-radius: 4px;
-   transition: all 0.2s ease;
-  }
-  .tab-content {
-   display: none;
-   border: 4px solid white;
-   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-   border-radius: 8px;
-   overflow: hidden;
-   height: 400px;
-  }
-  .tab-content img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-  }
-  /* Hide radio buttons */
-  #tab-before:checked ~ .gallery-toggle-box label[for="tab-before"]
-  #tab-after:checked ~ .gallery-toggle-box label[for="tab-after"] {
-   background: var(--primary);
-   color: white;
-  }
-  #tab-before:checked ~ #content-before
-  #tab-after:checked ~ #content-after {
-   display: block;
-  }
-  .radio-hidden {
-   display: none;
-  }
-
-  /* Why Choose Skin Clinic */
-  .why-us {
-   padding: 6rem 0;
-  }
-  .why-grid {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   gap: 4rem;
-   align-items: center;
-  }
-  .why-img img {
-   width: 100%;
-   height: 450px;
-   object-fit: cover;
-   border-radius: 8px;
-  }
-  .why-content h2 {
-   font-size: 2.5rem;
-   margin-bottom: 1.5rem;
-  }
-  .why-list {
-   list-style: none;
-  }
-  .why-item {
-   margin-bottom: 1.5rem;
-   display: flex;
-   gap: 1rem;
-  }
-  .why-check {
-   color: var(--primary);
-   background: var(--primary-light);
-   width: 2.2rem;
-   height: 2.2rem;
-   border-radius: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-shrink: 0;
-  }
-  .why-txt h4 {
-   font-size: 1.15rem;
-   margin-bottom: 0.25rem;
-  }
-  .why-txt p {
-   color: var(--text-muted);
-   font-size: 0.9rem;
-  }
-
-  /* Hours & Contact */
-  .contact-hours {
-   padding: 6rem 0;
-   background: var(--primary-light);
-  }
-  .contact-grid {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   gap: 4rem;
+  .hero-actions {
+  flex-direction: column;
   }
   .hours-box {
-   background: white;
-   padding: 3rem;
-   border-radius: 8px;
-   border: 1px solid var(--border);
+  padding: 1.5rem;
   }
-  .hours-table {
-   width: 100%;
-   border-collapse: collapse;
-   margin-top: 1.5rem;
-  }
-  .hours-table td {
-   padding: 0.8rem 0;
-   border-bottom: 1px solid #f3f4f6;
-   font-size: 0.95rem;
-  }
-  .hours-table tr:last-child td {
-   border-bottom: none;
-  }
-  .hours-table td:last-child {
-   text-align: right;
-   font-weight: 600;
-  }
-  .contact-box h2 {
-   font-size: 2.5rem;
-   margin-bottom: 2rem;
-  }
-  .details-list {
-   display: flex;
-   flex-direction: column;
-   gap: 1.5rem;
-   margin-bottom: 2rem;
-  }
-  .details-item h4 {
-   color: var(--primary);
-   margin-bottom: 0.25rem;
-  }
-  .details-item p {
-   font-size: 1.05rem;
-  }
-  .details-item a {
-   color: var(--text-dark);
-   text-decoration: underline;
-  }
-  .details-item a:hover {
-   color: var(--primary);
-  }
-  .map-box {
-   height: 250px;
-   border-radius: 8px;
-   overflow: hidden;
-   border: 1px solid var(--border);
-   margin-top: 1.5rem;
-  }
-  .map-box iframe {
-   width: 100%;
-   height: 100%;
-   border: none;
-  }
-
-  /* Footer */
-  footer {
-   background: #18181b;
-   color: #d4d4d8;
-   padding: 4rem 0;
-   text-align: center;
-   font-size: 0.85rem;
-  }
-  .footer-logo {
-   font-size: 1.5rem;
-   color: white;
-   text-decoration: none;
-   display: inline-block;
-   margin-bottom: 1.5rem;
-  }
-  .footer-credit {
-   margin-top: 2rem;
-   border-top: 1px solid #27272a;
-   padding-top: 2rem;
-  }
-
-  /* Responsive */
-  @media (max-width: 992px) {
-   .hero-grid, .why-grid, .contact-grid {
-    grid-template-columns: 1fr;
-   }
-   .hero {
-    text-align: center;
-   }
-   .hero-actions {
-    justify-content: center;
-   }
-   .why-img {
-    order: 2;
-   }
-  }
-  @media (max-width: 600px) {
-   .nav-cta {
-    display: none;
-   }
-   .hero h1 {
-    font-size: 2.25rem;
-   }
-   .hero-actions {
-    flex-direction: column;
-   }
-   .hours-box {
-    padding: 1.5rem;
-   }
-  }
+ }
  </style>
 </head>
 <body>
 
  <header>
-  <div class="container nav-wrapper">
-   <a href="#" class="logo">New Roots Clinic</a>
-   <div class="nav-cta">
-    <a href="tel:+919322565537" class="nav-phone">
-     <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-     +91 93225 65537
-    </a>
-    <a href="#contact" class="btn">Consult Doctor</a>
-   </div>
+ <div class="container nav-wrapper">
+  <a href="#" class="logo">New Roots Clinic</a>
+  <div class="nav-cta">
+  <a href="tel:+919322565537" class="nav-phone">
+   <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+   +91 93225 65537
+  </a>
+  <a href="#contact" class="btn">Consult Doctor</a>
   </div>
+ </div>
  </header>
 
  <section class="hero">
-  <div class="container hero-grid">
-   <div class="hero-content">
-    <div class="rating-badge">
-     <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-     <span>4.9★ (798 Reviews) | Skin & Laser Excellence</span>
-    </div>
-    <h1>Advanced Skin, Laser & Hair Transplant Clinic</h1>
-    <p>Book a consultation at New Roots Clinic in Vashi. Experience state-of-the-art dermatological procedures, hair restoration, and laser treatments.</p>
-    <div class="hero-actions">
-     <a href="tel:+919322565537" class="btn">Call +91 93225 65537</a>
-     <a href="#contact" class="btn btn-outline">Directions & Hours</a>
-    </div>
-   </div>
-   <div class="hero-img">
-    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80" alt="Skincare aesthetic laser treatment">
-   </div>
+ <div class="container hero-grid">
+  <div class="hero-content">
+  <div class="rating-badge">
+   <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+   <span>4.9★ (798 Reviews) | Skin & Laser Excellence</span>
   </div>
+  <h1>Advanced Skin, Laser & Hair Transplant Clinic</h1>
+  <p>Book a consultation at New Roots Clinic in Vashi. Experience state-of-the-art dermatological procedures, hair restoration, and laser treatments.</p>
+  <div class="hero-actions">
+   <a href="tel:+919322565537" class="btn">Call +91 93225 65537</a>
+   <a href="#contact" class="btn btn-outline">Directions & Hours</a>
+  </div>
+  </div>
+  <div class="hero-img">
+  <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80" alt="Skincare aesthetic laser treatment">
+  </div>
+ </div>
  </section>
 
  <section class="about">
-  <div class="container">
-   <div class="about-content">
-    <h2>Clinical Skincare & Hair Restoration</h2>
-    <p>New Roots: Skin, Laser & Hair Transplant Clinic in Vashi, Navi Mumbai, is a clinical facility offering advanced dermatological care and surgical hair restoration. Located near Axis Bank at Sector 17, our clinic is equipped with FDA-approved laser technology to deliver precise results under professional dermatological supervision.</p>
-   </div>
+ <div class="container">
+  <div class="about-content">
+  <h2>Clinical Skincare & Hair Restoration</h2>
+  <p>New Roots: Skin, Laser & Hair Transplant Clinic in Vashi, Navi Mumbai, is a clinical facility offering advanced dermatological care and surgical hair restoration. Located near Axis Bank at Sector 17, our clinic is equipped with FDA-approved laser technology to deliver precise results under professional dermatological supervision.</p>
   </div>
+ </div>
  </section>
 
  <section class="services">
-  <div class="container">
-   <div class="section-header">
-    <h2>Clinical Domains</h2>
-    <p>Professional dermatological and hair restoration treatments</p>
-   </div>
-   <div class="services-grid">
-    <div class="service-card">
-     <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707-.707M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg></div>
-     <h3>Hair Transplant (FUE)</h3>
-     <p>High-density hair restoration using Follicular Unit Extraction for natural results.</p>
-    </div>
-    <div class="service-card">
-     <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707-.707M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg></div>
-     <h3>Laser Hair Removal</h3>
-     <p>Safe, permanent hair reduction using advanced triple-wavelength laser systems.</p>
-    </div>
-    <div class="service-card">
-     <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707-.707M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg></div>
-     <h3>Acne & Scar Therapy</h3>
-     <p>Clinical chemical peels, micro-needling, and fractional laser skin resurfacing.</p>
-    </div>
-    <div class="service-card">
-     <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707-.707M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg></div>
-     <h3>Hydrafacials & Skin Polish</h3>
-     <p>Multi-step clinical facial to deep clean, exfoliate, and hydrate skin.</p>
-    </div>
-   </div>
+ <div class="container">
+  <div class="section-header">
+  <h2>Clinical Domains</h2>
+  <p>Professional dermatological and hair restoration treatments</p>
   </div>
+  <div class="services-grid">
+  <div class="service-card">
+   <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707-.707M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg></div>
+   <h3>Hair Transplant (FUE)</h3>
+   <p>High-density hair restoration using Follicular Unit Extraction for natural results.</p>
+  </div>
+  <div class="service-card">
+   <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707-.707M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg></div>
+   <h3>Laser Hair Removal</h3>
+   <p>Safe, permanent hair reduction using advanced triple-wavelength laser systems.</p>
+  </div>
+  <div class="service-card">
+   <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707-.707M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg></div>
+   <h3>Acne & Scar Therapy</h3>
+   <p>Clinical chemical peels, micro-needling, and fractional laser skin resurfacing.</p>
+  </div>
+  <div class="service-card">
+   <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707-.707M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg></div>
+   <h3>Hydrafacials & Skin Polish</h3>
+   <p>Multi-step clinical facial to deep clean, exfoliate, and hydrate skin.</p>
+  </div>
+  </div>
+ </div>
  </section>
 
  <section class="gallery-section">
-  <div class="container gallery-wrap">
-   <h2>Clinical Results</h2>
-   <p style="color: var(--text-muted); margin-bottom: 2rem;">Side-by-side comparison of skin treatment results</p>
-   
-   <input type="radio" name="gallery-tab" id="tab-before" class="radio-hidden" checked>
-   <input type="radio" name="gallery-tab" id="tab-after" class="radio-hidden">
-   
-   <div class="gallery-toggle-box">
-    <label for="tab-before">Before Treatment</label>
-    <label for="tab-after">After Treatment</label>
-   </div>
-   
-   <div class="tab-content" id="content-before">
-    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=80" alt="Skin Care Consultation Before">
-   </div>
-   <div class="tab-content" id="content-after">
-    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Skin Care Consultation After">
-   </div>
+ <div class="container gallery-wrap">
+  <h2>Clinical Results</h2>
+  <p style="color: var(--text-muted); margin-bottom: 2rem;">Side-by-side comparison of skin treatment results</p>
+  
+  <input type="radio" name="gallery-tab" id="tab-before" class="radio-hidden" checked>
+  <input type="radio" name="gallery-tab" id="tab-after" class="radio-hidden">
+  
+  <div class="gallery-toggle-box">
+  <label for="tab-before">Before Treatment</label>
+  <label for="tab-after">After Treatment</label>
   </div>
+  
+  <div class="tab-content" id="content-before">
+  <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=80" alt="Skin Care Consultation Before">
+  </div>
+  <div class="tab-content" id="content-after">
+  <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Skin Care Consultation After">
+  </div>
+ </div>
  </section>
 
  <section class="why-us">
-  <div class="container why-grid">
-   <div class="why-img">
-    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=80" alt="Laser skin treatment clinic">
-   </div>
-   <div class="why-content">
-    <h2>Precision Skin Excellence</h2>
-    <p style="color: var(--text-muted); margin-bottom: 2rem;">We prioritize patient safety, clinical efficacy, and transparent diagnostic evaluations.</p>
-    <ul class="why-list">
-     <li class="why-item">
-      <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-      <div class="why-txt">
-       <h4>FDA-Approved Laser Tech</h4>
-       <p>We work exclusively with standardized laser machinery to protect skin safety.</p>
-      </div>
-     </li>
-     <li class="why-item">
-      <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-      <div class="why-txt">
-       <h4>Specialist Dermatologists</h4>
-       <p>Experienced medical doctors who personally conduct diagnostic assessments and operations.</p>
-      </div>
-     </li>
-     <li class="why-item">
-      <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-      <div class="why-txt">
-       <h4>Sterile Surgical Rooms</h4>
-       <p>High-hygiene transplant rooms that meet clinical sanitization standards.</p>
-      </div>
-     </li>
-    </ul>
-   </div>
+ <div class="container why-grid">
+  <div class="why-img">
+  <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=80" alt="Laser skin treatment clinic">
   </div>
+  <div class="why-content">
+  <h2>Precision Skin Excellence</h2>
+  <p style="color: var(--text-muted); margin-bottom: 2rem;">We prioritize patient safety, clinical efficacy, and transparent diagnostic evaluations.</p>
+  <ul class="why-list">
+   <li class="why-item">
+   <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+   <div class="why-txt">
+    <h4>FDA-Approved Laser Tech</h4>
+    <p>We work exclusively with standardized laser machinery to protect skin safety.</p>
+   </div>
+   </li>
+   <li class="why-item">
+   <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+   <div class="why-txt">
+    <h4>Specialist Dermatologists</h4>
+    <p>Experienced medical doctors who personally conduct diagnostic assessments and operations.</p>
+   </div>
+   </li>
+   <li class="why-item">
+   <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+   <div class="why-txt">
+    <h4>Sterile Surgical Rooms</h4>
+    <p>High-hygiene transplant rooms that meet clinical sanitization standards.</p>
+   </div>
+   </li>
+  </ul>
+  </div>
+ </div>
  </section>
 
  <section class="contact-hours" id="contact">
-  <div class="container contact-grid">
-   <div class="hours-box">
-    <h3>Clinic Schedule</h3>
-    <table class="hours-table">
-     <tr><td>Monday</td><td>10:00 AM - 08:30 PM</td></tr>
-     <tr><td>Tuesday</td><td>10:00 AM - 08:30 PM</td></tr>
-     <tr><td>Wednesday</td><td>10:00 AM - 08:30 PM</td></tr>
-     <tr><td>Thursday</td><td>10:00 AM - 08:30 PM</td></tr>
-     <tr><td>Friday</td><td>10:00 AM - 08:30 PM</td></tr>
-     <tr><td>Saturday</td><td>10:00 AM - 08:30 PM</td></tr>
-     <tr><td>Sunday</td><td>10:00 AM - 08:30 PM</td></tr>
-    </table>
+ <div class="container contact-grid">
+  <div class="hours-box">
+  <h3>Clinic Schedule</h3>
+  <table class="hours-table">
+   <tr><td>Monday</td><td>10:00 AM - 08:30 PM</td></tr>
+   <tr><td>Tuesday</td><td>10:00 AM - 08:30 PM</td></tr>
+   <tr><td>Wednesday</td><td>10:00 AM - 08:30 PM</td></tr>
+   <tr><td>Thursday</td><td>10:00 AM - 08:30 PM</td></tr>
+   <tr><td>Friday</td><td>10:00 AM - 08:30 PM</td></tr>
+   <tr><td>Saturday</td><td>10:00 AM - 08:30 PM</td></tr>
+   <tr><td>Sunday</td><td>10:00 AM - 08:30 PM</td></tr>
+  </table>
+  </div>
+  <div class="contact-box">
+  <h2>Locate the Clinic</h2>
+  <div class="details-list">
+   <div class="details-item">
+   <h4>Clinic Address</h4>
+   <p>Office no 106, Vardhaman Chambers, plot no 84, near axis bank, Liberty Housing Society, Sector 17, Vashi, Navi Mumbai, Maharashtra 400703, India</p>
    </div>
-   <div class="contact-box">
-    <h2>Locate the Clinic</h2>
-    <div class="details-list">
-     <div class="details-item">
-      <h4>Clinic Address</h4>
-      <p>Office no 106, Vardhaman Chambers, plot no 84, near axis bank, Liberty Housing Society, Sector 17, Vashi, Navi Mumbai, Maharashtra 400703, India</p>
-     </div>
-     <div class="details-item">
-      <h4>Phone Number</h4>
-      <p><a href="tel:+919322565537">+91 93225 65537</a></p>
-     </div>
-    </div>
-    <a href="https://www.google.com/maps/search/?api=1&query=New%20Roots%3A%20Skin%2C%20Laser%20%26%20Hair%20Transplant%20Clinic%20Office%20no%20106%2C%20Vardhaman%20Chambers%2C%20plot%20no%2084%2C%20near%20axis%20bank%2C%20Liberty%20Housing%20Society%2C%20Sector%2017%2C%20Vashi%2C%20Navi%20Mumbai%2C%20Maharashtra%20400703%2C%20India" target="_blank" rel="noopener noreferrer" class="btn">Get Directions</a>
-    <div class="map-box">
-     <iframe src="https://maps.google.com/maps?q=New%20Roots%3A%20Skin%2C%20Laser%20%26%20Hair%20Transplant%20Clinic%2C%20Office%20no%20106%2C%20Vardhaman%20Chambers%2C%20plot%20no%2084%2C%20near%20axis%20bank%2C%20Liberty%20Housing%20Society%2C%20Sector%2017%2C%20Vashi%2C%20Navi%20Mumbai%2C%20Maharashtra%20400703%2C%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
-    </div>
+   <div class="details-item">
+   <h4>Phone Number</h4>
+   <p><a href="tel:+919322565537">+91 93225 65537</a></p>
    </div>
   </div>
+  <a href="https://www.google.com/maps/search/?api=1&query=New%20Roots%3A%20Skin%2C%20Laser%20%26%20Hair%20Transplant%20Clinic%20Office%20no%20106%2C%20Vardhaman%20Chambers%2C%20plot%20no%2084%2C%20near%20axis%20bank%2C%20Liberty%20Housing%20Society%2C%20Sector%2017%2C%20Vashi%2C%20Navi%20Mumbai%2C%20Maharashtra%20400703%2C%20India" target="_blank" rel="noopener noreferrer" class="btn">Get Directions</a>
+  <div class="map-box">
+   <iframe src="https://maps.google.com/maps?q=New%20Roots%3A%20Skin%2C%20Laser%20%26%20Hair%20Transplant%20Clinic%2C%20Office%20no%20106%2C%20Vardhaman%20Chambers%2C%20plot%20no%2084%2C%20near%20axis%20bank%2C%20Liberty%20Housing%20Society%2C%20Sector%2017%2C%20Vashi%2C%20Navi%20Mumbai%2C%20Maharashtra%20400703%2C%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  </div>
+ </div>
  </section>
 
  <footer>
-  <div class="container">
-   <a href="#" class="footer-logo">New Roots Clinic</a>
-   <p>&copy; 2026 New Roots: Skin, Laser & Hair Transplant Clinic. All rights reserved.</p>
-   <p style="margin-top: 0.5rem; color: #71717a;">Demo by Kevin</p>
-  </div>
+ <div class="container">
+  <a href="#" class="footer-logo">New Roots Clinic</a>
+  <p>&copy; 2026 New Roots: Skin, Laser & Hair Transplant Clinic. All rights reserved.</p>
+  <p style="margin-top: 0.5rem; color: #71717a;">Demo by Kevin</p>
+ </div>
  </footer>
 
 </body>
