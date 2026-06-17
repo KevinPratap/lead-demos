@@ -8,373 +8,373 @@
  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&family=Syne:wght@500;700&display=swap" rel="stylesheet">
  <style>
  :root {
-  --primary: #059669;
-  --primary-light: #f0fdf4;
-  --text-dark: #27272a;
-  --text-muted: #52525b;
-  --bg-light: #f4f7f5;
-  --border: #d1fae5;
-  --radius: 16px;
+ --primary: #059669;
+ --primary-light: #f0fdf4;
+ --text-dark: #27272a;
+ --text-muted: #52525b;
+ --bg-light: #f4f7f5;
+ --border: #d1fae5;
+ --radius: 16px;
  }
  * { margin: 0; padding: 0; box-sizing: border-box; }
  body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  color: var(--text-dark);
-  background: #ffffff;
-  line-height: 1.7;
-  font-weight: 400;
+ font-family: 'Plus Jakarta Sans', sans-serif;
+ color: var(--text-dark);
+ background: #ffffff;
+ line-height: 1.7;
+ font-weight: 400;
  }
  h1, h2, h3, h4 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+ font-family: 'Syne', sans-serif;
+ font-weight: 700;
+ letter-spacing: -0.02em;
  }
  .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+ max-width: 1000px;
+ margin: 0 auto;
+ padding: 0 1.5rem;
  }
  .icon-svg {
-  width: 1.25rem;
-  height: 1.25rem;
-  display: inline-block;
-  vertical-align: middle;
+ width: 1.25rem;
+ height: 1.25rem;
+ display: inline-block;
+ vertical-align: middle;
  }
 
  /* Header */
  header {
-  background: white;
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+ background: white;
+ border-bottom: 1px solid var(--border);
+ position: sticky;
+ top: 0;
+ z-index: 100;
  }
  .nav-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ height: 80px;
  }
  .logo {
-  font-size: 1.4rem;
-  color: var(--primary);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+ font-size: 1.4rem;
+ color: var(--primary);
+ text-decoration: none;
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
  }
  .nav-cta {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+ display: flex;
+ align-items: center;
+ gap: 2rem;
  }
  .nav-phone {
-  color: var(--text-dark);
-  text-decoration: none;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+ color: var(--text-dark);
+ text-decoration: none;
+ font-weight: 600;
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
  }
  .nav-phone:hover {
-  color: var(--primary);
+ color: var(--primary);
  }
  .btn {
-  display: inline-block;
-  background: var(--primary);
-  color: white;
-  padding: 0.75rem 1.6rem;
-  font-weight: 600;
-  border-radius: var(--radius);
-  text-decoration: none;
-  transition: all 0.2s ease;
+ display: inline-block;
+ background: var(--primary);
+ color: white;
+ padding: 0.75rem 1.6rem;
+ font-weight: 600;
+ border-radius: var(--radius);
+ text-decoration: none;
+ transition: all 0.2s ease;
  }
  .btn:hover {
-  opacity: 0.95;
-  transform: translateY(-1px);
+ opacity: 0.95;
+ transform: translateY(-1px);
  }
 
  /* Serene Hero */
  .hero {
-  padding: 6rem 0;
-  background: linear-gradient(135deg, var(--bg-light) 0%, #ffffff 100%);
+ padding: 6rem 0;
+ background: linear-gradient(135deg, var(--bg-light) 0%, #ffffff 100%);
  }
  .hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 4rem;
-  align-items: center;
+ display: grid;
+ grid-template-columns: 1.1fr 0.9fr;
+ gap: 4rem;
+ align-items: center;
  }
  .rating-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.85rem;
-  background: var(--border);
-  color: #065f46;
-  font-weight: 600;
-  padding: 0.4rem 0.8rem;
-  border-radius: 30px;
-  margin-bottom: 1.5rem;
+ display: inline-flex;
+ align-items: center;
+ gap: 0.4rem;
+ font-size: 0.85rem;
+ background: var(--border);
+ color: #065f46;
+ font-weight: 600;
+ padding: 0.4rem 0.8rem;
+ border-radius: 30px;
+ margin-bottom: 1.5rem;
  }
  .rating-badge .icon-svg {
-  fill: #065f46;
+ fill: #065f46;
  }
  .hero h1 {
-  font-size: 3.25rem;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
+ font-size: 3.25rem;
+ line-height: 1.1;
+ margin-bottom: 1.5rem;
  }
  .hero p {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  margin-bottom: 2rem;
+ font-size: 1.1rem;
+ color: var(--text-muted);
+ margin-bottom: 2rem;
  }
  .hero-actions {
-  display: flex;
-  gap: 1rem;
+ display: flex;
+ gap: 1rem;
  }
  .btn-outline {
-  background: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
+ background: transparent;
+ color: var(--primary);
+ border: 2px solid var(--primary);
  }
  .btn-outline:hover {
-  background: var(--primary-light);
+ background: var(--primary-light);
  }
  .hero-img img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  border-radius: var(--radius);
+ width: 100%;
+ height: 420px;
+ object-fit: cover;
+ border-radius: var(--radius);
  }
 
  /* About Section */
  .about {
-  padding: 6rem 0;
-  background: var(--bg-light);
+ padding: 6rem 0;
+ background: var(--bg-light);
  }
  .about-wrap {
-  max-width: 750px;
-  margin: 0 auto;
-  text-align: center;
+ max-width: 750px;
+ margin: 0 auto;
+ text-align: center;
  }
  .about-wrap h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+ font-size: 2.5rem;
+ margin-bottom: 1.5rem;
  }
  .about-wrap p {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  line-height: 1.8;
+ font-size: 1.1rem;
+ color: var(--text-muted);
+ line-height: 1.8;
  }
 
  /* Services Yoga Grid */
  .services {
-  padding: 6rem 0;
+ padding: 6rem 0;
  }
  .section-header {
-  text-align: center;
-  margin-bottom: 4rem;
+ text-align: center;
+ margin-bottom: 4rem;
  }
  .section-header h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+ font-size: 2.5rem;
+ margin-bottom: 0.5rem;
  }
  .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 2rem;
  }
  .service-card {
-  background: white;
-  padding: 2.5rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  transition: all 0.3s ease;
+ background: white;
+ padding: 2.5rem;
+ border-radius: var(--radius);
+ border: 1px solid var(--border);
+ transition: all 0.3s ease;
  }
  .service-card:hover {
-  border-color: var(--primary);
-  box-shadow: 0 10px 25px rgba(5, 150, 105, 0.05);
-  transform: translateY(-3px);
+ border-color: var(--primary);
+ box-shadow: 0 10px 25px rgba(5, 150, 105, 0.05);
+ transform: translateY(-3px);
  }
  .service-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
+ font-size: 1.25rem;
+ margin-bottom: 0.75rem;
  }
  .service-card p {
-  color: var(--text-muted);
-  font-size: 0.9rem;
+ color: var(--text-muted);
+ font-size: 0.9rem;
  }
 
  /* Why Yoga */
  .why-us {
-  padding: 6rem 0;
-  background: var(--bg-light);
+ padding: 6rem 0;
+ background: var(--bg-light);
  }
  .why-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 4rem;
+ align-items: center;
  }
  .why-img img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-  border-radius: var(--radius);
+ width: 100%;
+ height: 450px;
+ object-fit: cover;
+ border-radius: var(--radius);
  }
  .why-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+ font-size: 2.5rem;
+ margin-bottom: 1.5rem;
  }
  .why-list {
-  list-style: none;
+ list-style: none;
  }
  .why-item {
-  margin-bottom: 1.5rem;
-  display: flex;
-  gap: 1rem;
+ margin-bottom: 1.5rem;
+ display: flex;
+ gap: 1rem;
  }
  .why-check {
-  color: var(--primary);
-  background: var(--border);
-  width: 2.2rem;
-  height: 2.2rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+ color: var(--primary);
+ background: var(--border);
+ width: 2.2rem;
+ height: 2.2rem;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-shrink: 0;
  }
  .why-txt h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
+ font-size: 1.1rem;
+ margin-bottom: 0.25rem;
  }
  .why-txt p {
-  color: var(--text-muted);
-  font-size: 0.9rem;
+ color: var(--text-muted);
+ font-size: 0.9rem;
  }
 
  /* Hours & Contact */
  .contact-hours {
-  padding: 6rem 0;
+ padding: 6rem 0;
  }
  .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 4rem;
  }
  .hours-box {
-  background: white;
-  padding: 3rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+ background: white;
+ padding: 3rem;
+ border: 1px solid var(--border);
+ border-radius: var(--radius);
  }
  .hours-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1.5rem;
+ width: 100%;
+ border-collapse: collapse;
+ margin-top: 1.5rem;
  }
  .hours-table td {
-  padding: 0.8rem 0;
-  border-bottom: 1px solid var(--bg-light);
-  font-size: 0.95rem;
+ padding: 0.8rem 0;
+ border-bottom: 1px solid var(--bg-light);
+ font-size: 0.95rem;
  }
  .hours-table tr:last-child td {
-  border-bottom: none;
+ border-bottom: none;
  }
  .hours-table td:last-child {
-  text-align: right;
-  font-weight: 600;
-  color: var(--primary);
+ text-align: right;
+ font-weight: 600;
+ color: var(--primary);
  }
  .contact-box h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+ font-size: 2.5rem;
+ margin-bottom: 2rem;
  }
  .details-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+ display: flex;
+ flex-direction: column;
+ gap: 1.5rem;
+ margin-bottom: 2rem;
  }
  .details-item h4 {
-  color: var(--primary);
-  margin-bottom: 0.25rem;
+ color: var(--primary);
+ margin-bottom: 0.25rem;
  }
  .details-item p {
-  font-size: 1.05rem;
+ font-size: 1.05rem;
  }
  .details-item a {
-  color: var(--text-dark);
-  text-decoration: underline;
+ color: var(--text-dark);
+ text-decoration: underline;
  }
  .details-item a:hover {
-  color: var(--primary);
+ color: var(--primary);
  }
  .map-box {
-  height: 250px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--border);
-  margin-top: 1.5rem;
+ height: 250px;
+ border-radius: var(--radius);
+ overflow: hidden;
+ border: 1px solid var(--border);
+ margin-top: 1.5rem;
  }
  .map-box iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+ width: 100%;
+ height: 100%;
+ border: none;
  }
 
  /* Footer */
  footer {
-  background: #18181b;
-  color: #d4d4d8;
-  padding: 4rem 0;
-  text-align: center;
-  font-size: 0.85rem;
+ background: #18181b;
+ color: #d4d4d8;
+ padding: 4rem 0;
+ text-align: center;
+ font-size: 0.85rem;
  }
  .footer-logo {
-  font-size: 1.5rem;
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 1.5rem;
+ font-size: 1.5rem;
+ color: white;
+ text-decoration: none;
+ display: inline-block;
+ margin-bottom: 1.5rem;
  }
  .footer-credit {
-  margin-top: 2rem;
-  border-top: 1px solid #27272a;
-  padding-top: 2rem;
+ margin-top: 2rem;
+ border-top: 1px solid #27272a;
+ padding-top: 2rem;
  }
 
  /* Responsive */
  @media (max-width: 992px) {
-  .hero-grid, .why-grid, .contact-grid {
-  grid-template-columns: 1fr;
-  }
-  .hero {
-  text-align: center;
-  }
-  .hero-actions {
-  justify-content: center;
-  }
-  .why-img {
-  order: 2;
-  }
+ .hero-grid, .why-grid, .contact-grid {
+ grid-template-columns: 1fr;
+ }
+ .hero {
+ text-align: center;
+ }
+ .hero-actions {
+ justify-content: center;
+ }
+ .why-img {
+ order: 2;
+ }
  }
  @media (max-width: 600px) {
-  .nav-cta {
-  display: none;
-  }
-  .hero h1 {
-  font-size: 2.25rem;
-  }
-  .hero-actions {
-  flex-direction: column;
-  }
-  .hours-box {
-  padding: 1.5rem;
-  }
+ .nav-cta {
+ display: none;
+ }
+ .hero h1 {
+ font-size: 2.25rem;
+ }
+ .hero-actions {
+ flex-direction: column;
+ }
+ .hours-box {
+ padding: 1.5rem;
+ }
  }
  </style>
 </head>
@@ -382,152 +382,152 @@
 
  <header>
  <div class="container nav-wrapper">
-  <a href="#" class="logo">
-  <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6a6 6 0 0 0-6 6c0 2.5 1.5 4.5 4 5.5"/><path d="M12 6a6 6 0 0 1 6 6c0 2.5-1.5 4.5-4 5.5"/></svg>
-  Blue Eye Yoga Studio
-  </a>
-  <div class="nav-cta">
-  <a href="tel:+919820928789" class="nav-phone">
-   <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-   +91 98209 28789
-  </a>
-  <a href="#contact" class="btn">Book Class</a>
-  </div>
+ <a href="#" class="logo">
+ <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6a6 6 0 0 0-6 6c0 2.5 1.5 4.5 4 5.5"/><path d="M12 6a6 6 0 0 1 6 6c0 2.5-1.5 4.5-4 5.5"/></svg>
+ Blue Eye Yoga Studio
+ </a>
+ <div class="nav-cta">
+ <a href="tel:+919820928789" class="nav-phone">
+  <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  +91 98209 28789
+ </a>
+ <a href="#contact" class="btn">Book Class</a>
+ </div>
  </div>
  </header>
 
  <section class="hero">
  <div class="container hero-grid">
-  <div class="hero-content">
-  <div class="rating-badge">
-   <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-   <span>5.0★ (128 Reviews) | Serene Space</span>
-  </div>
-  <h1>Align Your Body, Calm Your Mind</h1>
-  <p>Welcome to Blue Eye Yoga Studio, Seawoods. Discover inner peace at our calm studio. We offer structured Hatha, Vinyasa, and meditation classes.</p>
-  <div class="hero-actions">
-   <a href="tel:+919820928789" class="btn">Call +91 98209 28789</a>
-   <a href="#contact" class="btn btn-outline">Directions & Hours</a>
-  </div>
-  </div>
-  <div class="hero-img">
-  <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80" alt="Yoga meditation breathing pose">
-  </div>
+ <div class="hero-content">
+ <div class="rating-badge">
+  <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+  <span>5.0★ (128 Reviews) | Serene Space</span>
+ </div>
+ <h1>Align Your Body, Calm Your Mind</h1>
+ <p>Welcome to Blue Eye Yoga Studio, Seawoods. Discover inner peace at our calm studio. We offer structured Hatha, Vinyasa, and meditation classes.</p>
+ <div class="hero-actions">
+  <a href="tel:+919820928789" class="btn">Call +91 98209 28789</a>
+  <a href="#contact" class="btn btn-outline">Directions & Hours</a>
+ </div>
+ </div>
+ <div class="hero-img">
+ <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80" alt="Yoga meditation breathing pose">
+ </div>
  </div>
  </section>
 
  <section class="about">
  <div class="container">
-  <div class="about-wrap">
-  <h2>The Mindful Sanctuary</h2>
-  <p>Blue Eye Yoga Studio in Seawoods, Navi Mumbai, is a tranquil space designed to support your wellness journey. We offer structured yoga sessions for beginners and advanced practitioners alike, guided by experienced certified yoga teachers. Located at Seawoods West, our clean, calm studio provides the ideal environment to build physical power and mental balance.</p>
-  </div>
+ <div class="about-wrap">
+ <h2>The Mindful Sanctuary</h2>
+ <p>Blue Eye Yoga Studio in Seawoods, Navi Mumbai, is a tranquil space designed to support your wellness journey. We offer structured yoga sessions for beginners and advanced practitioners alike, guided by experienced certified yoga teachers. Located at Seawoods West, our clean, calm studio provides the ideal environment to build physical power and mental balance.</p>
+ </div>
  </div>
  </section>
 
  <section class="services">
  <div class="container">
-  <div class="section-header">
-  <h2>Our Yoga Formats</h2>
-  <p>Guided physical postures, pranayama breathing, and meditation</p>
-  </div>
-  <div class="services-grid">
-  <div class="service-card">
-   <h3>Hatha Yoga</h3>
-   <p>Traditional slow-paced practice focusing on alignment, basic postures, and breath control.</p>
-  </div>
-  <div class="service-card">
-   <h3>Vinyasa Flow</h3>
-   <p>Dynamic movement coordinated with breath, flowing seamlessly from one posture to another.</p>
-  </div>
-  <div class="service-card">
-   <h3>Pranayama & Meditation</h3>
-   <p>Deep breathing practices and guided mindfulness sessions to relieve anxiety and focus the mind.</p>
-  </div>
-  <div class="service-card">
-   <h3>Therapeutic Yoga</h3>
-   <p>Modified poses to help with back pain, joint stiffness, stress management, and postural relief.</p>
-  </div>
-  </div>
+ <div class="section-header">
+ <h2>Our Yoga Formats</h2>
+ <p>Guided physical postures, pranayama breathing, and meditation</p>
+ </div>
+ <div class="services-grid">
+ <div class="service-card">
+  <h3>Hatha Yoga</h3>
+  <p>Traditional slow-paced practice focusing on alignment, basic postures, and breath control.</p>
+ </div>
+ <div class="service-card">
+  <h3>Vinyasa Flow</h3>
+  <p>Dynamic movement coordinated with breath, flowing seamlessly from one posture to another.</p>
+ </div>
+ <div class="service-card">
+  <h3>Pranayama & Meditation</h3>
+  <p>Deep breathing practices and guided mindfulness sessions to relieve anxiety and focus the mind.</p>
+ </div>
+ <div class="service-card">
+  <h3>Therapeutic Yoga</h3>
+  <p>Modified poses to help with back pain, joint stiffness, stress management, and postural relief.</p>
+ </div>
+ </div>
  </div>
  </section>
 
  <section class="why-us">
  <div class="container why-grid">
-  <div class="why-img">
-  <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80" alt="Yoga meditation studio class">
+ <div class="why-img">
+ <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80" alt="Yoga meditation studio class">
+ </div>
+ <div class="why-content">
+ <h2>Natural Serene Practice</h2>
+ <p style="color: var(--text-muted); margin-bottom: 2rem;">A calming space tailored for complete mental restoration and physical health.</p>
+ <ul class="why-list">
+  <li class="why-item">
+  <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+  <div class="why-txt">
+  <h4>Certified Yoga Teachers</h4>
+  <p>Guides with deep training in classical yoga anatomy, philosophy, and alignment.</p>
   </div>
-  <div class="why-content">
-  <h2>Natural Serene Practice</h2>
-  <p style="color: var(--text-muted); margin-bottom: 2rem;">A calming space tailored for complete mental restoration and physical health.</p>
-  <ul class="why-list">
-   <li class="why-item">
-   <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-   <div class="why-txt">
-    <h4>Certified Yoga Teachers</h4>
-    <p>Guides with deep training in classical yoga anatomy, philosophy, and alignment.</p>
-   </div>
-   </li>
-   <li class="why-item">
-   <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-   <div class="why-txt">
-    <h4>Hygienic Clean Mats</h4>
-    <p>Fully sanitized props, floors, and mats provided to support a safe session.</p>
-   </div>
-   </li>
-   <li class="why-item">
-   <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-   <div class="why-txt">
-    <h4>Quiet Environment</h4>
-    <p>A tranquil, clean space free from external city noise for peaceful meditation.</p>
-   </div>
-   </li>
-  </ul>
+  </li>
+  <li class="why-item">
+  <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+  <div class="why-txt">
+  <h4>Hygienic Clean Mats</h4>
+  <p>Fully sanitized props, floors, and mats provided to support a safe session.</p>
   </div>
+  </li>
+  <li class="why-item">
+  <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+  <div class="why-txt">
+  <h4>Quiet Environment</h4>
+  <p>A tranquil, clean space free from external city noise for peaceful meditation.</p>
+  </div>
+  </li>
+ </ul>
+ </div>
  </div>
  </section>
 
  <section class="contact-hours" id="contact">
  <div class="container contact-grid">
-  <div class="hours-box">
-  <h3>Studio Hours</h3>
-  <table class="hours-table">
-   <tr><td>Monday</td><td>06:00 AM - 11:00 AM, 04:30 PM - 08:30 PM</td></tr>
-   <tr><td>Tuesday</td><td>06:00 AM - 11:00 AM, 04:30 PM - 08:30 PM</td></tr>
-   <tr><td>Wednesday</td><td>06:00 AM - 11:00 AM, 04:30 PM - 08:30 PM</td></tr>
-   <tr><td>Thursday</td><td>06:00 AM - 11:00 AM, 04:30 PM - 08:30 PM</td></tr>
-   <tr><td>Friday</td><td>06:00 AM - 11:00 AM, 04:30 PM - 08:30 PM</td></tr>
-   <tr><td>Saturday</td><td>07:00 AM - 12:00 PM</td></tr>
-   <tr><td>Sunday</td><td>Closed</td></tr>
-  </table>
+ <div class="hours-box">
+ <h3>Studio Hours</h3>
+ <table class="hours-table">
+  <tr><td>Monday</td><td>06:00 AM - 11:00 AM, 04:30 PM - 08:30 PM</td></tr>
+  <tr><td>Tuesday</td><td>06:00 AM - 11:00 AM, 04:30 PM - 08:30 PM</td></tr>
+  <tr><td>Wednesday</td><td>06:00 AM - 11:00 AM, 04:30 PM - 08:30 PM</td></tr>
+  <tr><td>Thursday</td><td>06:00 AM - 11:00 AM, 04:30 PM - 08:30 PM</td></tr>
+  <tr><td>Friday</td><td>06:00 AM - 11:00 AM, 04:30 PM - 08:30 PM</td></tr>
+  <tr><td>Saturday</td><td>07:00 AM - 12:00 PM</td></tr>
+  <tr><td>Sunday</td><td>Closed</td></tr>
+ </table>
+ </div>
+ <div class="contact-box">
+ <h2>Find the Studio</h2>
+ <div class="details-list">
+  <div class="details-item">
+  <h4>Address</h4>
+  <p>Shop No. 05, The Signature, Plot No. 71, beside The Signature, Seawoods West, Sector 44, Seawoods, Navi Mumbai, Maharashtra 400706, India</p>
   </div>
-  <div class="contact-box">
-  <h2>Find the Studio</h2>
-  <div class="details-list">
-   <div class="details-item">
-   <h4>Address</h4>
-   <p>Shop No. 05, The Signature, Plot No. 71, beside The Signature, Seawoods West, Sector 44, Seawoods, Navi Mumbai, Maharashtra 400706, India</p>
-   </div>
-   <div class="details-item">
-   <h4>Phone Number</h4>
-   <p><a href="tel:+919820928789">+91 98209 28789</a></p>
-   </div>
+  <div class="details-item">
+  <h4>Phone Number</h4>
+  <p><a href="tel:+919820928789">+91 98209 28789</a></p>
   </div>
-  <a href="https://www.google.com/maps/search/?api=1&query=Blue%20Eye%20Yoga%20Studio%20Shop%20No.%2005%2C%20The%20Signature%2C%20Plot%20No.%2071%2C%20beside%20The%20Signature%2C%20Seawoods%20West%2C%20Sector%2044%2C%20Seawoods%2C%20Navi%20Mumbai%2C%20Maharashtra%20400706%2C%20India" target="_blank" rel="noopener noreferrer" class="btn">Get Directions</a>
-  <div class="map-box">
-   <iframe src="https://maps.google.com/maps?q=Blue%20Eye%20Yoga%20Studio%2C%20Shop%20No.%2005%2C%20The%20Signature%2C%20Plot%20No.%2071%2C%20beside%20The%20Signature%2C%20Seawoods%20West%2C%20Sector%2044%2C%20Seawoods%2C%20Navi%20Mumbai%2C%20Maharashtra%20400706%2C%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
-  </div>
-  </div>
+ </div>
+ <a href="https://www.google.com/maps/search/?api=1&query=Blue%20Eye%20Yoga%20Studio%20Shop%20No.%2005%2C%20The%20Signature%2C%20Plot%20No.%2071%2C%20beside%20The%20Signature%2C%20Seawoods%20West%2C%20Sector%2044%2C%20Seawoods%2C%20Navi%20Mumbai%2C%20Maharashtra%20400706%2C%20India" target="_blank" rel="noopener noreferrer" class="btn">Get Directions</a>
+ <div class="map-box">
+  <iframe src="https://maps.google.com/maps?q=Blue%20Eye%20Yoga%20Studio%2C%20Shop%20No.%2005%2C%20The%20Signature%2C%20Plot%20No.%2071%2C%20beside%20The%20Signature%2C%20Seawoods%20West%2C%20Sector%2044%2C%20Seawoods%2C%20Navi%20Mumbai%2C%20Maharashtra%20400706%2C%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+ </div>
+ </div>
  </div>
  </section>
 
  <footer>
  <div class="container">
-  <a href="#" class="footer-logo">
-  <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6a6 6 0 0 0-6 6c0 2.5 1.5 4.5 4 5.5"/><path d="M12 6a6 6 0 0 1 6 6c0 2.5-1.5 4.5-4 5.5"/></svg> Blue Eye Yoga
-  </a>
-  <p>&copy; 2026 Blue Eye Yoga Studio Seawoods. All rights reserved.</p>
-  <p style="margin-top: 0.5rem; color: #52525b;">Demo by Kevin</p>
+ <a href="#" class="footer-logo">
+ <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6a6 6 0 0 0-6 6c0 2.5 1.5 4.5 4 5.5"/><path d="M12 6a6 6 0 0 1 6 6c0 2.5-1.5 4.5-4 5.5"/></svg> Blue Eye Yoga
+ </a>
+ <p>&copy; 2026 Blue Eye Yoga Studio Seawoods. All rights reserved.</p>
+ <p style="margin-top: 0.5rem; color: #52525b;">Demo by Kevin</p>
  </div>
  </footer>
 

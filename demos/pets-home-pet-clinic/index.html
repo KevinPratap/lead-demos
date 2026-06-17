@@ -8,391 +8,391 @@
  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
  <style>
  :root {
-  --primary: #c2410c;
-  --primary-light: #fff7ed;
-  --text-dark: #374151;
-  --text-muted: #6b7280;
-  --bg-light: #fafaf9;
-  --border: #fed7aa;
-  --radius-lg: 20px;
-  --radius-md: 12px;
+ --primary: #c2410c;
+ --primary-light: #fff7ed;
+ --text-dark: #374151;
+ --text-muted: #6b7280;
+ --bg-light: #fafaf9;
+ --border: #fed7aa;
+ --radius-lg: 20px;
+ --radius-md: 12px;
  }
  * { margin: 0; padding: 0; box-sizing: border-box; }
  body {
-  font-family: 'Inter', sans-serif;
-  color: var(--text-dark);
-  background: #ffffff;
-  line-height: 1.6;
+ font-family: 'Inter', sans-serif;
+ color: var(--text-dark);
+ background: #ffffff;
+ line-height: 1.6;
  }
  h1, h2, h3, h4, .logo {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700;
+ font-family: 'Quicksand', sans-serif;
+ font-weight: 700;
  }
  .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 0 1.5rem;
  }
  .icon-svg {
-  width: 1.25rem;
-  height: 1.25rem;
-  display: inline-block;
-  vertical-align: middle;
+ width: 1.25rem;
+ height: 1.25rem;
+ display: inline-block;
+ vertical-align: middle;
  }
 
  /* Header */
  header {
-  background: white;
-  border-bottom: 1px solid #f3f4f6;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+ background: white;
+ border-bottom: 1px solid #f3f4f6;
+ position: sticky;
+ top: 0;
+ z-index: 100;
  }
  .nav-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ height: 80px;
  }
  .logo {
-  font-size: 1.4rem;
-  color: var(--primary);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+ font-size: 1.4rem;
+ color: var(--primary);
+ text-decoration: none;
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
  }
  .nav-cta {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+ display: flex;
+ align-items: center;
+ gap: 1.5rem;
  }
  .nav-phone {
-  color: var(--text-dark);
-  font-weight: 600;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+ color: var(--text-dark);
+ font-weight: 600;
+ text-decoration: none;
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
  }
  .nav-phone:hover {
-  color: var(--primary);
+ color: var(--primary);
  }
  .btn {
-  display: inline-block;
-  background: var(--primary);
-  color: white;
-  padding: 0.75rem 1.6rem;
-  border-radius: var(--radius-lg);
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  text-align: center;
+ display: inline-block;
+ background: var(--primary);
+ color: white;
+ padding: 0.75rem 1.6rem;
+ border-radius: var(--radius-lg);
+ text-decoration: none;
+ font-weight: 600;
+ transition: all 0.2s ease;
+ text-align: center;
  }
  .btn:hover {
-  transform: scale(1.02);
-  opacity: 0.95;
+ transform: scale(1.02);
+ opacity: 0.95;
  }
 
  /* Hero Section */
  .hero {
-  padding: 5rem 0;
-  background: var(--primary-light);
+ padding: 5rem 0;
+ background: var(--primary-light);
  }
  .hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 4rem;
+ align-items: center;
  }
  .rating-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  background: #ffedd5;
-  color: var(--primary);
-  font-size: 0.85rem;
-  font-weight: 700;
-  padding: 0.4rem 0.8rem;
-  border-radius: var(--radius-lg);
-  margin-bottom: 1.5rem;
+ display: inline-flex;
+ align-items: center;
+ gap: 0.4rem;
+ background: #ffedd5;
+ color: var(--primary);
+ font-size: 0.85rem;
+ font-weight: 700;
+ padding: 0.4rem 0.8rem;
+ border-radius: var(--radius-lg);
+ margin-bottom: 1.5rem;
  }
  .rating-badge .icon-svg {
-  fill: var(--primary);
+ fill: var(--primary);
  }
  .hero h1 {
-  font-size: 2.75rem;
-  line-height: 1.15;
-  margin-bottom: 1.5rem;
-  color: #1f2937;
+ font-size: 2.75rem;
+ line-height: 1.15;
+ margin-bottom: 1.5rem;
+ color: #1f2937;
  }
  .hero p {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  margin-bottom: 2rem;
+ font-size: 1.1rem;
+ color: var(--text-muted);
+ margin-bottom: 2rem;
  }
  .hero-actions {
-  display: flex;
-  gap: 1rem;
+ display: flex;
+ gap: 1rem;
  }
  .btn-outline {
-  background: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
+ background: transparent;
+ color: var(--primary);
+ border: 2px solid var(--primary);
  }
  .btn-outline:hover {
-  background: #ffedd5;
+ background: #ffedd5;
  }
  .hero-img img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  border: 6px solid white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+ width: 100%;
+ height: 420px;
+ object-fit: cover;
+ border-radius: var(--radius-lg);
+ border: 6px solid white;
+ box-shadow: 0 10px 25px rgba(0,0,0,0.05);
  }
 
  /* About Section */
  .about {
-  padding: 6rem 0;
+ padding: 6rem 0;
  }
  .about-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+ max-width: 800px;
+ margin: 0 auto;
+ text-align: center;
  }
  .about-content h2 {
-  font-size: 2.25rem;
-  margin-bottom: 1.5rem;
+ font-size: 2.25rem;
+ margin-bottom: 1.5rem;
  }
  .about-content p {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  line-height: 1.8;
+ font-size: 1.1rem;
+ color: var(--text-muted);
+ line-height: 1.8;
  }
 
  /* Services Pet Grid */
  .services {
-  padding: 6rem 0;
-  background: var(--bg-light);
-  border-top: 1px solid #f3f4f6;
-  border-bottom: 1px solid #f3f4f6;
+ padding: 6rem 0;
+ background: var(--bg-light);
+ border-top: 1px solid #f3f4f6;
+ border-bottom: 1px solid #f3f4f6;
  }
  .section-header {
-  text-align: center;
-  margin-bottom: 4rem;
+ text-align: center;
+ margin-bottom: 4rem;
  }
  .section-header h2 {
-  font-size: 2.25rem;
-  margin-bottom: 0.5rem;
+ font-size: 2.25rem;
+ margin-bottom: 0.5rem;
  }
  .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 2rem;
  }
  .service-card {
-  background: white;
-  padding: 2.5rem;
-  border-radius: var(--radius-md);
-  border: 1px solid #f3f4f6;
-  transition: all 0.2s ease;
+ background: white;
+ padding: 2.5rem;
+ border-radius: var(--radius-md);
+ border: 1px solid #f3f4f6;
+ transition: all 0.2s ease;
  }
  .service-card:hover {
-  border-color: var(--primary);
-  transform: translateY(-3px);
+ border-color: var(--primary);
+ transform: translateY(-3px);
  }
  .service-icon {
-  width: 3rem;
-  height: 3rem;
-  background: var(--primary-light);
-  color: var(--primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
+ width: 3rem;
+ height: 3rem;
+ background: var(--primary-light);
+ color: var(--primary);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 1.5rem;
  }
  .service-icon .icon-svg {
-  width: 1.5rem;
-  height: 1.5rem;
+ width: 1.5rem;
+ height: 1.5rem;
  }
  .service-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.75rem;
+ font-size: 1.2rem;
+ margin-bottom: 0.75rem;
  }
  .service-card p {
-  color: var(--text-muted);
-  font-size: 0.9rem;
+ color: var(--text-muted);
+ font-size: 0.9rem;
  }
 
  /* Why Choose Us */
  .why-us {
-  padding: 6rem 0;
+ padding: 6rem 0;
  }
  .why-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 4rem;
+ align-items: center;
  }
  .why-img img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
+ width: 100%;
+ height: 450px;
+ object-fit: cover;
+ border-radius: var(--radius-lg);
  }
  .why-content h2 {
-  font-size: 2.25rem;
-  margin-bottom: 1.5rem;
+ font-size: 2.25rem;
+ margin-bottom: 1.5rem;
  }
  .why-list {
-  list-style: none;
+ list-style: none;
  }
  .why-item {
-  margin-bottom: 1.5rem;
-  display: flex;
-  gap: 1rem;
+ margin-bottom: 1.5rem;
+ display: flex;
+ gap: 1rem;
  }
  .why-check {
-  color: var(--primary);
-  background: var(--primary-light);
-  width: 2.2rem;
-  height: 2.2rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+ color: var(--primary);
+ background: var(--primary-light);
+ width: 2.2rem;
+ height: 2.2rem;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-shrink: 0;
  }
  .why-txt h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
+ font-size: 1.1rem;
+ margin-bottom: 0.25rem;
  }
  .why-txt p {
-  color: var(--text-muted);
-  font-size: 0.9rem;
+ color: var(--text-muted);
+ font-size: 0.9rem;
  }
 
  /* Hours & Contact */
  .contact-hours {
-  padding: 6rem 0;
-  background: var(--primary-light);
+ padding: 6rem 0;
+ background: var(--primary-light);
  }
  .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 4rem;
  }
  .hours-box {
-  background: white;
-  padding: 3rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
+ background: white;
+ padding: 3rem;
+ border-radius: var(--radius-lg);
+ border: 1px solid var(--border);
  }
  .hours-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1.5rem;
+ width: 100%;
+ border-collapse: collapse;
+ margin-top: 1.5rem;
  }
  .hours-table td {
-  padding: 0.8rem 0;
-  border-bottom: 1px solid #f3f4f6;
-  font-size: 0.95rem;
+ padding: 0.8rem 0;
+ border-bottom: 1px solid #f3f4f6;
+ font-size: 0.95rem;
  }
  .hours-table tr:last-child td {
-  border-bottom: none;
+ border-bottom: none;
  }
  .hours-table td:last-child {
-  text-align: right;
-  font-weight: 600;
+ text-align: right;
+ font-weight: 600;
  }
  .contact-box h2 {
-  font-size: 2.25rem;
-  margin-bottom: 2rem;
+ font-size: 2.25rem;
+ margin-bottom: 2rem;
  }
  .details-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+ display: flex;
+ flex-direction: column;
+ gap: 1.5rem;
+ margin-bottom: 2rem;
  }
  .details-item h4 {
-  color: var(--primary);
-  margin-bottom: 0.25rem;
+ color: var(--primary);
+ margin-bottom: 0.25rem;
  }
  .details-item p {
-  font-size: 1.05rem;
+ font-size: 1.05rem;
  }
  .details-item a {
-  color: var(--text-dark);
-  text-decoration: underline;
+ color: var(--text-dark);
+ text-decoration: underline;
  }
  .details-item a:hover {
-  color: var(--primary);
+ color: var(--primary);
  }
  .map-box {
-  height: 250px;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid var(--border);
-  margin-top: 1.5rem;
+ height: 250px;
+ border-radius: var(--radius-lg);
+ overflow: hidden;
+ border: 1px solid var(--border);
+ margin-top: 1.5rem;
  }
  .map-box iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+ width: 100%;
+ height: 100%;
+ border: none;
  }
 
  /* Footer */
  footer {
-  background: #27272a;
-  color: #d4d4d8;
-  padding: 4rem 0;
-  text-align: center;
-  font-size: 0.85rem;
+ background: #27272a;
+ color: #d4d4d8;
+ padding: 4rem 0;
+ text-align: center;
+ font-size: 0.85rem;
  }
  .footer-logo {
-  font-size: 1.5rem;
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 1.5rem;
+ font-size: 1.5rem;
+ color: white;
+ text-decoration: none;
+ display: inline-block;
+ margin-bottom: 1.5rem;
  }
  .footer-credit {
-  margin-top: 2rem;
-  border-top: 1px solid #3f3f46;
-  padding-top: 2rem;
+ margin-top: 2rem;
+ border-top: 1px solid #3f3f46;
+ padding-top: 2rem;
  }
 
  /* Responsive */
  @media (max-width: 992px) {
-  .hero-grid, .why-grid, .contact-grid {
-  grid-template-columns: 1fr;
-  }
-  .hero {
-  text-align: center;
-  }
-  .hero-actions {
-  justify-content: center;
-  }
-  .why-img {
-  order: 2;
-  }
+ .hero-grid, .why-grid, .contact-grid {
+ grid-template-columns: 1fr;
+ }
+ .hero {
+ text-align: center;
+ }
+ .hero-actions {
+ justify-content: center;
+ }
+ .why-img {
+ order: 2;
+ }
  }
  @media (max-width: 600px) {
-  .nav-cta {
-  display: none;
-  }
-  .hero h1 {
-  font-size: 2.25rem;
-  }
-  .hero-actions {
-  flex-direction: column;
-  }
-  .hours-box {
-  padding: 1.5rem;
-  }
+ .nav-cta {
+ display: none;
+ }
+ .hero h1 {
+ font-size: 2.25rem;
+ }
+ .hero-actions {
+ flex-direction: column;
+ }
+ .hours-box {
+ padding: 1.5rem;
+ }
  }
  </style>
 </head>
@@ -400,156 +400,156 @@
 
  <header>
  <div class="container nav-wrapper">
-  <a href="#" class="logo">
-  <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="14" r="4"/><circle cx="6.5" cy="10.5" r="2"/><circle cx="17.5" cy="10.5" r="2"/><circle cx="9.5" cy="5.5" r="1.5"/><circle cx="14.5" cy="5.5" r="1.5"/></svg>
-  PETS HOME PET CLINIC
-  </a>
-  <div class="nav-cta">
-  <a href="tel:+917738183173" class="nav-phone">
-   <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-   +91 77381 83173
-  </a>
-  <a href="#contact" class="btn">Book Appointment</a>
-  </div>
+ <a href="#" class="logo">
+ <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="14" r="4"/><circle cx="6.5" cy="10.5" r="2"/><circle cx="17.5" cy="10.5" r="2"/><circle cx="9.5" cy="5.5" r="1.5"/><circle cx="14.5" cy="5.5" r="1.5"/></svg>
+ PETS HOME PET CLINIC
+ </a>
+ <div class="nav-cta">
+ <a href="tel:+917738183173" class="nav-phone">
+  <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  +91 77381 83173
+ </a>
+ <a href="#contact" class="btn">Book Appointment</a>
+ </div>
  </div>
  </header>
 
  <section class="hero">
  <div class="container hero-grid">
-  <div class="hero-content">
-  <div class="rating-badge">
-   <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-   <span>4.6★ (997 Reviews) | Veterinary Clinic</span>
-  </div>
-  <h1>Compassionate Care for Your Best Friend</h1>
-  <p>Providing professional veterinary medicine, diagnostics, vaccination, and surgical care in Navi Mumbai.</p>
-  <div class="hero-actions">
-   <a href="tel:+917738183173" class="btn">Call +91 77381 83173</a>
-   <a href="#contact" class="btn btn-outline">Directions & Hours</a>
-  </div>
-  </div>
-  <div class="hero-img">
-  <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80" alt="Veterinary animal care">
-  </div>
+ <div class="hero-content">
+ <div class="rating-badge">
+  <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+  <span>4.6★ (997 Reviews) | Veterinary Clinic</span>
+ </div>
+ <h1>Compassionate Care for Your Best Friend</h1>
+ <p>Providing professional veterinary medicine, diagnostics, vaccination, and surgical care in Navi Mumbai.</p>
+ <div class="hero-actions">
+  <a href="tel:+917738183173" class="btn">Call +91 77381 83173</a>
+  <a href="#contact" class="btn btn-outline">Directions & Hours</a>
+ </div>
+ </div>
+ <div class="hero-img">
+ <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80" alt="Veterinary animal care">
+ </div>
  </div>
  </section>
 
  <section class="about">
  <div class="container">
-  <div class="about-content">
-  <h2>Caring for Your Companion</h2>
-  <p>At Pets Home Pet Clinic in Kharghar, we treat your pets like family. Our full-service animal clinic is dedicated to providing standard veterinary medicine, diagnostics, and surgical care. From routine puppy checkups and vaccinations to emergency treatments, our veterinary team is committed to keeping your pets healthy and active.</p>
-  </div>
+ <div class="about-content">
+ <h2>Caring for Your Companion</h2>
+ <p>At Pets Home Pet Clinic in Kharghar, we treat your pets like family. Our full-service animal clinic is dedicated to providing standard veterinary medicine, diagnostics, and surgical care. From routine puppy checkups and vaccinations to emergency treatments, our veterinary team is committed to keeping your pets healthy and active.</p>
+ </div>
  </div>
  </section>
 
  <section class="services">
  <div class="container">
-  <div class="section-header">
-  <h2>Our Veterinary Services</h2>
-  <p>Complete medical, clinical, and preventative care for your pets</p>
-  </div>
-  <div class="services-grid">
-  <div class="service-card">
-   <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="14" r="4"/><circle cx="6.5" cy="10.5" r="2"/><circle cx="17.5" cy="10.5" r="2"/><circle cx="9.5" cy="5.5" r="1.5"/><circle cx="14.5" cy="5.5" r="1.5"/></svg></div>
-   <h3>Wellness Exams</h3>
-   <p>Routine clinical health checkups, temperature monitoring, and baseline health scans.</p>
-  </div>
-  <div class="service-card">
-   <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="14" r="4"/><circle cx="6.5" cy="10.5" r="2"/><circle cx="17.5" cy="10.5" r="2"/><circle cx="9.5" cy="5.5" r="1.5"/><circle cx="14.5" cy="5.5" r="1.5"/></svg></div>
-   <h3>Vaccinations</h3>
-   <p>Core vaccine planning and protection schedules against rabies, parvo, and distemper.</p>
-  </div>
-  <div class="service-card">
-   <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="14" r="4"/><circle cx="6.5" cy="10.5" r="2"/><circle cx="17.5" cy="10.5" r="2"/><circle cx="9.5" cy="5.5" r="1.5"/><circle cx="14.5" cy="5.5" r="1.5"/></svg></div>
-   <h3>Outpatient Surgery</h3>
-   <p>Sterilisation, spaying, neutering, and soft-tissue surgeries under standard anesthesia.</p>
-  </div>
-  <div class="service-card">
-   <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="14" r="4"/><circle cx="6.5" cy="10.5" r="2"/><circle cx="17.5" cy="10.5" r="2"/><circle cx="9.5" cy="5.5" r="1.5"/><circle cx="14.5" cy="5.5" r="1.5"/></svg></div>
-   <h3>Diagnostic Lab</h3>
-   <p>In-house diagnostics, blood panels, fecal testing, and digital microscopy screening.</p>
-  </div>
-  </div>
+ <div class="section-header">
+ <h2>Our Veterinary Services</h2>
+ <p>Complete medical, clinical, and preventative care for your pets</p>
+ </div>
+ <div class="services-grid">
+ <div class="service-card">
+  <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="14" r="4"/><circle cx="6.5" cy="10.5" r="2"/><circle cx="17.5" cy="10.5" r="2"/><circle cx="9.5" cy="5.5" r="1.5"/><circle cx="14.5" cy="5.5" r="1.5"/></svg></div>
+  <h3>Wellness Exams</h3>
+  <p>Routine clinical health checkups, temperature monitoring, and baseline health scans.</p>
+ </div>
+ <div class="service-card">
+  <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="14" r="4"/><circle cx="6.5" cy="10.5" r="2"/><circle cx="17.5" cy="10.5" r="2"/><circle cx="9.5" cy="5.5" r="1.5"/><circle cx="14.5" cy="5.5" r="1.5"/></svg></div>
+  <h3>Vaccinations</h3>
+  <p>Core vaccine planning and protection schedules against rabies, parvo, and distemper.</p>
+ </div>
+ <div class="service-card">
+  <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="14" r="4"/><circle cx="6.5" cy="10.5" r="2"/><circle cx="17.5" cy="10.5" r="2"/><circle cx="9.5" cy="5.5" r="1.5"/><circle cx="14.5" cy="5.5" r="1.5"/></svg></div>
+  <h3>Outpatient Surgery</h3>
+  <p>Sterilisation, spaying, neutering, and soft-tissue surgeries under standard anesthesia.</p>
+ </div>
+ <div class="service-card">
+  <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="14" r="4"/><circle cx="6.5" cy="10.5" r="2"/><circle cx="17.5" cy="10.5" r="2"/><circle cx="9.5" cy="5.5" r="1.5"/><circle cx="14.5" cy="5.5" r="1.5"/></svg></div>
+  <h3>Diagnostic Lab</h3>
+  <p>In-house diagnostics, blood panels, fecal testing, and digital microscopy screening.</p>
+ </div>
+ </div>
  </div>
  </section>
 
  <section class="why-us">
  <div class="container why-grid">
-  <div class="why-img">
-  <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Veterinary checkup dog">
+ <div class="why-img">
+ <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Veterinary checkup dog">
+ </div>
+ <div class="why-content">
+ <h2>Safe Hands & Gentle Hearts</h2>
+ <p style="color: var(--text-muted); margin-bottom: 2rem;">We prioritize medical precision while ensuring a calm, pet-friendly environment.</p>
+ <ul class="why-list">
+  <li class="why-item">
+  <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+  <div class="why-txt">
+  <h4>Certified Veterinarians</h4>
+  <p>Experienced animal healthcare professionals holding standard clinical degrees.</p>
   </div>
-  <div class="why-content">
-  <h2>Safe Hands & Gentle Hearts</h2>
-  <p style="color: var(--text-muted); margin-bottom: 2rem;">We prioritize medical precision while ensuring a calm, pet-friendly environment.</p>
-  <ul class="why-list">
-   <li class="why-item">
-   <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-   <div class="why-txt">
-    <h4>Certified Veterinarians</h4>
-    <p>Experienced animal healthcare professionals holding standard clinical degrees.</p>
-   </div>
-   </li>
-   <li class="why-item">
-   <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-   <div class="why-txt">
-    <h4>Hygienic Environment</h4>
-    <p>Proper sanitization of examination tables and clinical equipment before every visit.</p>
-   </div>
-   </li>
-   <li class="why-item">
-   <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-   <div class="why-txt">
-    <h4>Compassionate Staff</h4>
-    <p>Friendly handlers who treat your pets with extreme patience and gentle care.</p>
-   </div>
-   </li>
-  </ul>
+  </li>
+  <li class="why-item">
+  <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+  <div class="why-txt">
+  <h4>Hygienic Environment</h4>
+  <p>Proper sanitization of examination tables and clinical equipment before every visit.</p>
   </div>
+  </li>
+  <li class="why-item">
+  <div class="why-check"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+  <div class="why-txt">
+  <h4>Compassionate Staff</h4>
+  <p>Friendly handlers who treat your pets with extreme patience and gentle care.</p>
+  </div>
+  </li>
+ </ul>
+ </div>
  </div>
  </section>
 
  <section class="contact-hours" id="contact">
  <div class="container contact-grid">
-  <div class="hours-box">
-  <h3>Clinic Hours</h3>
-  <table class="hours-table">
-   <tr><td>Monday</td><td>10:00 AM - 1:30 PM, 5:00 PM - 8:30 PM</td></tr>
-   <tr><td>Tuesday</td><td>10:00 AM - 1:30 PM, 5:00 PM - 8:30 PM</td></tr>
-   <tr><td>Wednesday</td><td>10:00 AM - 1:30 PM, 5:00 PM - 8:30 PM</td></tr>
-   <tr><td>Thursday</td><td>10:00 AM - 1:30 PM, 5:00 PM - 8:30 PM</td></tr>
-   <tr><td>Friday</td><td>10:00 AM - 1:30 PM, 5:00 PM - 8:30 PM</td></tr>
-   <tr><td>Saturday</td><td>10:00 AM - 1:30 PM, 5:00 PM - 8:30 PM</td></tr>
-   <tr><td>Sunday</td><td>10:00 AM - 1:30 PM</td></tr>
-  </table>
+ <div class="hours-box">
+ <h3>Clinic Hours</h3>
+ <table class="hours-table">
+  <tr><td>Monday</td><td>10:00 AM - 1:30 PM, 5:00 PM - 8:30 PM</td></tr>
+  <tr><td>Tuesday</td><td>10:00 AM - 1:30 PM, 5:00 PM - 8:30 PM</td></tr>
+  <tr><td>Wednesday</td><td>10:00 AM - 1:30 PM, 5:00 PM - 8:30 PM</td></tr>
+  <tr><td>Thursday</td><td>10:00 AM - 1:30 PM, 5:00 PM - 8:30 PM</td></tr>
+  <tr><td>Friday</td><td>10:00 AM - 1:30 PM, 5:00 PM - 8:30 PM</td></tr>
+  <tr><td>Saturday</td><td>10:00 AM - 1:30 PM, 5:00 PM - 8:30 PM</td></tr>
+  <tr><td>Sunday</td><td>10:00 AM - 1:30 PM</td></tr>
+ </table>
+ </div>
+ <div class="contact-box">
+ <h2>Find the Clinic</h2>
+ <div class="details-list">
+  <div class="details-item">
+  <h4>Address</h4>
+  <p>Plot C, sai siddhi chs, Shop 26, 04, Sector 12, Kharghar, Navi Mumbai, Maharashtra 410210, India</p>
   </div>
-  <div class="contact-box">
-  <h2>Find the Clinic</h2>
-  <div class="details-list">
-   <div class="details-item">
-   <h4>Address</h4>
-   <p>Plot C, sai siddhi chs, Shop 26, 04, Sector 12, Kharghar, Navi Mumbai, Maharashtra 410210, India</p>
-   </div>
-   <div class="details-item">
-   <h4>Phone Number</h4>
-   <p><a href="tel:+917738183173">+91 77381 83173</a></p>
-   </div>
+  <div class="details-item">
+  <h4>Phone Number</h4>
+  <p><a href="tel:+917738183173">+91 77381 83173</a></p>
   </div>
-  <a href="https://www.google.com/maps/search/?api=1&query=PETS%20HOME%20PET%20CLINIC%20Plot%20C%2C%20sai%20siddhi%20chs%2C%20Shop%2026%2C%2004%2C%20Sector%2012%2C%20Kharghar%2C%20Navi%20Mumbai%2C%20Maharashtra%20410210%2C%20India" target="_blank" rel="noopener noreferrer" class="btn">Get Directions</a>
-  <div class="map-box">
-   <iframe src="https://maps.google.com/maps?q=PETS%20HOME%20PET%20CLINIC%2C%20Plot%20C%2C%20sai%20siddhi%20chs%2C%20Shop%2026%2C%2004%2C%20Sector%2012%2C%20Kharghar%2C%20Navi%20Mumbai%2C%20Maharashtra%20410210%2C%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
-  </div>
-  </div>
+ </div>
+ <a href="https://www.google.com/maps/search/?api=1&query=PETS%20HOME%20PET%20CLINIC%20Plot%20C%2C%20sai%20siddhi%20chs%2C%20Shop%2026%2C%2004%2C%20Sector%2012%2C%20Kharghar%2C%20Navi%20Mumbai%2C%20Maharashtra%20410210%2C%20India" target="_blank" rel="noopener noreferrer" class="btn">Get Directions</a>
+ <div class="map-box">
+  <iframe src="https://maps.google.com/maps?q=PETS%20HOME%20PET%20CLINIC%2C%20Plot%20C%2C%20sai%20siddhi%20chs%2C%20Shop%2026%2C%2004%2C%20Sector%2012%2C%20Kharghar%2C%20Navi%20Mumbai%2C%20Maharashtra%20410210%2C%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+ </div>
+ </div>
  </div>
  </section>
 
  <footer>
  <div class="container">
-  <a href="#" class="footer-logo">
-  <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="14" r="4"/><circle cx="6.5" cy="10.5" r="2"/><circle cx="17.5" cy="10.5" r="2"/><circle cx="9.5" cy="5.5" r="1.5"/><circle cx="14.5" cy="5.5" r="1.5"/></svg> PETS HOME PET CLINIC
-  </a>
-  <p>&copy; 2026 PETS HOME PET CLINIC. All rights reserved.</p>
-  <p style="margin-top: 0.5rem; color: #71717a;">Demo by Kevin</p>
+ <a href="#" class="footer-logo">
+ <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="14" r="4"/><circle cx="6.5" cy="10.5" r="2"/><circle cx="17.5" cy="10.5" r="2"/><circle cx="9.5" cy="5.5" r="1.5"/><circle cx="14.5" cy="5.5" r="1.5"/></svg> PETS HOME PET CLINIC
+ </a>
+ <p>&copy; 2026 PETS HOME PET CLINIC. All rights reserved.</p>
+ <p style="margin-top: 0.5rem; color: #71717a;">Demo by Kevin</p>
  </div>
  </footer>
 

@@ -8,391 +8,391 @@
  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
  <style>
  :root {
-  --primary: #0891b2;
-  --primary-light: #ecfeff;
-  --text-dark: #1e293b;
-  --text-muted: #64748b;
-  --bg-light: #f8fafc;
-  --border: #cbd5e1;
+ --primary: #0891b2;
+ --primary-light: #ecfeff;
+ --text-dark: #1e293b;
+ --text-muted: #64748b;
+ --bg-light: #f8fafc;
+ --border: #cbd5e1;
  }
  * { margin: 0; padding: 0; box-sizing: border-box; }
  body {
-  font-family: 'Lato', sans-serif;
-  color: var(--text-dark);
-  background: #ffffff;
-  line-height: 1.6;
+ font-family: 'Lato', sans-serif;
+ color: var(--text-dark);
+ background: #ffffff;
+ line-height: 1.6;
  }
  h1, h2, h3, h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 700;
  }
  .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 1.5rem;
  }
  .icon-svg {
-  width: 1.25rem;
-  height: 1.25rem;
-  display: inline-block;
-  vertical-align: middle;
+ width: 1.25rem;
+ height: 1.25rem;
+ display: inline-block;
+ vertical-align: middle;
  }
  /* Header */
  header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: white;
-  border-bottom: 1px solid var(--border);
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ background: white;
+ border-bottom: 1px solid var(--border);
  }
  .nav-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ height: 80px;
  }
  .logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--primary);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+ font-size: 1.4rem;
+ font-weight: 700;
+ color: var(--primary);
+ text-decoration: none;
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
  }
  .nav-cta {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+ display: flex;
+ align-items: center;
+ gap: 1.5rem;
  }
  .nav-phone {
-  color: var(--text-dark);
-  font-weight: 600;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+ color: var(--text-dark);
+ font-weight: 600;
+ text-decoration: none;
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
  }
  .nav-phone:hover {
-  color: var(--primary);
+ color: var(--primary);
  }
  .btn {
-  display: inline-block;
-  background: var(--primary);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.2s ease;
+ display: inline-block;
+ background: var(--primary);
+ color: white;
+ padding: 0.75rem 1.5rem;
+ border-radius: 4px;
+ text-decoration: none;
+ font-weight: 600;
+ transition: all 0.2s ease;
  }
  .btn:hover {
-  opacity: 0.9;
+ opacity: 0.9;
  }
 
  /* Hero Section */
  .hero {
-  padding: 6rem 0;
-  background: #0f172a;
-  color: white;
-  position: relative;
-  overflow: hidden;
+ padding: 6rem 0;
+ background: #0f172a;
+ color: white;
+ position: relative;
+ overflow: hidden;
  }
  .hero-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 4rem;
-  align-items: center;
+ display: grid;
+ grid-template-columns: 1.2fr 0.8fr;
+ gap: 4rem;
+ align-items: center;
  }
  .rating-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--primary);
-  color: white;
-  font-size: 0.875rem;
-  font-weight: 600;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  margin-bottom: 1.5rem;
+ display: inline-flex;
+ align-items: center;
+ gap: 0.5rem;
+ background: var(--primary);
+ color: white;
+ font-size: 0.875rem;
+ font-weight: 600;
+ padding: 0.4rem 0.8rem;
+ border-radius: 4px;
+ margin-bottom: 1.5rem;
  }
  .rating-badge .icon-svg {
-  width: 1rem;
-  height: 1rem;
-  fill: #ffffff;
+ width: 1rem;
+ height: 1rem;
+ fill: #ffffff;
  }
  .hero h1 {
-  font-size: 3.25rem;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
+ font-size: 3.25rem;
+ line-height: 1.1;
+ margin-bottom: 1.5rem;
  }
  .hero p {
-  font-size: 1.2rem;
-  color: #94a3b8;
-  margin-bottom: 2rem;
+ font-size: 1.2rem;
+ color: #94a3b8;
+ margin-bottom: 2rem;
  }
  .hero-actions {
-  display: flex;
-  gap: 1rem;
+ display: flex;
+ gap: 1rem;
  }
  .btn-outline {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
+ background: transparent;
+ color: white;
+ border: 2px solid white;
  }
  .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.1);
+ background: rgba(255, 255, 255, 0.1);
  }
  .hero-img-box img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 4px solid #334155;
+ width: 100%;
+ height: 400px;
+ object-fit: cover;
+ border-radius: 8px;
+ border: 4px solid #334155;
  }
 
  /* About */
  .about {
-  padding: 6rem 0;
-  background: var(--bg-light);
-  border-bottom: 1px solid var(--border);
+ padding: 6rem 0;
+ background: var(--bg-light);
+ border-bottom: 1px solid var(--border);
  }
  .section-header {
-  text-align: center;
-  max-width: 650px;
-  margin: 0 auto 4rem;
+ text-align: center;
+ max-width: 650px;
+ margin: 0 auto 4rem;
  }
  .section-header h2 {
-  font-size: 2.25rem;
-  margin-bottom: 1rem;
+ font-size: 2.25rem;
+ margin-bottom: 1rem;
  }
  .section-header p {
-  color: var(--text-muted);
+ color: var(--text-muted);
  }
  .about-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 1.125rem;
-  color: var(--text-muted);
-  line-height: 1.8;
+ max-width: 800px;
+ margin: 0 auto;
+ text-align: center;
+ font-size: 1.125rem;
+ color: var(--text-muted);
+ line-height: 1.8;
  }
 
  /* Services Grid */
  .services {
-  padding: 6rem 0;
+ padding: 6rem 0;
  }
  .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 2rem;
  }
  .service-card {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-  transition: all 0.3s ease;
+ background: white;
+ padding: 2.5rem;
+ border-radius: 6px;
+ border: 1px solid var(--border);
+ transition: all 0.3s ease;
  }
  .service-card:hover {
-  border-color: var(--primary);
-  box-shadow: 0 8px 24px rgba(8, 145, 178, 0.1);
+ border-color: var(--primary);
+ box-shadow: 0 8px 24px rgba(8, 145, 178, 0.1);
  }
  .service-icon {
-  width: 3.5rem;
-  height: 3.5rem;
-  background: var(--primary-light);
-  color: var(--primary);
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
+ width: 3.5rem;
+ height: 3.5rem;
+ background: var(--primary-light);
+ color: var(--primary);
+ border-radius: 6px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 1.5rem;
  }
  .service-icon .icon-svg {
-  width: 1.75rem;
-  height: 1.75rem;
+ width: 1.75rem;
+ height: 1.75rem;
  }
  .service-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
+ font-size: 1.25rem;
+ margin-bottom: 0.75rem;
  }
  .service-card p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
+ color: var(--text-muted);
+ font-size: 0.95rem;
  }
 
  /* Why Choose Us */
  .why-us {
-  padding: 6rem 0;
-  background: var(--bg-light);
+ padding: 6rem 0;
+ background: var(--bg-light);
  }
  .why-us-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 4rem;
+ align-items: center;
  }
  .why-us-img img {
-  width: 100%;
-  height: 480px;
-  object-fit: cover;
-  border-radius: 8px;
+ width: 100%;
+ height: 480px;
+ object-fit: cover;
+ border-radius: 8px;
  }
  .why-list {
-  list-style: none;
-  margin-top: 2rem;
+ list-style: none;
+ margin-top: 2rem;
  }
  .why-item {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+ display: flex;
+ gap: 1rem;
+ margin-bottom: 1.5rem;
  }
  .why-item-icon {
-  color: var(--primary);
-  background: var(--primary-light);
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+ color: var(--primary);
+ background: var(--primary-light);
+ width: 2.5rem;
+ height: 2.5rem;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-shrink: 0;
  }
  .why-item-content h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
+ font-size: 1.1rem;
+ margin-bottom: 0.25rem;
  }
  .why-item-content p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
+ color: var(--text-muted);
+ font-size: 0.95rem;
  }
 
  /* Hours & Contact */
  .contact-hours {
-  padding: 6rem 0;
+ padding: 6rem 0;
  }
  .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 4rem;
  }
  .hours-box {
-  background: var(--bg-light);
-  padding: 3rem;
-  border-radius: 8px;
-  border: 1px solid var(--border);
+ background: var(--bg-light);
+ padding: 3rem;
+ border-radius: 8px;
+ border: 1px solid var(--border);
  }
  .hours-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1.5rem;
+ width: 100%;
+ border-collapse: collapse;
+ margin-top: 1.5rem;
  }
  .hours-table tr {
-  border-bottom: 1px solid var(--border);
+ border-bottom: 1px solid var(--border);
  }
  .hours-table tr:last-child {
-  border-bottom: none;
+ border-bottom: none;
  }
  .hours-table td {
-  padding: 1rem 0;
-  font-size: 1rem;
+ padding: 1rem 0;
+ font-size: 1rem;
  }
  .hours-table td:last-child {
-  text-align: right;
-  font-weight: 600;
+ text-align: right;
+ font-weight: 600;
  }
  .contact-info-box {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+ display: flex;
+ flex-direction: column;
+ gap: 2rem;
  }
  .info-item {
-  display: flex;
-  gap: 1rem;
+ display: flex;
+ gap: 1rem;
  }
  .info-icon {
-  color: var(--primary);
-  flex-shrink: 0;
+ color: var(--primary);
+ flex-shrink: 0;
  }
  .info-text h4 {
-  margin-bottom: 0.25rem;
+ margin-bottom: 0.25rem;
  }
  .info-text p, .info-text a {
-  color: var(--text-muted);
-  text-decoration: none;
+ color: var(--text-muted);
+ text-decoration: none;
  }
  .info-text a:hover {
-  color: var(--primary);
+ color: var(--primary);
  }
  .map-iframe-container {
-  width: 100%;
-  height: 250px;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  margin-top: 1rem;
+ width: 100%;
+ height: 250px;
+ border-radius: 8px;
+ overflow: hidden;
+ border: 1px solid var(--border);
+ margin-top: 1rem;
  }
  .map-iframe-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+ width: 100%;
+ height: 100%;
+ border: none;
  }
 
  /* Footer */
  footer {
-  background: #0f172a;
-  color: white;
-  padding: 4rem 0;
-  text-align: center;
+ background: #0f172a;
+ color: white;
+ padding: 4rem 0;
+ text-align: center;
  }
  .footer-logo {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-decoration: none;
-  margin-bottom: 1rem;
-  display: inline-block;
+ color: white;
+ font-size: 1.5rem;
+ font-weight: 700;
+ text-decoration: none;
+ margin-bottom: 1rem;
+ display: inline-block;
  }
  .footer-text {
-  color: #94a3b8;
-  font-size: 0.9rem;
-  margin-bottom: 2rem;
+ color: #94a3b8;
+ font-size: 0.9rem;
+ margin-bottom: 2rem;
  }
  .footer-credit {
-  border-top: 1px solid #334155;
-  padding-top: 2rem;
-  font-size: 0.85rem;
-  color: #64748b;
+ border-top: 1px solid #334155;
+ padding-top: 2rem;
+ font-size: 0.85rem;
+ color: #64748b;
  }
 
  /* Responsive */
  @media (max-width: 992px) {
-  .hero-grid, .why-us-grid, .contact-grid {
-  grid-template-columns: 1fr;
-  gap: 3rem;
-  }
-  .hero-img-box img {
-  height: 350px;
-  }
-  .hero {
-  text-align: center;
-  padding: 4rem 0;
-  }
-  .hero-actions {
-  justify-content: center;
-  }
+ .hero-grid, .why-us-grid, .contact-grid {
+ grid-template-columns: 1fr;
+ gap: 3rem;
+ }
+ .hero-img-box img {
+ height: 350px;
+ }
+ .hero {
+ text-align: center;
+ padding: 4rem 0;
+ }
+ .hero-actions {
+ justify-content: center;
+ }
  }
  @media (max-width: 600px) {
-  .nav-cta {
-  display: none;
-  }
-  .hero h1 {
-  font-size: 2.25rem;
-  }
-  .hero-actions {
-  flex-direction: column;
-  }
+ .nav-cta {
+ display: none;
+ }
+ .hero h1 {
+ font-size: 2.25rem;
+ }
+ .hero-actions {
+ flex-direction: column;
+ }
  }
  </style>
 </head>
@@ -400,164 +400,164 @@
 
  <header>
  <div class="container nav-wrapper">
-  <a href="#" class="logo">
-  <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-  Nayan Eye Hospital
-  </a>
-  <div class="nav-cta">
-  <a href="tel:+918948949213" class="nav-phone">
-   <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-   +91 89489 49213
-  </a>
-  <a href="#contact" class="btn">Contact Clinic</a>
-  </div>
+ <a href="#" class="logo">
+ <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+ Nayan Eye Hospital
+ </a>
+ <div class="nav-cta">
+ <a href="tel:+918948949213" class="nav-phone">
+  <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  +91 89489 49213
+ </a>
+ <a href="#contact" class="btn">Contact Clinic</a>
+ </div>
  </div>
  </header>
 
  <section class="hero">
  <div class="container hero-grid">
-  <div class="hero-content">
-  <div class="rating-badge">
-   <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-   <span>4.9★ (542 Reviews) | Precision Eye Care</span>
-  </div>
-  <h1>Advanced Eye Care & Precision Vision Solutions</h1>
-  <p>Nayan Eye Hospital offers comprehensive clinical ophthalmology, modern cataract surgery, and laser vision correction in Ghansoli, Navi Mumbai.</p>
-  <div class="hero-actions">
-   <a href="tel:+918948949213" class="btn">Call Now</a>
-   <a href="#contact" class="btn btn-outline">Directions & Hours</a>
-  </div>
-  </div>
-  <div class="hero-img-box">
-  <img src="https://images.unsplash.com/photo-1579684389782-64d84b5e9053?auto=format&fit=crop&w=1200&q=80" alt="Eye Clinic Testing">
-  </div>
+ <div class="hero-content">
+ <div class="rating-badge">
+  <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+  <span>4.9★ (542 Reviews) | Precision Eye Care</span>
+ </div>
+ <h1>Advanced Eye Care & Precision Vision Solutions</h1>
+ <p>Nayan Eye Hospital offers comprehensive clinical ophthalmology, modern cataract surgery, and laser vision correction in Ghansoli, Navi Mumbai.</p>
+ <div class="hero-actions">
+  <a href="tel:+918948949213" class="btn">Call Now</a>
+  <a href="#contact" class="btn btn-outline">Directions & Hours</a>
+ </div>
+ </div>
+ <div class="hero-img-box">
+ <img src="https://images.unsplash.com/photo-1579684389782-64d84b5e9053?auto=format&fit=crop&w=1200&q=80" alt="Eye Clinic Testing">
+ </div>
  </div>
  </section>
 
  <section class="about">
  <div class="container">
-  <div class="section-header">
-  <h2>Welcome to Nayan Eye Hospital</h2>
-  <p>Preserving and restoring sight with clinical precision and compassionate medical care</p>
-  </div>
-  <div class="about-content">
-  <p>Nayan Eye Hospital is Navi Mumbai's trusted center for advanced vision diagnostics and surgical care. Under the guidance of our lead ophthalmic surgeons, we specialize in high-precision treatments for cataract, glaucoma, retinal health, and pediatric eye diseases. Located in Sector 11, Ghansoli, our hospital combines state-of-the-art diagnostic imaging with outpatient surgery to provide a seamless clinical experience.</p>
-  </div>
+ <div class="section-header">
+ <h2>Welcome to Nayan Eye Hospital</h2>
+ <p>Preserving and restoring sight with clinical precision and compassionate medical care</p>
+ </div>
+ <div class="about-content">
+ <p>Nayan Eye Hospital is Navi Mumbai's trusted center for advanced vision diagnostics and surgical care. Under the guidance of our lead ophthalmic surgeons, we specialize in high-precision treatments for cataract, glaucoma, retinal health, and pediatric eye diseases. Located in Sector 11, Ghansoli, our hospital combines state-of-the-art diagnostic imaging with outpatient surgery to provide a seamless clinical experience.</p>
+ </div>
  </div>
  </section>
 
  <section class="services">
  <div class="container">
-  <div class="section-header">
-  <h2>Ophthalmology Services</h2>
-  <p>Comprehensive eye care solutions utilizing advanced clinical diagnostics</p>
-  </div>
-  <div class="services-grid">
-  <div class="service-card">
-   <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-   <h3>Comprehensive Vision Testing</h3>
-   <p>Detailed refraction, eye pressure exams, and retinal screenings for optical health.</p>
-  </div>
-  <div class="service-card">
-   <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-   <h3>Micro-Incision Cataract Surgery</h3>
-   <p>Advanced phacoemulsification with premium intraocular lens (IOL) implants.</p>
-  </div>
-  <div class="service-card">
-   <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-   <h3>Glaucoma Management</h3>
-   <p>Early detection, pressure monitoring, laser treatments, and surgical options to preserve vision.</p>
-  </div>
-  <div class="service-card">
-   <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-   <h3>Pediatric Eye Care</h3>
-   <p>Specialized vision screenings and corrective treatments for squints, lazy eyes, and childhood vision issues.</p>
-  </div>
-  </div>
+ <div class="section-header">
+ <h2>Ophthalmology Services</h2>
+ <p>Comprehensive eye care solutions utilizing advanced clinical diagnostics</p>
+ </div>
+ <div class="services-grid">
+ <div class="service-card">
+  <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+  <h3>Comprehensive Vision Testing</h3>
+  <p>Detailed refraction, eye pressure exams, and retinal screenings for optical health.</p>
+ </div>
+ <div class="service-card">
+  <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+  <h3>Micro-Incision Cataract Surgery</h3>
+  <p>Advanced phacoemulsification with premium intraocular lens (IOL) implants.</p>
+ </div>
+ <div class="service-card">
+  <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+  <h3>Glaucoma Management</h3>
+  <p>Early detection, pressure monitoring, laser treatments, and surgical options to preserve vision.</p>
+ </div>
+ <div class="service-card">
+  <div class="service-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+  <h3>Pediatric Eye Care</h3>
+  <p>Specialized vision screenings and corrective treatments for squints, lazy eyes, and childhood vision issues.</p>
+ </div>
+ </div>
  </div>
  </section>
 
  <section class="why-us">
  <div class="container why-us-grid">
-  <div class="why-us-img">
-  <img src="https://images.unsplash.com/photo-1516062423079-7ca13cca993f?auto=format&fit=crop&w=800&q=80" alt="Eye examination">
+ <div class="why-us-img">
+ <img src="https://images.unsplash.com/photo-1516062423079-7ca13cca993f?auto=format&fit=crop&w=800&q=80" alt="Eye examination">
+ </div>
+ <div>
+ <h2>Clinical Precision & Clear Vision</h2>
+ <p style="color: var(--text-muted); margin-bottom: 2rem;">We prioritize your sight and comfort at every stage of your diagnostic and treatment journey.</p>
+ <ul class="why-list">
+  <li class="why-item">
+  <div class="why-item-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+  <div class="why-item-content">
+  <h4>Specialist Surgeons</h4>
+  <p>Ophthalmologists with extensive clinical training in microscopic and laser eye surgeries.</p>
   </div>
-  <div>
-  <h2>Clinical Precision & Clear Vision</h2>
-  <p style="color: var(--text-muted); margin-bottom: 2rem;">We prioritize your sight and comfort at every stage of your diagnostic and treatment journey.</p>
-  <ul class="why-list">
-   <li class="why-item">
-   <div class="why-item-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-   <div class="why-item-content">
-    <h4>Specialist Surgeons</h4>
-    <p>Ophthalmologists with extensive clinical training in microscopic and laser eye surgeries.</p>
-   </div>
-   </li>
-   <li class="why-item">
-   <div class="why-item-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-   <div class="why-item-content">
-    <h4>Advanced Diagnostics</h4>
-    <p>Equipped with optical coherence tomography (OCT) and visual field analyzers.</p>
-   </div>
-   </li>
-   <li class="why-item">
-   <div class="why-item-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-   <div class="why-item-content">
-    <h4>Patient Safety & Hygiene</h4>
-    <p>Rigorous clinical sanitization and sterile operating environment for surgical procedures.</p>
-   </div>
-   </li>
-  </ul>
+  </li>
+  <li class="why-item">
+  <div class="why-item-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+  <div class="why-item-content">
+  <h4>Advanced Diagnostics</h4>
+  <p>Equipped with optical coherence tomography (OCT) and visual field analyzers.</p>
   </div>
+  </li>
+  <li class="why-item">
+  <div class="why-item-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+  <div class="why-item-content">
+  <h4>Patient Safety & Hygiene</h4>
+  <p>Rigorous clinical sanitization and sterile operating environment for surgical procedures.</p>
+  </div>
+  </li>
+ </ul>
+ </div>
  </div>
  </section>
 
  <section class="contact-hours" id="contact">
  <div class="container contact-grid">
-  <div class="hours-box">
-  <h3><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Hospital Hours</h3>
-  <table class="hours-table">
-   <tr><td>Monday</td><td>10:00 AM - 8:30 PM</td></tr>
-   <tr><td>Tuesday</td><td>10:00 AM - 8:30 PM</td></tr>
-   <tr><td>Wednesday</td><td>10:00 AM - 8:30 PM</td></tr>
-   <tr><td>Thursday</td><td>10:00 AM - 8:30 PM</td></tr>
-   <tr><td>Friday</td><td>10:00 AM - 8:30 PM</td></tr>
-   <tr><td>Saturday</td><td>10:00 AM - 8:30 PM</td></tr>
-   <tr><td>Sunday</td><td>Closed</td></tr>
-  </table>
+ <div class="hours-box">
+ <h3><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Hospital Hours</h3>
+ <table class="hours-table">
+  <tr><td>Monday</td><td>10:00 AM - 8:30 PM</td></tr>
+  <tr><td>Tuesday</td><td>10:00 AM - 8:30 PM</td></tr>
+  <tr><td>Wednesday</td><td>10:00 AM - 8:30 PM</td></tr>
+  <tr><td>Thursday</td><td>10:00 AM - 8:30 PM</td></tr>
+  <tr><td>Friday</td><td>10:00 AM - 8:30 PM</td></tr>
+  <tr><td>Saturday</td><td>10:00 AM - 8:30 PM</td></tr>
+  <tr><td>Sunday</td><td>Closed</td></tr>
+ </table>
+ </div>
+ <div class="contact-info-box">
+ <h2>Get in Touch</h2>
+ <div class="info-item">
+  <div class="info-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+  <div class="info-text">
+  <h4>Address</h4>
+  <p>Shop no 13, Cloud 36 Rd, CHS, Sector 11, Ghansoli, Navi Mumbai, Maharashtra 400701, India</p>
   </div>
-  <div class="contact-info-box">
-  <h2>Get in Touch</h2>
-  <div class="info-item">
-   <div class="info-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-   <div class="info-text">
-   <h4>Address</h4>
-   <p>Shop no 13, Cloud 36 Rd, CHS, Sector 11, Ghansoli, Navi Mumbai, Maharashtra 400701, India</p>
-   </div>
+ </div>
+ <div class="info-item">
+  <div class="info-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+  <div class="info-text">
+  <h4>Phone Number</h4>
+  <p><a href="tel:+918948949213">+91 89489 49213</a></p>
   </div>
-  <div class="info-item">
-   <div class="info-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-   <div class="info-text">
-   <h4>Phone Number</h4>
-   <p><a href="tel:+918948949213">+91 89489 49213</a></p>
-   </div>
-  </div>
-  <a href="https://www.google.com/maps/search/?api=1&query=Nayan%20Eye%20Hospital%20Shop%20no%2013%2C%20Cloud%2036%20Rd%2C%20CHS%2C%20Sector%2011%2C%20Ghansoli%2C%20Navi%20Mumbai%2C%20Maharashtra%20400701%2C%20India" target="_blank" rel="noopener noreferrer" class="btn">Get Directions on Maps</a>
-  <div class="map-iframe-container">
-   <iframe src="https://maps.google.com/maps?q=Nayan%20Eye%20Hospital%2C%20Shop%20no%2013%2C%20Cloud%2036%20Rd%2C%20CHS%2C%20Sector%2011%2C%20Ghansoli%2C%20Navi%20Mumbai%2C%20Maharashtra%20400701%2C%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
-  </div>
-  </div>
+ </div>
+ <a href="https://www.google.com/maps/search/?api=1&query=Nayan%20Eye%20Hospital%20Shop%20no%2013%2C%20Cloud%2036%20Rd%2C%20CHS%2C%20Sector%2011%2C%20Ghansoli%2C%20Navi%20Mumbai%2C%20Maharashtra%20400701%2C%20India" target="_blank" rel="noopener noreferrer" class="btn">Get Directions on Maps</a>
+ <div class="map-iframe-container">
+  <iframe src="https://maps.google.com/maps?q=Nayan%20Eye%20Hospital%2C%20Shop%20no%2013%2C%20Cloud%2036%20Rd%2C%20CHS%2C%20Sector%2011%2C%20Ghansoli%2C%20Navi%20Mumbai%2C%20Maharashtra%20400701%2C%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+ </div>
+ </div>
  </div>
  </section>
 
  <footer>
  <div class="container">
-  <a href="#" class="footer-logo">Nayan Eye Hospital</a>
-  <p class="footer-text">Registered Eye Care Center in Ghansoli, Navi Mumbai</p>
-  <div class="footer-credit">
-  <p>&copy; 2026 Nayan Eye Hospital. All rights reserved.</p>
-  <p style="margin-top: 0.5rem;">Demo by Kevin</p>
-  </div>
+ <a href="#" class="footer-logo">Nayan Eye Hospital</a>
+ <p class="footer-text">Registered Eye Care Center in Ghansoli, Navi Mumbai</p>
+ <div class="footer-credit">
+ <p>&copy; 2026 Nayan Eye Hospital. All rights reserved.</p>
+ <p style="margin-top: 0.5rem;">Demo by Kevin</p>
+ </div>
  </div>
  </footer>
 
