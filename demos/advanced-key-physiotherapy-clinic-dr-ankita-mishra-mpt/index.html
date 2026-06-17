@@ -9,328 +9,328 @@
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
  <style>
-  :root {
-   --primary: #1d4ed8;
-   --primary-hover: #1e40af;
-   --primary-light: #eff6ff;
-   --accent: #f59e0b;
-   --dark: #0f172a;
-   --text: #1e293b;
-   --text-muted: #64748b;
-   --bg: #f8fafc;
-   --card: #ffffff;
-   --border: #e2e8f0;
-   --success: #16a34a;
-   --font: 'Inter', system-ui, -apple-system, sans-serif;
-   --radius: 12px;
-   --shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
-   --shadow-lg: 0 10px 25px rgba(0,0,0,.1), 0 4px 10px rgba(0,0,0,.06);
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: var(--font); color: var(--text); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-  a { text-decoration: none; color: inherit; }
+ :root {
+  --primary: #1d4ed8;
+  --primary-hover: #1e40af;
+  --primary-light: #eff6ff;
+  --accent: #f59e0b;
+  --dark: #0f172a;
+  --text: #1e293b;
+  --text-muted: #64748b;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --success: #16a34a;
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+  --radius: 12px;
+  --shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,.1), 0 4px 10px rgba(0,0,0,.06);
+ }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body { font-family: var(--font); color: var(--text); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+ a { text-decoration: none; color: inherit; }
 
-  .top-bar { background: var(--dark); color: #94a3b8; font-size: 13px; padding: 8px 0; }
-  .top-bar .container { display: flex; justify-content: space-between; align-items: center; }
-  .top-bar a { color: #e2e8f0; }
-  .top-bar .phone-top { color: var(--accent); font-weight: 700; font-size: 14px; }
+ .top-bar { background: var(--dark); color: #94a3b8; font-size: 13px; padding: 8px 0; }
+ .top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+ .top-bar a { color: #e2e8f0; }
+ .top-bar .phone-top { color: var(--accent); font-weight: 700; font-size: 14px; }
 
-  .nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
-  .nav .container { display: flex; justify-content: space-between; align-items: center; }
-  .nav .logo { font-weight: 800; font-size: 20px; color: var(--dark); letter-spacing: -.3px; }
-  .nav .logo span { color: var(--primary); }
-  .nav .logo small { display: block; font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: .5px; text-transform: uppercase; }
-  .nav-actions { display: flex; align-items: center; gap: 12px; }
-  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; border: none; transition: all .2s; }
-  .btn-primary { background: var(--primary); color: #fff; }
-  .btn-primary:hover { background: var(--primary-hover); transform: translateY(-1px); }
-  .btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
-  .btn-outline:hover { background: var(--primary-light); }
-  .btn-lg { padding: 14px 28px; font-size: 16px; border-radius: 10px; }
-  .btn-block { display: flex; width: 100%; justify-content: center; }
-  .btn-pulse { animation: pulse 2s infinite; }
-  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(29,78,216,.4); } 50% { box-shadow: 0 0 0 12px rgba(29,78,216,0); } }
+ .nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+ .nav .container { display: flex; justify-content: space-between; align-items: center; }
+ .nav .logo { font-weight: 800; font-size: 20px; color: var(--dark); letter-spacing: -.3px; }
+ .nav .logo span { color: var(--primary); }
+ .nav .logo small { display: block; font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: .5px; text-transform: uppercase; }
+ .nav-actions { display: flex; align-items: center; gap: 12px; }
+ .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; border: none; transition: all .2s; }
+ .btn-primary { background: var(--primary); color: #fff; }
+ .btn-primary:hover { background: var(--primary-hover); transform: translateY(-1px); }
+ .btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
+ .btn-outline:hover { background: var(--primary-light); }
+ .btn-lg { padding: 14px 28px; font-size: 16px; border-radius: 10px; }
+ .btn-block { display: flex; width: 100%; justify-content: center; }
+ .btn-pulse { animation: pulse 2s infinite; }
+ @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(29,78,216,.4); } 50% { box-shadow: 0 0 0 12px rgba(29,78,216,0); } }
 
-  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+ .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
 
-  .hero { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #1e40af 100%); color: #fff; padding: 80px 0 90px; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(29,78,216,.2) 0%, transparent 70%); border-radius: 50%; }
-  .hero .container { position: relative; z-index: 1; }
-  .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(29,78,216,.3); border: 1px solid rgba(29,78,216,.5); color: #93c5fd; padding: 6px 14px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
-  .hero-badge .dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: blink 1.5s infinite; }
-  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
-  .hero h1 { font-size: 48px; font-weight: 900; line-height: 1.1; letter-spacing: -1px; margin-bottom: 16px; }
-  .hero h1 .highlight { color: var(--accent); }
-  .hero p { font-size: 18px; color: #94a3b8; max-width: 540px; margin-bottom: 32px; }
-  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-  .hero .btn-outline { color: #fff; border-color: rgba(255,255,255,.3); }
-  .hero-stats { display: flex; gap: 40px; margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,.1); }
-  .hero-stat .num { font-size: 32px; font-weight: 800; color: #fff; }
-  .hero-stat .label { font-size: 13px; color: #64748b; font-weight: 500; }
+ .hero { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #1e40af 100%); color: #fff; padding: 80px 0 90px; position: relative; overflow: hidden; }
+ .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(29,78,216,.2) 0%, transparent 70%); border-radius: 50%; }
+ .hero .container { position: relative; z-index: 1; }
+ .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(29,78,216,.3); border: 1px solid rgba(29,78,216,.5); color: #93c5fd; padding: 6px 14px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+ .hero-badge .dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: blink 1.5s infinite; }
+ @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+ .hero h1 { font-size: 48px; font-weight: 900; line-height: 1.1; letter-spacing: -1px; margin-bottom: 16px; }
+ .hero h1 .highlight { color: var(--accent); }
+ .hero p { font-size: 18px; color: #94a3b8; max-width: 540px; margin-bottom: 32px; }
+ .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+ .hero .btn-outline { color: #fff; border-color: rgba(255,255,255,.3); }
+ .hero-stats { display: flex; gap: 40px; margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,.1); }
+ .hero-stat .num { font-size: 32px; font-weight: 800; color: #fff; }
+ .hero-stat .label { font-size: 13px; color: #64748b; font-weight: 500; }
 
-  .trust-bar { background: var(--card); border-bottom: 1px solid var(--border); padding: 20px 0; }
-  .trust-bar .container { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
-  .trust-item { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--text-muted); }
+ .trust-bar { background: var(--card); border-bottom: 1px solid var(--border); padding: 20px 0; }
+ .trust-bar .container { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
+ .trust-item { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--text-muted); }
 
-  .section { padding: 80px 0; }
-  .section-title { text-align: center; margin-bottom: 48px; }
-  .section-title h2 { font-size: 36px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 12px; }
-  .section-title p { font-size: 16px; color: var(--text-muted); max-width: 500px; margin: 0 auto; }
+ .section { padding: 80px 0; }
+ .section-title { text-align: center; margin-bottom: 48px; }
+ .section-title h2 { font-size: 36px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 12px; }
+ .section-title p { font-size: 16px; color: var(--text-muted); max-width: 500px; margin: 0 auto; }
 
-  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-  .service-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: all .2s; }
-  .service-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); border-color: var(--primary); }
-  .service-card .icon { width: 48px; height: 48px; background: var(--primary-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px; }
-  .service-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-  .service-card p { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+ .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+ .service-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: all .2s; }
+ .service-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); border-color: var(--primary); }
+ .service-card .icon { width: 48px; height: 48px; background: var(--primary-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px; }
+ .service-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+ .service-card p { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
 
-  .why-us { background: var(--dark); color: #fff; }
-  .why-us .section-title h2 { color: #fff; }
-  .why-us .section-title p { color: #94a3b8; }
-  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
-  .why-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius); padding: 28px; text-align: center; }
-  .why-card .icon { font-size: 36px; margin-bottom: 12px; }
-  .why-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-  .why-card p { font-size: 14px; color: #94a3b8; }
+ .why-us { background: var(--dark); color: #fff; }
+ .why-us .section-title h2 { color: #fff; }
+ .why-us .section-title p { color: #94a3b8; }
+ .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+ .why-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius); padding: 28px; text-align: center; }
+ .why-card .icon { font-size: 36px; margin-bottom: 12px; }
+ .why-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+ .why-card p { font-size: 14px; color: #94a3b8; }
 
-  .emergency-box { background: linear-gradient(135deg, #fef2f2 0%, #fff7ed 100%); border: 2px solid #fca5a5; border-radius: var(--radius); padding: 40px; text-align: center; margin-bottom: 48px; }
-  .emergency-box h3 { font-size: 28px; font-weight: 800; color: #dc2626; margin-bottom: 12px; }
-  .emergency-box p { font-size: 16px; color: var(--text-muted); margin-bottom: 24px; }
+ .emergency-box { background: linear-gradient(135deg, #fef2f2 0%, #fff7ed 100%); border: 2px solid #fca5a5; border-radius: var(--radius); padding: 40px; text-align: center; margin-bottom: 48px; }
+ .emergency-box h3 { font-size: 28px; font-weight: 800; color: #dc2626; margin-bottom: 12px; }
+ .emergency-box p { font-size: 16px; color: var(--text-muted); margin-bottom: 24px; }
 
-  .areas-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-  .area-tag { background: var(--card); border: 1px solid var(--border); padding: 8px 18px; border-radius: 100px; font-size: 14px; font-weight: 500; color: var(--text-muted); }
-  .area-tag:hover { border-color: var(--primary); color: var(--primary); }
+ .areas-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+ .area-tag { background: var(--card); border: 1px solid var(--border); padding: 8px 18px; border-radius: 100px; font-size: 14px; font-weight: 500; color: var(--text-muted); }
+ .area-tag:hover { border-color: var(--primary); color: var(--primary); }
 
-  .cta { background: linear-gradient(135deg, var(--primary) 0%, #1e40af 100%); color: #fff; padding: 80px 0; text-align: center; }
-  .cta h2 { font-size: 40px; font-weight: 800; margin-bottom: 16px; }
-  .cta p { font-size: 18px; color: rgba(255,255,255,.8); margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto; }
-  .cta .btn { background: #fff; color: var(--primary); }
+ .cta { background: linear-gradient(135deg, var(--primary) 0%, #1e40af 100%); color: #fff; padding: 80px 0; text-align: center; }
+ .cta h2 { font-size: 40px; font-weight: 800; margin-bottom: 16px; }
+ .cta p { font-size: 18px; color: rgba(255,255,255,.8); margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto; }
+ .cta .btn { background: #fff; color: var(--primary); }
 
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-  .contact-info h3 { font-size: 24px; font-weight: 700; margin-bottom: 20px; }
-  .contact-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
-  .contact-item .icon { width: 44px; height: 44px; background: var(--primary-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
-  .contact-item .label { font-size: 13px; color: var(--text-muted); font-weight: 500; }
-  .contact-item .value { font-size: 16px; font-weight: 600; }
-  .contact-item .value a:hover { color: var(--primary); }
-  .map-wrap { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); height: 360px; }
-  .map-wrap iframe { width: 100%; height: 100%; border: none; }
+ .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+ .contact-info h3 { font-size: 24px; font-weight: 700; margin-bottom: 20px; }
+ .contact-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+ .contact-item .icon { width: 44px; height: 44px; background: var(--primary-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+ .contact-item .label { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+ .contact-item .value { font-size: 16px; font-weight: 600; }
+ .contact-item .value a:hover { color: var(--primary); }
+ .map-wrap { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); height: 360px; }
+ .map-wrap iframe { width: 100%; height: 100%; border: none; }
 
-  .footer { background: var(--dark); color: #64748b; padding: 40px 0; text-align: center; font-size: 14px; }
-  .footer a { color: #94a3b8; }
+ .footer { background: var(--dark); color: #64748b; padding: 40px 0; text-align: center; font-size: 14px; }
+ .footer a { color: #94a3b8; }
 
-  .float-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--card); border-top: 1px solid var(--border); padding: 12px 24px; z-index: 100; }
+ .float-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--card); border-top: 1px solid var(--border); padding: 12px 24px; z-index: 100; }
 
-  @media (max-width: 768px) {
-   .hero h1 { font-size: 32px; }
-   .hero-stats { gap: 24px; }
-   .hero-stat .num { font-size: 24px; }
-   .contact-grid { grid-template-columns: 1fr; }
-   .section { padding: 60px 0; }
-   .section-title h2 { font-size: 28px; }
-   .cta h2 { font-size: 28px; }
-   .float-cta { display: flex; gap: 12px; }
-   body { padding-bottom: 70px; }
-  }
+ @media (max-width: 768px) {
+  .hero h1 { font-size: 32px; }
+  .hero-stats { gap: 24px; }
+  .hero-stat .num { font-size: 24px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .section { padding: 60px 0; }
+  .section-title h2 { font-size: 28px; }
+  .cta h2 { font-size: 28px; }
+  .float-cta { display: flex; gap: 12px; }
+  body { padding-bottom: 70px; }
+ }
  </style>
 </head>
 <body>
 
 <div class="top-bar">
  <div class="container">
-  <span>📍 Advance Key Physioth, Mumbai</span>
-  <a href="tel:+917498852881" class="phone-top">📞 Call Now: +91 74988 52881</a>
+ <span>📍 Advance Key Physioth, Mumbai</span>
+ <a href="tel:+917498852881" class="phone-top">📞 Call Now: +91 74988 52881</a>
  </div>
 </div>
 
 <nav class="nav">
  <div class="container">
-  <div class="logo">
-   Advanced
-   <small>Locksmith Services</small>
-  </div>
-  <div class="nav-actions">
-   <a href="tel:+917498852881" class="btn btn-primary btn-pulse">📞 +91 74988 52881</a>
-  </div>
+ <div class="logo">
+  Advanced
+  <small>Locksmith Services</small>
+ </div>
+ <div class="nav-actions">
+  <a href="tel:+917498852881" class="btn btn-primary btn-pulse">📞 +91 74988 52881</a>
+ </div>
  </div>
 </nav>
 
 <section class="hero">
  <div class="container">
-  <div class="hero-badge"><span class="dot"></span> Available 24/7 — Emergency Locksmith</div>
-  <h1>Locked Out? We'll Get You <span class="highlight">Back In Fast</span></h1>
-  <p>Professional locksmith services across Mumbai. Home lockouts, car lockouts, lock repair, key duplication, and security upgrades. Licensed, fast, and affordable.</p>
-  <div class="hero-actions">
-   <a href="tel:+917498852881" class="btn btn-primary btn-lg btn-pulse">📞 Call +91 74988 52881</a>
-   <a href="https://www.google.com/maps/place/?q=place_id:ChIJxU5YnFrB5zsRMLH8YkfkNHg" target="_blank" class="btn btn-outline btn-lg">📍 Get Directions</a>
-  </div>
-  <div class="hero-stats">
-   <div class="hero-stat"><div class="num">5.0★</div><div class="label">Google Rating</div></div>
-   <div class="hero-stat"><div class="num">222+</div><div class="label">Happy Customers</div></div>
-   <div class="hero-stat"><div class="num">24/7</div><div class="label">Emergency Service</div></div>
-   <div class="hero-stat"><div class="num">15min</div><div class="label">Response Time</div></div>
-  </div>
+ <div class="hero-badge"><span class="dot"></span> Available 24/7 — Emergency Locksmith</div>
+ <h1>Locked Out? We'll Get You <span class="highlight">Back In Fast</span></h1>
+ <p>Professional locksmith services across Mumbai. Home lockouts, car lockouts, lock repair, key duplication, and security upgrades. Licensed, fast, and affordable.</p>
+ <div class="hero-actions">
+  <a href="tel:+917498852881" class="btn btn-primary btn-lg btn-pulse">📞 Call +91 74988 52881</a>
+  <a href="https://www.google.com/maps/place/?q=place_id:ChIJxU5YnFrB5zsRMLH8YkfkNHg" target="_blank" class="btn btn-outline btn-lg">📍 Get Directions</a>
+ </div>
+ <div class="hero-stats">
+  <div class="hero-stat"><div class="num">5.0★</div><div class="label">Google Rating</div></div>
+  <div class="hero-stat"><div class="num">222+</div><div class="label">Happy Customers</div></div>
+  <div class="hero-stat"><div class="num">24/7</div><div class="label">Emergency Service</div></div>
+  <div class="hero-stat"><div class="num">15min</div><div class="label">Response Time</div></div>
+ </div>
  </div>
 </section>
 
 <div class="trust-bar">
  <div class="container">
-  <div class="trust-item">✅ Licensed & Insured</div>
-  <div class="trust-item">💰 No Hidden Charges</div>
-  <div class="trust-item">🛡️ 1-Year Warranty</div>
-  <div class="trust-item">⚡ Same-Day Service</div>
-  <div class="trust-item">📞 Free Estimates</div>
+ <div class="trust-item">✅ Licensed & Insured</div>
+ <div class="trust-item">💰 No Hidden Charges</div>
+ <div class="trust-item">🛡️ 1-Year Warranty</div>
+ <div class="trust-item">⚡ Same-Day Service</div>
+ <div class="trust-item">📞 Free Estimates</div>
  </div>
 </div>
 
 <section class="section">
  <div class="container">
-  <div class="emergency-box">
-   <h3>🔒 Locked Out Right Now?</h3>
-   <p>Don't break a window or damage your door. Our emergency locksmith will be there in 15 minutes — with the right tools to get you in safely.</p>
-   <a href="tel:+917498852881" class="btn btn-primary btn-lg btn-pulse">📞 Call +91 74988 52881 — We're On Our Way</a>
+ <div class="emergency-box">
+  <h3>🔒 Locked Out Right Now?</h3>
+  <p>Don't break a window or damage your door. Our emergency locksmith will be there in 15 minutes — with the right tools to get you in safely.</p>
+  <a href="tel:+917498852881" class="btn btn-primary btn-lg btn-pulse">📞 Call +91 74988 52881 — We're On Our Way</a>
+ </div>
+ <div class="section-title">
+  <h2>Our Locksmith Services</h2>
+  <p>Residential, commercial & automotive — we handle every lock</p>
+ </div>
+ <div class="services-grid">
+  <div class="service-card">
+  <div class="icon">🏠</div>
+  <h3>Home Lockout</h3>
+  <p>Locked out of your house or apartment? We'll get you back in without damaging your door or lock.</p>
   </div>
-  <div class="section-title">
-   <h2>Our Locksmith Services</h2>
-   <p>Residential, commercial & automotive — we handle every lock</p>
+  <div class="service-card">
+  <div class="icon">🚗</div>
+  <h3>Car Lockout</h3>
+  <p>Keys locked in the car? Lost car key? We handle all makes and models — no damage to your vehicle.</p>
   </div>
-  <div class="services-grid">
-   <div class="service-card">
-    <div class="icon">🏠</div>
-    <h3>Home Lockout</h3>
-    <p>Locked out of your house or apartment? We'll get you back in without damaging your door or lock.</p>
-   </div>
-   <div class="service-card">
-    <div class="icon">🚗</div>
-    <h3>Car Lockout</h3>
-    <p>Keys locked in the car? Lost car key? We handle all makes and models — no damage to your vehicle.</p>
-   </div>
-   <div class="service-card">
-    <div class="icon">🔑</div>
-    <h3>Key Duplication</h3>
-    <p>House keys, car keys, high-security keys — precise duplication while you wait.</p>
-   </div>
-   <div class="service-card">
-    <div class="icon">🔒</div>
-    <h3>Lock Repair & Replacement</h3>
-    <p>Broken lock? Upgrading security? We repair, replace, and install all types of locks.</p>
-   </div>
-   <div class="service-card">
-    <div class="icon">🏢</div>
-    <h3>Commercial Locksmith</h3>
-    <p>Office locks, master key systems, access control, and high-security solutions for businesses.</p>
-   </div>
-   <div class="service-card">
-    <div class="icon">🛡️</div>
-    <h3>Security Upgrade</h3>
-    <p>Smart locks, deadbolts, CCTV integration — make your home or office more secure.</p>
-   </div>
+  <div class="service-card">
+  <div class="icon">🔑</div>
+  <h3>Key Duplication</h3>
+  <p>House keys, car keys, high-security keys — precise duplication while you wait.</p>
   </div>
+  <div class="service-card">
+  <div class="icon">🔒</div>
+  <h3>Lock Repair & Replacement</h3>
+  <p>Broken lock? Upgrading security? We repair, replace, and install all types of locks.</p>
+  </div>
+  <div class="service-card">
+  <div class="icon">🏢</div>
+  <h3>Commercial Locksmith</h3>
+  <p>Office locks, master key systems, access control, and high-security solutions for businesses.</p>
+  </div>
+  <div class="service-card">
+  <div class="icon">🛡️</div>
+  <h3>Security Upgrade</h3>
+  <p>Smart locks, deadbolts, CCTV integration — make your home or office more secure.</p>
+  </div>
+ </div>
  </div>
 </section>
 
 <section class="section why-us">
  <div class="container">
-  <div class="section-title">
-   <h2>Why Choose Advanced?</h2>
-   <p>Mumbai's most trusted emergency locksmith</p>
+ <div class="section-title">
+  <h2>Why Choose Advanced?</h2>
+  <p>Mumbai's most trusted emergency locksmith</p>
+ </div>
+ <div class="why-grid">
+  <div class="why-card">
+  <div class="icon">⚡</div>
+  <h3>15-Minute Response</h3>
+  <p>We arrive fast for emergency lockouts across Mumbai and Navi Mumbai.</p>
   </div>
-  <div class="why-grid">
-   <div class="why-card">
-    <div class="icon">⚡</div>
-    <h3>15-Minute Response</h3>
-    <p>We arrive fast for emergency lockouts across Mumbai and Navi Mumbai.</p>
-   </div>
-   <div class="why-card">
-    <div class="icon">👷</div>
-    <h3>Expert Locksmiths</h3>
-    <p>10+ years of experience. Licensed, background-checked professionals.</p>
-   </div>
-   <div class="why-card">
-    <div class="icon">💵</div>
-    <h3>Fair Pricing</h3>
-    <p>Transparent quotes before work starts. No hidden charges, ever.</p>
-   </div>
-   <div class="why-card">
-    <div class="icon">🛡️</div>
-    <h3>Guaranteed Work</h3>
-    <p>1-year warranty on all locks and installations. Your satisfaction guaranteed.</p>
-   </div>
+  <div class="why-card">
+  <div class="icon">👷</div>
+  <h3>Expert Locksmiths</h3>
+  <p>10+ years of experience. Licensed, background-checked professionals.</p>
   </div>
+  <div class="why-card">
+  <div class="icon">💵</div>
+  <h3>Fair Pricing</h3>
+  <p>Transparent quotes before work starts. No hidden charges, ever.</p>
+  </div>
+  <div class="why-card">
+  <div class="icon">🛡️</div>
+  <h3>Guaranteed Work</h3>
+  <p>1-year warranty on all locks and installations. Your satisfaction guaranteed.</p>
+  </div>
+ </div>
  </div>
 </section>
 
 <section class="section">
  <div class="container">
-  <div class="section-title">
-   <h2>Areas We Serve</h2>
-   <p>Serving all of Mumbai, Navi Mumbai & Thane</p>
-  </div>
-  <div class="areas-grid">
-   <span class="area-tag">Andheri</span>
-   <span class="area-tag">Bandra</span>
-   <span class="area-tag">Borivali</span>
-   <span class="area-tag">Dadar</span>
-   <span class="area-tag">Goregaon</span>
-   <span class="area-tag">Juhu</span>
-   <span class="area-tag">Kandivali</span>
-   <span class="area-tag">Malad</span>
-   <span class="area-tag">Powai</span>
-   <span class="area-tag">Vile Parle</span>
-   <span class="area-tag">Virar</span>
-   <span class="area-tag">Thane</span>
-   <span class="area-tag">Navi Mumbai</span>
-   <span class="area-tag">Vashi</span>
-   <span class="area-tag">Nerul</span>
-   <span class="area-tag">Belapur</span>
-   <span class="area-tag">Panvel</span>
-  </div>
+ <div class="section-title">
+  <h2>Areas We Serve</h2>
+  <p>Serving all of Mumbai, Navi Mumbai & Thane</p>
+ </div>
+ <div class="areas-grid">
+  <span class="area-tag">Andheri</span>
+  <span class="area-tag">Bandra</span>
+  <span class="area-tag">Borivali</span>
+  <span class="area-tag">Dadar</span>
+  <span class="area-tag">Goregaon</span>
+  <span class="area-tag">Juhu</span>
+  <span class="area-tag">Kandivali</span>
+  <span class="area-tag">Malad</span>
+  <span class="area-tag">Powai</span>
+  <span class="area-tag">Vile Parle</span>
+  <span class="area-tag">Virar</span>
+  <span class="area-tag">Thane</span>
+  <span class="area-tag">Navi Mumbai</span>
+  <span class="area-tag">Vashi</span>
+  <span class="area-tag">Nerul</span>
+  <span class="area-tag">Belapur</span>
+  <span class="area-tag">Panvel</span>
+ </div>
  </div>
 </section>
 
 <section class="cta">
  <div class="container">
-  <h2>Locked Out? We're Already on Our Way.</h2>
-  <p>Don't wait outside in the heat or rain. Call now and our locksmith will be at your door in 15 minutes.</p>
-  <a href="tel:+917498852881" class="btn btn-lg">📞 Call +91 74988 52881 — Available 24/7</a>
+ <h2>Locked Out? We're Already on Our Way.</h2>
+ <p>Don't wait outside in the heat or rain. Call now and our locksmith will be at your door in 15 minutes.</p>
+ <a href="tel:+917498852881" class="btn btn-lg">📞 Call +91 74988 52881 — Available 24/7</a>
  </div>
 </section>
 
 <section class="section">
  <div class="container">
-  <div class="contact-grid">
-   <div class="contact-info">
-    <h3>Contact Us</h3>
-    <div class="contact-item">
-     <div class="icon">📞</div>
-     <div><div class="label">Phone (Call or WhatsApp)</div><div class="value"><a href="tel:+917498852881">+91 74988 52881</a></div></div>
-    </div>
-    <div class="contact-item">
-     <div class="icon">📍</div>
-     <div><div class="label">Service Area</div><div class="value">Shop No 6, Advance Key Physiotherapy, Greenfield Residency, Plot No 3, Sector 35-I, Sector 35I, Khar</div></div>
-    </div>
-    <div class="contact-item">
-     <div class="icon">⏰</div>
-     <div><div class="label">Working Hours</div><div class="value">24/7 — Including Holidays</div></div>
-    </div>
-    <div class="contact-item">
-     <div class="icon">⭐</div>
-     <div><div class="label">Google Rating</div><div class="value">5.0 out of 5 (222 reviews)</div></div>
-    </div>
-    <br>
-    <a href="tel:+917498852881" class="btn btn-primary btn-lg btn-block btn-pulse">📞 Call Now — Free Estimate</a>
-   </div>
-   <div class="map-wrap">
-    <iframe src="https://maps.google.com/maps?q=Advanced+key+physiotherapy+clinic+Dr.+Ankita+Mishra+(MPT)&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-   </div>
+ <div class="contact-grid">
+  <div class="contact-info">
+  <h3>Contact Us</h3>
+  <div class="contact-item">
+   <div class="icon">📞</div>
+   <div><div class="label">Phone (Call or WhatsApp)</div><div class="value"><a href="tel:+917498852881">+91 74988 52881</a></div></div>
   </div>
+  <div class="contact-item">
+   <div class="icon">📍</div>
+   <div><div class="label">Service Area</div><div class="value">Shop No 6, Advance Key Physiotherapy, Greenfield Residency, Plot No 3, Sector 35-I, Sector 35I, Khar</div></div>
+  </div>
+  <div class="contact-item">
+   <div class="icon">⏰</div>
+   <div><div class="label">Working Hours</div><div class="value">24/7 — Including Holidays</div></div>
+  </div>
+  <div class="contact-item">
+   <div class="icon">⭐</div>
+   <div><div class="label">Google Rating</div><div class="value">5.0 out of 5 (222 reviews)</div></div>
+  </div>
+  <br>
+  <a href="tel:+917498852881" class="btn btn-primary btn-lg btn-block btn-pulse">📞 Call Now — Free Estimate</a>
+  </div>
+  <div class="map-wrap">
+  <iframe src="https://maps.google.com/maps?q=Advanced+key+physiotherapy+clinic+Dr.+Ankita+Mishra+(MPT)&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+ </div>
  </div>
 </section>
 
 <footer class="footer">
  <div class="container">
-  <p>© 2025 Advanced key physiotherapy clinic Dr. Ankita Mishra (MPT) — Locksmith Services in Advance Key Physioth, Mumbai</p>
-  <p style="margin-top:8px;font-size:12px;">This is a demo website. <a href="#">Contact us</a> to claim or customize this site.</p>
+ <p>© 2025 Advanced key physiotherapy clinic Dr. Ankita Mishra (MPT) — Locksmith Services in Advance Key Physioth, Mumbai</p>
+ <p style="margin-top:8px;font-size:12px;">This is a demo website. <a href="#">Contact us</a> to claim or customize this site.</p>
  </div>
 </footer>
 
