@@ -14,685 +14,685 @@
  <style>
  /* CSS Variables & Design Tokens (Bento Grid Inspiration) */
  :root {
-  /* Colors */
-  --primary-hsl: 187, 85%, 28%;
-  --primary: hsl(var(--primary-hsl)); /* Teal Accent */
-  --primary-hover: hsl(187, 85%, 22%);
-  
-  --secondary-hsl: 187, 75%, 38%;
-  --secondary: hsl(var(--secondary-hsl));
-  --secondary-light: hsl(187, 100%, 97%);
-  
-  --dark-primary-hsl: 209, 61%, 12%;
-  --dark-primary: hsl(var(--dark-primary-hsl)); /* Deep Slate Black for text */
-  --dark-bg: #0d0e12; /* Dark panel background (Bento black cards) */
-  
-  --text-secondary-hsl: 209, 14%, 40%;
-  --text-secondary: hsl(var(--text-secondary-hsl)); /* Muted body text */
-  
-  --canvas-bg: #eaecf0; /* Outer canvas gray background */
-  --app-bg: #f8f9fc; /* Inner application container background */
-  --card-bg: #ffffff; /* Default white card background */
-  --border-color: #e2e8f0;
-  
-  --accent-gold: hsl(38, 95%, 52%); /* Rating stars */
-  
-  /* Typography */
-  --font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  
-  /* Spacing Grid (8px grid system) */
-  --space-1: 8px;
-  --space-2: 16px;
-  --space-3: 24px;
-  --space-4: 32px;
-  --space-6: 48px;
-  --space-8: 64px;
-  --space-10: 80px;
-  --space-12: 96px;
+ /* Colors */
+ --primary-hsl: 187, 85%, 28%;
+ --primary: hsl(var(--primary-hsl)); /* Teal Accent */
+ --primary-hover: hsl(187, 85%, 22%);
 
-  /* UI Tokens */
-  --border-radius-sm: 8px;
-  --border-radius-md: 16px;
-  --border-radius-lg: 24px;
-  --border-radius-xl: 32px;
-  
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.02);
-  --shadow-md: 0 8px 24px rgba(16, 24, 40, 0.05);
-  --shadow-lg: 0 16px 40px rgba(16, 24, 40, 0.08);
-  --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+ --secondary-hsl: 187, 75%, 38%;
+ --secondary: hsl(var(--secondary-hsl));
+ --secondary-light: hsl(187, 100%, 97%);
+
+ --dark-primary-hsl: 209, 61%, 12%;
+ --dark-primary: hsl(var(--dark-primary-hsl)); /* Deep Slate Black for text */
+ --dark-bg: #0d0e12; /* Dark panel background (Bento black cards) */
+
+ --text-secondary-hsl: 209, 14%, 40%;
+ --text-secondary: hsl(var(--text-secondary-hsl)); /* Muted body text */
+
+ --canvas-bg: #eaecf0; /* Outer canvas gray background */
+ --app-bg: #f8f9fc; /* Inner application container background */
+ --card-bg: #ffffff; /* Default white card background */
+ --border-color: #e2e8f0;
+
+ --accent-gold: hsl(38, 95%, 52%); /* Rating stars */
+
+ /* Typography */
+ --font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+ /* Spacing Grid (8px grid system) */
+ --space-1: 8px;
+ --space-2: 16px;
+ --space-3: 24px;
+ --space-4: 32px;
+ --space-6: 48px;
+ --space-8: 64px;
+ --space-10: 80px;
+ --space-12: 96px;
+
+ /* UI Tokens */
+ --border-radius-sm: 8px;
+ --border-radius-md: 16px;
+ --border-radius-lg: 24px;
+ --border-radius-xl: 32px;
+
+ --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.02);
+ --shadow-md: 0 8px 24px rgba(16, 24, 40, 0.05);
+ --shadow-lg: 0 16px 40px rgba(16, 24, 40, 0.08);
+ --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
  }
 
  /* CSS Reset */
  *, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
  }
 
  html {
-  scroll-behavior: smooth;
-  font-family: var(--font-family);
-  color: var(--dark-primary);
-  background-color: var(--canvas-bg);
-  line-height: 1.5;
+ scroll-behavior: smooth;
+ font-family: var(--font-family);
+ color: var(--dark-primary);
+ background-color: var(--canvas-bg);
+ line-height: 1.5;
  }
 
  body {
-  padding: var(--space-4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+ padding: var(--space-4);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
  }
 
  /* Outer Mockup Application Window */
  #app-window {
-  width: 100%;
-  max-width: 1280px;
-  background-color: var(--app-bg);
-  border-radius: var(--border-radius-xl);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 30px 80px rgba(16, 24, 40, 0.15);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+ width: 100%;
+ max-width: 1280px;
+ background-color: var(--app-bg);
+ border-radius: var(--border-radius-xl);
+ border: 1px solid rgba(0, 0, 0, 0.08);
+ box-shadow: 0 30px 80px rgba(16, 24, 40, 0.15);
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
  }
 
  /* Header Navigation */
  header {
-  background-color: var(--card-bg);
-  border-bottom: 1px solid var(--border-color);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+ background-color: var(--card-bg);
+ border-bottom: 1px solid var(--border-color);
+ position: sticky;
+ top: 0;
+ z-index: 100;
  }
 
  .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--space-2) var(--space-4);
-  height: 90px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: var(--space-2) var(--space-4);
+ height: 90px;
  }
 
  /* Logo Redesigned exactly like the inspiration video (Dental Health) */
  .logo-wrapper {
-  display: flex;
-  flex-direction: column;
-  line-height: 0.85;
-  text-decoration: none;
+ display: flex;
+ flex-direction: column;
+ line-height: 0.85;
+ text-decoration: none;
  }
 
  .logo-line1 {
-  font-size: 1.45rem;
-  font-weight: 800;
-  color: var(--dark-primary);
-  letter-spacing: -0.04em;
-  text-transform: uppercase;
+ font-size: 1.45rem;
+ font-weight: 800;
+ color: var(--dark-primary);
+ letter-spacing: -0.04em;
+ text-transform: uppercase;
  }
 
  .logo-line2 {
-  font-size: 1.45rem;
-  font-weight: 800;
-  color: var(--dark-primary);
-  letter-spacing: -0.04em;
-  text-transform: uppercase;
-  margin-top: -2px;
+ font-size: 1.45rem;
+ font-weight: 800;
+ color: var(--dark-primary);
+ letter-spacing: -0.04em;
+ text-transform: uppercase;
+ margin-top: -2px;
  }
 
  .logo-tagline {
-  font-size: 0.65rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  letter-spacing: -0.01em;
-  margin-top: 3px;
-  text-transform: lowercase;
+ font-size: 0.65rem;
+ font-weight: 500;
+ color: var(--text-secondary);
+ letter-spacing: -0.01em;
+ margin-top: 3px;
+ text-transform: lowercase;
  }
 
  /* Center Menu Pill */
  .menu-pill {
-  display: flex;
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  padding: 6px;
-  border-radius: 50px;
-  gap: 4px;
+ display: flex;
+ background-color: var(--card-bg);
+ border: 1px solid var(--border-color);
+ padding: 6px;
+ border-radius: 50px;
+ gap: 4px;
  }
 
  .menu-link {
-  padding: 8px 18px;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--dark-primary);
-  transition: var(--transition);
+ padding: 8px 18px;
+ border-radius: 50px;
+ font-size: 0.9rem;
+ font-weight: 600;
+ color: var(--dark-primary);
+ transition: var(--transition);
  }
 
  .menu-link:hover {
-  background-color: var(--canvas-bg);
+ background-color: var(--canvas-bg);
  }
 
  .menu-link.active {
-  background-color: var(--dark-bg);
-  color: var(--card-bg);
+ background-color: var(--dark-bg);
+ color: var(--card-bg);
  }
 
  .nav-actions {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
+ display: flex;
+ align-items: center;
+ gap: var(--space-3);
  }
 
  .emergency-link {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--dark-primary);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: var(--transition);
+ font-size: 0.95rem;
+ font-weight: 600;
+ color: var(--dark-primary);
+ display: inline-flex;
+ align-items: center;
+ gap: 6px;
+ transition: var(--transition);
  }
 
  .emergency-link:hover {
-  color: var(--primary);
+ color: var(--primary);
  }
 
  /* Bento Grid Styling */
  .bento-container {
-  padding: var(--space-4);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
+ padding: var(--space-4);
+ display: flex;
+ flex-direction: column;
+ gap: var(--space-6);
  }
 
  .bento-grid {
-  display: grid;
-  grid-template-columns: repeat(24, 1fr);
-  gap: var(--space-3);
+ display: grid;
+ grid-template-columns: repeat(24, 1fr);
+ gap: var(--space-3);
  }
 
  .bento-card {
-  background-color: var(--card-bg);
-  border-radius: var(--border-radius-lg);
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: var(--shadow-sm);
-  padding: var(--space-4);
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  transition: var(--transition);
-  opacity: 0; /* Starting state for entrance animation */
-  transform: translateY(20px);
-  animation: cardEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+ background-color: var(--card-bg);
+ border-radius: var(--border-radius-lg);
+ border: 1px solid rgba(0, 0, 0, 0.04);
+ box-shadow: var(--shadow-sm);
+ padding: var(--space-4);
+ display: flex;
+ flex-direction: column;
+ position: relative;
+ overflow: hidden;
+ transition: var(--transition);
+ opacity: 0; /* Starting state for entrance animation */
+ transform: translateY(20px);
+ animation: cardEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
  }
 
  /* Staggered Entrance Animations */
  @keyframes cardEntrance {
-  to {
-  opacity: 1;
-  transform: translateY(0);
-  }
+ to {
+ opacity: 1;
+ transform: translateY(0);
+ }
  }
 
  .bento-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-4px);
-  border-color: rgba(11, 100, 118, 0.25);
+ box-shadow: var(--shadow-md);
+ transform: translateY(-4px);
+ border-color: rgba(11, 100, 118, 0.25);
  }
 
  /* Bento Card Background Variants */
  .card-dark {
-  background-color: var(--dark-bg);
-  color: #ffffff;
+ background-color: var(--dark-bg);
+ color: #ffffff;
  }
 
  .card-dark h1, .card-dark h2, .card-dark h3 {
-  color: #ffffff;
+ color: #ffffff;
  }
 
  .card-dark p {
-  color: rgba(255, 255, 255, 0.7);
+ color: rgba(255, 255, 255, 0.7);
  }
 
  .card-dark:hover {
-  border-color: rgba(255, 255, 255, 0.15);
+ border-color: rgba(255, 255, 255, 0.15);
  }
 
  /* Screen 1: Hero Grid Configuration */
  .hero-main-info {
-  grid-column: 1 / 15;
-  grid-row: 1 / 2;
-  padding: var(--space-6);
-  justify-content: center;
-  animation-delay: 0.05s;
+ grid-column: 1 / 15;
+ grid-row: 1 / 2;
+ padding: var(--space-6);
+ justify-content: center;
+ animation-delay: 0.05s;
  }
 
  .hero-rating-badge {
-  align-self: flex-start;
-  background-color: var(--secondary-light);
-  border: 1px solid rgba(11, 100, 118, 0.15);
-  color: var(--primary);
-  padding: 6px 16px;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: var(--space-3);
-  transition: var(--transition);
+ align-self: flex-start;
+ background-color: var(--secondary-light);
+ border: 1px solid rgba(11, 100, 118, 0.15);
+ color: var(--primary);
+ padding: 6px 16px;
+ border-radius: 50px;
+ font-size: 0.85rem;
+ font-weight: 700;
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ margin-bottom: var(--space-3);
+ transition: var(--transition);
  }
 
  .hero-rating-badge:hover {
-  background-color: hsl(187, 85%, 93%);
+ background-color: hsl(187, 85%, 93%);
  }
 
  .hero-main-info h1 {
-  font-size: clamp(2.2rem, 3.5vw + 0.5rem, 3.8rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1.1;
-  margin-bottom: var(--space-2);
+ font-size: clamp(2.2rem, 3.5vw + 0.5rem, 3.8rem);
+ font-weight: 800;
+ letter-spacing: -0.04em;
+ line-height: 1.1;
+ margin-bottom: var(--space-2);
  }
 
  .hero-main-info p {
-  font-size: 1.15rem;
-  max-width: 550px;
-  margin-bottom: 0;
+ font-size: 1.15rem;
+ max-width: 550px;
+ margin-bottom: 0;
  }
 
  /* Middle Row left items */
  .hero-left-illustration {
-  aspect-ratio: 1.25;
-  padding: 0;
-  animation-delay: 0.1s;
+ aspect-ratio: 1.25;
+ padding: 0;
+ animation-delay: 0.1s;
  }
 
  .hero-diagram-1 {
-  grid-column: 1 / 8;
-  grid-row: 2 / 3;
+ grid-column: 1 / 8;
+ grid-row: 2 / 3;
  }
 
  .hero-diagram-2 {
-  grid-column: 8 / 15;
-  grid-row: 2 / 3;
+ grid-column: 8 / 15;
+ grid-row: 2 / 3;
  }
 
  .hero-left-illustration img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
  }
 
  .hero-left-illustration:hover img {
-  transform: scale(1.05);
+ transform: scale(1.05);
  }
 
  .hero-left-consultation {
-  grid-column: span 7;
-  aspect-ratio: 1.25;
-  justify-content: space-between;
-  animation-delay: 0.15s;
+ grid-column: span 7;
+ aspect-ratio: 1.25;
+ justify-content: space-between;
+ animation-delay: 0.15s;
  }
 
  .hero-left-consultation h3 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+ font-size: 1.5rem;
+ font-weight: 800;
+ line-height: 1.2;
+ letter-spacing: -0.02em;
  }
 
  .hero-left-consultation p {
-  font-size: 0.88rem;
-  margin-bottom: var(--space-2);
+ font-size: 0.88rem;
+ margin-bottom: var(--space-2);
  }
 
  /* Right column vertical banner */
  .hero-right-banner {
-  grid-column: 15 / 25;
-  grid-row: 1 / 3;
-  padding: 0;
-  min-height: 480px;
-  animation-delay: 0.2s;
+ grid-column: 15 / 25;
+ grid-row: 1 / 3;
+ padding: 0;
+ min-height: 480px;
+ animation-delay: 0.2s;
  }
 
  .hero-banner-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ position: absolute;
+ top: 0;
+ left: 0;
+ transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
  }
 
  .hero-right-banner:hover .hero-banner-img {
-  transform: scale(1.03);
+ transform: scale(1.03);
  }
 
  /* Overlays on Right Banner Image */
  .banner-overlay-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: var(--space-3);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background: linear-gradient(0deg, rgba(13,14,18,0.75) 0%, rgba(13,14,18,0) 100%);
-  z-index: 2;
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ padding: var(--space-3);
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ background: linear-gradient(0deg, rgba(13,14,18,0.75) 0%, rgba(13,14,18,0) 100%);
+ z-index: 2;
  }
 
  .floating-overlay-card {
-  background-color: var(--card-bg);
-  border-radius: var(--border-radius-md);
-  padding: var(--space-2) var(--space-3);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: var(--shadow-md);
-  text-decoration: none;
-  transition: var(--transition);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+ background-color: var(--card-bg);
+ border-radius: var(--border-radius-md);
+ padding: var(--space-2) var(--space-3);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ box-shadow: var(--shadow-md);
+ text-decoration: none;
+ transition: var(--transition);
+ border: 1px solid rgba(0, 0, 0, 0.05);
  }
 
  .floating-overlay-card:hover {
-  transform: translateY(-2px);
-  background-color: var(--secondary-light);
+ transform: translateY(-2px);
+ background-color: var(--secondary-light);
  }
 
  .floating-overlay-card.glass {
-  background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+ background-color: rgba(255, 255, 255, 0.15);
+ backdrop-filter: blur(12px);
+ -webkit-backdrop-filter: blur(12px);
+ border: 1px solid rgba(255, 255, 255, 0.2);
  }
 
  .floating-overlay-card.glass:hover {
-  background-color: rgba(255, 255, 255, 0.25);
+ background-color: rgba(255, 255, 255, 0.25);
  }
 
  .floating-overlay-card.glass .overlay-text {
-  color: #ffffff;
+ color: #ffffff;
  }
 
  .floating-overlay-card.glass .overlay-circle-btn {
-  background-color: rgba(255, 255, 255, 0.25);
-  color: #ffffff;
+ background-color: rgba(255, 255, 255, 0.25);
+ color: #ffffff;
  }
 
  .overlay-text {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--dark-primary);
+ font-size: 0.95rem;
+ font-weight: 700;
+ color: var(--dark-primary);
  }
 
  .overlay-circle-btn {
-  width: 36px;
-  height: 36px;
-  background-color: var(--dark-bg);
-  color: var(--card-bg);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  font-weight: 700;
-  transition: var(--transition);
+ width: 36px;
+ height: 36px;
+ background-color: var(--dark-bg);
+ color: var(--card-bg);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 1.1rem;
+ font-weight: 700;
+ transition: var(--transition);
  }
 
  .floating-overlay-card:hover .overlay-circle-btn {
-  transform: scale(1.05);
+ transform: scale(1.05);
  }
 
  /* Common elements */
  .pill-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 22px;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 0.88rem;
-  cursor: pointer;
-  text-align: center;
-  transition: var(--transition);
-  text-decoration: none;
-  border: 1px solid transparent;
-  align-self: flex-start;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ padding: 10px 22px;
+ border-radius: 50px;
+ font-weight: 600;
+ font-size: 0.88rem;
+ cursor: pointer;
+ text-align: center;
+ transition: var(--transition);
+ text-decoration: none;
+ border: 1px solid transparent;
+ align-self: flex-start;
  }
 
  .pill-btn-dark {
-  background-color: var(--dark-bg);
-  color: var(--card-bg);
+ background-color: var(--dark-bg);
+ color: var(--card-bg);
  }
 
  .pill-btn-dark:hover {
-  background-color: var(--primary);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(11, 100, 118, 0.15);
+ background-color: var(--primary);
+ transform: translateY(-2px);
+ box-shadow: 0 4px 12px rgba(11, 100, 118, 0.15);
  }
 
  .pill-btn-white {
-  background-color: var(--card-bg);
-  color: var(--dark-primary);
-  border-color: var(--border-color);
+ background-color: var(--card-bg);
+ color: var(--dark-primary);
+ border-color: var(--border-color);
  }
 
  .pill-btn-white:hover {
-  background-color: var(--canvas-bg);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+ background-color: var(--canvas-bg);
+ transform: translateY(-2px);
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
  }
 
  /* Screen 2: Why Choose Us (Advanced Dentistry) Grid Configuration */
  .why-text-card {
-  grid-column: span 14;
-  padding: var(--space-6);
-  justify-content: space-between;
-  animation-delay: 0.25s;
+ grid-column: span 14;
+ padding: var(--space-6);
+ justify-content: space-between;
+ animation-delay: 0.25s;
  }
 
  .why-text-card h2 {
-  font-size: clamp(1.6rem, 2.5vw + 0.5rem, 2.6rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.25;
-  margin-bottom: var(--space-3);
+ font-size: clamp(1.6rem, 2.5vw + 0.5rem, 2.6rem);
+ font-weight: 800;
+ letter-spacing: -0.03em;
+ line-height: 1.25;
+ margin-bottom: var(--space-3);
  }
 
  .why-text-card .accent-title {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: var(--text-secondary);
-  margin-bottom: var(--space-1);
+ font-size: 0.8rem;
+ text-transform: uppercase;
+ font-weight: 700;
+ letter-spacing: 0.05em;
+ color: var(--text-secondary);
+ margin-bottom: var(--space-1);
  }
 
  .why-pills-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  margin-top: var(--space-3);
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ width: 100%;
+ margin-top: var(--space-3);
  }
 
  .why-pill-row {
-  background-color: var(--app-bg);
-  border: 1px solid var(--border-color);
-  padding: 14px 24px;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--dark-primary);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: var(--transition);
+ background-color: var(--app-bg);
+ border: 1px solid var(--border-color);
+ padding: 14px 24px;
+ border-radius: 50px;
+ font-size: 1rem;
+ font-weight: 700;
+ color: var(--dark-primary);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ transition: var(--transition);
  }
 
  .why-pill-row:hover {
-  border-color: var(--primary);
-  background-color: var(--secondary-light);
-  transform: translateY(-1px);
+ border-color: var(--primary);
+ background-color: var(--secondary-light);
+ transform: translateY(-1px);
  }
 
  .why-pill-row-arrow {
-  color: var(--primary);
-  font-size: 1.2rem;
-  transition: var(--transition);
+ color: var(--primary);
+ font-size: 1.2rem;
+ transition: var(--transition);
  }
 
  .why-pill-row:hover .why-pill-row-arrow {
-  transform: translateX(3px);
+ transform: translateX(3px);
  }
 
  .why-right-banner {
-  grid-column: span 10;
-  padding: 0;
-  min-height: 400px;
-  position: relative;
-  animation-delay: 0.3s;
+ grid-column: span 10;
+ padding: 0;
+ min-height: 400px;
+ position: relative;
+ animation-delay: 0.3s;
  }
 
  .why-right-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ position: absolute;
+ top: 0;
+ left: 0;
+ transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
  }
 
  .why-right-banner:hover img {
-  transform: scale(1.03);
+ transform: scale(1.03);
  }
 
  .why-banner-overlay {
-  position: absolute;
-  bottom: var(--space-3);
-  left: var(--space-3);
-  right: var(--space-3);
-  background-color: rgba(13, 14, 18, 0.75);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 16px 20px;
-  border-radius: var(--border-radius-md);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  z-index: 2;
+ position: absolute;
+ bottom: var(--space-3);
+ left: var(--space-3);
+ right: var(--space-3);
+ background-color: rgba(13, 14, 18, 0.75);
+ backdrop-filter: blur(8px);
+ -webkit-backdrop-filter: blur(8px);
+ padding: 16px 20px;
+ border-radius: var(--border-radius-md);
+ color: #ffffff;
+ border: 1px solid rgba(255, 255, 255, 0.1);
+ z-index: 2;
  }
 
  .why-banner-overlay h4 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 2px;
+ font-size: 1.15rem;
+ font-weight: 700;
+ color: #ffffff;
+ margin-bottom: 2px;
  }
 
  .why-banner-overlay p {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 0;
+ font-size: 0.8rem;
+ color: rgba(255, 255, 255, 0.7);
+ margin-bottom: 0;
  }
 
  /* Screen 3: Services & Gallery */
  .gallery-left-title {
-  grid-column: span 10;
-  padding: var(--space-6);
-  justify-content: space-between;
-  min-height: 320px;
-  animation-delay: 0.35s;
+ grid-column: span 10;
+ padding: var(--space-6);
+ justify-content: space-between;
+ min-height: 320px;
+ animation-delay: 0.35s;
  }
 
  .gallery-left-title h2 {
-  font-size: clamp(2rem, 3.5vw + 0.5rem, 3rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1.1;
+ font-size: clamp(2rem, 3.5vw + 0.5rem, 3rem);
+ font-weight: 800;
+ letter-spacing: -0.04em;
+ line-height: 1.1;
  }
 
  .gallery-left-title p {
-  font-size: 0.95rem;
-  margin-bottom: var(--space-2);
+ font-size: 0.95rem;
+ margin-bottom: var(--space-2);
  }
 
  .gallery-right-visual {
-  grid-column: span 14;
-  padding: 0;
-  position: relative;
-  min-height: 320px;
-  animation-delay: 0.4s;
+ grid-column: span 14;
+ padding: 0;
+ position: relative;
+ min-height: 320px;
+ animation-delay: 0.4s;
  }
 
  .gallery-right-visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ position: absolute;
+ top: 0;
+ left: 0;
+ transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
  }
 
  .gallery-right-visual:hover img {
-  transform: scale(1.03);
+ transform: scale(1.03);
  }
 
  .gallery-overlay-box {
-  position: absolute;
-  bottom: var(--space-3);
-  right: var(--space-3);
-  background-color: var(--card-bg);
-  border-radius: var(--border-radius-md);
-  padding: var(--space-3) var(--space-4);
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  box-shadow: var(--shadow-md);
-  max-width: 320px;
-  border: 1px solid var(--border-color);
-  z-index: 2;
+ position: absolute;
+ bottom: var(--space-3);
+ right: var(--space-3);
+ background-color: var(--card-bg);
+ border-radius: var(--border-radius-md);
+ padding: var(--space-3) var(--space-4);
+ display: flex;
+ align-items: center;
+ gap: var(--space-2);
+ box-shadow: var(--shadow-md);
+ max-width: 320px;
+ border: 1px solid var(--border-color);
+ z-index: 2;
  }
 
  .gallery-overlay-text {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  font-weight: 500;
+ font-size: 0.8rem;
+ color: var(--text-secondary);
+ font-weight: 500;
  }
 
  .gallery-overlay-box .pill-btn {
-  flex-shrink: 0;
+ flex-shrink: 0;
  }
 
  /* Horizontal Services row */
  .services-bento-row {
-  grid-column: span 24;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-2);
+ grid-column: span 24;
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: var(--space-2);
  }
 
  .service-bento-card {
-  background-color: var(--card-bg);
-  border-radius: var(--border-radius-md);
-  padding: var(--space-3);
-  border: 1px solid var(--border-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 180px;
-  transition: var(--transition);
-  text-decoration: none;
-  color: var(--dark-primary);
-  opacity: 0;
-  transform: translateY(15px);
-  animation: cardEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+ background-color: var(--card-bg);
+ border-radius: var(--border-radius-md);
+ padding: var(--space-3);
+ border: 1px solid var(--border-color);
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ min-height: 180px;
+ transition: var(--transition);
+ text-decoration: none;
+ color: var(--dark-primary);
+ opacity: 0;
+ transform: translateY(15px);
+ animation: cardEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
  }
 
  .service-bento-card:nth-child(1) { animation-delay: 0.42s; }
@@ -701,401 +701,401 @@
  .service-bento-card:nth-child(4) { animation-delay: 0.57s; }
 
  .service-bento-card:hover {
-  border-color: var(--primary);
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
+ border-color: var(--primary);
+ transform: translateY(-5px);
+ box-shadow: var(--shadow-md);
  }
 
  .service-bento-card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-start;
+ width: 100%;
  }
 
  .service-number-circle {
-  width: 28px;
-  height: 28px;
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--text-secondary);
-  transition: var(--transition);
+ width: 28px;
+ height: 28px;
+ border: 1px solid var(--border-color);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 0.75rem;
+ font-weight: 700;
+ color: var(--text-secondary);
+ transition: var(--transition);
  }
 
  .service-bento-card:hover .service-number-circle {
-  background-color: var(--dark-bg);
-  color: var(--card-bg);
-  border-color: var(--dark-bg);
+ background-color: var(--dark-bg);
+ color: var(--card-bg);
+ border-color: var(--dark-bg);
  }
 
  .service-arrow {
-  font-size: 1.1rem;
-  color: var(--primary);
-  transition: var(--transition);
+ font-size: 1.1rem;
+ color: var(--primary);
+ transition: var(--transition);
  }
 
  .service-bento-card:hover .service-arrow {
-  transform: translate(2px, -2px);
+ transform: translate(2px, -2px);
  }
 
  .service-bento-card h3 {
-  font-size: 1.15rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.25;
-  margin-bottom: 2px;
+ font-size: 1.15rem;
+ font-weight: 800;
+ letter-spacing: -0.02em;
+ line-height: 1.25;
+ margin-bottom: 2px;
  }
 
  .service-bento-card p {
-  font-size: 0.75rem;
-  color: var(--text-secondary);
-  margin-bottom: 0;
-  line-height: 1.4;
+ font-size: 0.75rem;
+ color: var(--text-secondary);
+ margin-bottom: 0;
+ line-height: 1.4;
  }
 
  /* Screen 4: Booking & Contact info */
  .booking-top-banner {
-  grid-column: span 24;
-  height: 240px;
-  padding: 0;
-  position: relative;
-  animation-delay: 0.62s;
+ grid-column: span 24;
+ height: 240px;
+ padding: 0;
+ position: relative;
+ animation-delay: 0.62s;
  }
 
  .booking-top-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ position: absolute;
+ top: 0;
+ left: 0;
+ transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
  }
 
  .booking-top-banner:hover img {
-  transform: scale(1.02);
+ transform: scale(1.02);
  }
 
  .booking-banner-text {
-  position: absolute;
-  bottom: var(--space-3);
-  left: var(--space-3);
-  background-color: var(--card-bg);
-  padding: 8px 16px;
-  border-radius: 50px;
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--primary);
-  box-shadow: var(--shadow-sm);
-  z-index: 2;
+ position: absolute;
+ bottom: var(--space-3);
+ left: var(--space-3);
+ background-color: var(--card-bg);
+ padding: 8px 16px;
+ border-radius: 50px;
+ font-size: 0.88rem;
+ font-weight: 700;
+ color: var(--primary);
+ box-shadow: var(--shadow-sm);
+ z-index: 2;
  }
 
  /* Bottom row: left booking, right contact/hours */
  .booking-form-card {
-  grid-column: span 12;
-  padding: var(--space-4);
-  justify-content: space-between;
-  animation-delay: 0.67s;
+ grid-column: span 12;
+ padding: var(--space-4);
+ justify-content: space-between;
+ animation-delay: 0.67s;
  }
 
  .booking-form-card h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  margin-bottom: var(--space-3);
+ font-size: 2.5rem;
+ font-weight: 800;
+ letter-spacing: -0.04em;
+ margin-bottom: var(--space-3);
  }
 
  .booking-form-card p {
-  font-size: 0.95rem;
-  margin-bottom: var(--space-3);
+ font-size: 0.95rem;
+ margin-bottom: var(--space-3);
  }
 
  .booking-inputs-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  width: 100%;
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 12px;
+ width: 100%;
  }
 
  .booking-input-wrapper {
-  position: relative;
+ position: relative;
  }
 
  .booking-input {
-  width: 100%;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
-  padding: 12px 20px;
-  color: #ffffff;
-  font-family: var(--font-family);
-  font-size: 0.9rem;
-  font-weight: 500;
-  outline: none;
-  transition: var(--transition);
-  color-scheme: dark; /* Ensures browser native calendar/clock icons render in high-contrast light colors */
+ width: 100%;
+ background: transparent;
+ border: 1px solid rgba(255, 255, 255, 0.2);
+ border-radius: 50px;
+ padding: 12px 20px;
+ color: #ffffff;
+ font-family: var(--font-family);
+ font-size: 0.9rem;
+ font-weight: 500;
+ outline: none;
+ transition: var(--transition);
+ color-scheme: dark; /* Ensures browser native calendar/clock icons render in high-contrast light colors */
  }
 
  .booking-input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+ color: rgba(255, 255, 255, 0.4);
  }
 
  .booking-input:focus {
-  border-color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+ border-color: #ffffff;
+ background-color: rgba(255, 255, 255, 0.08);
+ box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
  }
 
  .booking-form-card .pill-btn-white {
-  width: 100%;
-  padding: 14px;
-  font-weight: 700;
-  margin-top: var(--space-3);
+ width: 100%;
+ padding: 14px;
+ font-weight: 700;
+ margin-top: var(--space-3);
  }
 
  .contact-hours-card {
-  grid-column: span 12;
-  padding: var(--space-4);
-  animation-delay: 0.72s;
+ grid-column: span 12;
+ padding: var(--space-4);
+ animation-delay: 0.72s;
  }
 
  .contact-details-grid {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  margin-bottom: var(--space-3);
+ display: flex;
+ flex-direction: column;
+ gap: var(--space-2);
+ margin-bottom: var(--space-3);
  }
 
  .contact-bento-row {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-2);
+ display: flex;
+ align-items: flex-start;
+ gap: var(--space-2);
  }
 
  .contact-bento-icon {
-  color: var(--primary);
-  flex-shrink: 0;
-  margin-top: 3px;
+ color: var(--primary);
+ flex-shrink: 0;
+ margin-top: 3px;
  }
 
  .contact-bento-text h4 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin-bottom: 2px;
+ font-size: 0.95rem;
+ font-weight: 700;
+ margin-bottom: 2px;
  }
 
  .contact-bento-text p, .contact-bento-text address {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  font-style: normal;
-  line-height: 1.4;
+ font-size: 0.88rem;
+ color: var(--text-secondary);
+ font-style: normal;
+ line-height: 1.4;
  }
 
  /* Clean Hours Bento Table */
  .hours-bento-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.82rem;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-sm);
-  overflow: hidden;
-  margin-top: var(--space-2);
+ width: 100%;
+ border-collapse: collapse;
+ font-size: 0.82rem;
+ border: 1px solid var(--border-color);
+ border-radius: var(--border-radius-sm);
+ overflow: hidden;
+ margin-top: var(--space-2);
  }
 
  .hours-bento-table th, .hours-bento-table td {
-  padding: 6px 12px;
-  border-bottom: 1px solid var(--border-color);
+ padding: 6px 12px;
+ border-bottom: 1px solid var(--border-color);
  }
 
  .hours-bento-table th {
-  background-color: var(--app-bg);
-  font-weight: 700;
-  text-align: left;
+ background-color: var(--app-bg);
+ font-weight: 700;
+ text-align: left;
  }
 
  .hours-bento-table tr:last-child td {
-  border-bottom: none;
+ border-bottom: none;
  }
 
  .hours-bento-table tr.closed-row {
-  background-color: var(--app-bg);
-  color: var(--text-secondary);
+ background-color: var(--app-bg);
+ color: var(--text-secondary);
  }
 
  /* Map card (Full width at bottom) */
  .map-bento-card {
-  grid-column: span 24;
-  padding: 0;
-  height: 320px;
-  border-radius: var(--border-radius-lg);
-  animation-delay: 0.77s;
+ grid-column: span 24;
+ padding: 0;
+ height: 320px;
+ border-radius: var(--border-radius-lg);
+ animation-delay: 0.77s;
  }
 
  .map-bento-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+ width: 100%;
+ height: 100%;
+ border: none;
  }
 
  /* Footer Section */
  footer {
-  background-color: var(--dark-bg);
-  color: rgba(255, 255, 255, 0.4);
-  padding: var(--space-4);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom-left-radius: var(--border-radius-xl);
-  border-bottom-right-radius: var(--border-radius-xl);
+ background-color: var(--dark-bg);
+ color: rgba(255, 255, 255, 0.4);
+ padding: var(--space-4);
+ border-top: 1px solid rgba(255, 255, 255, 0.05);
+ border-bottom-left-radius: var(--border-radius-xl);
+ border-bottom-right-radius: var(--border-radius-xl);
  }
 
  .footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  font-size: 0.85rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ max-width: 1200px;
+ margin: 0 auto;
+ font-size: 0.85rem;
  }
 
  .footer-links {
-  display: flex;
-  gap: var(--space-2);
+ display: flex;
+ gap: var(--space-2);
  }
 
  .footer-links a {
-  color: rgba(255, 255, 255, 0.4);
+ color: rgba(255, 255, 255, 0.4);
  }
 
  .footer-links a:hover {
-  color: #ffffff;
+ color: #ffffff;
  }
 
  .footer-credit {
-  font-weight: 600;
+ font-weight: 600;
  }
 
  /* Responsive Grid Wrapping */
  @media (max-width: 992px) {
-  .bento-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-2);
-  }
+ .bento-grid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: var(--space-2);
+ }
 
-  .hero-main-info, .hero-right-banner, .why-text-card, .why-right-banner, 
-  .gallery-left-title, .gallery-right-visual, .booking-form-card, 
-  .contact-hours-card, .map-bento-card {
-  grid-column: span 2 !important;
-  grid-row: auto !important;
-  width: 100%;
-  }
+ .hero-main-info, .hero-right-banner, .why-text-card, .why-right-banner, 
+ .gallery-left-title, .gallery-right-visual, .booking-form-card, 
+ .contact-hours-card, .map-bento-card {
+ grid-column: span 2 !important;
+ grid-row: auto !important;
+ width: 100%;
+ }
 
-  .hero-left-illustration {
-  grid-column: span 1 !important; /* Diagram 1 and 2 sit side-by-side! */
-  grid-row: auto !important;
-  width: 100%;
-  aspect-ratio: 1.25;
-  }
+ .hero-left-illustration {
+ grid-column: span 1 !important; /* Diagram 1 and 2 sit side-by-side! */
+ grid-row: auto !important;
+ width: 100%;
+ aspect-ratio: 1.25;
+ }
 
-  .services-bento-row {
-  grid-column: span 2;
-  grid-template-columns: repeat(2, 1fr);
-  }
+ .services-bento-row {
+ grid-column: span 2;
+ grid-template-columns: repeat(2, 1fr);
+ }
 
-  .booking-top-banner {
-  grid-column: span 2;
-  }
+ .booking-top-banner {
+ grid-column: span 2;
+ }
 
-  .hero-right-banner, .why-right-banner {
-  min-height: 350px;
-  }
+ .hero-right-banner, .why-right-banner {
+ min-height: 350px;
+ }
  }
 
  @media (max-width: 576px) {
-  body {
-  padding: 0;
-  }
+ body {
+ padding: 0;
+ }
 
-  #app-window {
-  border-radius: 0;
-  border: none;
-  }
+ #app-window {
+ border-radius: 0;
+ border: none;
+ }
 
-  .bento-container {
-  padding: var(--space-2);
-  gap: var(--space-4); /* 32px gap between sections on mobile */
-  }
+ .bento-container {
+ padding: var(--space-2);
+ gap: var(--space-4); /* 32px gap between sections on mobile */
+ }
 
-  .nav-container {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 75px;
-  padding: 0 var(--space-2);
-  }
+ .nav-container {
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+ height: 75px;
+ padding: 0 var(--space-2);
+ }
 
-  .logo-line1, .logo-line2 {
-  font-size: 1.1rem;
-  }
+ .logo-line1, .logo-line2 {
+ font-size: 1.1rem;
+ }
 
-  .logo-tagline {
-  font-size: 0.55rem;
-  }
+ .logo-tagline {
+ font-size: 0.55rem;
+ }
 
-  .nav-actions {
-  width: auto;
-  gap: var(--space-2);
-  }
+ .nav-actions {
+ width: auto;
+ gap: var(--space-2);
+ }
 
-  .emergency-link {
-  font-size: 0.85rem;
-  }
+ .emergency-link {
+ font-size: 0.85rem;
+ }
 
-  .phone-number-text {
-  display: none; /* Hide number text, keep only icon for extreme elegance on mobile */
-  }
+ .phone-number-text {
+ display: none; /* Hide number text, keep only icon for extreme elegance on mobile */
+ }
 
-  .pill-btn {
-  padding: 8px 14px;
-  font-size: 0.75rem;
-  }
+ .pill-btn {
+ padding: 8px 14px;
+ font-size: 0.75rem;
+ }
 
-  .menu-pill {
-  display: none; /* Hide top pill navigation menu on tiny mobile screen for cleaner spacing */
-  }
+ .menu-pill {
+ display: none; /* Hide top pill navigation menu on tiny mobile screen for cleaner spacing */
+ }
 
-  .services-bento-row {
-  grid-template-columns: 1fr;
-  }
+ .services-bento-row {
+ grid-template-columns: 1fr;
+ }
 
-  .booking-inputs-grid {
-  grid-template-columns: 1fr;
-  }
+ .booking-inputs-grid {
+ grid-template-columns: 1fr;
+ }
 
-  .footer-container {
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
-  }
+ .footer-container {
+ flex-direction: column;
+ gap: 10px;
+ text-align: center;
+ }
  }
 
  /* Accessibility: Respect Reduced Motion preferences */
  @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-  scroll-behavior: auto !important;
-  }
+ *, *::before, *::after {
+ animation-duration: 0.01ms !important;
+ animation-iteration-count: 1 !important;
+ transition-duration: 0.01ms !important;
+ scroll-behavior: auto !important;
+ }
 
-  .bento-card:hover, .service-bento-card:hover, .why-pill-row:hover, .floating-overlay-card:hover {
-  transform: none !important;
-  box-shadow: none !important;
-  }
+ .bento-card:hover, .service-bento-card:hover, .why-pill-row:hover, .floating-overlay-card:hover {
+ transform: none !important;
+ box-shadow: none !important;
+ }
  }
  </style>
 </head>
@@ -1106,312 +1106,312 @@
 
  <!-- Top Sticky Header -->
  <header>
-  <div class="nav-container">
-  <!-- Redesigned Logo matching the typography of the video (Dental Health) -->
-  <a href="#" class="logo-wrapper" aria-label="Bombay Smilz home">
-   <span class="logo-line1">Bombay Smilz</span>
-   <span class="logo-line2">Dental</span>
-   <span class="logo-tagline">quality healthcare</span>
+ <div class="nav-container">
+ <!-- Redesigned Logo matching the typography of the video (Dental Health) -->
+ <a href="#" class="logo-wrapper" aria-label="Bombay Smilz home">
+  <span class="logo-line1">Bombay Smilz</span>
+  <span class="logo-line2">Dental</span>
+  <span class="logo-tagline">quality healthcare</span>
+ </a>
+
+ <!-- Menu Pill (Smooth Anchor Links) -->
+ <nav class="menu-pill" aria-label="Main Navigation">
+  <a href="#hero" class="menu-link active">Home</a>
+  <a href="#services" class="menu-link">Services</a>
+  <a href="#why-choose-us" class="menu-link">Why Us</a>
+  <a href="#contact" class="menu-link">Book Now</a>
+ </nav>
+
+ <!-- Right Quick Call & Directions Button -->
+ <div class="nav-actions">
+  <a href="tel:+919373371026" class="emergency-link" aria-label="Call Bombay Smilz">
+  <svg style="width:16px;height:16px;vertical-align:middle;" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
+  <span class="phone-number-text">+91 93733 71026</span>
   </a>
-
-  <!-- Menu Pill (Smooth Anchor Links) -->
-  <nav class="menu-pill" aria-label="Main Navigation">
-   <a href="#hero" class="menu-link active">Home</a>
-   <a href="#services" class="menu-link">Services</a>
-   <a href="#why-choose-us" class="menu-link">Why Us</a>
-   <a href="#contact" class="menu-link">Book Now</a>
-  </nav>
-
-  <!-- Right Quick Call & Directions Button -->
-  <div class="nav-actions">
-   <a href="tel:+919373371026" class="emergency-link" aria-label="Call Bombay Smilz">
-   <svg style="width:16px;height:16px;vertical-align:middle;" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
-   <span class="phone-number-text">+91 93733 71026</span>
-   </a>
-   <a href="https://www.google.com/maps/search/?api=1&query=Bombay+Smilz&query_place_id=ChIJKUdDfVPJ5zsR_RNloKo1cxI" target="_blank" rel="noopener" class="pill-btn pill-btn-dark">
-   Get Directions
-   </a>
-  </div>
-  </div>
+  <a href="https://www.google.com/maps/search/?api=1&query=Bombay+Smilz&query_place_id=ChIJKUdDfVPJ5zsR_RNloKo1cxI" target="_blank" rel="noopener" class="pill-btn pill-btn-dark">
+  Get Directions
+  </a>
+ </div>
+ </div>
  </header>
 
  <main class="bento-container">
+
+ <!-- SCREEN 1: HERO / IMPLANT DENTISTRY -->
+ <section class="bento-grid" id="hero" aria-label="Introduction">
+
+ <!-- Large Hero Main info block -->
+ <div class="bento-card hero-main-info">
+  <div class="hero-rating-badge" aria-label="4.8 rating on Google based on 769 patient reviews">
+  <span style="color:var(--accent-gold);">★</span>
+  <span><strong>4.9</strong> on Google · 47 reviews</span>
+  </div>
+  <h1>Implant Dentistry</h1>
+  <p class="hero-tagline">
+  Restore missing teeth and regain your confident smile. Bombay Smilz provides top-tier cosmetic restoration and pain-free surgeries.
+  </p>
+ </div>
+
+ <!-- Bottom Left Row Column 1: Clinic Implant Diagram 1 (Original from Video) -->
+ <div class="bento-card hero-left-illustration hero-diagram-1">
+  <img src="images/implant_diagram_1.jpg" alt="Precision medical dental implant crown illustration">
+ </div>
+
+ <!-- Bottom Left Row Column 2: Clinic Implant Diagram 2 (Original from Video) -->
+ <div class="bento-card hero-left-illustration hero-diagram-2">
+  <img src="images/implant_diagram_2.jpg" alt="Precision medical dental implant fixture illustration">
+ </div>
+
+ <!-- Right large vertical photo banner (Original Blonde Woman from Video) -->
+ <div class="bento-card hero-right-banner">
+  <img class="hero-banner-img" src="images/blonde_woman.jpg" alt="Modern smiling blonde client at Bombay Smilz">
   
-  <!-- SCREEN 1: HERO / IMPLANT DENTISTRY -->
-  <section class="bento-grid" id="hero" aria-label="Introduction">
+  <div class="banner-overlay-wrapper">
+  <!-- Overlays styled exactly like the inspiration woman w/ overlays -->
+  <a href="#services" class="floating-overlay-card">
+  <span class="overlay-text">The Process of Installing Implants</span>
+  <div class="overlay-circle-btn">&gt;</div>
+  </a>
   
-  <!-- Large Hero Main info block -->
-  <div class="bento-card hero-main-info">
-   <div class="hero-rating-badge" aria-label="4.8 rating on Google based on 769 patient reviews">
-   <span style="color:var(--accent-gold);">★</span>
-   <span><strong>4.9</strong> on Google · 47 reviews</span>
-   </div>
-   <h1>Implant Dentistry</h1>
-   <p class="hero-tagline">
-   Restore missing teeth and regain your confident smile. Bombay Smilz provides top-tier cosmetic restoration and pain-free surgeries.
-   </p>
+  <a href="#services" class="floating-overlay-card glass">
+  <span class="overlay-text">Caring for Dental Implants</span>
+  <div class="overlay-circle-btn">&gt;</div>
+  </a>
   </div>
+ </div>
 
-  <!-- Bottom Left Row Column 1: Clinic Implant Diagram 1 (Original from Video) -->
-  <div class="bento-card hero-left-illustration hero-diagram-1">
-   <img src="images/implant_diagram_1.jpg" alt="Precision medical dental implant crown illustration">
+ </section>
+
+ <!-- SCREEN 2: WHY CHOOSE US / BENEFITS -->
+ <section class="bento-grid" id="why-choose-us" aria-label="Why Choose Us">
+
+ <!-- Left large text block -->
+ <div class="bento-card why-text-card">
+  <div>
+  <span class="accent-title">About Our Clinic</span>
+  <h2>Providing professional, gentle, and sterilized dental care using modern technologies.</h2>
+  <p>
+  Bombay Smilz has served families in Mumbai for over 40 years. Led by Our Team, our focus is on patient comfort, sterilized safety, and top-tier clinical outcomes.
+  </p>
   </div>
-
-  <!-- Bottom Left Row Column 2: Clinic Implant Diagram 2 (Original from Video) -->
-  <div class="bento-card hero-left-illustration hero-diagram-2">
-   <img src="images/implant_diagram_2.jpg" alt="Precision medical dental implant fixture illustration">
-  </div>
-
-  <!-- Right large vertical photo banner (Original Blonde Woman from Video) -->
-  <div class="bento-card hero-right-banner">
-   <img class="hero-banner-img" src="images/blonde_woman.jpg" alt="Modern smiling blonde client at Bombay Smilz">
-   
-   <div class="banner-overlay-wrapper">
-   <!-- Overlays styled exactly like the inspiration woman w/ overlays -->
-   <a href="#services" class="floating-overlay-card">
-    <span class="overlay-text">The Process of Installing Implants</span>
-    <div class="overlay-circle-btn">&gt;</div>
-   </a>
-   
-   <a href="#services" class="floating-overlay-card glass">
-    <span class="overlay-text">Caring for Dental Implants</span>
-    <div class="overlay-circle-btn">&gt;</div>
-   </a>
-   </div>
-  </div>
-
-  </section>
-
-  <!-- SCREEN 2: WHY CHOOSE US / BENEFITS -->
-  <section class="bento-grid" id="why-choose-us" aria-label="Why Choose Us">
   
-  <!-- Left large text block -->
-  <div class="bento-card why-text-card">
-   <div>
-   <span class="accent-title">About Our Clinic</span>
-   <h2>Providing professional, gentle, and sterilized dental care using modern technologies.</h2>
-   <p>
-    Bombay Smilz has served families in Mumbai for over 40 years. Led by Our Team, our focus is on patient comfort, sterilized safety, and top-tier clinical outcomes.
-   </p>
-   </div>
-   
-   <!-- Bento stacked pills rows -->
-   <div class="why-pills-container">
-   <div class="why-pill-row">
-    <span>State-of-the-Art Setup</span>
-    <span class="why-pill-row-arrow">➔</span>
-   </div>
-   <div class="why-pill-row">
-    <span>Hospital-Grade Sterilization</span>
-    <span class="why-pill-row-arrow">➔</span>
-   </div>
-   <div class="why-pill-row">
-    <span>Established</span>
-    <span class="why-pill-row-arrow">➔</span>
-   </div>
-   </div>
+  <!-- Bento stacked pills rows -->
+  <div class="why-pills-container">
+  <div class="why-pill-row">
+  <span>State-of-the-Art Setup</span>
+  <span class="why-pill-row-arrow">➔</span>
   </div>
-
-  <!-- Right large vertical photo banner (Original Winking Woman from Video) -->
-  <div class="bento-card why-right-banner">
-   <img src="images/red_turtleneck.jpg" alt="Smiling client winking at Bombay Smilz">
-   
-   <div class="why-banner-overlay">
-   <h4>We believe in the power of your smile</h4>
-   <p>Free checkups & consultations for all new patients.</p>
-   </div>
+  <div class="why-pill-row">
+  <span>Hospital-Grade Sterilization</span>
+  <span class="why-pill-row-arrow">➔</span>
   </div>
+  <div class="why-pill-row">
+  <span>Established</span>
+  <span class="why-pill-row-arrow">➔</span>
+  </div>
+  </div>
+ </div>
 
-  </section>
-
-  <!-- SCREEN 3: SERVICES & GALLERY -->
-  <section class="bento-grid" id="services" aria-label="Services Gallery">
+ <!-- Right large vertical photo banner (Original Winking Woman from Video) -->
+ <div class="bento-card why-right-banner">
+  <img src="images/red_turtleneck.jpg" alt="Smiling client winking at Bombay Smilz">
   
-  <!-- Left: Gallery Title Block -->
-  <div class="bento-card gallery-left-title">
-   <div>
-   <span class="accent-title">Smile Gallery</span>
-   <p>Browse our list of dental treatments and cosmetic procedures.</p>
-   </div>
-   <h2>Smile Makeover</h2>
+  <div class="why-banner-overlay">
+  <h4>We believe in the power of your smile</h4>
+  <p>Free checkups & consultations for all new patients.</p>
   </div>
+ </div>
 
-  <!-- Right: Brunette smiling girl block (Original from Video) -->
-  <div class="bento-card gallery-right-visual">
-   <img src="images/brunette_smiling.jpg" alt="Client showing gorgeous smile after makeover">
-   
-   <div class="gallery-overlay-box">
-   <span class="gallery-overlay-text">If you want a gorgeous smile, talk to our experts.</span>
-   <a href="tel:+919373371026" class="pill-btn pill-btn-dark">Call Us</a>
-   </div>
+ </section>
+
+ <!-- SCREEN 3: SERVICES & GALLERY -->
+ <section class="bento-grid" id="services" aria-label="Services Gallery">
+
+ <!-- Left: Gallery Title Block -->
+ <div class="bento-card gallery-left-title">
+  <div>
+  <span class="accent-title">Smile Gallery</span>
+  <p>Browse our list of dental treatments and cosmetic procedures.</p>
   </div>
+  <h2>Smile Makeover</h2>
+ </div>
 
-  <!-- Bottom: Horizontal Bento Row for 4 services -->
-  <div class="services-bento-row">
-   
-   <!-- Service 1 -->
-   <a href="#contact" class="service-bento-card">
-   <div class="service-bento-card-top">
-    <div class="service-number-circle">01</div>
-    <span class="service-arrow">↗</span>
-   </div>
-   <div>
-    <h3>Dental Veneers</h3>
-    <p>Custom-fit laminates designed to correct cracks, chips, and discolorations.</p>
-   </div>
-   </a>
-
-   <!-- Service 2 -->
-   <a href="#contact" class="service-bento-card">
-   <div class="service-bento-card-top">
-    <div class="service-number-circle">02</div>
-    <span class="service-arrow">↗</span>
-   </div>
-   <div>
-    <h3>Implants & Surgery</h3>
-    <p>Permanent titanium restorations anchored securely into the jaw for a natural feel.</p>
-   </div>
-   </a>
-
-   <!-- Service 3 -->
-   <a href="#contact" class="service-bento-card">
-   <div class="service-bento-card-top">
-    <div class="service-number-circle">03</div>
-    <span class="service-arrow">↗</span>
-   </div>
-   <div>
-    <h3>Teeth Whitening</h3>
-    <p>Medical scaling and professional polishing to remove stubborn yellowing.</p>
-   </div>
-   </a>
-
-   <!-- Service 4 -->
-   <a href="#contact" class="service-bento-card">
-   <div class="service-bento-card-top">
-    <div class="service-number-circle">04</div>
-    <span class="service-arrow">↗</span>
-   </div>
-   <div>
-    <h3>Pediatric Care</h3>
-    <p>Gentle and friendly examinations keeping child visits pain-free and calm.</p>
-   </div>
-   </a>
-
-  </div>
-
-  </section>
-
-  <!-- SCREEN 4: BOOKING, HOURS & LOCATION -->
-  <section class="bento-grid" id="contact" aria-label="Booking and Location">
+ <!-- Right: Brunette smiling girl block (Original from Video) -->
+ <div class="bento-card gallery-right-visual">
+  <img src="images/brunette_smiling.jpg" alt="Client showing gorgeous smile after makeover">
   
-  <!-- Wide top banner image (Original Woman in Yellow Turtleneck from Video) -->
-  <div class="bento-card booking-top-banner">
-   <img src="images/yellow_turtleneck.jpg" alt="Client smiling happily with yellow turtleneck sweater">
-   <div class="booking-banner-text">Welcome to Bombay Smilz</div>
+  <div class="gallery-overlay-box">
+  <span class="gallery-overlay-text">If you want a gorgeous smile, talk to our experts.</span>
+  <a href="tel:+919373371026" class="pill-btn pill-btn-dark">Call Us</a>
+  </div>
+ </div>
+
+ <!-- Bottom: Horizontal Bento Row for 4 services -->
+ <div class="services-bento-row">
+  
+  <!-- Service 1 -->
+  <a href="#contact" class="service-bento-card">
+  <div class="service-bento-card-top">
+  <div class="service-number-circle">01</div>
+  <span class="service-arrow">↗</span>
+  </div>
+  <div>
+  <h3>Dental Veneers</h3>
+  <p>Custom-fit laminates designed to correct cracks, chips, and discolorations.</p>
+  </div>
+  </a>
+
+  <!-- Service 2 -->
+  <a href="#contact" class="service-bento-card">
+  <div class="service-bento-card-top">
+  <div class="service-number-circle">02</div>
+  <span class="service-arrow">↗</span>
+  </div>
+  <div>
+  <h3>Implants & Surgery</h3>
+  <p>Permanent titanium restorations anchored securely into the jaw for a natural feel.</p>
+  </div>
+  </a>
+
+  <!-- Service 3 -->
+  <a href="#contact" class="service-bento-card">
+  <div class="service-bento-card-top">
+  <div class="service-number-circle">03</div>
+  <span class="service-arrow">↗</span>
+  </div>
+  <div>
+  <h3>Teeth Whitening</h3>
+  <p>Medical scaling and professional polishing to remove stubborn yellowing.</p>
+  </div>
+  </a>
+
+  <!-- Service 4 -->
+  <a href="#contact" class="service-bento-card">
+  <div class="service-bento-card-top">
+  <div class="service-number-circle">04</div>
+  <span class="service-arrow">↗</span>
+  </div>
+  <div>
+  <h3>Pediatric Care</h3>
+  <p>Gentle and friendly examinations keeping child visits pain-free and calm.</p>
+  </div>
+  </a>
+
+ </div>
+
+ </section>
+
+ <!-- SCREEN 4: BOOKING, HOURS & LOCATION -->
+ <section class="bento-grid" id="contact" aria-label="Booking and Location">
+
+ <!-- Wide top banner image (Original Woman in Yellow Turtleneck from Video) -->
+ <div class="bento-card booking-top-banner">
+  <img src="images/yellow_turtleneck.jpg" alt="Client smiling happily with yellow turtleneck sweater">
+  <div class="booking-banner-text">Welcome to Bombay Smilz</div>
+ </div>
+
+ <!-- Left Column: Booking panel (White text on black background) -->
+ <form class="bento-card booking-form-card card-dark" onsubmit="event.preventDefault(); alert('Appointment requested! We will call you back shortly.');">
+  <div>
+  <h2>Book Online</h2>
+  <p>Schedule your dental checkup or consult with our specialists today.</p>
+  </div>
+  
+  <div class="booking-inputs-grid">
+  <div class="booking-input-wrapper">
+  <input class="booking-input" type="text" placeholder="Your Name" required aria-label="Your Name">
+  </div>
+  <div class="booking-input-wrapper">
+  <input class="booking-input" type="tel" placeholder="Phone Number" required aria-label="Phone Number">
+  </div>
+  <div class="booking-input-wrapper">
+  <input class="booking-input" type="date" required aria-label="Preferred Date">
+  </div>
+  <div class="booking-input-wrapper">
+  <input class="booking-input" type="time" required aria-label="Preferred Time">
+  </div>
+  </div>
+  
+  <button type="submit" class="pill-btn pill-btn-white">Book Now</button>
+ </form>
+
+ <!-- Right Column: Contact Details & Hours Table -->
+ <div class="bento-card contact-hours-card">
+  <div class="contact-details-grid">
+  
+  <div class="contact-bento-row">
+  <span class="contact-bento-icon" aria-hidden="true">📍</span>
+  <div class="contact-bento-text">
+  <h4>Address</h4>
+  <address>
+   Swatantryaveer Savarkar Rd, The Mahim Makarand CHS, Mahim We
+   Mumbai
+  </address>
+  </div>
   </div>
 
-  <!-- Left Column: Booking panel (White text on black background) -->
-  <form class="bento-card booking-form-card card-dark" onsubmit="event.preventDefault(); alert('Appointment requested! We will call you back shortly.');">
-   <div>
-   <h2>Book Online</h2>
-   <p>Schedule your dental checkup or consult with our specialists today.</p>
-   </div>
-   
-   <div class="booking-inputs-grid">
-   <div class="booking-input-wrapper">
-    <input class="booking-input" type="text" placeholder="Your Name" required aria-label="Your Name">
-   </div>
-   <div class="booking-input-wrapper">
-    <input class="booking-input" type="tel" placeholder="Phone Number" required aria-label="Phone Number">
-   </div>
-   <div class="booking-input-wrapper">
-    <input class="booking-input" type="date" required aria-label="Preferred Date">
-   </div>
-   <div class="booking-input-wrapper">
-    <input class="booking-input" type="time" required aria-label="Preferred Time">
-   </div>
-   </div>
-   
-   <button type="submit" class="pill-btn pill-btn-white">Book Now</button>
-  </form>
-
-  <!-- Right Column: Contact Details & Hours Table -->
-  <div class="bento-card contact-hours-card">
-   <div class="contact-details-grid">
-   
-   <div class="contact-bento-row">
-    <span class="contact-bento-icon" aria-hidden="true">📍</span>
-    <div class="contact-bento-text">
-    <h4>Address</h4>
-    <address>
-     Swatantryaveer Savarkar Rd, The Mahim Makarand CHS, Mahim We
-     Mumbai
-    </address>
-    </div>
-   </div>
-
-   <div class="contact-bento-row">
-    <span class="contact-bento-icon" aria-hidden="true">📞</span>
-    <div class="contact-bento-text">
-    <h4>Phone</h4>
-    <p><a href="tel:+919373371026" style="font-weight:700;">+91 93733 71026</a></p>
-    </div>
-   </div>
-
-   </div>
-
-   <!-- Opening Hours Bento Table -->
-   <table class="hours-bento-table" aria-label="Opening Hours Table">
-   <thead>
-    <tr>
-    <th>Day</th>
-    <th>Shift Hours</th>
-    <th>Status</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-    <td>Mon - Sat</td>
-    <td>9:30 AM – 12:30 PM & 4:30 PM – 8:30 PM</td>
-    <td><span style="color:var(--primary); font-weight:700;">Open</span></td>
-    </tr>
-    <tr class="closed-row">
-    <td><strong>Sunday</strong></td>
-    <td>Closed</td>
-    <td><span style="color:red; font-weight:700;">Closed</span></td>
-    </tr>
-   </tbody>
-   </table>
+  <div class="contact-bento-row">
+  <span class="contact-bento-icon" aria-hidden="true">📞</span>
+  <div class="contact-bento-text">
+  <h4>Phone</h4>
+  <p><a href="tel:+919373371026" style="font-weight:700;">+91 93733 71026</a></p>
+  </div>
   </div>
 
-  <!-- Full-width Map bento card at bottom -->
-  <div class="bento-card map-bento-card">
-   <iframe 
-   class="map-bento-iframe"
-   title="Google Map location of Bombay Smilz"
-   src="https://maps.google.com/maps?q=Bombay%20Smilz&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-   allowfullscreen="" 
-   loading="lazy" 
-   referrerpolicy="no-referrer-when-downgrade">
-   </iframe>
   </div>
 
-  </section>
+  <!-- Opening Hours Bento Table -->
+  <table class="hours-bento-table" aria-label="Opening Hours Table">
+  <thead>
+  <tr>
+  <th>Day</th>
+  <th>Shift Hours</th>
+  <th>Status</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td>Mon - Sat</td>
+  <td>9:30 AM – 12:30 PM & 4:30 PM – 8:30 PM</td>
+  <td><span style="color:var(--primary); font-weight:700;">Open</span></td>
+  </tr>
+  <tr class="closed-row">
+  <td><strong>Sunday</strong></td>
+  <td>Closed</td>
+  <td><span style="color:red; font-weight:700;">Closed</span></td>
+  </tr>
+  </tbody>
+  </table>
+ </div>
+
+ <!-- Full-width Map bento card at bottom -->
+ <div class="bento-card map-bento-card">
+  <iframe 
+  class="map-bento-iframe"
+  title="Google Map location of Bombay Smilz"
+  src="https://maps.google.com/maps?q=Bombay%20Smilz&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+ </div>
+
+ </section>
 
  </main>
 
  <!-- Footer -->
  <footer>
-  <div class="footer-container">
-  <div class="footer-links">
-   <a href="#hero">Home</a> · 
-   <a href="#services">Services</a> · 
-   <a href="#why-choose-us">Why Us</a> · 
-   <a href="#contact">Contact</a>
-  </div>
-  <p>&copy; 2026 Bombay Smilz. All rights reserved.</p>
-  <p class="footer-credit">Demo created by Kevin</p>
-  </div>
+ <div class="footer-container">
+ <div class="footer-links">
+  <a href="#hero">Home</a> · 
+  <a href="#services">Services</a> · 
+  <a href="#why-choose-us">Why Us</a> · 
+  <a href="#contact">Contact</a>
+ </div>
+ <p>&copy; 2026 Bombay Smilz. All rights reserved.</p>
+ <p class="footer-credit">Demo created by Kevin</p>
+ </div>
  </footer>
 
  </div>
@@ -1419,28 +1419,28 @@
  <!-- Small JS helper to change active state in menu pill on scroll -->
  <script>
  document.addEventListener("DOMContentLoaded", function() {
-  const sections = document.querySelectorAll("section[id]");
-  const menuLinks = document.querySelectorAll(".menu-link");
+ const sections = document.querySelectorAll("section[id]");
+ const menuLinks = document.querySelectorAll(".menu-link");
 
-  window.addEventListener("scroll", function() {
-  let current = "";
-  const scrollPosition = window.scrollY + 100;
+ window.addEventListener("scroll", function() {
+ let current = "";
+ const scrollPosition = window.scrollY + 100;
 
-  sections.forEach(section => {
-   const sectionTop = section.offsetTop;
-   const sectionHeight = section.offsetHeight;
-   if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-   current = section.getAttribute("id");
-   }
-  });
+ sections.forEach(section => {
+  const sectionTop = section.offsetTop;
+  const sectionHeight = section.offsetHeight;
+  if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+  current = section.getAttribute("id");
+  }
+ });
 
-  menuLinks.forEach(link => {
-   link.classList.remove("active");
-   if (link.getAttribute("href") === "#" + current) {
-   link.classList.add("active");
-   }
-  });
-  });
+ menuLinks.forEach(link => {
+  link.classList.remove("active");
+  if (link.getAttribute("href") === "#" + current) {
+  link.classList.add("active");
+  }
+ });
+ });
  });
  </script>
 
